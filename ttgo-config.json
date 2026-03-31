@@ -1,0 +1,50 @@
+{
+  "developerPageUrl": "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi",
+  "brandName": "TTGO",
+  "games": [
+    {
+      "id": "block_puzzle_jewel_crystal_cat",
+      "name": "Block Puzzle Jewel Crystal Cat",
+      "iconUrl": "",
+      "screenshots": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "offline_100_games_no_wifi",
+      "name": "100 Offline Game No Wifi",
+      "iconUrl": "",
+      "screenshots": [
+        ""
+      ]
+    },
+    {
+      "id": "cat_color_water_sort_puzzle",
+      "name": "Cat Color Water Sort Puzzle",
+      "iconUrl": "",
+      "screenshots": [
+        ""
+      ]
+    },
+    {
+      "id": "dreamtile_animal_mahjong_match",
+      "name": "DreamTile Animal Mahjong Match",
+      "iconUrl": "",
+      "screenshots": [
+        ""
+      ]
+    }
+  ],
+  "heroScreenshots": {
+    "phone": [
+      "",
+      ""
+    ],
+    "gallery": [
+      "",
+      ""
+    ]
+  }
+}
+
