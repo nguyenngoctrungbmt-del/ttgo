@@ -287,11 +287,19 @@
     }
     .card-icon{
       width:40px; height:40px;
-      border-radius:15px;
+      border-radius:13px;
       background: rgba(34,197,94,.18);
       border:1px solid rgba(34,197,94,.25);
       display:flex; align-items:center; justify-content:center;
       font-weight:900;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+    .card-icon img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
     .card h3{
       margin:0;
@@ -481,15 +489,13 @@
     .screen-thumb{
       height:52px;
       border-radius:10px;
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
+      overflow:hidden;
     }
-    .thumb-1{
-      background-image: linear-gradient(135deg, #38bdf8, #a855f7);
-    }
-    .thumb-2{
-      background-image: linear-gradient(135deg, #22c55e, #f97316);
+    .screen-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
     .screen-label{
       font-size:11px;
@@ -538,16 +544,14 @@
     .gallery-thumb{
       height:66px;
       border-radius:14px;
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
+      overflow:hidden;
       margin-bottom:6px;
     }
-    .gallery-thumb.cat{
-      background-image: linear-gradient(135deg, #f97316, #facc15);
-    }
-    .gallery-thumb.puzzle{
-      background-image: linear-gradient(135deg, #22c55e, #0ea5e9);
+    .gallery-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
     .gallery-caption{
       font-size:11px;
@@ -642,7 +646,10 @@
                     <div class="phone-sub">Showcase your key gameplay screens and core features on mobile.</div>
                     <div class="phone-row">
                       <div class="screen-card">
-                        <div class="screen-thumb thumb-1"></div>
+                        <div class="screen-thumb">
+                          <!-- Replace src with a Block Puzzle / main gameplay screenshot URL from Google Play -->
+                          <img src="" alt="Block Puzzle Jewel gameplay screenshot from Google Play" loading="lazy">
+                        </div>
                         <div class="screen-label">Block Puzzle Jewel</div>
                         <div class="screen-pills">
                           <span class="screen-pill">🧩 Puzzle</span>
@@ -650,7 +657,10 @@
                         </div>
                       </div>
                       <div class="screen-card">
-                        <div class="screen-thumb thumb-2"></div>
+                        <div class="screen-thumb">
+                          <!-- Replace src with a Cat Color Sort gameplay screenshot URL from Google Play -->
+                          <img src="" alt="Cat Color Water Sort gameplay screenshot from Google Play" loading="lazy">
+                        </div>
                         <div class="screen-label">Cat Color Sort</div>
                         <div class="screen-pills">
                           <span class="screen-pill">🐱 Cute cats</span>
@@ -666,14 +676,20 @@
                 </div>
                 <div class="gallery" aria-hidden="true">
                   <div class="gallery-card">
-                    <div class="gallery-thumb cat"></div>
+                    <div class="gallery-thumb">
+                      <!-- Replace src with a vertical gameplay screenshot from Google Play -->
+                      <img src="" alt="TTGO gameplay highlight from Google Play" loading="lazy">
+                    </div>
                     <div class="gallery-caption">
                       Gameplay highlight
                       <span>Replace with real screenshots from your game.</span>
                     </div>
                   </div>
                   <div class="gallery-card">
-                    <div class="gallery-thumb puzzle"></div>
+                    <div class="gallery-thumb">
+                      <!-- Replace src with a level selection or menu screenshot from Google Play -->
+                      <img src="" alt="TTGO level selection screen from Google Play" loading="lazy">
+                    </div>
                     <div class="gallery-caption">
                       Level selection screen
                       <span>Designed to support your TTGO ads.</span>
@@ -698,7 +714,10 @@
         <div class="grid-cards" role="list">
           <article class="card" role="listitem">
             <div class="card-top">
-              <div class="card-icon" aria-hidden="true">1</div>
+              <div class="card-icon">
+                <!-- Replace src with Block Puzzle Jewel Crystal Cat icon URL from Google Play -->
+                <img src="" alt="Block Puzzle Jewel Crystal Cat icon from Google Play" loading="lazy">
+              </div>
               <div>
                 <h3>Block Puzzle Jewel Crystal Cat</h3>
                 <p>Relaxing block puzzle game with crystal-style visuals and cat themed blocks.</p>
@@ -712,7 +731,10 @@
 
           <article class="card" role="listitem">
             <div class="card-top">
-              <div class="card-icon" aria-hidden="true">2</div>
+              <div class="card-icon">
+                <!-- Replace src with 100 Offline Game No Wifi icon URL from Google Play -->
+                <img src="" alt="100 Offline Game No Wifi icon from Google Play" loading="lazy">
+              </div>
               <div>
                 <h3>100 Offline Game No Wifi</h3>
                 <p>Collection of small offline games so players can have fun anywhere, even without internet.</p>
@@ -726,7 +748,10 @@
 
           <article class="card" role="listitem">
             <div class="card-top">
-              <div class="card-icon" aria-hidden="true">3</div>
+              <div class="card-icon">
+                <!-- Replace src with Cat Color Water Sort Puzzle icon URL from Google Play -->
+                <img src="" alt="Cat Color Water Sort Puzzle icon from Google Play" loading="lazy">
+              </div>
               <div>
                 <h3>Cat Color Water Sort Puzzle</h3>
                 <p>Color water sort puzzle with cute cats, perfect for short relaxing sessions.</p>
@@ -740,7 +765,10 @@
 
           <article class="card" role="listitem">
             <div class="card-top">
-              <div class="card-icon" aria-hidden="true">4</div>
+              <div class="card-icon">
+                <!-- Replace src with DreamTile Animal Mahjong Match icon URL from Google Play -->
+                <img src="" alt="DreamTile Animal Mahjong Match icon from Google Play" loading="lazy">
+              </div>
               <div>
                 <h3>DreamTile Animal Mahjong Match</h3>
                 <p>Animal-themed mahjong match game with tile-connecting mechanics.</p>
