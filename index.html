@@ -1,53 +1,848 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TTGO Games - Play Free Puzzle & Casual Android Games on Google Play</title>
+  <meta name="description" content="Official TTGO landing page for Android games. Discover free puzzle and casual games, including block puzzles, cat color sort and offline games. Download now on Google Play." />
+  <meta name="keywords" content="TTGO games, Android games, free puzzle game, block puzzle, cat color sort, offline games, Google Play" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="TTGO Games - Free Puzzle & Casual Android Games" />
+  <meta property="og:description" content="Discover TTGO puzzle and casual Android games and download directly from Google Play." />
+  <meta property="og:type" content="website" />
 
-        .container {
-            animation: fadeIn 1.5s ease;
-        }
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1430;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --text:#EAF0FF;
+      --muted: rgba(234,240,255,.72);
+      --primary:#6D5EF6;
+      --primary2:#22C55E;
+      --border: rgba(255,255,255,.14);
+      --shadow: 0 22px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(109,94,246,.35), transparent 55%),
+        radial-gradient(900px 500px at 90% 20%, rgba(34,197,94,.22), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+    }
 
-        p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+    a{ color:inherit; text-decoration:none; }
+    .container{
+      width:min(1120px, calc(100% - 32px));
+      margin:0 auto;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:16px; top:16px; width:auto; height:auto;
+      padding:10px 12px;
+      background:rgba(255,255,255,.12);
+      border:1px solid var(--border);
+      border-radius:12px;
+      z-index:9999;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.55);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px;
+      border-radius:12px;
+      background:
+        radial-gradient(16px 16px at 30% 30%, rgba(255,255,255,.35), transparent 60%),
+        linear-gradient(135deg, rgba(109,94,246,1), rgba(34,197,94,1));
+      box-shadow: 0 10px 26px rgba(109,94,246,.25);
+      border:1px solid rgba(255,255,255,.25);
+    }
+
+    nav ul{
+      list-style:none;
+      margin:0; padding:0;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    nav a:hover{ color:var(--text); }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+      color:var(--text);
+      font-weight:800;
+      letter-spacing:.2px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.1);
+      border-color: rgba(255,255,255,.22);
+    }
+    .btn-primary{
+      background: linear-gradient(135deg, rgba(109,94,246,1), rgba(34,197,94,1));
+      border-color: rgba(255,255,255,.22);
+      box-shadow: 0 18px 40px rgba(109,94,246,.22);
+    }
+
+    .hero{
+      padding:56px 0 34px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:26px;
+      align-items:center;
+    }
+
+    .badge-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .badge{
+      background: rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.14);
+      color:var(--muted);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    h1{
+      margin:0 0 12px;
+      font-size: clamp(32px, 4.4vw, 48px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .lead{
+      margin:0 0 20px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      max-width: 52ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin: 18px 0 0;
+    }
+    .fineprint{
+      margin-top:12px;
+      color:rgba(234,240,255,.58);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-inner{
+      padding:18px;
+    }
+    .panel-title{
+      font-weight:900;
+      margin:0 0 10px;
+      letter-spacing:.2px;
+    }
+    .mini-list{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .mini-item{
+      padding:12px 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .mini-icon{
+      width:38px; height:38px;
+      border-radius:14px;
+      background: rgba(109,94,246,.18);
+      border:1px solid rgba(109,94,246,.25);
+      display:flex; align-items:center; justify-content:center;
+      font-size:16px;
+      flex:0 0 auto;
+    }
+    .mini-item b{
+      display:block;
+      margin-bottom:4px;
+      font-size:14px;
+    }
+    .mini-item span{
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    section{
+      padding: 34px 0;
+    }
+
+    .section-title{
+      font-size: 22px;
+      margin:0 0 12px;
+      letter-spacing:-.2px;
+    }
+    .section-sub{
+      margin:0 0 22px;
+      color:var(--muted);
+      line-height:1.6;
+      max-width: 70ch;
+      font-size:15px;
+    }
+
+    .grid-cards{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .card{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding:14px;
+      min-height: 148px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.085);
+      border-color: rgba(255,255,255,.22);
+    }
+    .card-top{
+      display:flex; align-items:flex-start; gap:10px;
+    }
+    .card-icon{
+      width:40px; height:40px;
+      border-radius:15px;
+      background: rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.25);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+    }
+    .card h3{
+      margin:0;
+      font-size:14px;
+      letter-spacing:.1px;
+      line-height:1.25;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+    .card a{
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      font-size:13px;
+      color: rgba(234,240,255,.86);
+    }
+    .arrow{
+      width:22px; height:22px;
+      border-radius:10px;
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      display:flex; align-items:center; justify-content:center;
+      font-size:13px;
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .why-item{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .why-item h3{
+      margin:0 0 8px;
+      font-size:16px;
+      letter-spacing:-.2px;
+    }
+    .why-item p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    details{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding: 14px 14px;
+      margin-bottom: 12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:.1px;
+    }
+    details p{
+      margin:10px 0 0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    footer{
+      padding: 28px 0 44px;
+      color: rgba(234,240,255,.6);
+      font-size:13px;
+      border-top:1px solid rgba(255,255,255,.08);
+      background: rgba(7,10,18,.25);
+    }
+    .footer-row{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .cta-mobile{
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      padding: 12px 12px;
+      border-radius: 18px;
+      background: rgba(8,10,16,.72);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 50px rgba(0,0,0,.45);
+      display:none;
+      z-index: 30;
+    }
+    .cta-mobile .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .cta-mobile b{
+      font-size:14px;
+    }
+
+    /* Phone mockup & gallery */
+    .phone-wrapper{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .phone{
+      width:230px;
+      height:460px;
+      border-radius:36px;
+      padding:10px;
+      background: radial-gradient(circle at 0% 0%, rgba(255,255,255,.25), transparent 45%), rgba(9,11,20,.9);
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow: 0 26px 70px rgba(0,0,0,.7);
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .phone-notch{
+      align-self:center;
+      margin-top:3px;
+      width:90px;
+      height:16px;
+      border-radius:999px;
+      background:rgba(0,0,0,.7);
+    }
+    .phone-screen{
+      flex:1;
+      border-radius:26px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(96,165,250,.75), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(52,211,153,.75), transparent 55%),
+        linear-gradient(145deg, #020617, #020617);
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .phone-tag{
+      align-self:flex-start;
+      padding:4px 9px;
+      border-radius:999px;
+      background:rgba(15,23,42,.92);
+      border:1px solid rgba(148,163,184,.7);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+    }
+    .phone-title{
+      font-weight:800;
+      font-size:16px;
+      line-height:1.25;
+    }
+    .phone-sub{
+      font-size:11px;
+      color:rgba(226,232,240,.8);
+    }
+    .phone-row{
+      display:flex;
+      gap:8px;
+      margin-top:6px;
+    }
+    .screen-card{
+      flex:1;
+      border-radius:13px;
+      padding:7px 7px 9px;
+      background:rgba(15,23,42,.94);
+      border:1px solid rgba(148,163,184,.65);
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .screen-thumb{
+      height:52px;
+      border-radius:10px;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .thumb-1{
+      background-image: linear-gradient(135deg, #38bdf8, #a855f7);
+    }
+    .thumb-2{
+      background-image: linear-gradient(135deg, #22c55e, #f97316);
+    }
+    .screen-label{
+      font-size:11px;
+      font-weight:700;
+    }
+    .phone-cta{
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:10px;
+      padding:4px 7px;
+      border-radius:999px;
+      background:rgba(56,189,248,.14);
+      border:1px solid rgba(56,189,248,.7);
+    }
+    .screen-pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:4px;
+      margin-top:6px;
+    }
+    .screen-pill{
+      font-size:9px;
+      padding:2px 6px;
+      border-radius:999px;
+      background:rgba(15,23,42,.9);
+      border:1px solid rgba(148,163,184,.7);
+    }
+    .gallery{
+      position:absolute;
+      right:-40px;
+      bottom:0;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .gallery-card{
+      width:150px;
+      border-radius:18px;
+      padding:8px;
+      background:rgba(15,23,42,.95);
+      border:1px solid rgba(148,163,184,.7);
+      box-shadow: 0 18px 40px rgba(0,0,0,.65);
+    }
+    .gallery-thumb{
+      height:66px;
+      border-radius:14px;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      margin-bottom:6px;
+    }
+    .gallery-thumb.cat{
+      background-image: linear-gradient(135deg, #f97316, #facc15);
+    }
+    .gallery-thumb.puzzle{
+      background-image: linear-gradient(135deg, #22c55e, #0ea5e9);
+    }
+    .gallery-caption{
+      font-size:11px;
+      font-weight:700;
+    }
+    .gallery-caption span{
+      display:block;
+      font-size:10px;
+      color:rgba(148,163,184,.9);
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .phone-wrapper{
+        margin-top:24px;
+        justify-content:flex-start;
+      }
+      .gallery{
+        position:static;
+        flex-direction:row;
+      }
+      .grid-cards{ grid-template-columns: repeat(2, 1fr); }
+      .why-grid{ grid-template-columns: 1fr; }
+      .cta-mobile{ display:block; }
+      header{ position:static; }
+    }
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
     <div class="container">
-        <h1>👋 Xin chào!</h1>
-        <p>Website của bạn đã deploy thành công 🚀</p>
+      <div class="nav">
+        <div class="brand" aria-label="TTGO">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </div>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="#featured">Featured games</a></li>
+            <li><a href="#why">Why TTGO</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="badge-row">
+              <span class="badge">TTGO • Android games</span>
+              <span class="badge">Casual &amp; puzzle</span>
+              <span class="badge">Easy to play</span>
+            </div>
+
+            <h1>TTGO Games - Casual &amp; Puzzle Android games on Google Play</h1>
+            <p class="lead">
+              Discover TTGO casual and puzzle games for Android. Use this landing page to quickly send players to your
+              Google Play developer page and boost installs.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+                View on Google Play
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn" href="#featured">
+                See featured games
+                <span class="arrow" aria-hidden="true">↓</span>
+              </a>
+            </div>
+
+            <div class="fineprint">
+              Note: the button opens your Google Play developer page. Players can then choose the game they want to install.
+            </div>
+          </div>
+
+          <aside class="panel" aria-label="Game preview images">
+            <div class="panel-inner">
+              <h2 class="panel-title">Preview your game screens</h2>
+              <div class="phone-wrapper">
+                <div class="phone" aria-hidden="true">
+                  <div class="phone-notch"></div>
+                  <div class="phone-screen">
+                    <div class="phone-tag">TTGO preview</div>
+                    <div class="phone-title">Block puzzle &amp; cat game</div>
+                    <div class="phone-sub">Showcase your key gameplay screens and core features on mobile.</div>
+                    <div class="phone-row">
+                      <div class="screen-card">
+                        <div class="screen-thumb thumb-1"></div>
+                        <div class="screen-label">Block Puzzle Jewel</div>
+                        <div class="screen-pills">
+                          <span class="screen-pill">🧩 Puzzle</span>
+                          <span class="screen-pill">Easy to learn</span>
+                        </div>
+                      </div>
+                      <div class="screen-card">
+                        <div class="screen-thumb thumb-2"></div>
+                        <div class="screen-label">Cat Color Sort</div>
+                        <div class="screen-pills">
+                          <span class="screen-pill">🐱 Cute cats</span>
+                          <span class="screen-pill">Color sorting</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone-cta">
+                      See more on Google Play
+                      <span>→</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gallery" aria-hidden="true">
+                  <div class="gallery-card">
+                    <div class="gallery-thumb cat"></div>
+                    <div class="gallery-caption">
+                      Gameplay highlight
+                      <span>Replace with real screenshots from your game.</span>
+                    </div>
+                  </div>
+                  <div class="gallery-card">
+                    <div class="gallery-thumb puzzle"></div>
+                    <div class="gallery-caption">
+                      Level selection screen
+                      <span>Designed to support your TTGO ads.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <section id="featured">
+      <div class="container">
+        <h2 class="section-title">Featured TTGO Android games</h2>
+        <p class="section-sub">
+          Highlight a few key games to attract players. Each card links to your Google Play developer page so they can
+          quickly discover all TTGO titles.
+        </p>
+
+        <div class="grid-cards" role="list">
+          <article class="card" role="listitem">
+            <div class="card-top">
+              <div class="card-icon" aria-hidden="true">1</div>
+              <div>
+                <h3>Block Puzzle Jewel Crystal Cat</h3>
+                <p>Relaxing block puzzle game with crystal-style visuals and cat themed blocks.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+              Open on Google Play
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-top">
+              <div class="card-icon" aria-hidden="true">2</div>
+              <div>
+                <h3>100 Offline Game No Wifi</h3>
+                <p>Collection of small offline games so players can have fun anywhere, even without internet.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+              Open on Google Play
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-top">
+              <div class="card-icon" aria-hidden="true">3</div>
+              <div>
+                <h3>Cat Color Water Sort Puzzle</h3>
+                <p>Color water sort puzzle with cute cats, perfect for short relaxing sessions.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+              Open on Google Play
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-top">
+              <div class="card-icon" aria-hidden="true">4</div>
+              <div>
+                <h3>DreamTile Animal Mahjong Match</h3>
+                <p>Animal-themed mahjong match game with tile-connecting mechanics.</p>
+              </div>
+            </div>
+            <a href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+              Open on Google Play
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <h2 class="section-title">Why this TTGO landing page converts</h2>
+        <p class="section-sub">
+          This landing page is designed to send high-intent players straight to your Google Play page, while clearly
+          explaining what TTGO offers in terms of casual and puzzle games.
+        </p>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Clear call-to-action</h3>
+            <p>Primary “View on Google Play” buttons appear in the hero section and on each game card to drive installs.</p>
+          </div>
+          <div class="why-item">
+            <h3>Clean, readable layout</h3>
+            <p>Responsive design, high-contrast colors and clear typography help users understand your games within seconds.</p>
+          </div>
+          <div class="why-item">
+            <h3>Built for paid campaigns</h3>
+            <p>“Featured games”, “Why TTGO” and “FAQ” sections address common questions and reduce friction before the click-through.</p>
+          </div>
+          <div class="why-item">
+            <h3>Simple to host</h3>
+            <p>Single static HTML file that you can host anywhere, without any build tools or backend setup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-sub">Quick answers players might look for before installing TTGO games.</p>
+
+        <details open>
+          <summary>What is this landing page for?</summary>
+          <p>
+            This is the official <b>TTGO</b> landing page used to promote your Android games and send traffic to Google Play.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where can players download the games?</summary>
+          <p>
+            Players can click the “View on Google Play” buttons in the hero or on each card, then select the TTGO game they
+            want to install from your Google Play developer page.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do these games require Wi‑Fi?</summary>
+          <p>
+            Some titles can be played offline while others may require an internet connection. Check the details on each
+            game’s Google Play page for specifics.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div>© <span id="year"></span> TTGO • Game landing page for Google Play</div>
+          <div>
+            Download source: Google Play
+            <a href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">Developer page</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="cta-mobile" role="region" aria-label="CTA di động">
+    <div class="row">
+      <div>
+        <b>Discover TTGO Android games</b>
+      </div>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+        Open Google Play
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Set year dynamically (avoids manual updates).
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
