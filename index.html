@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TTGO Games - Play Free Puzzle & Casual Android Games on Google Play</title>
-  <meta name="description" content="Official TTGO landing page for Android games. Discover free puzzle and casual games, including block puzzles, cat color sort and offline games. Download now on Google Play." />
-  <meta name="keywords" content="TTGO games, Android games, free puzzle game, block puzzle, cat color sort, offline games, Google Play" />
+  <meta name="description" content="Official TTGO landing page for Android games. Block puzzle, offline games, Winter Blast Puzzle, cat color sort, mahjong match — download on Google Play." />
+  <meta name="keywords" content="TTGO games, Android games, Winter Blast Puzzle, block puzzle, cat color sort, offline games, mahjong, Google Play" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="TTGO Games - Free Puzzle & Casual Android Games" />
@@ -211,7 +211,7 @@
 
     .grid-cards{
       display:grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap:14px;
     }
     .card{
@@ -362,7 +362,6 @@
 
     @media (max-width: 980px){
       .hero-grid{ grid-template-columns: 1fr; }
-      .grid-cards{ grid-template-columns: repeat(2, 1fr); }
       .why-grid{ grid-template-columns: 1fr; }
       .cta-mobile{ display:block; }
       header{ position:static; }
@@ -408,7 +407,7 @@
             </p>
 
             <div class="hero-actions">
-              <a id="hero-play-link" class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+              <a id="hero-play-link" class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">
                 View on Google Play
                 <span class="arrow" aria-hidden="true">→</span>
               </a>
@@ -431,8 +430,8 @@
       <div class="container">
         <h2 class="section-title">Featured TTGO Android games</h2>
         <p class="section-sub">
-          Highlight a few key games to attract players. Each card links to your Google Play developer page so they can
-          quickly discover all TTGO titles.
+          All titles from the AVTFINITY developer page on Google Play. Each card opens that game’s store listing so players
+          can install in one tap.
         </p>
 
         <div class="grid-cards" role="list">
@@ -447,7 +446,7 @@
                 <p>Relaxing block puzzle game with crystal-style visuals and cat themed blocks.</p>
               </div>
             </div>
-            <a id="game-link-block_puzzle_jewel_crystal_cat" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+            <a id="game-link-block_puzzle_jewel_crystal_cat" href="https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal" target="_blank" rel="noopener">
               Open on Google Play
               <span class="arrow" aria-hidden="true">→</span>
             </a>
@@ -464,7 +463,23 @@
                 <p>Collection of small offline games so players can have fun anywhere, even without internet.</p>
               </div>
             </div>
-            <a id="game-link-offline_100_games_no_wifi" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+            <a id="game-link-offline_100_games_no_wifi" href="https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain" target="_blank" rel="noopener">
+              Open on Google Play
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="card-top">
+              <div class="card-icon">
+                <img id="game-icon-winter_blast_puzzle" src="" alt="Winter Blast Puzzle icon from Google Play" loading="lazy">
+              </div>
+              <div>
+                <h3>Winter Blast Puzzle</h3>
+                <p>Seasonal puzzle fun: blast and match tiles through frosty, colorful levels.</p>
+              </div>
+            </div>
+            <a id="game-link-winter_blast_puzzle" href="https://play.google.com/store/apps/details?id=com.ttgo.winter.blash" target="_blank" rel="noopener">
               Open on Google Play
               <span class="arrow" aria-hidden="true">→</span>
             </a>
@@ -481,7 +496,7 @@
                 <p>Color water sort puzzle with cute cats, perfect for short relaxing sessions.</p>
               </div>
             </div>
-            <a id="game-link-cat_color_water_sort_puzzle" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+            <a id="game-link-cat_color_water_sort_puzzle" href="https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle" target="_blank" rel="noopener">
               Open on Google Play
               <span class="arrow" aria-hidden="true">→</span>
             </a>
@@ -498,7 +513,7 @@
                 <p>Animal-themed mahjong match game with tile-connecting mechanics.</p>
               </div>
             </div>
-            <a id="game-link-dreamtile_animal_mahjong_match" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+            <a id="game-link-dreamtile_animal_mahjong_match" href="https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2" target="_blank" rel="noopener">
               Open on Google Play
               <span class="arrow" aria-hidden="true">→</span>
             </a>
@@ -551,8 +566,8 @@
         <details>
           <summary>Where can players download the games?</summary>
           <p>
-            Players can click the “View on Google Play” buttons in the hero or on each card, then select the TTGO game they
-            want to install from your Google Play developer page.
+            Use “View on Google Play” in the hero to open the full developer catalog, or tap a featured card to go straight
+            to that game’s store listing.
           </p>
         </details>
 
@@ -572,7 +587,7 @@
           <div>© <span id="year"></span> TTGO • Game landing page for Google Play</div>
           <div>
             Download source: Google Play
-            <a id="footer-developer-link" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">Developer page</a>
+            <a id="footer-developer-link" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">Developer page</a>
           </div>
         </div>
       </div>
@@ -584,7 +599,7 @@
       <div>
         <b>Discover TTGO Android games</b>
       </div>
-      <a id="mobile-play-link" class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi" target="_blank" rel="noopener">
+      <a id="mobile-play-link" class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">
         Open Google Play
         <span class="arrow" aria-hidden="true">→</span>
       </a>
@@ -622,29 +637,17 @@
             setHref('hero-play-link', cfg.developerPageUrl);
             setHref('mobile-play-link', cfg.developerPageUrl);
             setHref('footer-developer-link', cfg.developerPageUrl);
-
-            // Also use developer URL for each game link by default.
-            setHref('game-link-block_puzzle_jewel_crystal_cat', cfg.developerPageUrl);
-            setHref('game-link-offline_100_games_no_wifi', cfg.developerPageUrl);
-            setHref('game-link-cat_color_water_sort_puzzle', cfg.developerPageUrl);
-            setHref('game-link-dreamtile_animal_mahjong_match', cfg.developerPageUrl);
           }
 
-          // Map games by id for icons and potential per-game URLs later.
-          var gamesById = {};
+          // Per-game Play Store URL and icon from config.games
           if (Array.isArray(cfg.games)) {
             cfg.games.forEach(function (g) {
-              if (g && g.id) gamesById[g.id] = g;
+              if (!g || !g.id) return;
+              var linkUrl = g.playStoreUrl || cfg.developerPageUrl;
+              if (linkUrl) setHref('game-link-' + g.id, linkUrl);
+              if (g.iconUrl) setSrc('game-icon-' + g.id, g.iconUrl);
             });
           }
-
-          // Icons from config.games[*].iconUrl
-          Object.keys(gamesById).forEach(function (id) {
-            var game = gamesById[id];
-            if (game.iconUrl) {
-              setSrc('game-icon-' + id, game.iconUrl);
-            }
-          });
 
         })
         .catch(function () {
