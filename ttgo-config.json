@@ -1,50 +1,41 @@
 {
-  "developerPageUrl": "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=vi",
+  "developerPageUrl": "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en",
   "brandName": "TTGO",
   "games": [
     {
       "id": "block_puzzle_jewel_crystal_cat",
       "name": "Block Puzzle Jewel Crystal Cat",
-      "iconUrl": "https://play-lh.googleusercontent.com/tZUX6sdmGXhDeNIfwJJxL5iGVur6yg536Spn8TFGfzi8B4xkVX6ywOXpfhLwiEynsKwLI-71bWihfpHim7g_PA=w240-h480-rw",
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw",
-        "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw"
-      ]
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal",
+      "iconUrl": "",
+      "screenshots": []
     },
     {
       "id": "offline_100_games_no_wifi",
       "name": "100 Offline Game No Wifi",
-      "iconUrl": "https://play-lh.googleusercontent.com/tZUX6sdmGXhDeNIfwJJxL5iGVur6yg536Spn8TFGfzi8B4xkVX6ywOXpfhLwiEynsKwLI-71bWihfpHim7g_PA=w240-h480-rw",
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw"
-      ]
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain",
+      "iconUrl": "",
+      "screenshots": []
+    },
+    {
+      "id": "winter_blast_puzzle",
+      "name": "Winter Blast Puzzle",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ttgo.winter.blash",
+      "iconUrl": "",
+      "screenshots": []
     },
     {
       "id": "cat_color_water_sort_puzzle",
       "name": "Cat Color Water Sort Puzzle",
-      "iconUrl": "https://play-lh.googleusercontent.com/tZUX6sdmGXhDeNIfwJJxL5iGVur6yg536Spn8TFGfzi8B4xkVX6ywOXpfhLwiEynsKwLI-71bWihfpHim7g_PA=w240-h480-rw",
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw"
-      ]
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle",
+      "iconUrl": "",
+      "screenshots": []
     },
     {
       "id": "dreamtile_animal_mahjong_match",
       "name": "DreamTile Animal Mahjong Match",
-      "iconUrl": "https://play-lh.googleusercontent.com/tZUX6sdmGXhDeNIfwJJxL5iGVur6yg536Spn8TFGfzi8B4xkVX6ywOXpfhLwiEynsKwLI-71bWihfpHim7g_PA=w240-h480-rw",
-      "screenshots": [
-        "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw"
-      ]
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2",
+      "iconUrl": "",
+      "screenshots": []
     }
-  ],
-  "heroScreenshots": {
-    "phone": [
-      "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw",
-      "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw"
-    ],
-    "gallery": [
-      "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw",
-      "https://play-lh.googleusercontent.com/A7Gkna3CGmfeAAmCvhjQJjr8SgoVtBPSn9WL3WeCcValEAc6XzZw0PkkkvgWl5h12mY=w526-h296-rw"
-    ]
-  }
+  ]
 }
-
