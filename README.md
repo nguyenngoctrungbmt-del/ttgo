@@ -1,10 +1,10 @@
 # TTGO Games | Free Android Puzzle Games, Block Puzzle, Water Sort, Offline Games, Mahjong Match & Casual Brain Games by AVTFINITY
 
-**Official landing page & app catalog for [TTGO Games](https://ttgo.games/)** — free Android puzzle games, casual games, offline games no wifi, block puzzle, jewel puzzle, water sort puzzle, match-3 blast, animal mahjong, tile match, and relaxing brain training games published by **AVTFINITY** on **Google Play**.
+**Official landing page & app catalog for [TTGO Games](https://ttgo.io.vn/)** — free Android puzzle games, casual games, offline games no wifi, block puzzle, jewel puzzle, water sort puzzle, match-3 blast, animal mahjong, tile match, and relaxing brain training games published by **AVTFINITY** on **Google Play**.
 
 > Download free Android games · Play offline · Puzzle · Casual · Brain games · No WiFi required · Google Play Store
 
-**Website:** [https://ttgo.games/](https://ttgo.games/)  
+**Website:** [https://ttgo.io.vn/](https://ttgo.io.vn/)  
 **Google Play Developer:** [AVTFINITY on Google Play](https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en)  
 **Brand:** TTGO / AVTFINITY  
 **Platform:** Android · Google Play Store · Mobile games · Free-to-play
@@ -15,11 +15,11 @@
 
 | Game | Google Play | Landing page |
 |------|-------------|--------------|
-| **Block Puzzle Jewel Crystal Cat** | [Play Store](https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal) | [ttgo.games](https://ttgo.games/games/block_puzzle_jewel_crystal_cat/) |
-| **100 Offline Game No Wifi** | [Play Store](https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain) | [ttgo.games](https://ttgo.games/games/offline_100_games_no_wifi/) |
-| **Winter Blast Puzzle** | [Play Store](https://play.google.com/store/apps/details?id=com.ttgo.winter.blash) | [ttgo.games](https://ttgo.games/games/winter_blast_puzzle/) |
-| **Cat Color Water Sort Puzzle** | [Play Store](https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle) | [ttgo.games](https://ttgo.games/games/cat_color_water_sort_puzzle/) |
-| **DreamTile Animal Mahjong Match** | [Play Store](https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2) | [ttgo.games](https://ttgo.games/games/dreamtile_animal_mahjong_match/) |
+| **Block Puzzle Jewel Crystal Cat** | [Play Store](https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal) | [ttgo.io.vn](https://ttgo.io.vn/games/block_puzzle_jewel_crystal_cat/) |
+| **100 Offline Game No Wifi** | [Play Store](https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain) | [ttgo.io.vn](https://ttgo.io.vn/games/offline_100_games_no_wifi/) |
+| **Winter Blast Puzzle** | [Play Store](https://play.google.com/store/apps/details?id=com.ttgo.winter.blash) | [ttgo.io.vn](https://ttgo.io.vn/games/winter_blast_puzzle/) |
+| **Cat Color Water Sort Puzzle** | [Play Store](https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle) | [ttgo.io.vn](https://ttgo.io.vn/games/cat_color_water_sort_puzzle/) |
+| **DreamTile Animal Mahjong Match** | [Play Store](https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2) | [ttgo.io.vn](https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/) |
 
 **Developer page (all apps):** [https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en](https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en)
 
@@ -47,7 +47,7 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 **Free jewel block puzzle Android game with cute cats · Classic block puzzle · Line clear · Brain training**
 
 - **Google Play:** https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal  
-- **Website:** https://ttgo.games/games/block_puzzle_jewel_crystal_cat/  
+- **Website:** https://ttgo.io.vn/games/block_puzzle_jewel_crystal_cat/  
 - **Package ID:** `com.happyfunnypuzzle.block.jewel.crystal`  
 - **Genre:** Block puzzle, jewel puzzle, crystal puzzle, cat puzzle, casual puzzle, brain game, offline puzzle  
 - **Keywords:** block puzzle, jewel block puzzle, crystal cat, cat block puzzle, place blocks, clear lines, Tetris-like puzzle, free block game Android, relaxing puzzle, cute cat game, brain training puzzle, free Google Play puzzle, TTGO block puzzle, AVTFINITY puzzle
@@ -61,7 +61,7 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 **100+ free offline mini games · No internet required · Puzzle & casual collection**
 
 - **Google Play:** https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain  
-- **Website:** https://ttgo.games/games/offline_100_games_no_wifi/  
+- **Website:** https://ttgo.io.vn/games/offline_100_games_no_wifi/  
 - **Package ID:** `com.PuzzleCollection.tiles.puzzle.Collection.Brain`  
 - **Genre:** Offline games, mini game collection, puzzle pack, casual collection, no wifi games, brain games  
 - **Keywords:** offline games, no wifi games, 100 offline games, offline game no wifi, games without internet, offline puzzle, offline casual games, mini games offline, free offline Android games, play without wifi, no internet games, puzzle collection, brain games offline, TTGO offline, AVTFINITY offline games
@@ -75,7 +75,7 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 **Free match & blast winter puzzle · Match-3 style · Snowy levels · Relaxing blast gameplay**
 
 - **Google Play:** https://play.google.com/store/apps/details?id=com.ttgo.winter.blash  
-- **Website:** https://ttgo.games/games/winter_blast_puzzle/  
+- **Website:** https://ttgo.io.vn/games/winter_blast_puzzle/  
 - **Package ID:** `com.ttgo.winter.blash`  
 - **Genre:** Match-3, blast puzzle, winter puzzle, casual match game, block blast, relaxing puzzle  
 - **Keywords:** Winter Blast Puzzle, winter blast, match blast, match 3 winter, snow puzzle, winter puzzle game, block blast, candy blast style, free match 3 Android, offline match puzzle, blast blocks, Christmas winter game vibe, TTGO Winter Blast, AVTFINITY blast puzzle
@@ -89,7 +89,7 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 **Free water sort puzzle · Color tube sort · Cute cat theme · Satisfying brain teaser**
 
 - **Google Play:** https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle  
-- **Website:** https://ttgo.games/games/cat_color_water_sort_puzzle/  
+- **Website:** https://ttgo.io.vn/games/cat_color_water_sort_puzzle/  
 - **Package ID:** `com.unfairthirty.cat.color.water.sort.puzzle`  
 - **Genre:** Water sort, color sort, tube puzzle, liquid sort, cat puzzle, logic puzzle, relaxing game  
 - **Keywords:** water sort puzzle, color water sort, cat water sort, tube sort, liquid sort game, color sorting puzzle, water sort Android, free water sort, cat color sort, sort colored water, brain teaser water sort, relaxing sort game, TTGO water sort, AVTFINITY color sort
@@ -103,7 +103,7 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 **Free animal mahjong · Tile match · Connect matching tiles · Cute mahjong solitaire**
 
 - **Google Play:** https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2  
-- **Website:** https://ttgo.games/games/dreamtile_animal_mahjong_match/  
+- **Website:** https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/  
 - **Package ID:** `com.avt.mahjong.dreamtile.match2`  
 - **Genre:** Mahjong, animal mahjong, tile match, mahjong solitaire, connect tiles, casual puzzle  
 - **Keywords:** DreamTile, animal mahjong, mahjong match, tile match puzzle, mahjong solitaire Android, animal tile game, connect mahjong tiles, cute mahjong, free mahjong game, tile matching game, DreamTile Animal Mahjong Match, TTGO mahjong, AVTFINITY mahjong
@@ -123,12 +123,12 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 6. https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en  
 
 ### TTGO website landing pages
-1. https://ttgo.games/  
-2. https://ttgo.games/games/block_puzzle_jewel_crystal_cat/  
-3. https://ttgo.games/games/offline_100_games_no_wifi/  
-4. https://ttgo.games/games/winter_blast_puzzle/  
-5. https://ttgo.games/games/cat_color_water_sort_puzzle/  
-6. https://ttgo.games/games/dreamtile_animal_mahjong_match/  
+1. https://ttgo.io.vn/  
+2. https://ttgo.io.vn/games/block_puzzle_jewel_crystal_cat/  
+3. https://ttgo.io.vn/games/offline_100_games_no_wifi/  
+4. https://ttgo.io.vn/games/winter_blast_puzzle/  
+5. https://ttgo.io.vn/games/cat_color_water_sort_puzzle/  
+6. https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/  
 
 ---
 
@@ -154,7 +154,7 @@ Search keywords people use for our games: `TTGO games`, `AVTFINITY`, `free Andro
 
 Static marketing landing pages for **TTGO Games** by **AVTFINITY**:
 
-- Root site: `index.html` → [https://ttgo.games/](https://ttgo.games/)
+- Root site: `index.html` → [https://ttgo.io.vn/](https://ttgo.io.vn/)
 - Per-game pages under `games/<game_id>/`
 - Config: `ttgo-config.json`
 - Styles: `assets/css/site.css`
@@ -183,7 +183,7 @@ This README lists every TTGO / AVTFINITY Android app with Google Play links, web
 
 - **Brand:** TTGO Games  
 - **Publisher / developer:** AVTFINITY  
-- **Site:** [ttgo.games](https://ttgo.games/)  
+- **Site:** [ttgo.io.vn](https://ttgo.io.vn/)  
 - **Play Store developer:** [AVTFINITY](https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en)  
 
 **Tags:** `#android` `#games` `#puzzle` `#casual` `#offline` `#googleplay` `#blockpuzzle` `#watersort` `#mahjong` `#match3` `#braintraining` `#freegames` `#ttgo` `#avtfinity`

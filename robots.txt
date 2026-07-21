@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ttgo.games/sitemap.xml
+Sitemap: https://ttgo.io.vn/sitemap.xml
