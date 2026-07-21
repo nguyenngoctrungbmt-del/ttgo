@@ -31,24 +31,131 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://ttgo.io.vn/#organization",
+        "name": "AVTFINITY",
+        "alternateName": [
+          "TTGO",
+          "TTGO Games"
+        ],
+        "url": "https://ttgo.io.vn/",
+        "logo": "https://play-lh.googleusercontent.com/PxmmRaR2Lr1cRUwC_swIihtft8xcfqdNj21ZRpbJfYhDVn6A13374Xp-a-eyrYmgVhSklj3DnZol_uNyeJAIJw=w512-h512",
+        "sameAs": [
+          "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "TTGO"
+        }
+      },
+      {
         "@type": "BreadcrumbList",
+        "@id": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
-          { "@type": "ListItem", "position": 2, "name": "Games", "item": "https://ttgo.io.vn/#featured" },
-          { "@type": "ListItem", "position": 3, "name": "DreamTile Animal Mahjong Match", "item": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ttgo.io.vn/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Games",
+            "item": "https://ttgo.io.vn/#featured"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "DreamTile Animal Mahjong Match",
+            "item": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/"
+          }
         ]
       },
       {
-        "@type": "MobileApplication",
+        "@type": "SoftwareApplication",
+        "@id": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/#softwareapplication",
         "name": "DreamTile Animal Mahjong Match",
         "operatingSystem": "Android",
         "applicationCategory": "GameApplication",
-        "description": "Free Android mahjong-style tile match puzzle featuring cute animal tiles and relaxing connect levels.",
+        "applicationSubCategory": "PuzzleGame",
+        "description": "Play DreamTile Animal Mahjong Match free on Android: connect animal mahjong tiles, clear relaxing levels, and enjoy a cute tile-match puzzle from TTGO on Google Play.",
         "image": "https://play-lh.googleusercontent.com/PxmmRaR2Lr1cRUwC_swIihtft8xcfqdNj21ZRpbJfYhDVn6A13374Xp-a-eyrYmgVhSklj3DnZol_uNyeJAIJw=w512-h512",
         "url": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "author": { "@type": "Organization", "name": "AVTFINITY" },
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2"
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2",
+        "softwareVersion": "latest",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2"
+        },
+        "author": {
+          "@id": "https://ttgo.io.vn/#organization"
+        },
+        "publisher": {
+          "@id": "https://ttgo.io.vn/#organization"
+        },
+        "creator": {
+          "@id": "https://ttgo.io.vn/#organization"
+        },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "sameAs": [
+          "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2"
+        ],
+        "identifier": "com.avt.mahjong.dreamtile.match2"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is DreamTile Animal Mahjong Match free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It is listed as a free Android game on Google Play. As with most free mobile titles, the Play listing may include optional ads or in-app purchases—check the live store page for the latest monetization details before installing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I play without Wi‑Fi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Core puzzle play is positioned as offline-friendly after install. You will need a connection to download the app and typically to fetch updates. Exact offline behavior can vary by version, so confirm on your device after install."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of puzzle is it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a mahjong-inspired tile match / connect puzzle: find matching animal tiles that can be paired under the game’s path or freeness rules, clear the board stage by stage, and enjoy cute tile art without the complexity of full traditional mahjong scoring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who makes DreamTile Animal Mahjong Match?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DreamTile Animal Mahjong Match is part of the TTGO games lineup associated with AVTFINITY on Google Play. Visit the TTGO site homepage for more free puzzle and casual Android titles from the same catalog."
+            }
+          }
+        ],
+        "about": {
+          "@id": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/#softwareapplication"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "TTGO Games",
+          "url": "https://ttgo.io.vn/",
+          "publisher": {
+            "@id": "https://ttgo.io.vn/#organization"
+          }
+        }
       }
     ]
   }
@@ -227,47 +334,18 @@
 
       </article>
 
-      <section style="padding:28px 0 8px">
-        <h2 class="section-title">More TTGO games</h2>
-        <p class="section-sub">Explore other free puzzle and casual Android titles from the same catalog.</p>
-        <div class="grid-cards" role="list">
-          <a class="card card-link" role="listitem" href="../block_puzzle_jewel_crystal_cat/">
-            <div class="card-top">
-              <div class="card-icon">
-                <img src="https://play-lh.googleusercontent.com/exFadaJKOfD76a9FqhlSyZ6hOqO-JvpOnRi527BvPYcW_RjKUGAAa7KzqzxEVc5183lbEQ7h30sK5s9cogvl_w=w240-h480" alt="" loading="lazy" />
-              </div>
-              <div>
-                <h3>Block Puzzle Jewel Crystal Cat</h3>
-                <p>Classic block puzzle with jewel crystal vibes.</p>
-              </div>
-            </div>
-            <span class="card-cta">View game details <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="card card-link" role="listitem" href="../offline_100_games_no_wifi/">
-            <div class="card-top">
-              <div class="card-icon">
-                <img src="https://play-lh.googleusercontent.com/ypAR0AeQYEf-XXR_rzAN6f5Xvxl1DmrbpGu_Z5Hgcs37gxH5Pzi0BQrvUautmp11YLO7OFbHciADXDkN63_K1w=w240-h480" alt="" loading="lazy" />
-              </div>
-              <div>
-                <h3>100 Offline Game No Wifi</h3>
-                <p>100+ offline mini games without Wi‑Fi.</p>
-              </div>
-            </div>
-            <span class="card-cta">View game details <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="card card-link" role="listitem" href="../winter_blast_puzzle/">
-            <div class="card-top">
-              <div class="card-icon">
-                <img src="https://play-lh.googleusercontent.com/8QIRwD1zq3rti3viND9PBycoe3t6cDM9L6kUWX0JUDEgKxA0iiLq_kQHnZpfjoZAEW88rQteozJ-00OvntC0Qw=w240-h480" alt="" loading="lazy" />
-              </div>
-              <div>
-                <h3>Winter Blast Puzzle</h3>
-                <p>Match and blast colorful winter blocks.</p>
-              </div>
-            </div>
-            <span class="card-cta">View game details <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </div>
+      <section class="also-like" aria-labelledby="also-like-title">
+        <h2 id="also-like-title" class="section-title">You may also like</h2>
+        <p class="section-sub">More free TTGO puzzle and casual Android games — pick another title to explore.</p>
+        <nav class="also-like-list" aria-label="Related TTGO games">
+          <a class="also-like-item" href="../block_puzzle_jewel_crystal_cat/">Block Puzzle</a>
+          <span class="also-like-sep" aria-hidden="true">↓</span>
+          <a class="also-like-item" href="../cat_color_water_sort_puzzle/">Water Sort</a>
+          <span class="also-like-sep" aria-hidden="true">↓</span>
+          <a class="also-like-item" href="../offline_100_games_no_wifi/">100 Offline Games</a>
+          <span class="also-like-sep" aria-hidden="true">↓</span>
+          <a class="also-like-item" href="../winter_blast_puzzle/">Winter Blast</a>
+        </nav>
       </section>
     </div>
   </main>

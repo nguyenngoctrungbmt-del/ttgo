@@ -333,7 +333,7 @@
       border:1px solid rgba(255,255,255,.14);
       border-radius: var(--radius);
       padding:14px;
-      min-height: 148px;
+      min-height: 200px;
       display:flex;
       flex-direction:column;
       gap:10px;
@@ -376,17 +376,38 @@
       line-height:1.5;
     }
     .card-cta{
-      margin-top:auto;
       display:inline-flex;
       align-items:center;
       gap:8px;
       font-weight:900;
       font-size:13px;
       color: rgba(234,240,255,.92);
+    }
+    .card:hover .card-cta{
+      color:var(--text);
+    }
+    .card-actions{
+      margin-top:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
       padding-top:4px;
     }
-    .card-link:hover .card-cta{
-      color:var(--text);
+    .btn-card-download{
+      padding:9px 12px;
+      border-radius:12px;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.15px;
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(16,185,129,.95));
+      border-color: rgba(255,255,255,.2);
+      box-shadow: 0 10px 22px rgba(34,197,94,.22);
+      flex-shrink:0;
+    }
+    .btn-card-download:hover{
+      background: linear-gradient(135deg, rgba(34,197,94,1), rgba(16,185,129,1));
     }
     .arrow{
       width:22px; height:22px;
@@ -444,6 +465,43 @@
       font-size:14px;
       line-height:1.6;
     }
+
+    .blog-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:14px;
+    }
+    .blog-card{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height: 180px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      color:inherit;
+      text-decoration:none;
+    }
+    .blog-card:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.085);
+      border-color: rgba(255,255,255,.22);
+    }
+    .blog-card h3{
+      margin:0;
+      font-size:17px;
+      line-height:1.3;
+    }
+    .blog-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+      flex:1;
+    }
+    .blog-card .card-cta{ margin-top:auto; }
 
     details{
       background: rgba(255,255,255,.06);
@@ -525,6 +583,7 @@
         <nav aria-label="Main navigation">
           <ul>
             <li><a href="#featured">Games</a></li>
+            <li><a href="blog/">Blog</a></li>
             <li><a href="#categories">Categories</a></li>
             <li><a href="#why">Why TTGO</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -559,12 +618,12 @@
               </a>
               <a class="btn" href="#featured">
                 See featured games
-                <span class="arrow" aria-hidden="true">â†“</span>
+                <span class="arrow" aria-hidden="true">↓</span>
               </a>
             </div>
 
             <div class="fineprint">
-              Hero button opens the full AVTFINITY catalog. Each game card is fully clickable and goes to that app on Google Play.
+              Hero button opens the full AVTFINITY catalog. Each game card has View details plus a Download button to Google Play.
             </div>
           </div>
 
@@ -576,12 +635,12 @@
       <div class="container">
         <h2 class="section-title">Download TTGO Free Android Games on Google Play</h2>
         <p class="section-sub">
-          Every card below opens the game’s detail page on TTGO — read the full overview, then jump to Google Play to install.
+          Use <strong>View details</strong> for the full overview, or tap <strong>Download</strong> to open that app on Google Play.
           Free puzzle, casual, offline and brain games for Android phones and tablets.
         </p>
 
         <div class="grid-cards" role="list">
-          <a id="game-card-block_puzzle_jewel_crystal_cat" class="card card-link" role="listitem" href="games/block_puzzle_jewel_crystal_cat/" aria-label="Block Puzzle Jewel Crystal Cat game details">
+          <article class="card" role="listitem">
             <div class="card-top">
               <div class="card-icon">
                 <img id="game-icon-block_puzzle_jewel_crystal_cat" src="https://play-lh.googleusercontent.com/exFadaJKOfD76a9FqhlSyZ6hOqO-JvpOnRi527BvPYcW_RjKUGAAa7KzqzxEVc5183lbEQ7h30sK5s9cogvl_w=w240-h480" alt="Block Puzzle Jewel Crystal Cat - free block puzzle Android game" loading="lazy">
@@ -591,13 +650,16 @@
                 <p>Free block puzzle game with jewel blocks and cute cats. Relaxing brain training for all ages.</p>
               </div>
             </div>
-            <span class="card-cta">
-              View game details
-              <span class="arrow" aria-hidden="true">→</span>
-            </span>
-          </a>
+            <div class="card-actions">
+              <a id="game-card-block_puzzle_jewel_crystal_cat" class="card-cta" href="games/block_puzzle_jewel_crystal_cat/">
+                View details
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a id="game-download-block_puzzle_jewel_crystal_cat" class="btn btn-card-download" href="https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal" target="_blank" rel="noopener noreferrer">Download</a>
+            </div>
+          </article>
 
-          <a id="game-card-offline_100_games_no_wifi" class="card card-link" role="listitem" href="games/offline_100_games_no_wifi/" aria-label="100 Offline Game No Wifi game details">
+          <article class="card" role="listitem">
             <div class="card-top">
               <div class="card-icon">
                 <img id="game-icon-offline_100_games_no_wifi" src="https://play-lh.googleusercontent.com/ypAR0AeQYEf-XXR_rzAN6f5Xvxl1DmrbpGu_Z5Hgcs37gxH5Pzi0BQrvUautmp11YLO7OFbHciADXDkN63_K1w=w240-h480" alt="100 Offline Game No Wifi - free offline games Android" loading="lazy">
@@ -607,13 +669,16 @@
                 <p>100+ offline mini games — play without internet. Perfect casual fun on the go.</p>
               </div>
             </div>
-            <span class="card-cta">
-              View game details
-              <span class="arrow" aria-hidden="true">→</span>
-            </span>
-          </a>
+            <div class="card-actions">
+              <a id="game-card-offline_100_games_no_wifi" class="card-cta" href="games/offline_100_games_no_wifi/">
+                View details
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a id="game-download-offline_100_games_no_wifi" class="btn btn-card-download" href="https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain" target="_blank" rel="noopener noreferrer">Download</a>
+            </div>
+          </article>
 
-          <a id="game-card-winter_blast_puzzle" class="card card-link" role="listitem" href="games/winter_blast_puzzle/" aria-label="Winter Blast Puzzle game details">
+          <article class="card" role="listitem">
             <div class="card-top">
               <div class="card-icon">
                 <img id="game-icon-winter_blast_puzzle" src="https://play-lh.googleusercontent.com/8QIRwD1zq3rti3viND9PBycoe3t6cDM9L6kUWX0JUDEgKxA0iiLq_kQHnZpfjoZAEW88rQteozJ-00OvntC0Qw=w240-h480" alt="Winter Blast Puzzle - free match blast puzzle game Android" loading="lazy">
@@ -623,13 +688,16 @@
                 <p>Match and blast colorful winter blocks. Addictive puzzle levels with snow theme and offline play.</p>
               </div>
             </div>
-            <span class="card-cta">
-              View game details
-              <span class="arrow" aria-hidden="true">→</span>
-            </span>
-          </a>
+            <div class="card-actions">
+              <a id="game-card-winter_blast_puzzle" class="card-cta" href="games/winter_blast_puzzle/">
+                View details
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a id="game-download-winter_blast_puzzle" class="btn btn-card-download" href="https://play.google.com/store/apps/details?id=com.ttgo.winter.blash" target="_blank" rel="noopener noreferrer">Download</a>
+            </div>
+          </article>
 
-          <a id="game-card-cat_color_water_sort_puzzle" class="card card-link" role="listitem" href="games/cat_color_water_sort_puzzle/" aria-label="Cat Color Water Sort Puzzle game details">
+          <article class="card" role="listitem">
             <div class="card-top">
               <div class="card-icon">
                 <img id="game-icon-cat_color_water_sort_puzzle" src="https://play-lh.googleusercontent.com/wijRRvhs3uc-zM0bLs8BG8EIp0oL4Yu7ULtS9OIwEM_QFaCI84i2MNQCD0wDp-gK9XAHeTTwfXV_RYZq2oABsg=w240-h480" alt="Cat Color Water Sort Puzzle - free water sort game Android" loading="lazy">
@@ -639,13 +707,16 @@
                 <p>Sort colored water with adorable cats. A relaxing color puzzle and brain teaser game.</p>
               </div>
             </div>
-            <span class="card-cta">
-              View game details
-              <span class="arrow" aria-hidden="true">→</span>
-            </span>
-          </a>
+            <div class="card-actions">
+              <a id="game-card-cat_color_water_sort_puzzle" class="card-cta" href="games/cat_color_water_sort_puzzle/">
+                View details
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a id="game-download-cat_color_water_sort_puzzle" class="btn btn-card-download" href="https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle" target="_blank" rel="noopener noreferrer">Download</a>
+            </div>
+          </article>
 
-          <a id="game-card-dreamtile_animal_mahjong_match" class="card card-link" role="listitem" href="games/dreamtile_animal_mahjong_match/" aria-label="DreamTile Animal Mahjong Match game details">
+          <article class="card" role="listitem">
             <div class="card-top">
               <div class="card-icon">
                 <img id="game-icon-dreamtile_animal_mahjong_match" src="https://play-lh.googleusercontent.com/PxmmRaR2Lr1cRUwC_swIihtft8xcfqdNj21ZRpbJfYhDVn6A13374Xp-a-eyrYmgVhSklj3DnZol_uNyeJAIJw=w240-h480" alt="DreamTile Animal Mahjong Match - free mahjong tile game Android" loading="lazy">
@@ -655,11 +726,14 @@
                 <p>Connect animal mahjong tiles in this free match puzzle. Fun tile game for casual players.</p>
               </div>
             </div>
-            <span class="card-cta">
-              View game details
-              <span class="arrow" aria-hidden="true">→</span>
-            </span>
-          </a>
+            <div class="card-actions">
+              <a id="game-card-dreamtile_animal_mahjong_match" class="card-cta" href="games/dreamtile_animal_mahjong_match/">
+                View details
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a id="game-download-dreamtile_animal_mahjong_match" class="btn btn-card-download" href="https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2" target="_blank" rel="noopener noreferrer">Download</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -723,6 +797,53 @@
             <p>Game icons and Play Store URLs load from <code>ttgo-config.json</code> so you can update listings without rebuilding.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="container">
+        <h2 class="section-title">Puzzle trends &amp; guides</h2>
+        <p class="section-sub">
+          Short reads on casual Android puzzle trends, offline play, and which genre fits your mood—
+          with links back to free TTGO games on Google Play.
+        </p>
+        <div class="blog-grid">
+          <a class="blog-card" href="blog/puzzle-game-trends-2026/">
+            <div class="badge-row" style="margin:0">
+              <span class="badge">Trends</span>
+            </div>
+            <h3>Puzzle Game Trends 2026</h3>
+            <p>Why short sessions, offline play, and cute themes still dominate mobile puzzle games.</p>
+            <span class="card-cta">Read article <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a class="blog-card" href="blog/why-offline-puzzle-games-are-booming/">
+            <div class="badge-row" style="margin:0">
+              <span class="badge">Offline</span>
+            </div>
+            <h3>Why Offline Puzzle Games Are Booming</h3>
+            <p>No-wifi brain games for travel, weak signal days, and free Android collections.</p>
+            <span class="card-cta">Read article <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a class="blog-card" href="blog/block-puzzle-vs-water-sort-vs-mahjong/">
+            <div class="badge-row" style="margin:0">
+              <span class="badge">Guides</span>
+            </div>
+            <h3>Block Puzzle vs Water Sort vs Mahjong</h3>
+            <p>Pick the casual loop that fits you: place, pour, or pair matching tiles.</p>
+            <span class="card-cta">Read article <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+          <a class="blog-card" href="blog/match-blast-seasonal-puzzle-themes/">
+            <div class="badge-row" style="margin:0">
+              <span class="badge">Design</span>
+            </div>
+            <h3>Match-Blast &amp; Winter Themes</h3>
+            <p>How seasonal boards keep match-blast puzzles cozy, readable, and replayable.</p>
+            <span class="card-cta">Read article <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+        <p style="margin:18px 0 0">
+          <a class="btn" href="blog/">View all blog posts <span class="arrow" aria-hidden="true">→</span></a>
+        </p>
       </div>
     </section>
 
@@ -821,19 +942,12 @@
             setHref('footer-developer-link', cfg.developerPageUrl);
           }
 
-          // Per-game Play Store URL and icon from config.games
+          // Per-game detail + Play Store download URL and icon from config.games
           if (Array.isArray(cfg.games)) {
             cfg.games.forEach(function (g) {
               if (!g || !g.id) return;
-              var linkUrl = g.detailUrl || g.playStoreUrl || cfg.developerPageUrl;
-              if (linkUrl) {
-                setHref('game-card-' + g.id, linkUrl);
-                var card = document.getElementById('game-card-' + g.id);
-                if (card && g.detailUrl) {
-                  card.removeAttribute('target');
-                  card.removeAttribute('rel');
-                }
-              }
+              if (g.detailUrl) setHref('game-card-' + g.id, g.detailUrl);
+              if (g.playStoreUrl) setHref('game-download-' + g.id, g.playStoreUrl);
               if (g.iconUrl) setSrc('game-icon-' + g.id, g.iconUrl);
             });
           }

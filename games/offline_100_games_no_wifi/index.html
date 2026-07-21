@@ -31,24 +31,131 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://ttgo.io.vn/#organization",
+        "name": "AVTFINITY",
+        "alternateName": [
+          "TTGO",
+          "TTGO Games"
+        ],
+        "url": "https://ttgo.io.vn/",
+        "logo": "https://play-lh.googleusercontent.com/ypAR0AeQYEf-XXR_rzAN6f5Xvxl1DmrbpGu_Z5Hgcs37gxH5Pzi0BQrvUautmp11YLO7OFbHciADXDkN63_K1w=w512-h512",
+        "sameAs": [
+          "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "TTGO"
+        }
+      },
+      {
         "@type": "BreadcrumbList",
+        "@id": "https://ttgo.io.vn/games/offline_100_games_no_wifi/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
-          { "@type": "ListItem", "position": 2, "name": "Games", "item": "https://ttgo.io.vn/#featured" },
-          { "@type": "ListItem", "position": 3, "name": "100 Offline Game No Wifi", "item": "https://ttgo.io.vn/games/offline_100_games_no_wifi/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ttgo.io.vn/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Games",
+            "item": "https://ttgo.io.vn/#featured"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "100 Offline Game No Wifi",
+            "item": "https://ttgo.io.vn/games/offline_100_games_no_wifi/"
+          }
         ]
       },
       {
-        "@type": "MobileApplication",
+        "@type": "SoftwareApplication",
+        "@id": "https://ttgo.io.vn/games/offline_100_games_no_wifi/#softwareapplication",
         "name": "100 Offline Game No Wifi",
         "operatingSystem": "Android",
         "applicationCategory": "GameApplication",
-        "description": "Free Android collection of 100+ offline mini games including puzzles and casual brain games playable without Wi-Fi.",
+        "applicationSubCategory": "PuzzleGame",
+        "description": "Download 100 Offline Game No Wifi free on Android: 100+ puzzle and casual mini games playable without internet. Offline brain games from TTGO on Google Play.",
         "image": "https://play-lh.googleusercontent.com/ypAR0AeQYEf-XXR_rzAN6f5Xvxl1DmrbpGu_Z5Hgcs37gxH5Pzi0BQrvUautmp11YLO7OFbHciADXDkN63_K1w=w512-h512",
         "url": "https://ttgo.io.vn/games/offline_100_games_no_wifi/",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "author": { "@type": "Organization", "name": "AVTFINITY" },
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain"
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain",
+        "softwareVersion": "latest",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain"
+        },
+        "author": {
+          "@id": "https://ttgo.io.vn/#organization"
+        },
+        "publisher": {
+          "@id": "https://ttgo.io.vn/#organization"
+        },
+        "creator": {
+          "@id": "https://ttgo.io.vn/#organization"
+        },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "sameAs": [
+          "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain"
+        ],
+        "identifier": "com.PuzzleCollection.tiles.puzzle.Collection.Brain"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ttgo.io.vn/games/offline_100_games_no_wifi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is 100 Offline Game No Wifi free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It is listed as a free Android game on Google Play. As with most free mobile titles, the Play listing may include optional ads or in-app purchases—check the live store page for the latest monetization details before installing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I play without Wi‑Fi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "That is the core positioning: offline-friendly mini games after install. You still need a connection to download the app and typically to fetch updates. Exact offline behavior can vary by version and by individual mini game, so confirm on your device after install."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of game is it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a multi-game collection: dozens of short puzzle and casual mini games bundled in one app so you can switch genres without installing many separate titles. Core play is aimed at offline sessions after you download the package."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who makes 100 Offline Game No Wifi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "100 Offline Game No Wifi is part of the TTGO games lineup associated with AVTFINITY on Google Play. Visit the TTGO site homepage for more free puzzle and casual Android titles from the same catalog."
+            }
+          }
+        ],
+        "about": {
+          "@id": "https://ttgo.io.vn/games/offline_100_games_no_wifi/#softwareapplication"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "TTGO Games",
+          "url": "https://ttgo.io.vn/",
+          "publisher": {
+            "@id": "https://ttgo.io.vn/#organization"
+          }
+        }
       }
     ]
   }
@@ -224,47 +331,18 @@
 
       </article>
 
-      <section style="padding:28px 0 8px">
-        <h2 class="section-title">More TTGO games</h2>
-        <p class="section-sub">Explore other free puzzle and casual Android titles from the same catalog.</p>
-        <div class="grid-cards" role="list">
-          <a class="card card-link" role="listitem" href="../block_puzzle_jewel_crystal_cat/">
-            <div class="card-top">
-              <div class="card-icon">
-                <img src="https://play-lh.googleusercontent.com/exFadaJKOfD76a9FqhlSyZ6hOqO-JvpOnRi527BvPYcW_RjKUGAAa7KzqzxEVc5183lbEQ7h30sK5s9cogvl_w=w240-h480" alt="" loading="lazy" />
-              </div>
-              <div>
-                <h3>Block Puzzle Jewel Crystal Cat</h3>
-                <p>Classic block puzzle with jewel crystal vibes.</p>
-              </div>
-            </div>
-            <span class="card-cta">View game details <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="card card-link" role="listitem" href="../winter_blast_puzzle/">
-            <div class="card-top">
-              <div class="card-icon">
-                <img src="https://play-lh.googleusercontent.com/8QIRwD1zq3rti3viND9PBycoe3t6cDM9L6kUWX0JUDEgKxA0iiLq_kQHnZpfjoZAEW88rQteozJ-00OvntC0Qw=w240-h480" alt="" loading="lazy" />
-              </div>
-              <div>
-                <h3>Winter Blast Puzzle</h3>
-                <p>Match and blast colorful winter blocks.</p>
-              </div>
-            </div>
-            <span class="card-cta">View game details <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-          <a class="card card-link" role="listitem" href="../cat_color_water_sort_puzzle/">
-            <div class="card-top">
-              <div class="card-icon">
-                <img src="https://play-lh.googleusercontent.com/wijRRvhs3uc-zM0bLs8BG8EIp0oL4Yu7ULtS9OIwEM_QFaCI84i2MNQCD0wDp-gK9XAHeTTwfXV_RYZq2oABsg=w240-h480" alt="" loading="lazy" />
-              </div>
-              <div>
-                <h3>Cat Color Water Sort Puzzle</h3>
-                <p>Sort colored water with a cute cat theme.</p>
-              </div>
-            </div>
-            <span class="card-cta">View game details <span class="arrow" aria-hidden="true">→</span></span>
-          </a>
-        </div>
+      <section class="also-like" aria-labelledby="also-like-title">
+        <h2 id="also-like-title" class="section-title">You may also like</h2>
+        <p class="section-sub">More free TTGO puzzle and casual Android games — pick another title to explore.</p>
+        <nav class="also-like-list" aria-label="Related TTGO games">
+          <a class="also-like-item" href="../block_puzzle_jewel_crystal_cat/">Block Puzzle</a>
+          <span class="also-like-sep" aria-hidden="true">↓</span>
+          <a class="also-like-item" href="../dreamtile_animal_mahjong_match/">Mahjong</a>
+          <span class="also-like-sep" aria-hidden="true">↓</span>
+          <a class="also-like-item" href="../cat_color_water_sort_puzzle/">Water Sort</a>
+          <span class="also-like-sep" aria-hidden="true">↓</span>
+          <a class="also-like-item" href="../winter_blast_puzzle/">Winter Blast</a>
+        </nav>
       </section>
     </div>
   </main>
