@@ -2,6 +2,7 @@
   "use strict";
 
   var SIZE = 4;
+  var MERGE_MIN = 3;
   var EPOCH = Date.UTC(2026, 0, 1); // Daily Puzzle #1 = 2026-01-01 UTC
   var DIRS = [
     [0, 1],
@@ -9,6 +10,7 @@
     [0, -1],
     [-1, 0],
   ];
+  var animating = false;
 
   function pad(n) {
     return n < 10 ? "0" + n : String(n);
@@ -84,66 +86,109 @@
     return q;
   }
 
-  /** Merge all connected groups of size >= 2 into a single doubled tile. Returns score gained. */
-  function resolveMerges(board) {
-    var gained = 0;
-    var changed = true;
-    var guard = 0;
+  function wait(ms) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
+  }
 
-    while (changed && guard++ < 40) {
-      changed = false;
-      var visited = {};
+  function cellCenter(r, c) {
+    var cell = document.querySelector('.tu-cell[data-r="' + r + '"][data-c="' + c + '"]');
+    var layer = el("tu-fx");
+    if (!cell || !layer) return null;
+    var cb = cell.getBoundingClientRect();
+    var lb = layer.getBoundingClientRect();
+    return {
+      x: cb.left - lb.left + cb.width / 2,
+      y: cb.top - lb.top + cb.height / 2,
+      w: cb.width,
+      h: cb.height,
+    };
+  }
 
-      for (var r = 0; r < SIZE; r++) {
-        for (var c = 0; c < SIZE; c++) {
-          var val = board[r][c];
-          if (!val) continue;
-          var key = r + "," + c;
-          if (visited[key]) continue;
+  /**
+   * Find connected groups of identical tiles (size >= MERGE_MIN).
+   * Returns merge descriptors; does not mutate board.
+   */
+  function findMergeGroups(board) {
+    var visited = {};
+    var groups = [];
 
-          var stack = [[r, c]];
-          var cells = [];
-          visited[key] = true;
+    for (var r = 0; r < SIZE; r++) {
+      for (var c = 0; c < SIZE; c++) {
+        var val = board[r][c];
+        if (!val) continue;
+        var key = r + "," + c;
+        if (visited[key]) continue;
 
-          while (stack.length) {
-            var cur = stack.pop();
-            cells.push(cur);
-            for (var d = 0; d < DIRS.length; d++) {
-              var nr = cur[0] + DIRS[d][0];
-              var nc = cur[1] + DIRS[d][1];
-              if (nr < 0 || nc < 0 || nr >= SIZE || nc >= SIZE) continue;
-              var nk = nr + "," + nc;
-              if (visited[nk]) continue;
-              if (board[nr][nc] !== val) continue;
-              visited[nk] = true;
-              stack.push([nr, nc]);
-            }
+        var stack = [[r, c]];
+        var cells = [];
+        visited[key] = true;
+
+        while (stack.length) {
+          var cur = stack.pop();
+          cells.push(cur);
+          for (var d = 0; d < DIRS.length; d++) {
+            var nr = cur[0] + DIRS[d][0];
+            var nc = cur[1] + DIRS[d][1];
+            if (nr < 0 || nc < 0 || nr >= SIZE || nc >= SIZE) continue;
+            var nk = nr + "," + nc;
+            if (visited[nk]) continue;
+            if (board[nr][nc] !== val) continue;
+            visited[nk] = true;
+            stack.push([nr, nc]);
           }
-
-          if (cells.length < 2) continue;
-
-          // Keep the "center-most" cell; clear the rest; write doubled value.
-          cells.sort(function (a, b) {
-            var da = Math.abs(a[0] - 1.5) + Math.abs(a[1] - 1.5);
-            var db = Math.abs(b[0] - 1.5) + Math.abs(b[1] - 1.5);
-            return da - db;
-          });
-          var keep = cells[0];
-          var merges = cells.length - 1;
-          // Each extra connected tile doubles once (2+2→4, 2+2+2→8).
-          var result = val;
-          for (var m = 0; m < merges; m++) result *= 2;
-
-          for (var i = 0; i < cells.length; i++) {
-            board[cells[i][0]][cells[i][1]] = 0;
-          }
-          board[keep[0]][keep[1]] = result;
-          gained += result * merges;
-          changed = true;
         }
+
+        if (cells.length < MERGE_MIN) continue;
+
+        cells.sort(function (a, b) {
+          var da = Math.abs(a[0] - 1.5) + Math.abs(a[1] - 1.5);
+          var db = Math.abs(b[0] - 1.5) + Math.abs(b[1] - 1.5);
+          return da - db;
+        });
+
+        var keep = cells[0];
+        var triples = Math.floor(cells.length / MERGE_MIN);
+        var result = val;
+        for (var t = 0; t < triples; t++) result *= 2;
+
+        groups.push({
+          cells: cells,
+          keep: keep,
+          val: val,
+          result: result,
+          score: result * triples,
+        });
       }
     }
 
+    return groups;
+  }
+
+  /** Apply all current merge groups once. Returns score gained. */
+  function applyMergeGroups(board, groups) {
+    var gained = 0;
+    for (var i = 0; i < groups.length; i++) {
+      var g = groups[i];
+      for (var j = 0; j < g.cells.length; j++) {
+        board[g.cells[j][0]][g.cells[j][1]] = 0;
+      }
+      board[g.keep[0]][g.keep[1]] = g.result;
+      gained += g.score;
+    }
+    return gained;
+  }
+
+  /** Resolve all cascades instantly (used on daily start / no FX needed). */
+  function resolveMerges(board) {
+    var gained = 0;
+    var guard = 0;
+    while (guard++ < 40) {
+      var groups = findMergeGroups(board);
+      if (!groups.length) break;
+      gained += applyMergeGroups(board, groups);
+    }
     return gained;
   }
 
@@ -189,7 +234,8 @@
     } catch (e) {}
   }
 
-  function startDaily(forceNew) {
+  function startDaily() {
+    if (animating) return;
     var now = new Date();
     var dateKey = utcDateKey(now);
     var puzzleNo = dailyNumber(now);
@@ -208,10 +254,6 @@
     state.rng = rng;
     state.best = loadBest(dateKey);
 
-    // Seed a few starter tiles so the board isn't empty (deterministic).
-    if (!forceNew) {
-      /* always fresh board for new day / restart with same seed sequence */
-    }
     var starters = 2;
     while (starters--) {
       var empties = [];
@@ -224,7 +266,7 @@
     }
     resolveMerges(state.board);
 
-    render(true);
+    render({ animatePlace: false });
   }
 
   function currentTile() {
@@ -242,11 +284,143 @@
     };
   }
 
-  function placeAt(r, c) {
-    if (state.over) return;
+  function bumpScore(amount) {
+    state.score += amount;
+    if (state.score > state.best) {
+      state.best = state.score;
+      saveBest();
+    }
+    el("tu-score").textContent = String(state.score);
+    el("tu-best").textContent = String(state.best);
+    var scoreEl = el("tu-score");
+    scoreEl.classList.remove("tu-score-pop");
+    void scoreEl.offsetWidth;
+    scoreEl.classList.add("tu-score-pop");
+  }
+
+  function showScoreFloat(r, c, points) {
+    var layer = el("tu-fx");
+    var pos = cellCenter(r, c);
+    if (!layer || !pos) return;
+    var floatEl = document.createElement("div");
+    floatEl.className = "tu-score-float";
+    floatEl.textContent = "+" + points;
+    floatEl.style.left = pos.x + "px";
+    floatEl.style.top = pos.y + "px";
+    layer.appendChild(floatEl);
+    setTimeout(function () {
+      if (floatEl.parentNode) floatEl.parentNode.removeChild(floatEl);
+    }, 700);
+  }
+
+  function spawnBurst(r, c) {
+    var layer = el("tu-fx");
+    var pos = cellCenter(r, c);
+    if (!layer || !pos) return;
+    var burst = document.createElement("div");
+    burst.className = "tu-burst";
+    burst.style.left = pos.x + "px";
+    burst.style.top = pos.y + "px";
+    layer.appendChild(burst);
+    setTimeout(function () {
+      if (burst.parentNode) burst.parentNode.removeChild(burst);
+    }, 500);
+  }
+
+  async function animateMergePass(groups) {
+    var i;
+    var j;
+
+    // Pulse tiles about to merge
+    for (i = 0; i < groups.length; i++) {
+      for (j = 0; j < groups[i].cells.length; j++) {
+        var cell = groups[i].cells[j];
+        var elCell = document.querySelector(
+          '.tu-cell[data-r="' + cell[0] + '"][data-c="' + cell[1] + '"]'
+        );
+        if (elCell) elCell.classList.add("tu-merging");
+      }
+    }
+    await wait(280);
+
+    // Fly non-keep tiles toward keep, then clear
+    var layer = el("tu-fx");
+    var ghosts = [];
+
+    for (i = 0; i < groups.length; i++) {
+      var g = groups[i];
+      var keepPos = cellCenter(g.keep[0], g.keep[1]);
+      if (!keepPos) continue;
+
+      for (j = 0; j < g.cells.length; j++) {
+        var rc = g.cells[j];
+        var isKeep = rc[0] === g.keep[0] && rc[1] === g.keep[1];
+        var from = cellCenter(rc[0], rc[1]);
+        var srcCell = document.querySelector(
+          '.tu-cell[data-r="' + rc[0] + '"][data-c="' + rc[1] + '"] .tu-tile'
+        );
+        if (!from || !srcCell) continue;
+
+        if (isKeep) {
+          srcCell.classList.add("tu-tile-absorb");
+          continue;
+        }
+
+        var ghost = srcCell.cloneNode(true);
+        ghost.className = "tu-tile tu-tile-fly " + tileClass(g.val);
+        ghost.style.left = from.x - from.w / 2 + "px";
+        ghost.style.top = from.y - from.h / 2 + "px";
+        ghost.style.width = from.w + "px";
+        ghost.style.height = from.h + "px";
+        ghost.style.setProperty("--tu-dx", keepPos.x - from.x + "px");
+        ghost.style.setProperty("--tu-dy", keepPos.y - from.y + "px");
+        layer.appendChild(ghost);
+        ghosts.push(ghost);
+        srcCell.style.opacity = "0";
+      }
+    }
+
+    await wait(320);
+
+    for (i = 0; i < ghosts.length; i++) {
+      if (ghosts[i].parentNode) ghosts[i].parentNode.removeChild(ghosts[i]);
+    }
+
+    applyMergeGroups(state.board, groups);
+
+    for (i = 0; i < groups.length; i++) {
+      bumpScore(groups[i].score);
+      showScoreFloat(groups[i].keep[0], groups[i].keep[1], groups[i].score);
+      spawnBurst(groups[i].keep[0], groups[i].keep[1]);
+    }
+
+    render({
+      animatePlace: false,
+      mergeKeeps: groups.map(function (g) {
+        return g.keep[0] + "," + g.keep[1];
+      }),
+    });
+
+    await wait(380);
+  }
+
+  async function runMergeCascades() {
+    var guard = 0;
+    while (guard++ < 40) {
+      var groups = findMergeGroups(state.board);
+      if (!groups.length) break;
+      await animateMergePass(groups);
+    }
+  }
+
+  async function placeAt(r, c) {
+    if (animating || state.over) return;
     if (state.board[r][c]) return;
     var tile = currentTile();
     if (!tile) return;
+
+    animating = true;
+    el("tu-shell").classList.add("is-busy");
 
     pushHistory();
     state.board[r][c] = tile;
@@ -255,26 +429,29 @@
       state.queue = state.queue.concat(makeQueue(state.rng, 24));
     }
     state.moves += 1;
+    bumpScore(tile);
 
-    var gained = resolveMerges(state.board);
-    state.score += gained + tile;
-    if (state.score > state.best) {
-      state.best = state.score;
-      saveBest();
+    render({
+      animatePlace: true,
+      placeAt: r + "," + c,
+    });
+    await wait(180);
+
+    try {
+      await runMergeCascades();
+    } finally {
+      if (countEmpty(state.board) === 0) {
+        state.over = true;
+        saveBest();
+      }
+      render({ animatePlace: false });
+      animating = false;
+      el("tu-shell").classList.remove("is-busy");
     }
-
-    if (countEmpty(state.board) === 0) {
-      // One more merge pass chance already done; if still full → over.
-      state.over = true;
-      saveBest();
-    }
-
-    render(true);
-    flashCell(r, c);
   }
 
   function undoMove() {
-    if (!state.undo) return;
+    if (animating || !state.undo) return;
     var u = state.undo;
     state.board = u.board;
     state.queue = u.queue;
@@ -283,12 +460,11 @@
     state.bombs = u.bombs;
     state.over = u.over;
     state.undo = null;
-    render(true);
+    render({ animatePlace: false });
   }
 
   function useBomb() {
-    if (state.over || state.bombs <= 0) return;
-    // Remove the lowest-value occupied tile (prefer edges).
+    if (animating || state.over || state.bombs <= 0) return;
     var candidates = [];
     for (var r = 0; r < SIZE; r++) {
       for (var c = 0; c < SIZE; c++) {
@@ -305,16 +481,11 @@
     state.board[t[0]][t[1]] = 0;
     state.bombs -= 1;
     state.over = false;
-    render(true);
-    flashCell(t[0], t[1]);
-  }
-
-  function flashCell(r, c) {
-    var cell = document.querySelector('.tu-cell[data-r="' + r + '"][data-c="' + c + '"]');
-    if (!cell) return;
-    cell.classList.remove("flash");
-    void cell.offsetWidth;
-    cell.classList.add("flash");
+    render({ animatePlace: false });
+    var cell = document.querySelector('.tu-cell[data-r="' + t[0] + '"][data-c="' + t[1] + '"]');
+    if (cell) {
+      cell.classList.add("flash");
+    }
   }
 
   function renderMini(value, extraClass) {
@@ -325,7 +496,11 @@
     return span;
   }
 
-  function render(animate) {
+  function render(opts) {
+    opts = opts || {};
+    var mergeKeeps = opts.mergeKeeps || [];
+    var placeAtKey = opts.placeAt || "";
+
     el("tu-puzzle-no").textContent = "#" + state.puzzleNo;
     el("tu-score").textContent = String(state.score);
     el("tu-best").textContent = String(state.best);
@@ -342,6 +517,7 @@
 
     var boardEl = el("tu-board");
     boardEl.innerHTML = "";
+
     for (var r = 0; r < SIZE; r++) {
       for (var c = 0; c < SIZE; c++) {
         var cell = document.createElement("button");
@@ -356,20 +532,28 @@
             : "Empty cell, place " + (cur || "tile")
         );
         if (state.board[r][c]) {
-          var tile = document.createElement("div");
-          tile.className = "tu-tile " + tileClass(state.board[r][c]);
-          if (!animate) tile.style.animation = "none";
-          tile.textContent = state.board[r][c];
-          cell.appendChild(tile);
+          var tileEl = document.createElement("div");
+          var key = r + "," + c;
+          tileEl.className = "tu-tile " + tileClass(state.board[r][c]);
+          if (mergeKeeps.indexOf(key) !== -1) {
+            tileEl.classList.add("tu-tile-born");
+          } else if (opts.animatePlace && key === placeAtKey) {
+            tileEl.classList.add("tu-tile-place");
+          } else if (!opts.animatePlace) {
+            tileEl.style.animation = "none";
+          }
+          tileEl.textContent = state.board[r][c];
+          cell.appendChild(tileEl);
         }
         cell.addEventListener("click", onCellClick);
         boardEl.appendChild(cell);
       }
     }
 
-    el("tu-undo").disabled = !state.undo;
-    el("tu-bomb").disabled = state.over || state.bombs <= 0;
+    el("tu-undo").disabled = animating || !state.undo;
+    el("tu-bomb").disabled = animating || state.over || state.bombs <= 0;
     el("tu-bomb").textContent = "Clear low tile (" + state.bombs + ")";
+    el("tu-restart").disabled = animating;
 
     var shell = el("tu-shell");
     shell.classList.toggle("is-over", state.over);
@@ -394,12 +578,12 @@
 
   function bind() {
     el("tu-restart").addEventListener("click", function () {
-      startDaily(true);
+      startDaily();
     });
     el("tu-undo").addEventListener("click", undoMove);
     el("tu-bomb").addEventListener("click", useBomb);
   }
 
   bind();
-  startDaily(false);
+  startDaily();
 })();
