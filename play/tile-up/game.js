@@ -250,7 +250,7 @@
   };
 
   function storageKey(dateKey) {
-    return "ttgo-tile-up-" + dateKey;
+    return "ttgo-merge-number-up-" + dateKey;
   }
 
   function loadBest(dateKey) {
@@ -278,7 +278,7 @@
     var now = new Date();
     var dateKey = utcDateKey(now);
     var puzzleNo = dailyNumber(now);
-    var seed = hashString("tile-up|" + dateKey);
+    var seed = hashString("merge-number-up|" + dateKey);
     var rng = mulberry32(seed);
 
     state.dateKey = dateKey;
@@ -632,14 +632,16 @@
     var shell = el("tu-shell");
     shell.classList.toggle("is-over", state.over);
 
-    var banner = el("tu-banner");
+    var overlay = el("tu-overlay");
     if (state.over) {
-      banner.classList.add("show");
-      el("tu-banner-title").textContent = "Board full — daily run over";
-      el("tu-banner-text").textContent =
-        "Score " + state.score + " · Best today " + state.best + " · Moves " + state.moves;
+      overlay.classList.add("show");
+      overlay.hidden = false;
+      el("tu-overlay-title").textContent = "You lose";
+      el("tu-overlay-text").textContent =
+        "Board full · Score " + state.score + " · Best " + state.best + " · Moves " + state.moves;
     } else {
-      banner.classList.remove("show");
+      overlay.classList.remove("show");
+      overlay.hidden = true;
     }
   }
 
@@ -652,6 +654,9 @@
 
   function bind() {
     el("tu-restart").addEventListener("click", function () {
+      startDaily();
+    });
+    el("tu-overlay-restart").addEventListener("click", function () {
       startDaily();
     });
     el("tu-undo").addEventListener("click", undoMove);

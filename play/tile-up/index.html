@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tile Up Daily — Free Online Merge Puzzle Game | TTGO Play</title>
-  <meta name="description" content="Play Tile Up Daily free online: place number tiles on a 4x4 board, merge 3 matching tiles, chain cascades, and beat today’s high score. Free browser puzzle game from TTGO—no download." />
-  <meta name="keywords" content="Tile Up Daily, tile up game, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free puzzle game, browser puzzle, play puzzle online, casual brain game, tile merge game, 2048 style merge, match 3 tiles, free online games, no download puzzle, TTGO play, TTGO games, AVTFINITY, daily challenge puzzle, high score puzzle, offline friendly browser game, logic puzzle, mobile browser puzzle, free casual games" />
+  <title>Merge Number Up — Free Online Merge Puzzle Game | TTGO Play</title>
+  <meta name="description" content="Play Merge Number Up free online: place number tiles on a 4x4 board, merge 3+ matching tiles, chain cascades, and beat today’s high score. Free browser puzzle game from TTGO—no download." />
+  <meta name="keywords" content="Merge Number Up, merge number puzzle, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free puzzle game, browser puzzle, play puzzle online, casual brain game, tile merge game, 2048 style merge, match 3 tiles, free online games, no download puzzle, TTGO play, TTGO games, AVTFINITY, daily challenge puzzle, high score puzzle, logic puzzle, mobile browser puzzle, free casual games" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="TTGO / AVTFINITY" />
   <link rel="canonical" href="https://ttgo.io.vn/play/tile-up/" />
-  <meta property="og:title" content="Tile Up Daily — Free Online Merge Puzzle | TTGO Play" />
-  <meta property="og:description" content="Free browser merge puzzle: place tiles, merge 3 matches, chase today’s daily high score." />
+  <meta property="og:title" content="Merge Number Up — Free Online Merge Puzzle | TTGO Play" />
+  <meta property="og:description" content="Free browser merge puzzle: place tiles, merge 3+ matches, chase today’s daily high score." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ttgo.io.vn/play/tile-up/" />
   <link rel="stylesheet" href="/assets/css/site.css" />
@@ -19,8 +19,8 @@
   {
     "@context": "https://schema.org",
     "@type": "VideoGame",
-    "name": "Tile Up Daily",
-    "description": "Free online daily merge puzzle: place number tiles on a 4x4 board, merge 3 identical tiles, chain cascades, and beat today’s high score in your browser.",
+    "name": "Merge Number Up",
+    "description": "Free online daily merge puzzle: place number tiles on a 4x4 board, merge 3+ identical tiles, chain cascades, and beat today’s high score in your browser.",
     "url": "https://ttgo.io.vn/play/tile-up/",
     "genre": ["Puzzle", "Casual", "Brain training"],
     "playMode": "SinglePlayer",
@@ -31,7 +31,7 @@
     },
     "isAccessibleForFree": true,
     "inLanguage": "en",
-    "keywords": "Tile Up Daily, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free browser puzzle"
+    "keywords": "Merge Number Up, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free browser puzzle"
   }
   </script>
 </head>
@@ -62,7 +62,7 @@
         <ol>
           <li><a href="/">Home</a><span class="sep" aria-hidden="true">/</span></li>
           <li><a href="/play/">Play</a><span class="sep" aria-hidden="true">/</span></li>
-          <li aria-current="page">Tile Up Daily</li>
+          <li aria-current="page">Merge Number Up</li>
         </ol>
       </nav>
 
@@ -70,10 +70,10 @@
         <div>
           <div class="badge-row">
             <span class="badge">Daily puzzle</span>
-            <span class="badge">Merge tiles</span>
+            <span class="badge">Merge numbers</span>
             <span class="badge">Free play</span>
           </div>
-          <h1>Tile Up Daily <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
+          <h1>Merge Number Up <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
           <p class="lead">
             Place tiles from the <strong>Next 2</strong> preview. When <strong>3+ tiles of the same value</strong> connect,
             they all merge on the <strong>last tile you placed</strong>.
@@ -86,7 +86,7 @@
         </div>
       </div>
 
-      <div id="tu-shell" class="tu-shell" role="application" aria-label="Tile Up Daily board">
+      <div id="tu-shell" class="tu-shell" role="application" aria-label="Merge Number Up board">
         <div class="tu-hud" aria-live="polite">
           <div class="tu-stat">
             <span class="label">Score</span>
@@ -112,6 +112,13 @@
         <div class="tu-board-wrap">
           <div id="tu-board" class="tu-board" aria-label="4 by 4 board"></div>
           <div id="tu-fx" class="tu-fx" aria-hidden="true"></div>
+          <div id="tu-overlay" class="tu-overlay" role="dialog" aria-modal="true" aria-labelledby="tu-overlay-title" hidden>
+            <div class="tu-overlay-card">
+              <h2 id="tu-overlay-title">Board full</h2>
+              <p id="tu-overlay-text"></p>
+              <button type="button" class="btn btn-primary" id="tu-overlay-restart">Play again</button>
+            </div>
+          </div>
         </div>
 
         <div class="tu-actions">
@@ -120,16 +127,10 @@
           <button type="button" class="btn btn-primary" id="tu-restart">New run</button>
         </div>
 
-        <div id="tu-banner" class="tu-banner" role="status">
-          <h2 id="tu-banner-title">Board full</h2>
-          <p id="tu-banner-text"></p>
-          <button type="button" class="btn btn-primary" onclick="document.getElementById('tu-restart').click()">Play again</button>
-        </div>
-
         <div class="tu-help">
-          <h2>How to play Tile Up Daily</h2>
+          <h2>How to play Merge Number Up</h2>
           <p>
-            <strong>Tile Up Daily</strong> is a free online <strong>merge puzzle</strong> and
+            <strong>Merge Number Up</strong> is a free online <strong>merge puzzle</strong> and
             <strong>number tile puzzle</strong> you can play instantly in your browser—no download and no account.
             Each UTC day shares the same <strong>daily puzzle</strong> seed so everyone faces the same tile sequence
             while chasing a personal high score.
@@ -148,8 +149,8 @@
           <p>
             Use <strong>Undo</strong> to reverse your last move, or spend your one
             <strong>Clear low tile</strong> power-up to remove the smallest tile when the board gets tight.
-            The run ends when every cell is filled and no more placements are possible—then tap
-            <strong>New run</strong> or <strong>Play again</strong> to retry today’s challenge.
+            When the board is full, a lose overlay appears on the board—tap
+            <strong>Play again</strong> or <strong>New run</strong> to retry today’s challenge.
           </p>
           <p>
             Perfect for short sessions: a casual <strong>brain game</strong>, <strong>logic puzzle</strong>, and
@@ -159,7 +160,7 @@
           </p>
           <p class="tu-seo-tags" aria-label="Related puzzle keywords">
             Keywords:
-            free puzzle game · merge puzzle online · tile merge game · match 3 tiles · daily puzzle online ·
+            Merge Number Up · free puzzle game · merge puzzle online · tile merge game · match 3 tiles · daily puzzle online ·
             browser puzzle · play puzzle online · number tile puzzle · casual brain game · free online games ·
             no download puzzle · mobile browser puzzle · high score puzzle · TTGO games
           </p>
