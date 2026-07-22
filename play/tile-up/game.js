@@ -107,59 +107,91 @@
   }
 
   /**
-   * Find connected groups of identical tiles (size >= MERGE_MIN).
-   * Returns merge descriptors; does not mutate board.
+   * Exactly 3 same-value adjacent tiles merge into val*2 at keep (last item).
    */
-  function findMergeGroups(board) {
-    var visited = {};
+  function buildTripleMerge(board, keepR, keepC, used) {
+    var val = board[keepR][keepC];
+    var keepKey = keepR + "," + keepC;
+    if (!val || used[keepKey]) return null;
+
+    var queue = [[keepR, keepC]];
+    var seen = {};
+    seen[keepKey] = true;
+    var connected = [];
+
+    while (queue.length) {
+      var cur = queue.shift();
+      connected.push(cur);
+      for (var d = 0; d < DIRS.length; d++) {
+        var nr = cur[0] + DIRS[d][0];
+        var nc = cur[1] + DIRS[d][1];
+        if (nr < 0 || nc < 0 || nr >= SIZE || nc >= SIZE) continue;
+        var nk = nr + "," + nc;
+        if (seen[nk] || used[nk]) continue;
+        if (board[nr][nc] !== val) continue;
+        seen[nk] = true;
+        queue.push([nr, nc]);
+      }
+    }
+
+    if (connected.length < MERGE_MIN) return null;
+
+    var cells = connected.slice(0, MERGE_MIN);
+    for (var i = 0; i < cells.length; i++) {
+      used[cells[i][0] + "," + cells[i][1]] = true;
+    }
+
+    return {
+      cells: cells,
+      keep: [keepR, keepC],
+      val: val,
+      result: val * 2,
+      score: val * 2,
+    };
+  }
+
+  /**
+   * Same value only. Need 3 adjacent tiles.
+   * preferredKeep = last placed / last merge result — merged tile appears there.
+   */
+  function findMergeGroups(board, preferredKeep) {
+    var used = {};
     var groups = [];
+
+    if (preferredKeep) {
+      var first = buildTripleMerge(board, preferredKeep[0], preferredKeep[1], used);
+      if (first) groups.push(first);
+    }
 
     for (var r = 0; r < SIZE; r++) {
       for (var c = 0; c < SIZE; c++) {
+        if (!board[r][c] || used[r + "," + c]) continue;
+
         var val = board[r][c];
-        if (!val) continue;
-        var key = r + "," + c;
-        if (visited[key]) continue;
-
-        var stack = [[r, c]];
-        var cells = [];
-        visited[key] = true;
-
-        while (stack.length) {
-          var cur = stack.pop();
-          cells.push(cur);
+        var queue = [[r, c]];
+        var seen = {};
+        seen[r + "," + c] = true;
+        var connected = [];
+        while (queue.length) {
+          var cur = queue.shift();
+          connected.push(cur);
           for (var d = 0; d < DIRS.length; d++) {
             var nr = cur[0] + DIRS[d][0];
             var nc = cur[1] + DIRS[d][1];
             if (nr < 0 || nc < 0 || nr >= SIZE || nc >= SIZE) continue;
             var nk = nr + "," + nc;
-            if (visited[nk]) continue;
+            if (seen[nk] || used[nk]) continue;
             if (board[nr][nc] !== val) continue;
-            visited[nk] = true;
-            stack.push([nr, nc]);
+            seen[nk] = true;
+            queue.push([nr, nc]);
           }
         }
+        if (connected.length < MERGE_MIN) continue;
 
-        if (cells.length < MERGE_MIN) continue;
-
-        cells.sort(function (a, b) {
-          var da = Math.abs(a[0] - 1.5) + Math.abs(a[1] - 1.5);
-          var db = Math.abs(b[0] - 1.5) + Math.abs(b[1] - 1.5);
-          return da - db;
-        });
-
-        var keep = cells[0];
-        var triples = Math.floor(cells.length / MERGE_MIN);
-        var result = val;
-        for (var t = 0; t < triples; t++) result *= 2;
-
-        groups.push({
-          cells: cells,
-          keep: keep,
-          val: val,
-          result: result,
-          score: result * triples,
-        });
+        // Last of the triple = item cuối cùng for leftover groups
+        var keep = connected[MERGE_MIN - 1];
+        var g = buildTripleMerge(board, keep[0], keep[1], used);
+        if (g) groups.push(g);
       }
     }
 
@@ -181,13 +213,15 @@
   }
 
   /** Resolve all cascades instantly (used on daily start / no FX needed). */
-  function resolveMerges(board) {
+  function resolveMerges(board, preferredKeep) {
     var gained = 0;
     var guard = 0;
+    var keep = preferredKeep || null;
     while (guard++ < 40) {
-      var groups = findMergeGroups(board);
+      var groups = findMergeGroups(board, keep);
       if (!groups.length) break;
       gained += applyMergeGroups(board, groups);
+      keep = groups[0] ? groups[0].keep : null;
     }
     return gained;
   }
@@ -404,12 +438,17 @@
     await wait(380);
   }
 
-  async function runMergeCascades() {
+  async function runMergeCascades(triggerR, triggerC) {
     var guard = 0;
+    var keep = [triggerR, triggerC];
     while (guard++ < 40) {
-      var groups = findMergeGroups(state.board);
+      // One merge at a time from the last item, then cascade from its result cell
+      var groups = findMergeGroups(state.board, keep);
       if (!groups.length) break;
-      await animateMergePass(groups);
+      // Animate only the preferred merge first for clear “last item” FX
+      var primary = groups[0];
+      await animateMergePass([primary]);
+      keep = primary.keep;
     }
   }
 
@@ -438,7 +477,7 @@
     await wait(180);
 
     try {
-      await runMergeCascades();
+      await runMergeCascades(r, c);
     } finally {
       if (countEmpty(state.board) === 0) {
         state.over = true;

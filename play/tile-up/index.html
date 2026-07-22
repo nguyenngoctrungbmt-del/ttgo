@@ -75,8 +75,8 @@
           </div>
           <h1>Tile Up Daily <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
           <p class="lead">
-            Place the current tile on an empty cell. Get <strong>3 identical tiles touching</strong>
-            to merge them upward—chain cascades and beat today’s score.
+            Place the current tile on an empty cell. When <strong>3 tiles of the same value</strong> sit next to each other,
+            they merge into the next value <strong>on the last tile you placed</strong>.
           </p>
           <div class="post-meta">
             <span id="tu-date">—</span>
@@ -140,10 +140,11 @@
             and avoid locking low tiles into corners.
           </p>
           <p>
-            Merges need <strong>3 identical tiles touching</strong> (up, down, left, or right—not diagonal).
-            When a group of three or more matching numbers connects, they <strong>merge 3 tiles</strong> into a higher
-            value with a cascade animation and you earn points. Larger clusters still follow the 3-of-a-kind rule and can
-            chain into bigger numbers.
+            Merges need <strong>exactly 3 adjacent tiles with the same value</strong>
+            (up, down, left, or right—not diagonal). Different numbers never merge together.
+            The merged tile appears <strong>on the last tile’s cell</strong> (the one you just placed),
+            doubles in value (for example 2+2+2 → 4), plays a cascade animation, and adds to your score.
+            If that new tile completes another triple of the same value, merges chain from that same spot.
           </p>
           <p>
             Use <strong>Undo</strong> to reverse your last move, or spend your one
