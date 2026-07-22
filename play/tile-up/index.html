@@ -75,8 +75,8 @@
           </div>
           <h1>Tile Up Daily <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
           <p class="lead">
-            Place the current tile on an empty cell. When <strong>3 tiles of the same value</strong> sit next to each other,
-            they merge into the next value <strong>on the last tile you placed</strong>.
+            Place tiles from the <strong>Next 2</strong> preview. When <strong>3+ tiles of the same value</strong> connect,
+            they all merge on the <strong>last tile you placed</strong>.
           </p>
           <div class="post-meta">
             <span id="tu-date">—</span>
@@ -104,7 +104,7 @@
 
         <div class="tu-tray">
           <div>
-            <div class="tu-tray-label">Now / next</div>
+            <div class="tu-tray-label">Next 2</div>
           </div>
           <div class="tu-next-row" id="tu-next" aria-label="Upcoming tiles"></div>
         </div>
@@ -135,16 +135,15 @@
             while chasing a personal high score.
           </p>
           <p>
-            Look at the <strong>Now / next</strong> tray for the current tile and upcoming values. Tap any empty square
-            on the <strong>4×4 board</strong> to place the highlighted tile. Plan ahead: keep space open for bigger merges
-            and avoid locking low tiles into corners.
+            Look at the <strong>Next 2</strong> tray for the upcoming tiles (only two are shown). Tap any empty square
+            on the <strong>4×4 board</strong> to place the first upcoming tile. The tray slides forward after each place.
           </p>
           <p>
-            Merges need <strong>exactly 3 adjacent tiles with the same value</strong>
+            Merges need <strong>at least 3 adjacent tiles with the same value</strong>
             (up, down, left, or right—not diagonal). Different numbers never merge together.
-            The merged tile appears <strong>on the last tile’s cell</strong> (the one you just placed),
-            doubles in value (for example 2+2+2 → 4), plays a cascade animation, and adds to your score.
-            If that new tile completes another triple of the same value, merges chain from that same spot.
+            If <strong>more than 3</strong> matching tiles are connected, <strong>all of them merge</strong>
+            into one higher tile on the <strong>last tile’s cell</strong> (the one you just placed).
+            Example: three 2s become a 4; six 2s can become an 8. Cascades continue from that same spot.
           </p>
           <p>
             Use <strong>Undo</strong> to reverse your last move, or spend your one

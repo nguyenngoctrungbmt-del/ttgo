@@ -56,7 +56,9 @@
 .tu-next-row{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:10px;
+  min-height:52px;
+  overflow:hidden;
 }
 .tu-mini{
   width:48px;
@@ -71,14 +73,63 @@
   box-shadow: 0 8px 18px rgba(0,0,0,.25);
   color:#0b1020;
   box-sizing:border-box;
+  transition: transform .24s ease, opacity .24s ease, outline-color .24s ease;
 }
 .tu-mini.is-current{
   outline:2px solid rgba(255,255,255,.55);
   outline-offset:2px;
   box-shadow: 0 0 0 2px rgba(109,94,246,.35), 0 8px 18px rgba(0,0,0,.25);
 }
-.tu-mini.is-ghost{
-  opacity:.55;
+.tu-mini.is-next{
+  opacity:.7;
+}
+.tu-mini.tu-mini-exit{
+  animation: tu-mini-exit .24s ease forwards;
+}
+.tu-mini.tu-mini-promote{
+  animation: tu-mini-promote .24s ease forwards;
+}
+.tu-mini.tu-mini-enter{
+  animation: tu-mini-enter .28s ease;
+}
+.tu-mini.tu-mini-enter-next{
+  animation: tu-mini-enter-next .32s ease;
+}
+@keyframes tu-mini-exit{
+  to{
+    transform: translateX(-28px) scale(.7);
+    opacity:0;
+  }
+}
+@keyframes tu-mini-promote{
+  from{
+    transform: translateX(0);
+    opacity:.7;
+  }
+  to{
+    transform: translateX(-58px) scale(1);
+    opacity:1;
+  }
+}
+@keyframes tu-mini-enter{
+  from{
+    transform: translateX(18px) scale(.85);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0) scale(1);
+    opacity:1;
+  }
+}
+@keyframes tu-mini-enter-next{
+  from{
+    transform: translateX(24px);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0);
+    opacity:.7;
+  }
 }
 
 .tu-board-wrap{

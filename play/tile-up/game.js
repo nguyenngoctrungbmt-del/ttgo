@@ -107,9 +107,10 @@
   }
 
   /**
-   * Exactly 3 same-value adjacent tiles merge into val*2 at keep (last item).
+   * Same-value adjacent group (>= 3) merges into val*2 at keep (last item).
+   * If more than 3 connected tiles, all of them are consumed.
    */
-  function buildTripleMerge(board, keepR, keepC, used) {
+  function buildGroupMerge(board, keepR, keepC, used) {
     var val = board[keepR][keepC];
     var keepKey = keepR + "," + keepC;
     if (!val || used[keepKey]) return null;
@@ -136,30 +137,34 @@
 
     if (connected.length < MERGE_MIN) return null;
 
-    var cells = connected.slice(0, MERGE_MIN);
+    // Take the whole connected group (3+), result stays on last item (keep)
+    var cells = connected;
     for (var i = 0; i < cells.length; i++) {
       used[cells[i][0] + "," + cells[i][1]] = true;
     }
+
+    var triples = Math.floor(cells.length / MERGE_MIN);
+    var result = val;
+    for (var t = 0; t < triples; t++) result *= 2;
 
     return {
       cells: cells,
       keep: [keepR, keepC],
       val: val,
-      result: val * 2,
-      score: val * 2,
+      result: result,
+      score: result * triples,
     };
   }
 
   /**
-   * Same value only. Need 3 adjacent tiles.
-   * preferredKeep = last placed / last merge result — merged tile appears there.
+   * Same value only. Need >= 3 adjacent tiles; merge all of them at preferredKeep.
    */
   function findMergeGroups(board, preferredKeep) {
     var used = {};
     var groups = [];
 
     if (preferredKeep) {
-      var first = buildTripleMerge(board, preferredKeep[0], preferredKeep[1], used);
+      var first = buildGroupMerge(board, preferredKeep[0], preferredKeep[1], used);
       if (first) groups.push(first);
     }
 
@@ -188,9 +193,9 @@
         }
         if (connected.length < MERGE_MIN) continue;
 
-        // Last of the triple = item cuối cùng for leftover groups
-        var keep = connected[MERGE_MIN - 1];
-        var g = buildTripleMerge(board, keep[0], keep[1], used);
+        // Last tile in the group acts as "item cuối cùng"
+        var keep = connected[connected.length - 1];
+        var g = buildGroupMerge(board, keep[0], keep[1], used);
         if (g) groups.push(g);
       }
     }
@@ -463,17 +468,22 @@
 
     pushHistory();
     state.board[r][c] = tile;
+    state.moves += 1;
+    bumpScore(tile);
+
+    // Place on board first; keep queue UI for shift animation
+    render({
+      animatePlace: true,
+      placeAt: r + "," + c,
+      skipQueue: true,
+    });
+
+    await animateQueueAdvance();
     state.queue.shift();
     if (state.queue.length < 8) {
       state.queue = state.queue.concat(makeQueue(state.rng, 24));
     }
-    state.moves += 1;
-    bumpScore(tile);
-
-    render({
-      animatePlace: true,
-      placeAt: r + "," + c,
-    });
+    renderQueue({ enter: true, enterNext: true });
     await wait(180);
 
     try {
@@ -535,6 +545,34 @@
     return span;
   }
 
+  function renderQueue(opts) {
+    opts = opts || {};
+    var next = el("tu-next");
+    next.innerHTML = "";
+    // Only show the next 2 tiles in the queue
+    if (state.queue[0]) {
+      next.appendChild(
+        renderMini(state.queue[0], "is-current" + (opts.enter ? " tu-mini-enter" : ""))
+      );
+    }
+    if (state.queue[1]) {
+      next.appendChild(
+        renderMini(state.queue[1], "is-next" + (opts.enterNext ? " tu-mini-enter-next" : ""))
+      );
+    }
+  }
+
+  async function animateQueueAdvance() {
+    var row = el("tu-next");
+    var cur = row.querySelector(".is-current");
+    var nxt = row.querySelector(".is-next");
+    if (!cur && !nxt) return;
+
+    if (cur) cur.classList.add("tu-mini-exit");
+    if (nxt) nxt.classList.add("tu-mini-promote");
+    await wait(240);
+  }
+
   function render(opts) {
     opts = opts || {};
     var mergeKeeps = opts.mergeKeeps || [];
@@ -546,17 +584,14 @@
     el("tu-moves").textContent = String(state.moves);
     el("tu-date").textContent = state.dateKey + " UTC";
 
-    var next = el("tu-next");
-    next.innerHTML = "";
-    var cur = currentTile();
-    if (cur) next.appendChild(renderMini(cur, "is-current"));
-    for (var i = 1; i < 4; i++) {
-      if (state.queue[i]) next.appendChild(renderMini(state.queue[i], "is-ghost"));
+    if (!opts.skipQueue) {
+      renderQueue({ enter: !!opts.queueEnter, enterNext: !!opts.queueEnter });
     }
 
     var boardEl = el("tu-board");
     boardEl.innerHTML = "";
 
+    var cur = currentTile();
     for (var r = 0; r < SIZE; r++) {
       for (var c = 0; c < SIZE; c++) {
         var cell = document.createElement("button");
