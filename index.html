@@ -582,10 +582,10 @@
         </div>
         <nav aria-label="Main navigation">
           <ul>
-            <li><a href="#featured">Games</a></li>
+            <li><a href="#featured">Apps</a></li>
+            <li><a href="#play-online">Play</a></li>
             <li><a href="/blog/">Blog</a></li>
             <li><a href="#categories">Categories</a></li>
-            <li><a href="#why">Why TTGO</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </nav>
@@ -612,18 +612,22 @@
             </p>
 
             <div class="hero-actions">
-              <a id="hero-play-link" class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">
+              <a class="btn btn-primary" href="/play/tile-up/">
+                Play Tile Up
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a id="hero-play-link" class="btn" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">
                 View on Google Play
                 <span class="arrow" aria-hidden="true">→</span>
               </a>
-              <a class="btn" href="#featured">
-                See featured games
+              <a class="btn" href="#play-online">
+                Browser games
                 <span class="arrow" aria-hidden="true">↓</span>
               </a>
             </div>
 
             <div class="fineprint">
-              Hero button opens the full AVTFINITY catalog. Each game card has View details plus a Download button to Google Play.
+              Play Tile Up free in your browser, or open Android apps on Google Play from the cards below.
             </div>
           </div>
 
@@ -735,6 +739,30 @@
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="play-online">
+      <div class="container">
+        <h2 class="section-title">Play in your browser</h2>
+        <p class="section-sub">
+          Free web puzzles you can open instantly—no install. Tap a card to start playing.
+        </p>
+        <div class="blog-grid">
+          <a class="blog-card" href="/play/tile-up/">
+            <div class="badge-row" style="margin:0">
+              <span class="badge">Daily puzzle</span>
+              <span class="badge">New</span>
+            </div>
+            <h3>Tile Up Daily</h3>
+            <p>Place number tiles, merge matching groups, and chase today’s high score.</p>
+            <span class="card-cta">Play now <span class="arrow" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+        <p style="margin:18px 0 0">
+          <a class="btn btn-primary" href="/play/tile-up/">Play Tile Up <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn" href="/play/" style="margin-left:10px">All browser games <span class="arrow" aria-hidden="true">→</span></a>
+        </p>
       </div>
     </section>
 
@@ -889,21 +917,24 @@
         <div class="footer-row">
           <div>© <span id="year"></span> TTGO • Free puzzle, offline &amp; casual Android games on Google Play</div>
           <div>
-            Download source: Google Play
-            <a id="footer-developer-link" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">Developer page</a>
+            <a href="/play/tile-up/">Play Tile Up</a>
+            ·
+            <a href="/play/">Browser games</a>
+            ·
+            <a id="footer-developer-link" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">Google Play</a>
           </div>
         </div>
       </div>
     </footer>
   </main>
 
-  <div class="cta-mobile" role="region" aria-label="CTA di Ä‘á»™ng">
+  <div class="cta-mobile" role="region" aria-label="Mobile play CTA">
     <div class="row">
       <div>
-        <b>Discover TTGO Android games</b>
+        <b>Play Tile Up free in browser</b>
       </div>
-      <a id="mobile-play-link" class="btn btn-primary" href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en" target="_blank" rel="noopener">
-        Open Google Play
+      <a class="btn btn-primary" href="/play/tile-up/">
+        Play now
         <span class="arrow" aria-hidden="true">→</span>
       </a>
     </div>
@@ -935,10 +966,9 @@
             if (el) el.src = url;
           }
 
-          // Developer page URL for hero, mobile CTA and footer.
+          // Developer page URL for hero Google Play button and footer.
           if (cfg.developerPageUrl) {
             setHref('hero-play-link', cfg.developerPageUrl);
-            setHref('mobile-play-link', cfg.developerPageUrl);
             setHref('footer-developer-link', cfg.developerPageUrl);
           }
 

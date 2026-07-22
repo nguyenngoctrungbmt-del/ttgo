@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tile Up Daily — Free Browser Merge Puzzle | TTGO Play</title>
+  <meta name="description" content="Play Tile Up Daily free in your browser: place number tiles, merge matching groups, and chase today’s high score. TTGO’s take on the Reddit Tile Up daily puzzle." />
+  <meta name="keywords" content="Tile Up, Tile Up Daily, merge puzzle, number tiles, daily puzzle, play online, TTGO" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/tile-up/" />
+  <meta property="og:title" content="Tile Up Daily — Free Browser Merge Puzzle | TTGO Play" />
+  <meta property="og:description" content="Place tiles, merge matches, beat today’s daily puzzle score." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/tile-up/" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="game.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Tile Up Daily",
+    "description": "Daily place-and-merge number tile puzzle playable free in the browser.",
+    "url": "https://ttgo.io.vn/play/tile-up/",
+    "genre": "Puzzle",
+    "playMode": "SinglePlayer",
+    "gamePlatform": "Web browser",
+    "author": {
+      "@type": "Organization",
+      "name": "TTGO / AVTFINITY"
+    },
+    "isAccessibleForFree": true,
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="/#featured">Apps</a></li>
+            <li><a href="/play/">Play</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li><a href="/play/">Play</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Tile Up Daily</li>
+        </ol>
+      </nav>
+
+      <div class="page-hero" style="grid-template-columns:1fr">
+        <div>
+          <div class="badge-row">
+            <span class="badge">Daily puzzle</span>
+            <span class="badge">Merge tiles</span>
+            <span class="badge">Free play</span>
+          </div>
+          <h1>Tile Up Daily <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
+          <p class="lead">
+            Place the current tile on an empty cell. Connected matching numbers merge upward—
+            clear space, chain merges, and beat today’s score.
+          </p>
+          <div class="post-meta">
+            <span id="tu-date">—</span>
+            <span>·</span>
+            <span>Same daily seed for everyone (UTC)</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="tu-shell" class="tu-shell" role="application" aria-label="Tile Up Daily board">
+        <div class="tu-hud" aria-live="polite">
+          <div class="tu-stat">
+            <span class="label">Score</span>
+            <span class="value" id="tu-score">0</span>
+          </div>
+          <div class="tu-stat">
+            <span class="label">Best today</span>
+            <span class="value" id="tu-best">0</span>
+          </div>
+          <div class="tu-stat">
+            <span class="label">Moves</span>
+            <span class="value" id="tu-moves">0</span>
+          </div>
+        </div>
+
+        <div class="tu-tray">
+          <div>
+            <div class="tu-tray-label">Now / next</div>
+          </div>
+          <div class="tu-next-row" id="tu-next" aria-label="Upcoming tiles"></div>
+        </div>
+
+        <div id="tu-board" class="tu-board" aria-label="4 by 4 board"></div>
+
+        <div class="tu-actions">
+          <button type="button" class="btn" id="tu-undo">Undo</button>
+          <button type="button" class="btn" id="tu-bomb">Clear low tile (1)</button>
+          <button type="button" class="btn btn-primary" id="tu-restart">New run</button>
+        </div>
+
+        <div id="tu-banner" class="tu-banner" role="status">
+          <h2 id="tu-banner-title">Board full</h2>
+          <p id="tu-banner-text"></p>
+          <button type="button" class="btn btn-primary" onclick="document.getElementById('tu-restart').click()">Play again</button>
+        </div>
+
+        <div class="tu-help">
+          <p>
+            <strong>How to play:</strong> Tap an empty square to place the highlighted tile.
+            When <strong>2 or more identical tiles touch</strong> (up/down/left/right), they merge into a higher value
+            and you score. Cascades can chain. The board is full when no empty cells remain—use
+            <strong>Undo</strong> or your one <strong>Clear low tile</strong> power-up wisely.
+          </p>
+          <p>
+            Inspired by Reddit’s <em>Tile Up</em> daily puzzle. This is an original TTGO browser remake for the
+            <a href="/play/">Play</a> category—not an official Reddit embed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div><a href="/play/">All play games</a> · <a href="/#featured">Android apps</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="game.js"></script>
+</body>
+</html>

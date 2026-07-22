@@ -13,6 +13,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ttgo.io.vn/play/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ttgo.io.vn/play/tile-up/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://ttgo.io.vn/games/block_puzzle_jewel_crystal_cat/</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
