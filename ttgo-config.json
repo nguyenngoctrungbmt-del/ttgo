@@ -2,6 +2,26 @@
   "siteUrl": "https://ttgo.io.vn/",
   "developerPageUrl": "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en",
   "brandName": "TTGO",
+  "playGames": [
+    {
+      "id": "tile-up",
+      "name": "Merge Number Up",
+      "path": "play/tile-up/",
+      "categories": ["puzzle", "merge", "daily"],
+      "icon": "play/tile-up/icon.svg",
+      "shortDesc": "Place number tiles, merge 3+ matches, and beat today’s high score.",
+      "badge": "HOT"
+    },
+    {
+      "id": "connect-4",
+      "name": "Connect 4",
+      "path": "play/connect-4/",
+      "categories": ["strategy", "classic", "new"],
+      "icon": "play/connect-4/icon.svg",
+      "shortDesc": "Drop discs and connect four in a row—vs AI or a friend.",
+      "badge": "NEW"
+    }
+  ],
   "games": [
     {
       "id": "block_puzzle_jewel_crystal_cat",

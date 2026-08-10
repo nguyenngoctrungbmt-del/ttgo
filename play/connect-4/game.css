@@ -1,0 +1,218 @@
+/* Connect 4 — scoped game UI */
+.c4-shell{
+  --c4-p1: #F43F5E;
+  --c4-p2: #22C55E;
+  --c4-board: #1a2a6c;
+  --c4-hole: #070A12;
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+.c4-hud{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:10px;
+  margin-bottom:14px;
+}
+.c4-stat{
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px 14px;
+  text-align:center;
+}
+.c4-stat .label{
+  display:block;
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:4px;
+}
+.c4-stat .value{
+  font-size:20px;
+  font-weight:800;
+  font-variant-numeric: tabular-nums;
+}
+.c4-turn-dot{
+  display:inline-block;
+  width:12px; height:12px;
+  border-radius:50%;
+  margin-right:6px;
+  vertical-align:middle;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.2);
+}
+.c4-turn-dot.p1{ background: var(--c4-p1); }
+.c4-turn-dot.p2{ background: var(--c4-p2); }
+
+.c4-modes{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:14px;
+}
+.c4-mode-btn{
+  appearance:none;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color:var(--muted);
+  font-weight:800;
+  font-size:13px;
+  padding:9px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.c4-mode-btn:hover{
+  color:var(--text);
+  border-color: rgba(255,255,255,.24);
+}
+.c4-mode-btn.is-active{
+  color:#081018;
+  background: linear-gradient(135deg, #A78BFA, #34D399);
+  border-color: transparent;
+}
+
+.c4-board-wrap{
+  position:relative;
+  background: linear-gradient(180deg, #2a3f9e, #1a2a6c);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;
+  padding:14px 12px 16px;
+  box-shadow: var(--shadow);
+  user-select:none;
+  overflow:hidden;
+}
+.c4-columns{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap:8px;
+}
+.c4-col{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding:4px 0;
+  border:0;
+  background:transparent;
+  border-radius:14px;
+  cursor:pointer;
+  min-width:0;
+}
+.c4-col:focus-visible{
+  outline:2px solid rgba(167,139,250,.9);
+  outline-offset:2px;
+}
+.c4-col:hover:not(:disabled){
+  background: rgba(255,255,255,.06);
+}
+.c4-col:disabled{
+  cursor:default;
+}
+.c4-cell{
+  aspect-ratio:1;
+  width:100%;
+  border-radius:50%;
+  background: var(--c4-hole);
+  box-shadow: inset 0 4px 10px rgba(0,0,0,.45);
+  position:relative;
+  overflow:visible;
+  z-index:0;
+}
+.c4-cell.is-landing{
+  z-index:2;
+}
+.c4-disc{
+  position:absolute;
+  inset:6%;
+  border-radius:50%;
+  opacity:0;
+  transform: translateY(0);
+  pointer-events:none;
+  box-shadow:
+    inset 0 -4px 8px rgba(0,0,0,.28),
+    inset 0 3px 6px rgba(255,255,255,.28);
+  will-change: transform;
+}
+.c4-disc.p1{ background: radial-gradient(circle at 35% 30%, #fb7185, var(--c4-p1)); }
+.c4-disc.p2{ background: radial-gradient(circle at 35% 30%, #4ade80, var(--c4-p2)); }
+.c4-disc.is-settled{
+  opacity:1;
+  transform: translateY(0);
+}
+.c4-disc.is-dropping{
+  opacity:1;
+  animation: c4-drop var(--c4-dur, .45s) cubic-bezier(.15,.85,.25,1) both;
+}
+.c4-disc.is-win{
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,.85),
+    0 0 18px rgba(255,255,255,.35),
+    inset 0 -4px 8px rgba(0,0,0,.28);
+}
+
+@keyframes c4-drop{
+  0%{
+    transform: translateY(var(--c4-from, -520%));
+  }
+  78%{
+    transform: translateY(6%);
+  }
+  90%{
+    transform: translateY(-3%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.c4-overlay{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background: rgba(7,10,18,.62);
+  border-radius:22px;
+  padding:20px;
+  z-index:2;
+}
+.c4-overlay[hidden]{ display:none !important; }
+.c4-overlay-card{
+  width:min(100%, 320px);
+  text-align:center;
+  background: rgba(12,18,40,.95);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;
+  padding:22px 18px;
+  box-shadow: var(--shadow);
+}
+.c4-overlay-card h2{
+  margin:0 0 8px;
+  font-size:22px;
+}
+.c4-overlay-card p{
+  margin:0 0 16px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.c4-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+  justify-content:center;
+}
+
+.c4-shell.is-busy .c4-col{ pointer-events:none; }
+
+@media (max-width: 420px){
+  .c4-board-wrap{ padding:10px 8px 12px; border-radius:18px; }
+  .c4-columns{ gap:5px; }
+  .c4-col{ gap:5px; }
+  .c4-disc{ inset:8%; }
+  .c4-hud{ grid-template-columns: 1fr 1fr; }
+  .c4-stat:last-child{ grid-column: 1 / -1; }
+}

@@ -6,32 +6,49 @@
   <title>Merge Number Up — Free Online Merge Puzzle Game | TTGO Play</title>
   <meta name="description" content="Play Merge Number Up free online: place number tiles on a 4x4 board, merge 3+ matching tiles, chain cascades, and beat today’s high score. Free browser puzzle game from TTGO—no download." />
   <meta name="keywords" content="Merge Number Up, merge number puzzle, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free puzzle game, browser puzzle, play puzzle online, casual brain game, tile merge game, 2048 style merge, match 3 tiles, free online games, no download puzzle, TTGO play, TTGO games, AVTFINITY, daily challenge puzzle, high score puzzle, logic puzzle, mobile browser puzzle, free casual games" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
   <link rel="canonical" href="https://ttgo.io.vn/play/tile-up/" />
   <meta property="og:title" content="Merge Number Up — Free Online Merge Puzzle | TTGO Play" />
   <meta property="og:description" content="Free browser merge puzzle: place tiles, merge 3+ matches, chase today’s daily high score." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ttgo.io.vn/play/tile-up/" />
-  <link rel="stylesheet" href="/assets/css/site.css" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ttgo.io.vn/play/tile-up/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Merge Number Up — Free Online Merge Puzzle" />
+  <meta name="twitter:description" content="Place tiles, merge 3+ matches, beat today’s high score. Free browser puzzle from TTGO." />
+  <meta name="twitter:image" content="https://ttgo.io.vn/play/tile-up/icon.svg" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
   <link rel="stylesheet" href="game.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "VideoGame",
-    "name": "Merge Number Up",
-    "description": "Free online daily merge puzzle: place number tiles on a 4x4 board, merge 3+ identical tiles, chain cascades, and beat today’s high score in your browser.",
-    "url": "https://ttgo.io.vn/play/tile-up/",
-    "genre": ["Puzzle", "Casual", "Brain training"],
-    "playMode": "SinglePlayer",
-    "gamePlatform": "Web browser",
-    "author": {
-      "@type": "Organization",
-      "name": "TTGO / AVTFINITY"
-    },
-    "isAccessibleForFree": true,
-    "inLanguage": "en",
-    "keywords": "Merge Number Up, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free browser puzzle"
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Merge Number Up", "item": "https://ttgo.io.vn/play/tile-up/" }
+        ]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Merge Number Up",
+        "description": "Free online daily merge puzzle: place number tiles on a 4x4 board, merge 3+ identical tiles, chain cascades, and beat today’s high score in your browser.",
+        "url": "https://ttgo.io.vn/play/tile-up/",
+        "image": "https://ttgo.io.vn/play/tile-up/icon.svg",
+        "genre": ["Puzzle", "Casual", "Brain training"],
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "keywords": "Merge Number Up, merge puzzle, merge 3 tiles, number tile puzzle, daily puzzle online, free browser puzzle"
+      }
+    ]
   }
   </script>
 </head>
@@ -40,16 +57,22 @@
   <header>
     <div class="container">
       <div class="nav">
-        <a class="brand" href="/" aria-label="TTGO home">
+        <a class="brand" href="../../" aria-label="TTGO home">
           <div class="logo" aria-hidden="true"></div>
           <div>TTGO</div>
         </a>
         <nav aria-label="Main navigation">
           <ul>
-            <li><a href="/#featured">Apps</a></li>
-            <li><a href="/play/">Play</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Play</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -60,29 +83,25 @@
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <ol>
-          <li><a href="/">Home</a><span class="sep" aria-hidden="true">/</span></li>
-          <li><a href="/play/">Play</a><span class="sep" aria-hidden="true">/</span></li>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
           <li aria-current="page">Merge Number Up</li>
         </ol>
       </nav>
 
-      <div class="page-hero" style="grid-template-columns:1fr">
-        <div>
-          <div class="badge-row">
-            <span class="badge">Daily puzzle</span>
-            <span class="badge">Merge numbers</span>
-            <span class="badge">Free play</span>
-          </div>
-          <h1>Merge Number Up <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
-          <p class="lead">
-            Place tiles from the <strong>Next 2</strong> preview. When <strong>3+ tiles of the same value</strong> connect,
-            they all merge on the <strong>last tile you placed</strong>.
-          </p>
-          <div class="post-meta">
-            <span id="tu-date">—</span>
-            <span>·</span>
-            <span>Same daily seed for everyone (UTC)</span>
-          </div>
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Daily puzzle</span>
+          <span class="badge">Merge numbers</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Merge Number Up <span id="tu-puzzle-label">Puzzle <span id="tu-puzzle-no">#—</span></span></h1>
+        <p class="lead">
+          Place tiles from the <strong>Next 2</strong> preview. Merge <strong>3+</strong> matching tiles on the last cell you place.
+        </p>
+        <div class="post-meta">
+          <span id="tu-date">—</span>
+          <span>·</span>
+          <span>Same daily seed for everyone (UTC)</span>
         </div>
       </div>
 
@@ -126,46 +145,61 @@
           <button type="button" class="btn" id="tu-bomb">Clear low tile (1)</button>
           <button type="button" class="btn btn-primary" id="tu-restart">New run</button>
         </div>
-
-        <div class="tu-help">
-          <h2>How to play Merge Number Up</h2>
-          <p>
-            <strong>Merge Number Up</strong> is a free online <strong>merge puzzle</strong> and
-            <strong>number tile puzzle</strong> you can play instantly in your browser—no download and no account.
-            Each UTC day shares the same <strong>daily puzzle</strong> seed so everyone faces the same tile sequence
-            while chasing a personal high score.
-          </p>
-          <p>
-            Look at the <strong>Next 2</strong> tray for the upcoming tiles (only two are shown). Tap any empty square
-            on the <strong>4×4 board</strong> to place the first upcoming tile. The tray slides forward after each place.
-          </p>
-          <p>
-            Merges need <strong>at least 3 adjacent tiles with the same value</strong>
-            (up, down, left, or right—not diagonal). Different numbers never merge together.
-            If <strong>more than 3</strong> matching tiles are connected, <strong>all of them merge</strong>
-            into one higher tile on the <strong>last tile’s cell</strong> (the one you just placed).
-            Example: three 2s become a 4; six 2s can become an 8. Cascades continue from that same spot.
-          </p>
-          <p>
-            Use <strong>Undo</strong> to reverse your last move, or spend your one
-            <strong>Clear low tile</strong> power-up to remove the smallest tile when the board gets tight.
-            When the board is full, a lose overlay appears on the board—tap
-            <strong>Play again</strong> or <strong>New run</strong> to retry today’s challenge.
-          </p>
-          <p>
-            Perfect for short sessions: a casual <strong>brain game</strong>, <strong>logic puzzle</strong>, and
-            <strong>daily challenge puzzle</strong> on phone or desktop. Explore more free titles in the
-            <a href="/play/">TTGO Play</a> category, or browse
-            <a href="/#featured">Android puzzle apps</a> from TTGO / AVTFINITY on Google Play.
-          </p>
-          <p class="tu-seo-tags" aria-label="Related puzzle keywords">
-            Keywords:
-            Merge Number Up · free puzzle game · merge puzzle online · tile merge game · match 3 tiles · daily puzzle online ·
-            browser puzzle · play puzzle online · number tile puzzle · casual brain game · free online games ·
-            no download puzzle · mobile browser puzzle · high score puzzle · TTGO games
-          </p>
-        </div>
       </div>
+
+      <article class="game-seo" aria-label="About Merge Number Up">
+        <h2>How to play Merge Number Up</h2>
+        <p>
+          <strong>Merge Number Up</strong> is a free online <strong>merge puzzle</strong> and
+          <strong>number tile puzzle</strong> you can play instantly in your browser—no download and no account.
+          Each UTC day shares the same <strong>daily puzzle</strong> seed so everyone faces the same tile sequence
+          while chasing a personal high score.
+        </p>
+        <p>
+          Look at the <strong>Next 2</strong> tray for the upcoming tiles (only two are shown). Tap any empty square
+          on the <strong>4×4 board</strong> to place the first upcoming tile. The tray slides forward after each place.
+        </p>
+        <p>
+          Merges need <strong>at least 3 adjacent tiles with the same value</strong>
+          (up, down, left, or right—not diagonal). Different numbers never merge together.
+          If <strong>more than 3</strong> matching tiles are connected, <strong>all of them merge</strong>
+          into one higher tile on the <strong>last tile’s cell</strong> (the one you just placed).
+          Example: three 2s become a 4; six 2s can become an 8. Cascades continue from that same spot.
+        </p>
+
+        <h2>Tips for a higher score</h2>
+        <ul>
+          <li>Plan around the <strong>Next 2</strong> preview before you place—avoid blocking your own merges.</li>
+          <li>Use <strong>Undo</strong> after a risky placement; save <strong>Clear low tile</strong> for a nearly full board.</li>
+          <li>Chase cascades: larger connected groups of the same number score more in fewer moves.</li>
+          <li>When the board is full, tap <strong>Play again</strong> or <strong>New run</strong> to retry today’s seed.</li>
+        </ul>
+
+        <h2>Why play Merge Number Up</h2>
+        <p>
+          Perfect for short sessions: a casual <strong>brain game</strong>, <strong>logic puzzle</strong>, and
+          <strong>daily challenge puzzle</strong> on phone or desktop. No install, no login—just open this page and play.
+        </p>
+        <p>
+          Explore more free titles on the <a href="../../">TTGO Play home</a>, or browse
+          <a href="../../apps/">Android puzzle apps</a> from TTGO / AVTFINITY on Google Play.
+        </p>
+
+        <h2>FAQ</h2>
+        <h3>Is Merge Number Up free?</h3>
+        <p>Yes. It is a free browser puzzle with no download and no account required.</p>
+        <h3>Do I need Wi‑Fi?</h3>
+        <p>You need a connection to load the page once; the daily puzzle runs entirely in your browser after that.</p>
+        <h3>Is everyone’s daily puzzle the same?</h3>
+        <p>Yes. Each UTC day uses the same seed so players share the same tile sequence while keeping personal best scores.</p>
+
+        <p class="tu-seo-tags" aria-label="Related puzzle keywords">
+          Keywords:
+          Merge Number Up · free puzzle game · merge puzzle online · tile merge game · match 3 tiles · daily puzzle online ·
+          browser puzzle · play puzzle online · number tile puzzle · casual brain game · free online games ·
+          no download puzzle · mobile browser puzzle · high score puzzle · TTGO games
+        </p>
+      </article>
     </div>
   </main>
 
@@ -173,7 +207,7 @@
     <div class="container">
       <div class="footer-row">
         <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
-        <div><a href="/play/">All play games</a> · <a href="/#featured">Android apps</a></div>
+        <div><a href="../../">All play games</a> · <a href="../../apps/">Android apps</a></div>
       </div>
     </div>
   </footer>

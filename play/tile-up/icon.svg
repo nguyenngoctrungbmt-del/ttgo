@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Merge Number Up">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6D5EF6"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect x="18" y="18" width="40" height="40" rx="10" fill="rgba(255,255,255,.92)"/>
+  <rect x="70" y="18" width="40" height="40" rx="10" fill="rgba(255,255,255,.72)"/>
+  <rect x="18" y="70" width="40" height="40" rx="10" fill="rgba(255,255,255,.72)"/>
+  <rect x="70" y="70" width="40" height="40" rx="10" fill="rgba(255,255,255,.92)"/>
+  <text x="38" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#1B2550">2</text>
+  <text x="90" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#1B2550">2</text>
+  <text x="38" y="98" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#1B2550">2</text>
+  <text x="90" y="98" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#1B2550">4</text>
+</svg>

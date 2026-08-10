@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connect 4 — Free Online Connect Four Game | TTGO Play</title>
+  <meta name="description" content="Play Connect 4 free online: drop discs, connect four in a row, and challenge the AI or a friend. Classic strategy board game in your browser—no download." />
+  <meta name="keywords" content="Connect 4, Connect Four, free Connect 4 online, play Connect Four, strategy board game, 4 in a row, connect four AI, free browser game, classic board game, two player Connect 4, TTGO play" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/connect-4/" />
+  <meta property="og:title" content="Connect 4 — Free Online Connect Four | TTGO Play" />
+  <meta property="og:description" content="Drop discs and connect four in a row. Play vs AI or local 2-player—free in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/connect-4/" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ttgo.io.vn/play/connect-4/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Connect 4 — Free Online Connect Four" />
+  <meta name="twitter:description" content="Play Connect 4 free online vs AI or a friend. Classic 4-in-a-row strategy game from TTGO." />
+  <meta name="twitter:image" content="https://ttgo.io.vn/play/connect-4/icon.svg" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link rel="stylesheet" href="game.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Connect 4", "item": "https://ttgo.io.vn/play/connect-4/" }
+        ]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Connect 4",
+        "description": "Free online Connect Four: drop colored discs on a 7×6 board and connect four in a row. Play against AI or a friend in your browser.",
+        "url": "https://ttgo.io.vn/play/connect-4/",
+        "image": "https://ttgo.io.vn/play/connect-4/icon.svg",
+        "genre": ["Strategy", "Board game", "Casual"],
+        "playMode": ["SinglePlayer", "MultiPlayer"],
+        "gamePlatform": "Web browser",
+        "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "keywords": "Connect 4, Connect Four, 4 in a row, strategy board game, free browser game"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Play</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Connect 4</li>
+        </ol>
+      </nav>
+
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Strategy</span>
+          <span class="badge">Classic</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Connect 4</h1>
+        <p class="lead">
+          Drop a disc into a column. Get <strong>four in a row</strong>—horizontal, vertical, or diagonal—before your opponent.
+        </p>
+      </div>
+
+      <div id="c4-shell" class="c4-shell" role="application" aria-label="Connect 4 board">
+        <div class="c4-modes" role="group" aria-label="Game mode">
+          <button type="button" class="c4-mode-btn is-active" data-mode="ai">vs AI</button>
+          <button type="button" class="c4-mode-btn" data-mode="pvp">2 Players</button>
+        </div>
+
+        <div class="c4-hud" aria-live="polite">
+          <div class="c4-stat">
+            <span class="label">You</span>
+            <span class="value" id="c4-score-p1">0</span>
+          </div>
+          <div class="c4-stat">
+            <span class="label" id="c4-score-p2-label">AI</span>
+            <span class="value" id="c4-score-p2">0</span>
+          </div>
+          <div class="c4-stat">
+            <span class="label">Status</span>
+            <span class="value" id="c4-turn" style="font-size:15px"><span class="c4-turn-dot p1"></span>Your turn</span>
+          </div>
+        </div>
+
+        <div class="c4-board-wrap">
+          <div id="c4-columns" class="c4-columns" aria-label="7 by 6 Connect Four board"></div>
+          <div id="c4-overlay" class="c4-overlay" role="dialog" aria-modal="true" aria-labelledby="c4-overlay-title" hidden>
+            <div class="c4-overlay-card">
+              <h2 id="c4-overlay-title">Game over</h2>
+              <p id="c4-overlay-text"></p>
+              <button type="button" class="btn btn-primary" id="c4-overlay-restart">Play again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="c4-actions">
+          <button type="button" class="btn" id="c4-reset-scores">Reset scores</button>
+          <button type="button" class="btn btn-primary" id="c4-restart">New game</button>
+        </div>
+      </div>
+
+      <article class="game-seo" aria-label="About Connect 4">
+        <h2>How to play Connect 4</h2>
+        <p>
+          <strong>Connect 4</strong> (also called <strong>Connect Four</strong>) is a classic
+          <strong>strategy board game</strong>. Players take turns dropping colored discs into a
+          <strong>7×6 grid</strong>. The disc falls to the lowest empty slot in that column.
+        </p>
+        <p>
+          The first player to form a line of <strong>four discs</strong>—horizontally, vertically, or diagonally—wins.
+          If the board fills with no winner, the game is a draw.
+        </p>
+        <p>
+          On this page you can play <strong>vs AI</strong> or <strong>2 Players</strong> on the same device.
+          Tap a column (or press keys <strong>1–7</strong>) to drop your disc. Red is always Player 1; green is the AI or Player 2.
+        </p>
+
+        <h2>Tips to win</h2>
+        <ul>
+          <li>Control the <strong>center column</strong>—it creates the most winning lines.</li>
+          <li>Watch for forks: setups that threaten two fours at once are hard to block.</li>
+          <li>Block your opponent’s three-in-a-row immediately, even if you wanted another column.</li>
+          <li>Against the AI, force it to respond while you build a second threat.</li>
+        </ul>
+
+        <h2>Why play Connect 4 on TTGO</h2>
+        <p>
+          Instant play in your browser—no download, no account. Perfect for a quick
+          <strong>brain game</strong>, a casual duel with a friend, or practicing
+          <strong>4 in a row</strong> strategy against the computer.
+        </p>
+        <p>
+          Explore more free titles on the <a href="../../">TTGO Play home</a>, or browse
+          <a href="../../apps/">Android puzzle apps</a> from TTGO / AVTFINITY on Google Play.
+        </p>
+
+        <h2>FAQ</h2>
+        <h3>Is Connect 4 free?</h3>
+        <p>Yes. This Connect Four game is free to play in your browser with no download.</p>
+        <h3>Can I play with a friend?</h3>
+        <p>Yes. Switch to <strong>2 Players</strong> mode for local hot-seat play on the same device.</p>
+        <h3>Does the AI cheat?</h3>
+        <p>No. The AI uses standard Connect Four strategy (wins, blocks, and lookahead)—same rules as you.</p>
+
+        <p class="tu-seo-tags" aria-label="Related keywords">
+          Keywords:
+          Connect 4 · Connect Four · free Connect 4 online · play Connect Four · 4 in a row ·
+          strategy board game · connect four AI · two player Connect 4 · free browser game ·
+          classic board game · TTGO games
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div><a href="../../">All play games</a> · <a href="../../apps/">Android apps</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="game.js"></script>
+</body>
+</html>
