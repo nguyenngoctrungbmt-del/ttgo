@@ -944,6 +944,12 @@ footer{
   color:rgba(234,240,255,.5);
 }
 
+.play-gplay-promo{
+  display:flex;
+  justify-content:center;
+  margin:0 auto 24px;
+  max-width:520px;
+}
 .play-compact-hero{
   padding:18px 0 12px;
 }

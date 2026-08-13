@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minesweeper — Free Online Mine Sweeper Game | TTGO Play</title>
+  <meta name="description" content="Play Minesweeper free online: flag mines, reveal safe squares, and clear the board. Classic puzzle logic game in your browser—Easy, Medium, and Hard modes." />
+  <meta name="keywords" content="Minesweeper, mine sweeper, free Minesweeper online, play Minesweeper, logic puzzle, flag mines, classic puzzle game, free browser game, TTGO play" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/minesweeper/" />
+  <meta property="og:title" content="Minesweeper — Free Online Mine Sweeper | TTGO Play" />
+  <meta property="og:description" content="Flag mines and clear the board. Classic Minesweeper with Easy, Medium, and Hard modes—free in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/minesweeper/" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ttgo.io.vn/play/minesweeper/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Minesweeper — Free Online Mine Sweeper" />
+  <meta name="twitter:description" content="Play Minesweeper free online. Classic logic puzzle from TTGO." />
+  <meta name="twitter:image" content="https://ttgo.io.vn/play/minesweeper/icon.svg" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link rel="stylesheet" href="game.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Minesweeper", "item": "https://ttgo.io.vn/play/minesweeper/" }
+        ]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Minesweeper",
+        "description": "Free online Minesweeper: reveal safe squares, flag hidden mines, and clear the board. Easy, Medium, and Hard modes in your browser.",
+        "url": "https://ttgo.io.vn/play/minesweeper/",
+        "image": "https://ttgo.io.vn/play/minesweeper/icon.svg",
+        "genre": ["Puzzle", "Logic", "Casual"],
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "keywords": "Minesweeper, mine sweeper, logic puzzle, free browser game"
+      }
+    ]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Play</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Minesweeper</li>
+        </ol>
+      </nav>
+
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Logic</span>
+          <span class="badge">Classic</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Minesweeper</h1>
+        <p class="lead">
+          Reveal safe squares and <strong>flag the mines</strong>. Use the numbers to deduce where bombs hide—clear the board to win.
+        </p>
+      </div>
+
+      <div id="ms-shell" class="ms-shell" role="application" aria-label="Minesweeper board">
+        <div class="ms-modes" role="group" aria-label="Difficulty">
+          <button type="button" class="ms-mode-btn is-active" data-diff="easy">Easy 9×9</button>
+          <button type="button" class="ms-mode-btn" data-diff="medium">Medium 16×16</button>
+          <button type="button" class="ms-mode-btn" data-diff="hard">Hard 30×16</button>
+        </div>
+
+        <div class="ms-hud" aria-live="polite">
+          <div class="ms-stat">
+            <span class="label">Mines left</span>
+            <span class="value" id="ms-mines">10</span>
+          </div>
+          <div class="ms-stat">
+            <span class="label">Time</span>
+            <span class="value" id="ms-timer">0</span>
+          </div>
+          <div class="ms-stat">
+            <span class="label">Status</span>
+            <span class="value" id="ms-status" style="font-size:15px">Ready</span>
+          </div>
+        </div>
+
+        <div class="ms-board-wrap">
+          <div id="ms-board" class="ms-board" aria-label="Minesweeper grid"></div>
+          <div id="ms-overlay" class="ms-overlay" role="dialog" aria-modal="true" aria-labelledby="ms-overlay-title" hidden>
+            <div class="ms-overlay-card">
+              <h2 id="ms-overlay-title">Game over</h2>
+              <p id="ms-overlay-text"></p>
+              <button type="button" class="btn btn-primary" id="ms-overlay-restart">Play again</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="ms-hint">Tap to reveal · Right-click or long-press to flag · Tap a number to chord-open</p>
+
+        <div class="ms-actions">
+          <button type="button" class="btn btn-primary" id="ms-restart">New game</button>
+        </div>
+      </div>
+
+      <div class="play-gplay-promo">
+        <a class="btn btn-gplay" href="https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain" target="_blank" rel="noopener noreferrer">
+          100 Offline Games on Google Play
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <article class="game-seo" aria-label="About Minesweeper">
+        <h2>How to play Minesweeper</h2>
+        <p>
+          <strong>Minesweeper</strong> is a classic <strong>logic puzzle</strong>.
+          Hidden mines sit on the grid. Tap a square to reveal it.
+          If it is safe, a number shows how many mines touch that square (including diagonals).
+          An empty square auto-opens its neighbors.
+        </p>
+        <p>
+          <strong>Right-click</strong> (or <strong>long-press</strong> on mobile) to place a flag on a suspected mine.
+          When the flags around a number match its value, tap the number to open the rest—called a <strong>chord</strong>.
+        </p>
+        <p>
+          Win by revealing every non-mine square. Hit a mine and the run ends.
+          Choose <strong>Easy</strong> (9×9), <strong>Medium</strong> (16×16), or <strong>Hard</strong> (30×16).
+          Your first click is always safe.
+        </p>
+
+        <h2>Tips to win</h2>
+        <ul>
+          <li>Start from corners and edges—fewer neighbors means easier deductions.</li>
+          <li>If a 1 touches only one hidden square, that square must be a mine.</li>
+          <li>Flag confidently, then use chord clicks to speed up clearing.</li>
+          <li>When two numbers overlap, compare what they share to find forced safe cells.</li>
+        </ul>
+
+        <h2>Why play Minesweeper on TTGO</h2>
+        <p>
+          Instant play in your browser—no download, no account.
+          A perfect <strong>brain game</strong> for quick logic training on desktop or mobile.
+        </p>
+        <p>
+          Explore more free titles on the <a href="../../">TTGO Play home</a>, or browse
+          <a href="../../apps/">Android puzzle apps</a> from TTGO / AVTFINITY on Google Play.
+        </p>
+
+        <h2>FAQ</h2>
+        <h3>Is Minesweeper free?</h3>
+        <p>Yes. This Minesweeper game is free to play in your browser with no download.</p>
+        <h3>How do I flag on mobile?</h3>
+        <p>Long-press a square to toggle a flag. Tap normally to reveal.</p>
+        <h3>Is the first click safe?</h3>
+        <p>Yes. Mines are placed after your first reveal, keeping that square and its neighbors clear.</p>
+
+        <p class="tu-seo-tags" aria-label="Related keywords">
+          Keywords:
+          Minesweeper · mine sweeper · free Minesweeper online · play Minesweeper ·
+          logic puzzle · flag mines · classic puzzle game · free browser game · TTGO games
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div><a href="../../">All play games</a> · <a href="../../apps/">Android apps</a>
+          ·
+          <a href="../../privacy/">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="game.js"></script>
+</body>
+</html>

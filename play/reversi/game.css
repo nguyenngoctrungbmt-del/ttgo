@@ -1,0 +1,199 @@
+/* Reversi — scoped game UI */
+.rev-shell{
+  --rev-black: #0F172A;
+  --rev-white: #F8FAFC;
+  --rev-board: #15803D;
+  --rev-valid: rgba(250,204,21,.45);
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+.rev-hud{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:10px;
+  margin-bottom:14px;
+}
+.rev-stat{
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px 14px;
+  text-align:center;
+}
+.rev-stat .label{
+  display:block;
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:4px;
+}
+.rev-stat .value{
+  font-size:20px;
+  font-weight:800;
+  font-variant-numeric: tabular-nums;
+}
+.rev-turn-dot{
+  display:inline-block;
+  width:12px; height:12px;
+  border-radius:50%;
+  margin-right:6px;
+  vertical-align:middle;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.2);
+}
+.rev-turn-dot.black{ background: var(--rev-black); }
+.rev-turn-dot.white{ background: var(--rev-white); }
+
+.rev-modes{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:14px;
+}
+.rev-mode-btn{
+  appearance:none;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color:var(--muted);
+  font-weight:800;
+  font-size:13px;
+  padding:9px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.rev-mode-btn:hover{
+  color:var(--text);
+  border-color: rgba(255,255,255,.24);
+}
+.rev-mode-btn.is-active{
+  color:#081018;
+  background: linear-gradient(135deg, #A78BFA, #34D399);
+  border-color: transparent;
+}
+
+.rev-board-wrap{
+  position:relative;
+  background: linear-gradient(180deg, #166534, var(--rev-board));
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;
+  padding:14px;
+  box-shadow: var(--shadow);
+  user-select:none;
+}
+.rev-board{
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap:4px;
+}
+.rev-cell{
+  aspect-ratio:1;
+  border:0;
+  border-radius:8px;
+  background: rgba(7,10,18,.22);
+  cursor:pointer;
+  position:relative;
+  padding:0;
+  min-width:0;
+}
+.rev-cell:focus-visible{
+  outline:2px solid rgba(167,139,250,.9);
+  outline-offset:2px;
+}
+.rev-cell:hover:not(:disabled){
+  background: rgba(255,255,255,.08);
+}
+.rev-cell.is-valid{
+  box-shadow: inset 0 0 0 2px var(--rev-valid);
+}
+.rev-cell.is-valid::after{
+  content:"";
+  position:absolute;
+  inset:32%;
+  border-radius:50%;
+  background: var(--rev-valid);
+  opacity:.85;
+}
+.rev-cell:disabled{
+  cursor:default;
+}
+.rev-disc{
+  position:absolute;
+  inset:8%;
+  border-radius:50%;
+  box-shadow:
+    inset 0 -3px 6px rgba(0,0,0,.35),
+    inset 0 2px 4px rgba(255,255,255,.25);
+}
+.rev-disc.black{
+  background: radial-gradient(circle at 35% 30%, #334155, var(--rev-black));
+}
+.rev-disc.white{
+  background: radial-gradient(circle at 35% 30%, #fff, #CBD5E1);
+}
+.rev-disc.is-new{
+  animation: rev-pop .18s ease-out both;
+}
+.rev-disc.is-flip{
+  animation: rev-flip .28s ease-in-out both;
+}
+
+@keyframes rev-pop{
+  from{ transform: scale(.2); opacity:.4; }
+  to{ transform: scale(1); opacity:1; }
+}
+@keyframes rev-flip{
+  0%{ transform: scale(1); }
+  50%{ transform: scale(.85) rotateY(90deg); }
+  100%{ transform: scale(1) rotateY(0); }
+}
+
+.rev-overlay{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  background: rgba(7,10,18,.62);
+  border-radius:22px;
+  padding:20px;
+  z-index:2;
+}
+.rev-overlay[hidden]{ display:none !important; }
+.rev-overlay-card{
+  width:min(100%, 320px);
+  text-align:center;
+  background: rgba(12,18,40,.95);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;
+  padding:22px 18px;
+  box-shadow: var(--shadow);
+}
+.rev-overlay-card h2{
+  margin:0 0 8px;
+  font-size:22px;
+}
+.rev-overlay-card p{
+  margin:0 0 16px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.rev-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+  justify-content:center;
+}
+
+.rev-shell.is-busy .rev-cell{ pointer-events:none; }
+
+@media (max-width: 420px){
+  .rev-board-wrap{ padding:10px; border-radius:18px; }
+  .rev-board{ gap:3px; }
+  .rev-hud{ grid-template-columns: 1fr 1fr; }
+  .rev-stat:last-child{ grid-column: 1 / -1; }
+}

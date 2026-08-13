@@ -16,9 +16,27 @@
       "id": "connect-4",
       "name": "Connect 4",
       "path": "play/connect-4/",
-      "categories": ["strategy", "classic", "new"],
+      "categories": ["strategy", "classic"],
       "icon": "play/connect-4/icon.svg",
       "shortDesc": "Drop discs and connect four in a row—vs AI or a friend.",
+      "badge": "NEW"
+    },
+    {
+      "id": "reversi",
+      "name": "Reversi",
+      "path": "play/reversi/",
+      "categories": ["strategy", "classic", "new"],
+      "icon": "play/reversi/icon.svg",
+      "shortDesc": "Flip discs on an 8×8 board—classic Othello vs AI or a friend.",
+      "badge": "NEW"
+    },
+    {
+      "id": "color-blink",
+      "name": "Color Blink",
+      "path": "play/color-blink/",
+      "categories": ["puzzle", "new"],
+      "icon": "play/color-blink/icon.svg",
+      "shortDesc": "Watch the blinking colors and repeat the pattern—memory reflex fun.",
       "badge": "NEW"
     }
   ],

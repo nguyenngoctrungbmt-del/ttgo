@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reversi — Free Online Othello Board Game | TTGO Play</title>
+  <meta name="description" content="Play Reversi free online: flip discs, control corners, and outsmart the AI or a friend. Classic Othello strategy board game in your browser—no download." />
+  <meta name="keywords" content="Reversi, Othello, free Reversi online, play Othello, strategy board game, flip discs, Reversi AI, free browser game, classic board game, two player Reversi, TTGO play" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/reversi/" />
+  <meta property="og:title" content="Reversi — Free Online Othello | TTGO Play" />
+  <meta property="og:description" content="Flip discs and capture the board. Play Reversi vs AI or local 2-player—free in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/reversi/" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ttgo.io.vn/play/reversi/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reversi — Free Online Othello" />
+  <meta name="twitter:description" content="Play Reversi free online vs AI or a friend. Classic Othello strategy game from TTGO." />
+  <meta name="twitter:image" content="https://ttgo.io.vn/play/reversi/icon.svg" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link rel="stylesheet" href="game.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Reversi", "item": "https://ttgo.io.vn/play/reversi/" }
+        ]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Reversi",
+        "description": "Free online Reversi (Othello): flip opponent discs by bracketing them on an 8×8 board. Play against AI or a friend in your browser.",
+        "url": "https://ttgo.io.vn/play/reversi/",
+        "image": "https://ttgo.io.vn/play/reversi/icon.svg",
+        "genre": ["Strategy", "Board game", "Casual"],
+        "playMode": ["SinglePlayer", "MultiPlayer"],
+        "gamePlatform": "Web browser",
+        "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "keywords": "Reversi, Othello, flip discs, strategy board game, free browser game"
+      }
+    ]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Play</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Reversi</li>
+        </ol>
+      </nav>
+
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Strategy</span>
+          <span class="badge">Classic</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Reversi</h1>
+        <p class="lead">
+          Place a disc to <strong>flip</strong> opponent pieces. Control the board and finish with the most discs.
+        </p>
+      </div>
+
+      <div id="rev-shell" class="rev-shell" role="application" aria-label="Reversi board">
+        <div class="rev-modes" role="group" aria-label="Game mode">
+          <button type="button" class="rev-mode-btn is-active" data-mode="ai">vs AI</button>
+          <button type="button" class="rev-mode-btn" data-mode="pvp">2 Players</button>
+        </div>
+
+        <div class="rev-hud" aria-live="polite">
+          <div class="rev-stat">
+            <span class="label">Black</span>
+            <span class="value" id="rev-black-count">2</span>
+          </div>
+          <div class="rev-stat">
+            <span class="label" id="rev-white-label">AI</span>
+            <span class="value" id="rev-white-count">2</span>
+          </div>
+          <div class="rev-stat">
+            <span class="label">Status</span>
+            <span class="value" id="rev-turn" style="font-size:15px"><span class="rev-turn-dot black"></span>Black turn</span>
+          </div>
+        </div>
+
+        <div class="rev-board-wrap">
+          <div id="rev-board" class="rev-board" aria-label="8 by 8 Reversi board"></div>
+          <div id="rev-overlay" class="rev-overlay" role="dialog" aria-modal="true" aria-labelledby="rev-overlay-title" hidden>
+            <div class="rev-overlay-card">
+              <h2 id="rev-overlay-title">Game over</h2>
+              <p id="rev-overlay-text"></p>
+              <button type="button" class="btn btn-primary" id="rev-overlay-restart">Play again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-actions">
+          <button type="button" class="btn" id="rev-reset-scores">Restart</button>
+          <button type="button" class="btn btn-primary" id="rev-restart">New game</button>
+        </div>
+      </div>
+
+      <div class="play-gplay-promo">
+        <a class="btn btn-gplay" href="https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain" target="_blank" rel="noopener noreferrer">
+          100 Offline Games on Google Play
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <article class="game-seo" aria-label="About Reversi">
+        <h2>How to play Reversi</h2>
+        <p>
+          <strong>Reversi</strong> (also called <strong>Othello</strong>) is played on an
+          <strong>8×8 board</strong> with black and white discs. Black moves first.
+          Tap a highlighted square to place your disc and flip all opponent discs you bracket
+          in a straight line—horizontally, vertically, or diagonally.
+        </p>
+        <p>
+          If you cannot move, your turn is skipped. When neither player can move, the game ends
+          and the player with more discs wins.
+        </p>
+        <p>
+          Play <strong>vs AI</strong> or <strong>2 Players</strong> on the same device.
+          Valid moves glow on the board; black is always Player 1, white is the AI or Player 2.
+        </p>
+
+        <h2>Tips to win</h2>
+        <ul>
+          <li><strong>Corners</strong> cannot be flipped—take them when you safely can.</li>
+          <li>Avoid placing discs next to corners early unless it secures the corner itself.</li>
+          <li>Limit your opponent’s mobility: fewer valid moves for them is often better.</li>
+          <li>Disc count matters most at the end—sometimes sacrificing discs mid-game opens strong flips.</li>
+        </ul>
+
+        <h2>Why play Reversi on TTGO</h2>
+        <p>
+          Instant play in your browser—no download, no account. A quick
+          <strong>brain game</strong> for strategy fans who love classic board games.
+        </p>
+        <p>
+          Explore more free titles on the <a href="../../">TTGO Play home</a>, or browse
+          <a href="../../apps/">Android puzzle apps</a> from TTGO / AVTFINITY on Google Play.
+        </p>
+
+        <h2>FAQ</h2>
+        <h3>Is Reversi the same as Othello?</h3>
+        <p>Yes. Reversi and Othello refer to the same flip-disc strategy game on an 8×8 board.</p>
+        <h3>Is Reversi free?</h3>
+        <p>Yes. This Reversi game is free to play in your browser with no download.</p>
+        <h3>Can I play with a friend?</h3>
+        <p>Yes. Switch to <strong>2 Players</strong> mode for local hot-seat play on the same device.</p>
+
+        <p class="tu-seo-tags" aria-label="Related keywords">
+          Keywords:
+          Reversi · Othello · free Reversi online · play Othello · flip discs ·
+          strategy board game · Reversi AI · two player Reversi · free browser game ·
+          classic board game · TTGO games
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div><a href="../../">All play games</a> · <a href="../../apps/">Android apps</a>
+          ·
+          <a href="../../privacy/">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="game.js"></script>
+</body>
+</html>
