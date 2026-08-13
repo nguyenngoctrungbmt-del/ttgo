@@ -35,6 +35,11 @@
     try { localStorage.setItem(BEST_KEY, String(best)); } catch (e) {}
   }
 
+  function updateScore() {
+    scoreEl.textContent = String(score);
+    saveBest();
+  }
+
   function emptyGrid() {
     var g = [];
     var r, c;
@@ -62,10 +67,10 @@
 
   function spawnTile() {
     var cells = emptyCells();
-    if (!cells.length) return false;
+    if (!cells.length) return null;
     var pick = cells[Math.floor(Math.random() * cells.length)];
     grid[pick[0]][pick[1]] = Math.random() < 0.9 ? 2 : 4;
-    return true;
+    return pick;
   }
 
   function tileClass(v) {
@@ -91,8 +96,7 @@
       }
     }
     tilesEl.innerHTML = html;
-    scoreEl.textContent = String(score);
-    saveBest();
+    updateScore();
   }
 
   function slideLine(line) {
@@ -236,11 +240,10 @@
   }
 
   function handleMove(fn) {
-    var before = cloneGrid(grid);
     var moved = fn();
     if (!moved) return;
-    spawnTile();
-    renderTiles([], []);
+    var spawned = spawnTile();
+    renderTiles(spawned ? [spawned] : [], []);
     if (!won && has2048()) {
       won = true;
       if (!keepPlaying) {

@@ -38,6 +38,33 @@
       "icon": "play/color-blink/icon.svg",
       "shortDesc": "Watch the blinking colors and repeat the pattern—memory reflex fun.",
       "badge": "NEW"
+    },
+    {
+      "id": "push-man",
+      "name": "Push Man",
+      "path": "play/push-man/",
+      "categories": ["puzzle", "classic"],
+      "icon": "play/push-man/icon.svg",
+      "shortDesc": "Classic Sokoban-style push puzzle. Push boxes onto goals.",
+      "badge": "NEW"
+    },
+    {
+      "id": "minesweeper",
+      "name": "Minesweeper",
+      "path": "play/minesweeper/",
+      "categories": ["puzzle", "classic", "new"],
+      "icon": "play/minesweeper/icon.svg",
+      "shortDesc": "Flag mines and clear the board—Easy, Medium, and Hard modes.",
+      "badge": "NEW"
+    },
+    {
+      "id": "2048",
+      "name": "2048",
+      "path": "play/2048/",
+      "categories": ["puzzle", "merge", "classic", "new"],
+      "icon": "play/2048/icon.svg",
+      "shortDesc": "Slide and merge number tiles—reach 2048 on a 4×4 board.",
+      "badge": "NEW"
     }
   ],
   "games": [

@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TTGO Play — Free Online Games: Puzzle, Connect 4 &amp; More</title>
-  <meta name="description" content="Play free online games from TTGO: Merge Number Up, Connect 4, Reversi, Color Blink, and more browser puzzles. Instant play, no download. Also find TTGO Android apps on Google Play by AVTFINITY." />
-  <meta name="keywords" content="TTGO play, free online games, free browser games, play puzzle online, Merge Number Up, Connect 4, Reversi, Othello, Color Blink, memory game, merge puzzle, strategy games, casual games, no download games, TTGO Google Play, AVTFINITY" />
+  <meta name="description" content="Play free online games from TTGO: Merge Number Up, Connect 4, Reversi, 2048, Minesweeper, and more browser puzzles. Instant play, no download. Also find TTGO Android apps on Google Play by AVTFINITY." />
+  <meta name="keywords" content="TTGO play, free online games, free browser games, play puzzle online, Merge Number Up, Connect 4, Reversi, 2048, Minesweeper, Color Blink, memory game, merge puzzle, strategy games, casual games, no download games, TTGO Google Play, AVTFINITY" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="TTGO / AVTFINITY" />
   <meta name="theme-color" content="#070A12" />
@@ -65,9 +65,9 @@
         "about": { "@id": "https://ttgo.io.vn/#organization" }
       },
       {
-        "@type": "ItemList",
+            "@type": "ItemList",
         "name": "TTGO free browser games",
-        "numberOfItems": 4,
+        "numberOfItems": 7,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -92,6 +92,24 @@
             "position": 4,
             "url": "https://ttgo.io.vn/play/color-blink/",
             "name": "Color Blink"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://ttgo.io.vn/play/push-man/",
+            "name": "Push Man"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://ttgo.io.vn/play/minesweeper/",
+            "name": "Minesweeper"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "url": "https://ttgo.io.vn/play/2048/",
+            "name": "2048"
           }
         ]
       }
@@ -222,6 +240,51 @@
             </span>
             <span class="game-tile-name">Color Blink</span>
             <span class="game-tile-desc">Repeat the blinking color pattern—memory reflex fun.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
+            href="play/push-man/"
+            data-id="push-man"
+            data-name="Push Man"
+            data-categories="puzzle classic"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/push-man/icon.svg" alt="Push Man game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">Push Man</span>
+            <span class="game-tile-desc">Classic Sokoban-style push puzzle. Push boxes onto goals.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
+            href="play/minesweeper/"
+            data-id="minesweeper"
+            data-name="Minesweeper"
+            data-categories="puzzle classic new"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/minesweeper/icon.svg" alt="Minesweeper game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">Minesweeper</span>
+            <span class="game-tile-desc">Flag mines and clear the board—3 difficulty modes.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
+            href="play/2048/"
+            data-id="2048"
+            data-name="2048"
+            data-categories="puzzle merge classic new"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/2048/icon.svg" alt="2048 game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">2048</span>
+            <span class="game-tile-desc">Slide and merge numbers—reach the 2048 tile.</span>
           </a>
         </div>
         <p class="portal-empty" id="portal-empty" hidden>No games match your search.</p>

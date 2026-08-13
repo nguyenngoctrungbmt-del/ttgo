@@ -34,42 +34,45 @@
 
 .g2048-board-wrap{
   position:relative;
+  width:100%;
+  aspect-ratio:1;
   background: rgba(187,173,160,.25);
   border:1px solid rgba(255,255,255,.14);
   border-radius:22px;
-  padding:14px;
+  padding:12px;
   box-shadow: var(--shadow);
   touch-action:none;
   user-select:none;
+  box-sizing:border-box;
 }
-.g2048-grid{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:10px;
-  position:relative;
-}
-.g2048-bg-cell{
-  aspect-ratio:1;
-  border-radius:12px;
-  background: rgba(7,10,18,.35);
-}
+.g2048-grid,
 .g2048-tiles{
   position:absolute;
-  inset:14px;
+  inset:12px;
   display:grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap:10px;
+}
+.g2048-bg-cell{
+  border-radius:12px;
+  background: rgba(7,10,18,.35);
+  min-width:0;
+  min-height:0;
+}
+.g2048-tiles{
   pointer-events:none;
+  z-index:1;
 }
 .g2048-tile{
-  aspect-ratio:1;
   border-radius:12px;
   display:grid;
   place-items:center;
   font-weight:800;
-  font-size:clamp(18px, 6vw, 28px);
-  animation: g2048-pop .14s ease-out both;
+  font-size:clamp(16px, 5vw, 28px);
   box-shadow: inset 0 -3px 0 rgba(0,0,0,.12);
+  min-width:0;
+  min-height:0;
 }
 .g2048-tile.is-new{
   animation: g2048-spawn .18s ease-out both;
@@ -78,10 +81,6 @@
   animation: g2048-merge .16s ease-out both;
 }
 
-@keyframes g2048-pop{
-  from{ transform: scale(.85); opacity:.6; }
-  to{ transform: scale(1); opacity:1; }
-}
 @keyframes g2048-spawn{
   from{ transform: scale(0); }
   to{ transform: scale(1); }
@@ -92,16 +91,16 @@
   100%{ transform: scale(1); }
 }
 
-.g2048-tile.v2{ background:#EEE4DA; color:#776E65; font-size:clamp(20px, 6.5vw, 30px); }
-.g2048-tile.v4{ background:#EDE0C8; color:#776E65; font-size:clamp(20px, 6.5vw, 30px); }
+.g2048-tile.v2{ background:#EEE4DA; color:#776E65; font-size:clamp(18px, 5.5vw, 30px); }
+.g2048-tile.v4{ background:#EDE0C8; color:#776E65; font-size:clamp(18px, 5.5vw, 30px); }
 .g2048-tile.v8{ background:#F2B179; color:#F9F6F2; }
 .g2048-tile.v16{ background:#F59563; color:#F9F6F2; }
 .g2048-tile.v32{ background:#F67C5F; color:#F9F6F2; }
 .g2048-tile.v64{ background:#F65E3B; color:#F9F6F2; }
-.g2048-tile.v128{ background:#EDCF72; color:#F9F6F2; font-size:clamp(16px, 5.5vw, 24px); }
-.g2048-tile.v2048{ background:#EDCC61; color:#F9F6F2; font-size:clamp(14px, 5vw, 22px); box-shadow:0 0 18px rgba(237,204,97,.45); }
-.g2048-tile.v4096{ background:#3C3A32; color:#F9F6F2; font-size:clamp(13px, 4.5vw, 20px); }
-.g2048-tile.v8192{ background:#3C3A32; color:#F9F6F2; font-size:clamp(12px, 4vw, 18px); }
+.g2048-tile.v128{ background:#EDCF72; color:#F9F6F2; font-size:clamp(14px, 4.5vw, 24px); }
+.g2048-tile.v2048{ background:#EDCC61; color:#F9F6F2; font-size:clamp(13px, 4vw, 22px); box-shadow:0 0 18px rgba(237,204,97,.45); }
+.g2048-tile.v4096{ background:#3C3A32; color:#F9F6F2; font-size:clamp(12px, 4vw, 20px); }
+.g2048-tile.v8192{ background:#3C3A32; color:#F9F6F2; font-size:clamp(11px, 3.5vw, 18px); }
 
 .g2048-overlay{
   position:absolute;
@@ -133,6 +132,12 @@
   font-size:14px;
   line-height:1.5;
 }
+.g2048-overlay-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
 
 .g2048-actions{
   display:flex;
@@ -151,8 +156,7 @@
 
 @media (max-width: 420px){
   .g2048-board-wrap{ padding:10px; border-radius:18px; }
-  .g2048-grid, .g2048-tiles{ gap:8px; }
-  .g2048-tiles{ inset:10px; }
+  .g2048-grid, .g2048-tiles{ inset:10px; gap:8px; }
   .g2048-hud{ grid-template-columns: 1fr 1fr; }
   .g2048-stat:last-child{ grid-column: 1 / -1; }
 }

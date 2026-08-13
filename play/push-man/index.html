@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Push Man — Free Online Sokoban Puzzle | TTGO Play</title>
+  <meta name="description" content="Play Push Man free online: classic Sokoban box-pushing puzzles in your browser. Push crates onto goals, undo moves, and beat your best score." />
+  <meta name="keywords" content="Push Man, Sokoban, box pushing puzzle, free Sokoban online, warehouse puzzle, push crate game, free browser puzzle, TTGO play" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/push-man/" />
+  <meta property="og:title" content="Push Man — Free Online Sokoban Puzzle | TTGO Play" />
+  <meta property="og:description" content="Push boxes onto goals in this classic Sokoban-style puzzle. Free in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/push-man/" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ttgo.io.vn/play/push-man/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Push Man — Free Online Sokoban Puzzle" />
+  <meta name="twitter:description" content="Classic box-pushing puzzle game free in your browser from TTGO." />
+  <meta name="twitter:image" content="https://ttgo.io.vn/play/push-man/icon.svg" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link rel="stylesheet" href="game.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Push Man", "item": "https://ttgo.io.vn/play/push-man/" }
+        ]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Push Man",
+        "description": "Free online Sokoban puzzle: push boxes onto goal tiles, plan ahead, and clear levels in your browser.",
+        "url": "https://ttgo.io.vn/play/push-man/",
+        "image": "https://ttgo.io.vn/play/push-man/icon.svg",
+        "genre": ["Puzzle", "Casual", "Logic"],
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Web browser",
+        "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "keywords": "Push Man, Sokoban, box pushing puzzle, free browser game"
+      }
+    ]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Play</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Push Man</li>
+        </ol>
+      </nav>
+
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Puzzle</span>
+          <span class="badge">Classic</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Push Man</h1>
+        <p class="lead">
+          Push every crate onto a <strong>goal tile</strong>. Plan your route—boxes only move when pushed, never pulled.
+        </p>
+      </div>
+
+      <div id="pm-shell" class="pm-shell" role="application" aria-label="Push Man">
+        <div class="pm-hud" aria-live="polite">
+          <div class="pm-stat">
+            <span class="label">Moves</span>
+            <span class="value" id="pm-moves">0</span>
+          </div>
+          <div class="pm-stat">
+            <span class="label">Best</span>
+            <span class="value" id="pm-best">—</span>
+          </div>
+          <div class="pm-stat">
+            <span class="label" for="pm-level-select">Level</span>
+            <div class="pm-level-picker">
+              <button type="button" id="pm-prev-level" class="btn" aria-label="Previous level">◀</button>
+              <select id="pm-level-select" aria-label="Select level"></select>
+              <button type="button" id="pm-next-level" class="btn" aria-label="Next level">▶</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pm-board-wrap">
+          <div id="pm-board" class="pm-board" aria-label="Push Man board"></div>
+          <div id="pm-overlay" class="pm-overlay" role="dialog" aria-modal="true" aria-labelledby="pm-overlay-title" hidden>
+            <div class="pm-overlay-card">
+              <h2 id="pm-overlay-title"></h2>
+              <p id="pm-overlay-text"></p>
+              <button type="button" class="btn btn-primary" id="pm-overlay-restart">Play again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pm-actions">
+          <button type="button" id="undo" class="btn">Undo</button>
+          <button type="button" id="restart" class="btn btn-primary">Restart</button>
+        </div>
+
+        <div class="pm-controls" aria-label="On-screen move controls">
+          <button type="button" data-dir="0,-1" aria-label="Move up">↑</button>
+          <div>
+            <button type="button" data-dir="-1,0" aria-label="Move left">←</button>
+            <button type="button" data-dir="1,0" aria-label="Move right">→</button>
+          </div>
+          <button type="button" data-dir="0,1" aria-label="Move down">↓</button>
+        </div>
+      </div>
+
+      <div class="play-gplay-promo">
+        <a class="btn btn-gplay" href="https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain" target="_blank" rel="noopener noreferrer">
+          100 Offline Games on Google Play
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <article class="game-seo" aria-label="About Push Man">
+        <h2>How to play Push Man</h2>
+        <p>
+          <strong>Push Man</strong> is a free online <strong>Sokoban</strong> puzzle. Move the player with
+          arrow keys, WASD, or the on-screen pad. Walk into a box to push it one square—only if the space beyond is empty.
+          Place every box on a goal tile to win the level.
+        </p>
+        <p>
+          Use <strong>Undo</strong> to step back after a bad push, switch levels from the selector, and chase a lower move count on your personal best.
+        </p>
+
+        <h2>Tips to solve levels</h2>
+        <ul>
+          <li>Never push a box into a corner unless it is already on a goal.</li>
+          <li>Work backward from goals when a level feels stuck.</li>
+          <li>Keep a clear lane so you can walk around boxes later.</li>
+          <li>One wrong push can block the whole puzzle—undo early.</li>
+        </ul>
+
+        <h2>FAQ</h2>
+        <h3>Is Push Man free?</h3>
+        <p>Yes. Push Man is free to play in your browser with no download.</p>
+        <h3>Is this the same as Sokoban?</h3>
+        <p>Yes. Push Man follows the classic Sokoban rules: push crates onto goals without pulling them.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div><a href="../../">All play games</a> · <a href="../../apps/">Android apps</a>
+          ·
+          <a href="../../privacy/">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="game.js"></script>
+</body>
+</html>
