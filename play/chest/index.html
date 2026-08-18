@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chest Match — Memory Game</title>
+  <meta name="description" content="Match the hidden chests to find pairs. A simple memory game by TTGO." />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-body">
+  <main class="container">
+    <div class="play-compact-hero">
+      <h1>Chest Match</h1>
+      <p class="lead">Open chests and match pairs — classic memory card game.</p>
+    </div>
+
+    <div class="chest-shell">
+      <div class="chest-hud">
+        <div>Moves: <strong id="chest-moves">0</strong></div>
+        <div>Matches: <strong id="chest-matches">0</strong></div>
+        <div>Time: <strong id="chest-time">0s</strong></div>
+        <div>
+          <button id="chest-restart" class="btn btn-primary">Restart</button>
+        </div>
+        <div>Best: <strong id="chest-best">—</strong></div>
+      </div>
+
+      <div id="chest-board" class="chest-board" role="grid" aria-label="Chest match board"></div>
+
+      <div id="chest-overlay" class="chest-overlay" hidden>
+        <div class="overlay-card">
+          <h2>You win!</h2>
+          <p id="chest-summary"></p>
+          <button id="chest-play-again" class="btn btn-primary">Play again</button>
+        </div>
+      </div>
+    </div>
+
+    <article class="game-seo">
+      <h2>How to play</h2>
+      <p>Tap a chest to reveal its content. Match pairs to clear the board. Try to finish with fewest moves and time.</p>
+    </article>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TTGO Play — Free Online Games: Puzzle, Connect 4 &amp; More</title>
-  <meta name="description" content="Play free online games from TTGO: Merge Number Up, Connect 4, Reversi, 2048, Minesweeper, and more browser puzzles. Instant play, no download. Also find TTGO Android apps on Google Play by AVTFINITY." />
-  <meta name="keywords" content="TTGO play, free online games, free browser games, play puzzle online, Merge Number Up, Connect 4, Reversi, 2048, Minesweeper, Color Blink, memory game, merge puzzle, strategy games, casual games, no download games, TTGO Google Play, AVTFINITY" />
+  <meta name="description" content="Play free online games from TTGO: Merge Number Up, Connect 4, Reversi, Chess, 2048, Minesweeper, and more browser puzzles. Instant play, no download. Also find TTGO Android apps on Google Play by AVTFINITY." />
+  <meta name="keywords" content="TTGO play, free online games, free browser games, play puzzle online, Merge Number Up, Connect 4, Reversi, Chess, 2048, Minesweeper, Color Blink, memory game, merge puzzle, strategy games, casual games, no download games, TTGO Google Play, AVTFINITY" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="TTGO / AVTFINITY" />
   <meta name="theme-color" content="#070A12" />
@@ -65,52 +65,21 @@
         "about": { "@id": "https://ttgo.io.vn/#organization" }
       },
       {
-            "@type": "ItemList",
+        "@type": "ItemList",
         "name": "TTGO free browser games",
-        "numberOfItems": 7,
+        "numberOfItems": 11,
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "url": "https://ttgo.io.vn/play/tile-up/",
-            "name": "Merge Number Up"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "url": "https://ttgo.io.vn/play/connect-4/",
-            "name": "Connect 4"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "url": "https://ttgo.io.vn/play/reversi/",
-            "name": "Reversi"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "url": "https://ttgo.io.vn/play/color-blink/",
-            "name": "Color Blink"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "url": "https://ttgo.io.vn/play/push-man/",
-            "name": "Push Man"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "url": "https://ttgo.io.vn/play/minesweeper/",
-            "name": "Minesweeper"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "url": "https://ttgo.io.vn/play/2048/",
-            "name": "2048"
-          }
+          { "@type": "ListItem", "position": 1, "url": "https://ttgo.io.vn/play/tile-up/", "name": "Merge Number Up" },
+          { "@type": "ListItem", "position": 2, "url": "https://ttgo.io.vn/play/connect-4/", "name": "Connect 4" },
+          { "@type": "ListItem", "position": 3, "url": "https://ttgo.io.vn/play/reversi/", "name": "Reversi" },
+          { "@type": "ListItem", "position": 4, "url": "https://ttgo.io.vn/play/color-blink/", "name": "Color Blink" },
+          { "@type": "ListItem", "position": 5, "url": "https://ttgo.io.vn/play/push-man/", "name": "Push Man" },
+          { "@type": "ListItem", "position": 6, "url": "https://ttgo.io.vn/play/caro/", "name": "Caro" },
+          { "@type": "ListItem", "position": 7, "url": "https://ttgo.io.vn/play/chest/", "name": "Chest Match" },
+          { "@type": "ListItem", "position": 8, "url": "https://ttgo.io.vn/play/defense/", "name": "Defense" },
+          { "@type": "ListItem", "position": 9, "url": "https://ttgo.io.vn/play/minesweeper/", "name": "Minesweeper" },
+          { "@type": "ListItem", "position": 10, "url": "https://ttgo.io.vn/play/2048/", "name": "2048" },
+          { "@type": "ListItem", "position": 11, "url": "https://ttgo.io.vn/play/chess/", "name": "Chess" }
         ]
       }
     ]
@@ -259,6 +228,51 @@
           <a
             class="game-tile"
             role="listitem"
+            href="play/caro/"
+            data-id="caro"
+            data-name="Caro"
+            data-categories="classic strategy"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/caro/icon.svg" alt="Caro game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">Caro</span>
+            <span class="game-tile-desc">Cờ Caro (Gomoku) — nối 5 quân để thắng.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
+            href="play/chest/"
+            data-id="chest"
+            data-name="Chest Match"
+            data-categories="puzzle memory"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/chest/icon.svg" alt="Chest Match game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">Chest Match</span>
+            <span class="game-tile-desc">Match pairs of chests — memory card fun.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
+            href="play/defense/"
+            data-id="defense"
+            data-name="Defense"
+            data-categories="strategy action"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/defense/icon.svg" alt="Defense game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">Defense</span>
+            <span class="game-tile-desc">Turret defense: kill waves, gain XP, choose upgrades.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
             href="play/minesweeper/"
             data-id="minesweeper"
             data-name="Minesweeper"
@@ -285,6 +299,21 @@
             </span>
             <span class="game-tile-name">2048</span>
             <span class="game-tile-desc">Slide and merge numbers—reach the 2048 tile.</span>
+          </a>
+          <a
+            class="game-tile"
+            role="listitem"
+            href="play/chess/"
+            data-id="chess"
+            data-name="Chess"
+            data-categories="strategy classic"
+          >
+            <span class="game-tile-badge">NEW</span>
+            <span class="game-tile-icon">
+              <img src="play/chess/icon.svg" alt="Chess game icon" width="128" height="128" loading="lazy" />
+            </span>
+            <span class="game-tile-name">Chess</span>
+            <span class="game-tile-desc">Classic chess vs AI—2D/3D board and move history.</span>
           </a>
         </div>
         <p class="portal-empty" id="portal-empty" hidden>No games match your search.</p>

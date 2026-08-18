@@ -48,6 +48,34 @@
       "shortDesc": "Classic Sokoban-style push puzzle. Push boxes onto goals.",
       "badge": "NEW"
     },
+    
+    {
+      "id": "caro",
+      "name": "Caro",
+      "path": "play/caro/",
+      "categories": ["classic", "strategy"],
+      "icon": "play/caro/icon.svg",
+      "shortDesc": "Cờ Caro (Gomoku) two-player connect-5 board game.",
+      "badge": "NEW"
+    },
+    {
+      "id": "chest",
+      "name": "Chest Match",
+      "path": "play/chest/",
+      "categories": ["puzzle", "memory"],
+      "icon": "play/chest/icon.svg",
+      "shortDesc": "Match pairs of chests — memory card game.",
+      "badge": "NEW"
+    },
+    {
+      "id": "defense",
+      "name": "Defense",
+      "path": "play/defense/",
+      "categories": ["strategy", "action"],
+      "icon": "play/defense/icon.svg",
+      "shortDesc": "Turret defense: kill waves, gain XP, choose upgrades.",
+      "badge": "NEW"
+    },
     {
       "id": "minesweeper",
       "name": "Minesweeper",
@@ -64,6 +92,15 @@
       "categories": ["puzzle", "merge", "classic", "new"],
       "icon": "play/2048/icon.svg",
       "shortDesc": "Slide and merge number tiles—reach 2048 on a 4×4 board.",
+      "badge": "NEW"
+    },
+    {
+      "id": "chess",
+      "name": "Chess",
+      "path": "play/chess/",
+      "categories": ["strategy", "classic"],
+      "icon": "play/chess/icon.svg",
+      "shortDesc": "Classic chess vs AI—2D and 3D board, move history, and PGN.",
       "badge": "NEW"
     }
   ],

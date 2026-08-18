@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chess — Free Online Chess vs AI | TTGO Play</title>
+  <meta name="description" content="Play Chess free online on TTGO: classic board vs AI, 2D and 3D views, move history, and keyboard controls. No download." />
+  <meta name="keywords" content="Chess, free chess online, play chess, chess vs AI, browser chess, classic board game, TTGO play" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/chess/" />
+  <meta property="og:title" content="Chess — Free Online Chess | TTGO Play" />
+  <meta property="og:description" content="Play classic chess vs AI in your browser—2D/3D board, move replay, and PGN support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/chess/" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ttgo.io.vn/play/chess/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chess — Free Online Chess" />
+  <meta name="twitter:description" content="Classic chess vs AI—free in your browser from TTGO Play." />
+  <meta name="twitter:image" content="https://ttgo.io.vn/play/chess/icon.svg" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link rel="stylesheet" href="css/chess.css" />
+  <link rel="stylesheet" href="skins/gnomechess.css" />
+  <link rel="stylesheet" href="game.css" />
+  <script type="text/ecmascript" src="common/xhr.js"></script>
+  <script type="text/ecmascript" src="chess.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ttgo.io.vn/" },
+          { "@type": "ListItem", "position": 2, "name": "Chess", "item": "https://ttgo.io.vn/play/chess/" }
+        ]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Chess",
+        "description": "Free online chess with AI opponent, 2D and 3D board views, move navigation, and keyboard controls.",
+        "url": "https://ttgo.io.vn/play/chess/",
+        "image": "https://ttgo.io.vn/play/chess/icon.svg",
+        "genre": ["Strategy", "Board game", "Classic"],
+        "playMode": ["SinglePlayer"],
+        "gamePlatform": "Web browser",
+        "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+        "isAccessibleForFree": true,
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+     crossorigin="anonymous"></script>
+  <script>
+  var nVwPressed = false;
+  function pressVwBtn(nBtnId) {
+    if (nVwPressed) { document.getElementById("viewBtn" + nVwPressed).className = ""; }
+    document.getElementById("viewBtn" + nBtnId).className = "pressedBtn";
+    nVwPressed = nBtnId;
+  }
+  function initChess() {
+    chess.useAI(document.chessCtrl1.useAI.checked);
+    chess.setPromotion(document.chessCtrl1.selPromo.selectedIndex);
+    chess.setFrameRate(Math.abs(Number(document.chessCtrl2.frameRateCtrl.value)) || 1000);
+    chess.setSide(document.chessCtrl2.selSide.selectedIndex);
+    chess.useKeyboard(document.chessCtrl2.KeybCtrl.checked);
+    chess.placeById("chessDesk");
+    document.chessCtrl1.plyDepthCtrl.value = "0";
+    chess.setView(1);
+    pressVwBtn(1);
+  }
+  </script>
+</head>
+<body onload="initChess();">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Google Play</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Chess</li>
+        </ol>
+      </nav>
+
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Strategy</span>
+          <span class="badge">Classic</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Chess</h1>
+        <p class="lead">
+          Classic <strong>chess vs AI</strong> in your browser—switch 2D/3D view, replay moves, and use keyboard controls.
+        </p>
+      </div>
+
+      <div class="ch-shell" role="application" aria-label="Chess board">
+        <div class="ch-board-wrap">
+          <form name="chessCtrl1" class="ch-controls" onsubmit="return(false);">
+            <p>
+              <input type="button" name="strtBtn" value="New game" onclick="chess.organize(this.form.plyerClr1[1].checked);" />
+              <span class="configitem"><input id="useAIAsk" name="useAI" type="checkbox" onclick="chess.useAI(this.checked);" checked /> <label for="useAIAsk">Against machine</label></span>
+              <span class="configitem">Promotion: <select onchange="chess.setPromotion(this.selectedIndex);" name="selPromo"><option>Queen</option><option>Rook</option><option>Bishop</option><option>Knight</option></select></span>
+              <span class="configitem">Player: <input type="radio" name="plyerClr1" id="white1" checked /> <label for="white1">White</label> <input type="radio" name="plyerClr1" id="black1" /> <label for="black1">Black</label></span>
+              <span class="configitem">AI depth (Enter): <input type="text" name="plyDepthCtrl" value="0" size="2" onkeypress=";if(event.keyCode===13&&chess.setPlyDepth(this.value)){alert('Ply depth set.' + (Number(this.value) > 2 ? '\nThe game could be slow.' : ' Good game :)'));}" /></span>
+            </p>
+          </form>
+
+          <div id="chessToolBar">
+            <div id="setViewBtns">
+              <span id="viewBtn2" onclick="chess.setView(2);pressVwBtn(2);" onmousedown="return(false);">3D view</span>
+              <span id="viewBtn1" onclick="chess.setView(1);pressVwBtn(1);" onmousedown="return(false);">2D view</span>
+              <span id="viewBtn3" onclick="chess.setView(3);pressVwBtn(3);" onmousedown="return(false);">Both</span>
+            </div>
+            <img class="tbBtn" src="icons/skip-backward.png" alt="" onclick="chess.backToStart();" />
+            <img class="tbBtn" src="icons/backward.png" alt="" onclick="chess.navigate(-10, true);" />
+            <img class="tbBtn" src="icons/reverse-play.png" alt="" onclick="chess.navigate(-1, true);" />
+            <img class="tbBtn" src="icons/stop.png" alt="" onclick="chess.stopMotion();" />
+            <img class="tbBtn" src="icons/play.png" alt="" onclick="chess.navigate(1, true);" />
+            <img class="tbBtn" src="icons/forward.png" alt="" onclick="chess.navigate(10, true);" />
+            <img class="tbBtn" src="icons/skip-forward.png" alt="" onclick="chess.returnToEnd();" />
+            <img class="tbBtn" src="icons/go-previous.png" alt="" onclick="chess.navigate(-1);">
+            <img class="tbBtn" src="icons/go-next.png" alt="" onclick="chess.navigate(1);" />
+            <img class="tbBtn" src="icons/help-hint.png" alt="" onclick="chess.help();" />
+          </div>
+
+          <div id="chessDesk"></div>
+
+          <form name="chessCtrl2" class="ch-controls" onsubmit="return(false);">
+            <p>
+              <span class="configitem">View side: <select onchange="chess.setSide(this.selectedIndex);" name="selSide"><option>White</option><option>Black</option><option selected>Human side</option></select></span>
+              <span class="configitem"><input id="useKeybAsk" name="KeybCtrl" type="checkbox" onclick="chess.useKeyboard(this.checked);" checked /> <label for="useKeybAsk">Enable keyboard</label></span>
+              <span class="configitem">Frame rate: <input type="text" name="frameRateCtrl" value="1000" size="5" onchange="var nMs=new Number(this.value);if(!isNaN(nMs)&&nMs>0){chess.setFrameRate(nMs);}" /> ms</span>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="play-gplay-promo">
+        <a class="btn btn-gplay" href="https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain" target="_blank" rel="noopener noreferrer">
+          100 Offline Games on Google Play
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <article class="game-seo" aria-label="About Chess">
+        <h2>How to play</h2>
+        <p>
+          Click a piece, then click a highlighted square to move. Toggle <strong>Against machine</strong> to play vs AI.
+          Use the toolbar to switch between <strong>2D</strong>, <strong>3D</strong>, or <strong>Both</strong> views and step through move history.
+        </p>
+        <p>
+          Back to more free games on the <a href="../../">TTGO Play home</a>, or browse
+          <a href="../../apps/">Android apps</a> on Google Play.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div>
+          <a href="../../">All play games</a>
+          ·
+          <a href="../../apps/">Android apps</a>
+          ·
+          <a href="../../privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

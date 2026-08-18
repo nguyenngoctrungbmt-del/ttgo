@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cờ Caro — TTGO Play</title>
+  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link rel="stylesheet" href="game.css" />
+  <meta name="description" content="Cờ Caro (Gomoku) hai người chơi - chơi ngay trên trình duyệt." />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../../">Home</a><span class="sep">/</span></li>
+        <li aria-current="page">Cờ Caro</li>
+      </ol>
+    </nav>
+
+    <div class="play-compact-hero">
+      <div class="badge-row">
+        <span class="badge">Classic</span>
+        <span class="badge">Strategy</span>
+      </div>
+      <h1>Cờ Caro</h1>
+      <p class="lead">Hai người chơi: X và O. Ai nối 5 liên tiếp trước sẽ thắng.</p>
+    </div>
+
+    <div class="caro-shell">
+    <div class="caro-hud">
+      <div>Turn: <strong id="caro-turn">X</strong></div>
+      <div><button id="caro-restart" class="btn btn-primary">Restart</button></div>
+      <div>
+        <button id="caro-toggle-ai" class="btn" aria-pressed="true">Play vs AI: On</button>
+      </div>
+    </div>
+
+    <div class="caro-board-wrap">
+      <div id="caro-board" class="caro-board" role="grid" aria-label="Cờ Caro board"></div>
+    </div>
+
+    <div id="caro-overlay" class="caro-overlay" role="dialog" aria-modal="true" aria-labelledby="caro-overlay-title" hidden>
+      <div class="caro-overlay-card">
+        <h2 id="caro-overlay-title"></h2>
+        <p id="caro-overlay-text"></p>
+        <button id="caro-overlay-restart" class="btn btn-primary">Play again</button>
+      </div>
+    </div>
+
+    </div>
+
+    <article class="game-seo">
+      <h2>Luật chơi</h2>
+      <p>Hai người lần lượt đặt quân tại ô trống. Người tạo được năm quân liên tiếp ngang, dọc hoặc chéo sẽ chiến thắng.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">© <span id="year"></span> TTGO</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="game.js"></script>
+</body>
+</html>

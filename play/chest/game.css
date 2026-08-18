@@ -1,0 +1,21 @@
+:root{--accent:#f4c542;--bg:#071024}
+body.game-body{font-family:system-ui,Arial,sans-serif;background:var(--bg);color:#e9eef8;padding:24px}
+.container{max-width:980px;margin:0 auto}
+.play-compact-hero{margin-bottom:12px}
+.play-compact-hero h1{margin:0;font-size:28px}
+.chest-shell{background:#081229;padding:16px;border-radius:8px}
+.chest-hud{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.btn{background:#1b2638;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.btn-primary{background:var(--accent);color:#041225}
+.chest-board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:520px;margin:0 auto}
+.chest-card{background:#0d2236;border-radius:8px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;box-shadow:inset 0 -6px 12px rgba(0,0,0,0.4)}
+.chest-card .face{font-size:32px;opacity:0;transform:scale(0.85);transition:all .18s ease}
+.chest-card.revealed .face{opacity:1;transform:scale(1)}
+.chest-card::after{content:"\1F4E6";position:absolute;font-size:30px;filter:drop-shadow(0 2px 0 rgba(0,0,0,0.6))}
+.chest-card.revealed::after{content:""}
+.chest-card.matched{opacity:.4;cursor:default;pointer-events:none;background:transparent}
+.chest-card.matched::after{content:""}
+.chest-card.matched .face{opacity:0;visibility:hidden}
+.chest-overlay{position:fixed;inset:0;background:rgba(4,6,12,0.7);display:flex;align-items:center;justify-content:center}
+.overlay-card{background:#fff;color:#041225;padding:20px;border-radius:8px;text-align:center;min-width:220px}
+.game-seo{color:#c9d7ee;margin-top:18px}

@@ -1,0 +1,164 @@
+/* TTGO shell overrides for HTML Chess */
+body {
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(109,94,246,.35), transparent 55%),
+    radial-gradient(900px 500px at 90% 20%, rgba(34,197,94,.22), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  color: var(--text);
+}
+
+.ch-shell {
+  max-width: 960px;
+  margin: 0 auto 28px;
+}
+
+.ch-board-wrap {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  overflow: auto;
+}
+
+.ch-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ch-controls p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.ch-shell .configitem {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin: 0;
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.ch-shell .configitem select,
+.ch-shell .configitem input[type="text"] {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(7,10,18,.45);
+  color: var(--text);
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+.ch-shell input[type="button"],
+.ch-shell input[type="button"].strtBtn {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,.14);
+  background: linear-gradient(135deg, rgba(109,94,246,.95), rgba(34,197,94,.85));
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ch-shell input[type="radio"],
+.ch-shell input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+#chessToolBar {
+  width: min(100%, 550px);
+  margin: 12px auto;
+  background: rgba(255,255,255,.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.1);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: center;
+  padding: 8px;
+}
+
+#setViewBtns span {
+  margin: 0 3px;
+  display: inline-block;
+  font: 12px / 13px ui-sans-serif, system-ui, sans-serif;
+  text-shadow: none;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+#setViewBtns span.pressedBtn {
+  background: rgba(109,94,246,.35);
+  border-color: rgba(109,94,246,.55);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+img.tbBtn {
+  cursor: pointer;
+  margin: 2px 4px;
+  filter: brightness(1.15);
+}
+
+#chessDesk {
+  clear: both;
+  width: auto;
+  height: auto;
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#chessCtrlPanel {
+  background: rgba(12,18,40,.95) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+  border-radius: 14px 0 0 0;
+  box-shadow: var(--shadow) !important;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+}
+
+#chessCtrlPanel select,
+#chessCtrlPanel input[type="text"],
+#chessMoves,
+#chessAlgebraic {
+  background: rgba(7,10,18,.55) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+#chessInfo span.intLink,
+span.infoKey,
+span.infoVal {
+  color: var(--text) !important;
+}
+
+a.chessCtrlBtn:link,
+span.chessCtrlBtn {
+  color: var(--text) !important;
+  background: rgba(255,255,255,.08) !important;
+  box-shadow: none !important;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .ch-board-wrap { padding: 10px; }
+  #chessToolBar { width: 100%; }
+  .ch-shell .configitem { font-size: 12px; }
+}

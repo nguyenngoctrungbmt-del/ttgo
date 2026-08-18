@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Defense — Turret Waves</title>
+  <meta name="description" content="Turret defense: kill enemies, earn gold, and buy upgrades from the shop bar while waves keep running." />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-body">
+  <main class="container">
+    <div class="play-compact-hero">
+      <h1>Defense</h1>
+      <p class="lead">Kill enemies for gold. Buy upgrades from the shop below—game never pauses.</p>
+    </div>
+
+    <div class="def-shell">
+      <div class="def-hud">
+        <div>Wave: <strong id="def-wave">1</strong></div>
+        <div>Enemies: <strong id="def-enemies">0</strong></div>
+        <div>Gold: <strong id="def-money">0</strong></div>
+        <div>Turret HP: <strong id="def-hp">100</strong></div>
+        <div><button id="def-start" class="btn btn-primary" type="button">Start Wave</button></div>
+        <div><button id="def-autostart" class="btn" type="button" aria-pressed="false">Auto-start: Off</button></div>
+      </div>
+
+      <div class="def-canvas-wrap">
+        <canvas id="def-canvas" width="640" height="480" aria-label="Defense game canvas"></canvas>
+      </div>
+
+      <div class="def-shop-wrap">
+        <h2 class="def-shop-title">Upgrade Shop</h2>
+        <div id="def-shop" class="def-shop" aria-label="Upgrade shop"></div>
+      </div>
+    </div>
+
+    <article class="game-seo">
+      <h2>How it works</h2>
+      <p>Earn gold from kills and spend it on upgrade buttons at the bottom. Prices rise each time you buy the same upgrade.</p>
+    </article>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
