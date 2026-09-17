@@ -1,14 +1,41 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cờ Caro — TTGO Play</title>
+  <title>Caro (Gomoku) — Free Online Five-in-a-Row | TTGO Play</title>
+  <meta name="description" content="Play Caro (Gomoku) free online: place X and O, connect five in a row vs AI or a friend. Classic strategy board game in your browser." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/caro/" />
+  <meta property="og:title" content="Caro (Gomoku) — Free Online Five-in-a-Row | TTGO Play" />
+  <meta property="og:description" content="Connect five stones in a row. Play Caro vs AI or local 2-player—free in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/caro/" />
+  <meta property="og:site_name" content="TTGO Play" />
   <link rel="stylesheet" href="../../assets/css/site.css" />
   <link rel="stylesheet" href="game.css" />
-  <meta name="description" content="Cờ Caro (Gomoku) hai người chơi - chơi ngay trên trình duyệt." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Caro",
+    "alternateName": "Gomoku",
+    "description": "Free online Caro / Gomoku: connect five in a row vs AI or a friend.",
+    "url": "https://ttgo.io.vn/play/caro/",
+    "genre": ["Strategy", "Board game", "Classic"],
+    "gamePlatform": "Web browser",
+    "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+    "isAccessibleForFree": true,
+    "inLanguage": ["en", "vi"]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+     crossorigin="anonymous"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container">
       <div class="nav">
@@ -16,6 +43,15 @@
           <div class="logo" aria-hidden="true"></div>
           <div>TTGO</div>
         </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../about/">About</a></li>
+            <li><a href="../../contact/">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -23,8 +59,8 @@
   <main class="container" id="main">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <ol>
-        <li><a href="../../">Home</a><span class="sep">/</span></li>
-        <li aria-current="page">Cờ Caro</li>
+        <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+        <li aria-current="page">Caro</li>
       </ol>
     </nav>
 
@@ -32,43 +68,94 @@
       <div class="badge-row">
         <span class="badge">Classic</span>
         <span class="badge">Strategy</span>
+        <span class="badge">Free play</span>
       </div>
-      <h1>Cờ Caro</h1>
-      <p class="lead">Hai người chơi: X và O. Ai nối 5 liên tiếp trước sẽ thắng.</p>
+      <h1>Caro (Gomoku)</h1>
+      <p class="lead">Two players place X and O. First to connect five in a row—horizontal, vertical, or diagonal—wins.</p>
     </div>
 
     <div class="caro-shell">
-    <div class="caro-hud">
-      <div>Turn: <strong id="caro-turn">X</strong></div>
-      <div><button id="caro-restart" class="btn btn-primary">Restart</button></div>
-      <div>
-        <button id="caro-toggle-ai" class="btn" aria-pressed="true">Play vs AI: On</button>
+      <div class="caro-hud">
+        <div>Turn: <strong id="caro-turn">X</strong></div>
+        <div><button id="caro-restart" class="btn btn-primary">Restart</button></div>
+        <div>
+          <button id="caro-toggle-ai" class="btn" aria-pressed="true">Play vs AI: On</button>
+        </div>
+      </div>
+
+      <div class="caro-board-wrap">
+        <div id="caro-board" class="caro-board" role="grid" aria-label="Caro board"></div>
+      </div>
+
+      <div id="caro-overlay" class="caro-overlay" role="dialog" aria-modal="true" aria-labelledby="caro-overlay-title" hidden>
+        <div class="caro-overlay-card">
+          <h2 id="caro-overlay-title"></h2>
+          <p id="caro-overlay-text"></p>
+          <button id="caro-overlay-restart" class="btn btn-primary">Play again</button>
+        </div>
       </div>
     </div>
 
-    <div class="caro-board-wrap">
-      <div id="caro-board" class="caro-board" role="grid" aria-label="Cờ Caro board"></div>
-    </div>
+    <article class="game-seo" aria-label="About Caro">
+      <h2>How to play Caro</h2>
+      <p>
+        <strong>Caro</strong> (also known as <strong>Gomoku</strong>) is a classic <strong>five-in-a-row</strong> board game.
+        Players take turns placing marks on empty intersections of the grid. The first player to form an unbroken line of
+        <strong>five</strong> marks—horizontally, vertically, or diagonally—wins the round.
+      </p>
+      <p>
+        On this page you can play <strong>vs AI</strong> (toggle in the HUD) or turn the AI off for a local two-player match
+        on the same device. Tap an empty cell to place your mark. Use <strong>Restart</strong> anytime for a fresh board.
+      </p>
 
-    <div id="caro-overlay" class="caro-overlay" role="dialog" aria-modal="true" aria-labelledby="caro-overlay-title" hidden>
-      <div class="caro-overlay-card">
-        <h2 id="caro-overlay-title"></h2>
-        <p id="caro-overlay-text"></p>
-        <button id="caro-overlay-restart" class="btn btn-primary">Play again</button>
-      </div>
-    </div>
+      <h2>Tips</h2>
+      <ul>
+        <li>Build open fours (four in a row with space on both ends)—they are hard to block in one move.</li>
+        <li>Watch for forks: two threats created at once usually force a win.</li>
+        <li>Block your opponent’s four-in-a-row immediately, even if you wanted to extend your own line.</li>
+        <li>Control the center early so your lines can grow in more directions.</li>
+      </ul>
 
-    </div>
+      <h2>Why play Caro on TTGO</h2>
+      <p>
+        Instant browser play with no download. Pair it with other strategy boards like
+        <a href="../connect-4/">Connect 4</a>, <a href="../reversi/">Reversi</a>, or <a href="../chess/">Chess</a>.
+        More free games are on the <a href="../../">home page</a>; publisher info is on
+        <a href="../../about/">About</a>.
+      </p>
 
-    <article class="game-seo">
-      <h2>Luật chơi</h2>
-      <p>Hai người lần lượt đặt quân tại ô trống. Người tạo được năm quân liên tiếp ngang, dọc hoặc chéo sẽ chiến thắng.</p>
+      <h2>Luật chơi (tiếng Việt)</h2>
+      <p>
+        Hai người lần lượt đặt quân X và O vào ô trống. Ai tạo được <strong>năm quân liên tiếp</strong>
+        theo hàng ngang, dọc hoặc chéo trước sẽ thắng. Bật chế độ chơi với máy (AI) hoặc tắt để chơi hai người trên cùng thiết bị.
+      </p>
+
+      <h2>FAQ</h2>
+      <h3>Is Caro the same as Gomoku?</h3>
+      <p>Yes—Caro is the common Vietnamese name for the five-in-a-row family of games often called Gomoku.</p>
+      <h3>Can I play without the AI?</h3>
+      <p>Yes. Tap <strong>Play vs AI</strong> to turn it off for local hot-seat play.</p>
+      <h3>Is it free?</h3>
+      <p>Yes. Free online on ttgo.io.vn with no account required.</p>
     </article>
   </main>
 
   <footer>
     <div class="container">
-      <div class="footer-row">© <span id="year"></span> TTGO</div>
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div>
+          <a href="../../">Home</a>
+          ·
+          <a href="../../about/">About</a>
+          ·
+          <a href="../../contact/">Contact</a>
+          ·
+          <a href="../../privacy/">Privacy</a>
+          ·
+          <a href="../../terms/">Terms</a>
+        </div>
+      </div>
     </div>
   </footer>
 

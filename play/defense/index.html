@@ -3,42 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Defense — Turret Waves</title>
-  <meta name="description" content="Turret defense: kill enemies, earn gold, and buy upgrades from the shop bar while waves keep running." />
+  <title>Defense — Free Online Turret Wave Game | TTGO Play</title>
+  <meta name="description" content="Play Defense free online: survive enemy waves, earn gold from kills, and buy turret upgrades without pausing. Simple tower defense in your browser." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="TTGO / AVTFINITY" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="canonical" href="https://ttgo.io.vn/play/defense/" />
+  <meta property="og:title" content="Defense — Free Online Turret Waves | TTGO Play" />
+  <meta property="og:description" content="Kill waves, earn gold, upgrade your turret—game never pauses. Free browser defense." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ttgo.io.vn/play/defense/" />
+  <meta property="og:site_name" content="TTGO Play" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
   <link rel="stylesheet" href="game.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Defense",
+    "description": "Free online turret defense: survive waves, earn gold, and buy upgrades while the action continues.",
+    "url": "https://ttgo.io.vn/play/defense/",
+    "genre": ["Strategy", "Action", "Tower defense"],
+    "gamePlatform": "Web browser",
+    "author": { "@type": "Organization", "name": "TTGO / AVTFINITY" },
+    "isAccessibleForFree": true
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+     crossorigin="anonymous"></script>
 </head>
-<body class="game-body">
-  <main class="container">
-    <div class="play-compact-hero">
-      <h1>Defense</h1>
-      <p class="lead">Kill enemies for gold. Buy upgrades from the shop below—game never pauses.</p>
-    </div>
-
-    <div class="def-shell">
-      <div class="def-hud">
-        <div>Wave: <strong id="def-wave">1</strong></div>
-        <div>Enemies: <strong id="def-enemies">0</strong></div>
-        <div>Gold: <strong id="def-money">0</strong></div>
-        <div>Turret HP: <strong id="def-hp">100</strong></div>
-        <div><button id="def-start" class="btn btn-primary" type="button">Start Wave</button></div>
-        <div><button id="def-autostart" class="btn" type="button" aria-pressed="false">Auto-start: Off</button></div>
-      </div>
-
-      <div class="def-canvas-wrap">
-        <canvas id="def-canvas" width="640" height="480" aria-label="Defense game canvas"></canvas>
-      </div>
-
-      <div class="def-shop-wrap">
-        <h2 class="def-shop-title">Upgrade Shop</h2>
-        <div id="def-shop" class="def-shop" aria-label="Upgrade shop"></div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="../../" aria-label="TTGO home">
+          <div class="logo" aria-hidden="true"></div>
+          <div>TTGO</div>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../apps/">Apps</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../about/">About</a></li>
+            <li><a href="../../contact/">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
+  </header>
 
-    <article class="game-seo">
-      <h2>How it works</h2>
-      <p>Earn gold from kills and spend it on upgrade buttons at the bottom. Prices rise each time you buy the same upgrade.</p>
-    </article>
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a><span class="sep" aria-hidden="true">/</span></li>
+          <li aria-current="page">Defense</li>
+        </ol>
+      </nav>
+
+      <div class="play-compact-hero">
+        <div class="badge-row">
+          <span class="badge">Strategy</span>
+          <span class="badge">Action</span>
+          <span class="badge">Free play</span>
+        </div>
+        <h1>Defense</h1>
+        <p class="lead">Kill enemies for gold. Buy upgrades from the shop below—the game never pauses while you shop.</p>
+      </div>
+
+      <div class="def-shell">
+        <div class="def-hud">
+          <div>Wave: <strong id="def-wave">1</strong></div>
+          <div>Enemies: <strong id="def-enemies">0</strong></div>
+          <div>Gold: <strong id="def-money">0</strong></div>
+          <div>Turret HP: <strong id="def-hp">100</strong></div>
+          <div><button id="def-start" class="btn btn-primary" type="button">Start Wave</button></div>
+          <div><button id="def-autostart" class="btn" type="button" aria-pressed="false">Auto-start: Off</button></div>
+        </div>
+
+        <div class="def-canvas-wrap">
+          <canvas id="def-canvas" width="640" height="480" aria-label="Defense game canvas"></canvas>
+        </div>
+
+        <div class="def-shop-wrap">
+          <h2 class="def-shop-title">Upgrade Shop</h2>
+          <div id="def-shop" class="def-shop" aria-label="Upgrade shop"></div>
+        </div>
+      </div>
+
+      <article class="game-seo" aria-label="About Defense">
+        <h2>How to play Defense</h2>
+        <p>
+          <strong>Defense</strong> is a compact <strong>turret wave</strong> game. Press <strong>Start Wave</strong>
+          to send enemies toward your turret. Destroy them to earn <strong>gold</strong>. Spend gold on the
+          <strong>Upgrade Shop</strong> under the canvas—damage, fire rate, range, and survivability options grow stronger
+          (and more expensive) each time you buy the same upgrade.
+        </p>
+        <p>
+          The action does not freeze when you open the shop, so plan purchases between dense packs of enemies.
+          Turn on <strong>Auto-start</strong> if you want the next wave to begin automatically after the current one clears.
+          Keep an eye on <strong>Turret HP</strong>: when it hits zero, the run ends.
+        </p>
+
+        <h2>Strategy tips</h2>
+        <ul>
+          <li>Early waves: prioritize reliable damage so gold income stays stable.</li>
+          <li>Mid game: balance fire rate with range so you softens packs before they reach the turret.</li>
+          <li>Don’t ignore HP upgrades when leak damage starts stacking across waves.</li>
+          <li>Save a buffer of gold before a hard wave instead of spending every coin immediately.</li>
+        </ul>
+
+        <h2>Why play on TTGO</h2>
+        <p>
+          Defense is a short strategy session you can play in the browser with no install.
+          If you like planning under pressure, also try <a href="../chess/">Chess</a> or
+          <a href="../connect-4/">Connect 4</a>. More free titles live on the
+          <a href="../../">home page</a>; Android puzzle apps are listed in the
+          <a href="../../apps/">apps catalog</a>.
+        </p>
+
+        <h2>FAQ</h2>
+        <h3>Is Defense free?</h3>
+        <p>Yes. Play free online at ttgo.io.vn with no account.</p>
+        <h3>Does shopping pause the game?</h3>
+        <p>No. Waves and enemies keep moving while you buy upgrades—that’s intentional.</p>
+        <h3>What does Auto-start do?</h3>
+        <p>When enabled, the next wave begins automatically after you clear the current one.</p>
+      </article>
+    </div>
   </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© <span id="year"></span> TTGO • Free puzzle &amp; casual games</div>
+        <div>
+          <a href="../../">Home</a>
+          ·
+          <a href="../../about/">About</a>
+          ·
+          <a href="../../contact/">Contact</a>
+          ·
+          <a href="../../privacy/">Privacy</a>
+          ·
+          <a href="../../terms/">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="game.js"></script>
 </body>
 </html>

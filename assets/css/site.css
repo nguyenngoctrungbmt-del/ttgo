@@ -897,6 +897,19 @@ footer{
   line-height:1.7;
   max-width:72ch;
 }
+.portal-seo ul{
+  margin:0 0 16px;
+  padding-left:1.2em;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+  max-width:72ch;
+}
+.portal-seo a{
+  color: rgba(167,139,250,.98);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .nav-gplay{
   color: #86efac !important;
 }

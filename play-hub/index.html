@@ -4,12 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#070A12" />
-    <title>TTGO Play Hub 111</title>
+    <title>TTGO Play Hub — Flappy Bird, Snake &amp; Free Browser Games</title>
+    <meta name="description" content="TTGO Play Hub: free browser games including Flappy Bird and Snake. Instant play, no download—part of TTGO / AVTFINITY." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="TTGO / AVTFINITY" />
+    <link rel="canonical" href="https://ttgo.io.vn/play-hub/" />
+    <meta property="og:title" content="TTGO Play Hub — Free Browser Games" />
+    <meta property="og:description" content="Play Flappy Bird, Snake, and more free games in the TTGO Play Hub." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ttgo.io.vn/play-hub/" />
+    <meta property="og:site_name" content="TTGO Play" />
     <link rel="icon" type="image/svg+xml" href="./flappy-bird-icon.svg" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
     <script type="module" crossorigin src="./assets/index-DICGJuNp.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-e6I2dp7l.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6497715070196852"
+       crossorigin="anonymous"></script>
+    <style>
+      .hub-static { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+      .hub-static h1 { font-size: 1.75rem; margin: 0 0 12px; }
+      .hub-static p, .hub-static li { color: var(--muted, #9aa4b2); line-height: 1.65; }
+      .hub-static a { color: inherit; text-decoration: underline; }
+      noscript .hub-static, .hub-fallback { display: block; }
+      #root:not(:empty) ~ .hub-fallback { display: none; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div class="hub-static">
+        <h1>TTGO Play Hub</h1>
+        <p>
+          Free browser games from TTGO / AVTFINITY. Enable JavaScript to play in the hub,
+          or open games directly:
+        </p>
+        <ul>
+          <li><a href="./#/flappy-bird">Flappy Bird</a> — tap to flap through the pipes</li>
+          <li><a href="./#/snake">Snake</a> — eat apples, don’t hit yourself</li>
+        </ul>
+        <p>
+          <a href="../">Home</a> ·
+          <a href="../about/">About</a> ·
+          <a href="../contact/">Contact</a> ·
+          <a href="../privacy/">Privacy</a> ·
+          <a href="../terms/">Terms</a>
+        </p>
+      </div>
+    </noscript>
+    <div class="hub-fallback hub-static" hidden>
+      <h1>TTGO Play Hub</h1>
+      <p>
+        Loading the interactive hub… If nothing appears, try
+        <a href="./#/flappy-bird">Flappy Bird</a> or <a href="./#/snake">Snake</a>,
+        or return to the <a href="../">TTGO Play home</a>.
+      </p>
+      <h2>Flappy Bird</h2>
+      <p>Tap or press Space to flap. Fly between pipes without hitting them. How far can you go?</p>
+      <h2>Snake</h2>
+      <p>Use arrow keys or WASD to steer. Eat food to grow. Avoid walls and your own tail.</p>
+      <p>
+        <a href="../about/">About TTGO</a> ·
+        <a href="../contact/">Contact</a> ·
+        <a href="../privacy/">Privacy</a>
+      </p>
+    </div>
+    <script>
+      (function () {
+        var root = document.getElementById('root');
+        var fallback = document.querySelector('.hub-fallback');
+        if (!fallback) return;
+        setTimeout(function () {
+          if (root && root.childNodes.length === 0) fallback.hidden = false;
+        }, 2500);
+      })();
+    </script>
   </body>
 </html>
