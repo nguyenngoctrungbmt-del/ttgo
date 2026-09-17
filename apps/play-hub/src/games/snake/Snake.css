@@ -1,0 +1,71 @@
+.snake-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 1.25rem 1rem 1.5rem;
+  color: #e8f0e4;
+}
+
+.snake-hud {
+  display: flex;
+  gap: 1.25rem;
+  font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.snake-stage {
+  width: min(360px, 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(107, 207, 107, 0.28);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  touch-action: none;
+  user-select: none;
+}
+
+.snake-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  background: #0e1a0e;
+}
+
+.snake-hint {
+  margin: 0;
+  max-width: 22rem;
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: rgba(232, 240, 228, 0.78);
+}
+
+.snake-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.snake-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0.65rem 1.15rem;
+  border-radius: 12px;
+  font-weight: 800;
+  color: #0e1a0e;
+  background: linear-gradient(135deg, #7adf7a, #3d8f3d);
+}
+
+.snake-btn:hover {
+  filter: brightness(1.06);
+}
+
+.snake-btn--ghost {
+  color: #e8f0e4;
+  background: transparent;
+  border: 1px solid rgba(232, 240, 228, 0.28);
+  font-weight: 700;
+}

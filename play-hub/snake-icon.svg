@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Snake">
+  <defs>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2f1a"/>
+      <stop offset="100%" stop-color="#0e1a0e"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#grass)"/>
+  <rect x="18" y="18" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.5"/>
+  <rect x="54" y="18" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.35"/>
+  <rect x="90" y="18" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.5"/>
+  <rect x="18" y="54" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.35"/>
+  <rect x="90" y="54" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.35"/>
+  <rect x="18" y="90" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.5"/>
+  <rect x="54" y="90" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.35"/>
+  <rect x="90" y="90" width="18" height="18" rx="4" fill="#2a4a2a" opacity="0.5"/>
+  <rect x="28" y="72" width="20" height="20" rx="5" fill="#3d8f3d"/>
+  <rect x="44" y="56" width="20" height="20" rx="5" fill="#4aa84a"/>
+  <rect x="60" y="40" width="20" height="20" rx="5" fill="#5bc45b"/>
+  <rect x="76" y="40" width="22" height="22" rx="6" fill="#7adf7a"/>
+  <circle cx="84" cy="46" r="3" fill="#0e1a0e"/>
+  <circle cx="92" cy="46" r="3" fill="#0e1a0e"/>
+  <circle cx="96" cy="78" r="9" fill="#e85d4c"/>
+  <rect x="94" y="66" width="3" height="7" rx="1" fill="#6bcf6b"/>
+</svg>

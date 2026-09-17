@@ -7,4 +7,12 @@ export const GAMES = [
     shortDesc: 'Tap to flap through the pipes. How far can you go?',
     badge: 'NEW',
   },
+  {
+    id: 'snake',
+    name: 'Snake',
+    path: '/snake',
+    icon: `${import.meta.env.BASE_URL}snake-icon.svg`,
+    shortDesc: 'Eat apples. Don’t hit yourself.',
+    badge: 'NEW',
+  },
 ];
