@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Flappy Bird">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ec0ca"/>
+      <stop offset="100%" stop-color="#7ad5dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#sky)"/>
+  <rect x="78" y="0" width="28" height="48" rx="4" fill="#5bbd3a"/>
+  <rect x="74" y="40" width="36" height="14" rx="3" fill="#4aa52f"/>
+  <rect x="78" y="78" width="28" height="50" rx="4" fill="#5bbd3a"/>
+  <rect x="74" y="74" width="36" height="14" rx="3" fill="#4aa52f"/>
+  <ellipse cx="48" cy="64" rx="22" ry="18" fill="#f5d547"/>
+  <ellipse cx="42" cy="68" rx="10" ry="7" fill="#f0b429"/>
+  <circle cx="58" cy="58" r="6" fill="#fff"/>
+  <circle cx="60" cy="58" r="2.5" fill="#222"/>
+  <path d="M62 64 L78 68 L62 72 Z" fill="#f07a2a"/>
+  <rect x="0" y="108" width="128" height="20" fill="#ded895"/>
+  <rect x="0" y="108" width="128" height="8" fill="#b9d94c"/>
+</svg>

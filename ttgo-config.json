@@ -102,6 +102,15 @@
       "icon": "play/chess/icon.svg",
       "shortDesc": "Classic chess vs AI—2D and 3D board, move history, and PGN.",
       "badge": "NEW"
+    },
+    {
+      "id": "flappy-bird",
+      "name": "Flappy Bird",
+      "path": "play-hub/#/flappy-bird",
+      "categories": ["action", "classic", "new"],
+      "icon": "play-hub/flappy-bird-icon.svg",
+      "shortDesc": "Tap to flap through the pipes. How far can you go?",
+      "badge": "NEW"
     }
   ],
   "games": [

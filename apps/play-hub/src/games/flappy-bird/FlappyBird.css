@@ -1,0 +1,91 @@
+.flappy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.flappy-stage {
+  position: relative;
+  width: min(360px, 100%);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.flappy-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  background: #4ec0ca;
+}
+
+.flappy-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.2));
+}
+
+.flappy-overlay--panel {
+  pointer-events: auto;
+  background: rgba(7, 10, 18, 0.55);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  padding: 20px;
+}
+
+.flappy-overlay--panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.flappy-overlay--panel p {
+  margin: 0 0 16px;
+  color: rgba(234, 240, 255, 0.85);
+}
+
+.flappy-hint {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(7, 10, 18, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.flappy-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 800;
+  color: #071018;
+  background: linear-gradient(135deg, #f5d547, #f0b429);
+}
+
+.flappy-btn:hover {
+  filter: brightness(1.05);
+}
+
+.flappy-meta {
+  display: flex;
+  gap: 18px;
+  color: rgba(234, 240, 255, 0.85);
+  font-weight: 700;
+}
+
+.flappy-help {
+  margin: 0;
+  color: rgba(234, 240, 255, 0.65);
+  font-size: 0.92rem;
+  text-align: center;
+}
