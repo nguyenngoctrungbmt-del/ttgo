@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { playSfx, unlockAudio, isMuted, setMuted } from '../../lib/sfx';
 import './FlappyBird.css';
 
 const W = 360;
@@ -55,6 +56,7 @@ export default function FlappyBird() {
     score: 0,
     best: loadBest(),
   });
+  const [muted, setMutedUi] = useState(isMuted);
 
   const resetWorld = useCallback(() => {
     stateRef.current = {
@@ -70,6 +72,7 @@ export default function FlappyBird() {
   }, []);
 
   const flap = useCallback(() => {
+    unlockAudio();
     const s = stateRef.current;
     if (!s) return;
     if (s.mode === 'ready') {
@@ -77,18 +80,32 @@ export default function FlappyBird() {
       s.startedAt = performance.now();
       s.lastPipe = performance.now();
       s.vel = FLAP;
+      playSfx('flap');
       setUi((u) => ({ ...u, mode: 'playing', score: 0 }));
       return;
     }
     if (s.mode === 'playing') {
       s.vel = FLAP;
+      playSfx('flap');
     }
   }, []);
 
   const restart = useCallback(() => {
+    unlockAudio();
+    playSfx('start');
     resetWorld();
     setUi((u) => ({ ...u, mode: 'ready', score: 0 }));
   }, [resetWorld]);
+
+  function toggleMute() {
+    const next = !muted;
+    setMuted(next);
+    setMutedUi(next);
+    if (!next) {
+      unlockAudio();
+      playSfx('start');
+    }
+  }
 
   useEffect(() => {
     resetWorld();
@@ -146,6 +163,7 @@ export default function FlappyBird() {
           if (!p.scored && p.x + PIPE_W < BIRD_X) {
             p.scored = true;
             s.score += 1;
+            playSfx('score');
             setUi((u) => {
               const best = Math.max(u.best, s.score);
               if (best > u.best) saveBest(best);
@@ -161,6 +179,7 @@ export default function FlappyBird() {
         }
 
         if (s.mode === 'dead') {
+          playSfx('hit');
           setUi((u) => {
             const best = Math.max(u.best, s.score);
             if (best > u.best) saveBest(best);
@@ -302,6 +321,16 @@ export default function FlappyBird() {
       <div className="flappy-meta" aria-live="polite">
         <span>Score: {ui.score}</span>
         <span>Best: {ui.best}</span>
+        <button
+          type="button"
+          className="flappy-mute"
+          onClick={toggleMute}
+          aria-pressed={muted}
+          aria-label={muted ? 'Unmute sound' : 'Mute sound'}
+          title={muted ? 'Unmute' : 'Mute'}
+        >
+          {muted ? 'Sound off' : 'Sound on'}
+        </button>
       </div>
       <p className="flappy-help">Click, tap, or press Space / ↑ to flap.</p>
     </div>

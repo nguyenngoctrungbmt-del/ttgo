@@ -10,10 +10,35 @@
 .snake-hud {
   display: flex;
   gap: 1.25rem;
+  align-items: center;
   font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
   font-weight: 700;
+}
+
+.snake-mute {
+  appearance: none;
+  margin-left: 0.25rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 8px;
+  border: 1px solid rgba(232, 240, 228, 0.28);
+  background: rgba(0, 0, 0, 0.25);
+  color: rgba(232, 240, 228, 0.9);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.snake-mute:hover {
+  border-color: rgba(122, 223, 122, 0.55);
+  color: #e8f0e4;
+}
+
+.snake-mute[aria-pressed='true'] {
+  opacity: 0.7;
 }
 
 .snake-stage {

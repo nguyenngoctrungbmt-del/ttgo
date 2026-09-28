@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { playSfx, unlockAudio, isMuted, setMuted } from '../../lib/sfx';
 import './Snake.css';
 
 const COLS = 20;
@@ -67,6 +68,7 @@ export default function Snake() {
   const [snake, setSnake] = useState(START_SNAKE);
   const [food, setFood] = useState(() => spawnFood(START_SNAKE));
   const [mode, setMode] = useState('ready');
+  const [muted, setMutedUi] = useState(isMuted);
 
   const canvasRef = useRef(null);
   const directionRef = useRef(direction);
@@ -101,17 +103,32 @@ export default function Snake() {
   }
 
   function startPlaying() {
+    unlockAudio();
+    playSfx('start');
     setMode('playing');
     modeRef.current = 'playing';
   }
 
   function playAgain() {
+    unlockAudio();
+    playSfx('start');
     resetWorld();
     setMode('playing');
     modeRef.current = 'playing';
   }
 
+  function toggleMute() {
+    const next = !muted;
+    setMuted(next);
+    setMutedUi(next);
+    if (!next) {
+      unlockAudio();
+      playSfx('start');
+    }
+  }
+
   function trySetDirection(next) {
+    unlockAudio();
     const m = modeRef.current;
     if (m === 'ready') {
       setDirection(next);
@@ -178,12 +195,14 @@ export default function Snake() {
               nextHead.y < 0 ||
               nextHead.y >= ROWS
             ) {
+              playSfx('die');
               setMode('dead');
               modeRef.current = 'dead';
               return prev;
             }
 
             if (prev.some((s) => s.x === nextHead.x && s.y === nextHead.y)) {
+              playSfx('die');
               setMode('dead');
               modeRef.current = 'dead';
               return prev;
@@ -194,6 +213,7 @@ export default function Snake() {
             const ate = nextHead.x === f.x && nextHead.y === f.y;
 
             if (ate) {
+              playSfx('eat');
               const newFood = spawnFood(next);
               foodRef.current = newFood;
               setFood(newFood);
@@ -344,6 +364,16 @@ export default function Snake() {
       <div className="snake-hud">
         <span>Score {score}</span>
         <span>Best {best}</span>
+        <button
+          type="button"
+          className="snake-mute"
+          onClick={toggleMute}
+          aria-pressed={muted}
+          aria-label={muted ? 'Unmute sound' : 'Mute sound'}
+          title={muted ? 'Unmute' : 'Mute'}
+        >
+          {muted ? 'Sound off' : 'Sound on'}
+        </button>
       </div>
 
       <div className="snake-stage">

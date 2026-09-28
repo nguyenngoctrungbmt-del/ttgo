@@ -1,0 +1,198 @@
+PRIVACY POLICY
+
+
+This Privacy Policy applies to the mobile applications published and operated by TTGO (AVTFINITY) on Google Play, including current and future applications that use this Privacy Policy.
+
+We value your privacy. This Privacy Policy explains how information may be collected, used, and shared when you use our applications.
+
+Our applications use third-party services, including Google Firebase Analytics and Google AdMob, to help us understand app usage and provide advertising.
+
+
+1. INFORMATION WE COLLECT
+
+Our applications do not require you to create an account or provide information such as your name, email address, or phone number to use the basic features of the applications.
+
+However, our applications use third-party services that may automatically collect certain information when you use the application.
+
+The information collected may include:
+
+- App usage and interaction data
+- Game or application events
+- Session information
+- Device information
+- Operating system and app version
+- Advertising identifiers
+- IP address
+- Approximate location information
+- Advertising and ad interaction information
+- Diagnostic and performance information
+
+The exact information collected may depend on the device, operating system, third-party SDK configuration, and applicable privacy settings.
+
+
+2. FIREBASE ANALYTICS
+
+We use Google Firebase Analytics to understand how users interact with our applications and to improve their functionality and user experience.
+
+Firebase Analytics may collect information such as:
+
+- App interactions and usage
+- Events generated while using the application
+- Session information
+- Device and operating system information
+- App version
+- Approximate location
+- User properties and other analytics information
+
+Firebase Analytics can automatically collect certain events and user properties, in addition to information that our applications may explicitly send to Analytics.
+
+We use this information for purposes such as:
+
+- Understanding how our applications are used
+- Measuring application performance
+- Identifying popular features and content
+- Improving gameplay and user experience
+- Detecting usage patterns
+- Improving and maintaining our applications
+
+We do not use Firebase Analytics to intentionally collect sensitive personal information such as passwords or payment card information.
+
+More information about Firebase Analytics:
+https://firebase.google.com/docs/analytics
+
+
+3. GOOGLE ADMOB
+
+Our applications may display advertisements provided by Google AdMob.
+
+AdMob may collect and process information such as:
+
+- Advertising identifiers
+- Device information
+- IP address
+- Approximate location
+- Information about interactions with advertisements
+- App usage information
+- Information related to advertising and measurement
+
+This information may be used to:
+
+- Deliver advertisements
+- Measure advertising performance
+- Prevent fraud and abuse
+- Improve advertising services
+- Provide personalized or non-personalized advertising, where permitted and applicable
+
+Depending on your location and applicable privacy requirements, advertising personalization may be limited or require user consent. Google's systems and our application configuration may provide different advertising treatment based on applicable privacy settings and regulations.
+
+More information about Google AdMob:
+https://support.google.com/admob/
+
+
+4. HOW WE USE INFORMATION
+
+Information collected through our applications and third-party services may be used to:
+
+- Provide and operate our applications
+- Improve gameplay and application features
+- Understand application usage
+- Analyze performance and engagement
+- Display advertisements
+- Measure advertising effectiveness
+- Detect and prevent fraud or abuse
+- Maintain the security and reliability of our applications
+- Comply with applicable legal requirements
+
+We do not sell your personal information directly.
+
+
+5. THIRD-PARTY SERVICE PROVIDERS
+
+Our applications use third-party services that may independently collect and process information according to their own privacy policies.
+
+The services currently used include:
+
+Google Firebase Analytics
+Used for application analytics and usage measurement.
+
+https://firebase.google.com/support/privacy
+
+Google AdMob
+Used to provide and measure advertisements within our applications.
+
+https://policies.google.com/technologies/ads
+
+These third-party providers may process information according to their own policies and applicable laws.
+
+
+6. DATA RETENTION
+
+We retain analytics information according to the configuration and retention settings of our Firebase Analytics project.
+
+Information processed by Google AdMob is retained and processed according to Google's applicable policies and retention practices.
+
+Because these services are operated by third parties, their retention periods may change according to their policies and configuration.
+
+
+7. DATA SECURITY
+
+We take reasonable measures to protect information associated with our applications.
+
+However, no method of electronic transmission or storage can be guaranteed to be completely secure.
+
+Third-party services such as Firebase and AdMob use their own security measures to protect the information they process.
+
+
+8. CHILDREN'S PRIVACY
+
+Our applications are not specifically designed to collect personal information from children.
+
+We do not knowingly request or require children to provide personal information such as their name, email address, phone number, or password.
+
+Where an application is subject to children's privacy requirements, we will configure advertising and data collection features in accordance with applicable laws and Google policies.
+
+If an application is directed to children or is intended for a mixed audience that includes children, applicable child-directed advertising and data collection requirements will be followed.
+
+
+9. YOUR PRIVACY CHOICES
+
+Depending on your location and applicable laws, you may have certain rights regarding the processing of your information.
+
+You may also be able to control certain advertising and privacy settings through your Android device or Google's available privacy controls.
+
+For users in jurisdictions where consent is required for certain analytics or advertising activities, applicable consent mechanisms may be provided within the application.
+
+Google provides mechanisms for controlling Analytics collection and advertising personalization, including consent-based controls.
+
+
+10. LINKS TO OTHER WEBSITES
+
+Our applications may contain links to third-party websites or services.
+
+We are not responsible for the privacy practices, content, or security of third-party websites.
+
+We encourage users to review the privacy policies of any third-party services they visit.
+
+
+11. CHANGES TO THIS PRIVACY POLICY
+
+We may update this Privacy Policy from time to time.
+
+When changes are made, we will update the "Last Updated" date at the top of this Privacy Policy.
+
+We encourage users to periodically review this Privacy Policy for any changes.
+
+
+12. CONTACT US
+
+If you have questions, concerns, or requests regarding this Privacy Policy or our applications, please contact us:
+
+Developer / Publisher: TTGO and AVTFINITY
+Email: nguyenngoctrungbmt@gmail.com
+
+
+13. APPLICATIONS COVERED BY THIS POLICY
+
+This Privacy Policy applies to applications published by TTGO (AVTFINITY) that link to this Privacy Policy, including current and future applications that use the same data collection practices described above.
+
+If a particular application uses additional services or collects additional types of information that are not described in this Privacy Policy, we will update the applicable privacy disclosures accordingly.
