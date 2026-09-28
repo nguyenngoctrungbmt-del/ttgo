@@ -986,3 +986,21 @@ footer{
   .game-tile-icon{ border-radius:12px; }
   .portal-body{ padding-bottom:0; }
 }
+
+/* CV page */
+main:has(.cv-page){
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: calc(100vh - 160px);
+}
+.cv-page{
+  width:min(900px, calc(100% - 32px));
+  max-width:900px;
+  margin:0 auto;
+  padding:24px 0;
+}
+.cv-page .cv-video{
+  max-width:none;
+  margin:0 auto;
+}
