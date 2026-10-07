@@ -1,4 +1,5 @@
 import CelebrateBurst from './CelebrateBurst'
+import { ResultPlayCta } from './playStore'
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -50,6 +51,7 @@ export default function ResultOverlay({
           <button type="button" className="btn btn-primary" onClick={onPrimary}>
             {primaryLabel}
           </button>
+          <ResultPlayCta />
         </div>
       </div>
     </div>

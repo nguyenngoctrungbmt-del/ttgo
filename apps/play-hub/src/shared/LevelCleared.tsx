@@ -1,4 +1,5 @@
 import CelebrateBurst from './CelebrateBurst'
+import { ResultPlayCta } from './playStore'
 import './LevelCleared.css'
 
 type Props = {
@@ -56,6 +57,7 @@ export default function LevelCleared({
               {replayLabel}
             </button>
           ) : null}
+          <ResultPlayCta />
         </div>
       </div>
     </div>

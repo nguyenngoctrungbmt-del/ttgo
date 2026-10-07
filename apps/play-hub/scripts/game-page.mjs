@@ -6,6 +6,13 @@ export const escapeHtml = (s) =>
 
 export const pageUrl = (game) => `${SITE}play-hub/game/${game.id}/`
 
+/** Today Puzzle: Brain Games — the Android app these games ship in (see src/shared/playStore.tsx). */
+const APP_NAME = 'Today Puzzle: Brain Games'
+const playStoreUrl = (medium, gameId) =>
+  `https://play.google.com/store/apps/details?id=com.ttgo.today.puzzle&referrer=${encodeURIComponent(
+    `utm_source=ttgo_web&utm_medium=${medium}&utm_campaign=play_hub&utm_content=${gameId}`,
+  )}`
+
 function clip(text, max) {
   if (text.length <= max) return text
   return `${text.slice(0, max - 1).replace(/\s+\S*$/, '')}…`
@@ -99,7 +106,7 @@ export function renderGamePage(game, info, related, updated) {
   <meta name="twitter:title" content="${escapeHtml(`${game.title} — Free Online Game`)}" />
   <meta name="twitter:description" content="${escapeHtml(desc)}" />
   <meta name="twitter:image" content="${shot}" />
-  <link rel="stylesheet" href="../../../assets/css/site.css?v=20261007" />
+  <link rel="stylesheet" href="../../../assets/css/site.css?v=20261008" />
   <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
   </script>
@@ -148,7 +155,7 @@ ${JSON.stringify(ld, null, 2)}
           <p class="lead">${escapeHtml(game.blurb)}</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${playHref}">▶ Play ${escapeHtml(game.title)} now</a>
-            <a class="btn" href="../../">All games</a>
+            <a class="btn btn-gplay" href="${playStoreUrl('landing_hero', game.id)}" target="_blank" rel="noopener">Get the app on Google Play</a>
           </div>
         </div>
       </div>
@@ -194,6 +201,15 @@ ${
           <p><a href="${playHref}">Start playing ${escapeHtml(game.title)}</a> or browse <a href="../../">all Play Hub games</a>.</p>
         </article>
       </div>
+
+      <section class="gp-landing" aria-labelledby="gp-title">
+        <img src="../../today-puzzle-icon.png" alt="${APP_NAME} app icon" width="80" height="80" loading="lazy" />
+        <div>
+          <h2 id="gp-title">Play ${escapeHtml(game.title)} offline on Android</h2>
+          <p>${escapeHtml(game.title)} is part of <strong>${APP_NAME}</strong>, our free Android app — no Wi-Fi needed, with daily puzzles and check-in rewards.</p>
+        </div>
+        <a class="btn btn-gplay" href="${playStoreUrl('landing_section', game.id)}" target="_blank" rel="noopener">Get it on Google Play</a>
+      </section>
 
       <section class="also-like" aria-labelledby="related-title">
         <h2 id="related-title" class="section-title">More ${escapeHtml(game.tag.toLowerCase())} games</h2>

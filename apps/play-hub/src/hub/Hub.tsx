@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { GAMES, searchGames, type GameMeta } from '../data/games'
 import { GAMES as CLASSIC_GAMES } from '../classic/registry'
 import GameCover from '../shared/GameCover'
+import { AndroidAppBar, HubPlayBanner } from '../shared/playStore'
 import ThemeToggle from '../shared/ThemeToggle'
 import { useProgressStore } from '../store/progressStore'
 import './hub.css'
@@ -93,6 +94,8 @@ export default function Hub() {
           </label>
         </section>
 
+        <HubPlayBanner />
+
         <div className="ph-chips" role="toolbar" aria-label="Filter by category">
           {chips.map((item) => (
             <button
@@ -140,6 +143,7 @@ export default function Hub() {
           <a href="../privacy/">Privacy</a>
         </div>
       </footer>
+      <AndroidAppBar />
     </div>
   )
 }

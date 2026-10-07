@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { ResultPlayCta } from '../playStore'
 import { Link } from 'react-router-dom'
 import { dailyChallenges } from '../../data/dailyAction'
 import type { GameId, GameMeta } from '../../data/games'
@@ -110,6 +111,7 @@ export default function ActionResult({ run, title, subtitle, celebrate = false, 
           <button type="button" className="btn btn-primary" onClick={() => onPlayAgain()}>
             Play again
           </button>
+          <ResultPlayCta />
         </div>
       </div>
     </div>

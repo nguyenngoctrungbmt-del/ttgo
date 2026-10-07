@@ -1,0 +1,1 @@
+import{f as e}from"./index-BQu-9qqF.js";var t=e();function n({hint:e,onPlay:n,label:r=`Play`}){return(0,t.jsxs)(`div`,{className:`play-idle`,children:[e?(0,t.jsx)(`p`,{className:`muted play-idle__hint`,children:e}):null,(0,t.jsx)(`button`,{type:`button`,className:`btn btn-primary btn-play`,onClick:n,children:r})]})}export{n as t};
