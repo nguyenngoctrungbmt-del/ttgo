@@ -1013,7 +1013,7 @@ const BASE_GAMES: GameMeta[] = [
       'Type a five-letter guess, then hit Enter to lock it in.',
       'Green = right letter, right spot. Yellow = right letter, wrong spot. Gray = not in the word.',
       'You have six tries each level. Win streak rises when you clear a word and resets if you fail.',
-      'Stuck? Watch an ad during play to skip to the next word.',
+      'Stuck? Tap Skip level to jump to the next word.',
     ],
     isNew: true,
     popularity: 94,

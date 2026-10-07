@@ -169,7 +169,7 @@
     {
       "id": "hub-slash",
       "name": "Blade Slash",
-      "path": "play-hub/#/play/slash",
+      "path": "play-hub/game/slash/",
       "categories": [
         "action",
         "new"
@@ -181,7 +181,7 @@
     {
       "id": "hub-asteroids",
       "name": "Rock Blaster",
-      "path": "play-hub/#/play/asteroids",
+      "path": "play-hub/game/asteroids/",
       "categories": [
         "action",
         "new"
@@ -193,7 +193,7 @@
     {
       "id": "hub-tank",
       "name": "Tank Arena",
-      "path": "play-hub/#/play/tank",
+      "path": "play-hub/game/tank/",
       "categories": [
         "action",
         "new"
@@ -205,7 +205,7 @@
     {
       "id": "hub-ninja",
       "name": "Rooftop Ninja",
-      "path": "play-hub/#/play/ninja",
+      "path": "play-hub/game/ninja/",
       "categories": [
         "action",
         "new"
@@ -217,7 +217,7 @@
     {
       "id": "hub-orbit",
       "name": "Orbit Guard",
-      "path": "play-hub/#/play/orbit",
+      "path": "play-hub/game/orbit/",
       "categories": [
         "action",
         "new"
@@ -229,7 +229,7 @@
     {
       "id": "hub-parry",
       "name": "Samurai Parry",
-      "path": "play-hub/#/play/parry",
+      "path": "play-hub/game/parry/",
       "categories": [
         "action",
         "memory",
@@ -242,7 +242,7 @@
     {
       "id": "hub-defense",
       "name": "City Shield",
-      "path": "play-hub/#/play/defense",
+      "path": "play-hub/game/defense/",
       "categories": [
         "action",
         "new"
@@ -254,7 +254,7 @@
     {
       "id": "hub-swing",
       "name": "Grapple Swing",
-      "path": "play-hub/#/play/swing",
+      "path": "play-hub/game/swing/",
       "categories": [
         "action",
         "new"
@@ -266,7 +266,7 @@
     {
       "id": "hub-zombie",
       "name": "Last Stand",
-      "path": "play-hub/#/play/zombie",
+      "path": "play-hub/game/zombie/",
       "categories": [
         "action",
         "memory",
@@ -279,7 +279,7 @@
     {
       "id": "hub-knife",
       "name": "Knife Toss",
-      "path": "play-hub/#/play/knife",
+      "path": "play-hub/game/knife/",
       "categories": [
         "action",
         "new"
@@ -291,7 +291,7 @@
     {
       "id": "hub-jetpack",
       "name": "Jetpack Rush",
-      "path": "play-hub/#/play/jetpack",
+      "path": "play-hub/game/jetpack/",
       "categories": [
         "action",
         "new"
@@ -303,7 +303,7 @@
     {
       "id": "hub-pulse",
       "name": "Pulse Dash",
-      "path": "play-hub/#/play/pulse",
+      "path": "play-hub/game/pulse/",
       "categories": [
         "action",
         "new"
@@ -315,7 +315,7 @@
     {
       "id": "hub-brawler",
       "name": "Street Brawler",
-      "path": "play-hub/#/play/brawler",
+      "path": "play-hub/game/brawler/",
       "categories": [
         "action",
         "new"
@@ -327,7 +327,7 @@
     {
       "id": "hub-archer",
       "name": "Sky Archer",
-      "path": "play-hub/#/play/archer",
+      "path": "play-hub/game/archer/",
       "categories": [
         "action",
         "new"
@@ -339,7 +339,7 @@
     {
       "id": "hub-goalie",
       "name": "Goal Keeper",
-      "path": "play-hub/#/play/goalie",
+      "path": "play-hub/game/goalie/",
       "categories": [
         "action",
         "new"
@@ -351,7 +351,7 @@
     {
       "id": "hub-boxing",
       "name": "Boxing Champ",
-      "path": "play-hub/#/play/boxing",
+      "path": "play-hub/game/boxing/",
       "categories": [
         "action",
         "new"
@@ -363,7 +363,7 @@
     {
       "id": "hub-helix",
       "name": "Helix Drop",
-      "path": "play-hub/#/play/helix",
+      "path": "play-hub/game/helix/",
       "categories": [
         "action",
         "new"
@@ -375,7 +375,7 @@
     {
       "id": "hub-hoops",
       "name": "Basket Flick",
-      "path": "play-hub/#/play/hoops",
+      "path": "play-hub/game/hoops/",
       "categories": [
         "action",
         "new"
@@ -387,7 +387,7 @@
     {
       "id": "hub-racer",
       "name": "Neon Racer",
-      "path": "play-hub/#/play/racer",
+      "path": "play-hub/game/racer/",
       "categories": [
         "action",
         "new"
@@ -399,7 +399,7 @@
     {
       "id": "hub-drift",
       "name": "Drift King",
-      "path": "play-hub/#/play/drift",
+      "path": "play-hub/game/drift/",
       "categories": [
         "action",
         "new"
@@ -411,7 +411,7 @@
     {
       "id": "hub-slither",
       "name": "Slither Arena",
-      "path": "play-hub/#/play/slither",
+      "path": "play-hub/game/slither/",
       "categories": [
         "action",
         "new"
@@ -423,7 +423,7 @@
     {
       "id": "hub-hole",
       "name": "Black Hole",
-      "path": "play-hub/#/play/hole",
+      "path": "play-hub/game/hole/",
       "categories": [
         "action",
         "new"
@@ -435,7 +435,7 @@
     {
       "id": "hub-bubble",
       "name": "Bubble Blast",
-      "path": "play-hub/#/play/bubble",
+      "path": "play-hub/game/bubble/",
       "categories": [
         "action",
         "puzzle",
@@ -448,7 +448,7 @@
     {
       "id": "hub-pinball",
       "name": "Pinball Wizard",
-      "path": "play-hub/#/play/pinball",
+      "path": "play-hub/game/pinball/",
       "categories": [
         "action",
         "new"
@@ -460,7 +460,7 @@
     {
       "id": "hub-galaga",
       "name": "Star Squadron",
-      "path": "play-hub/#/play/galaga",
+      "path": "play-hub/game/galaga/",
       "categories": [
         "action",
         "new"
@@ -472,7 +472,7 @@
     {
       "id": "hub-bullet",
       "name": "Bullet Storm",
-      "path": "play-hub/#/play/bullet",
+      "path": "play-hub/game/bullet/",
       "categories": [
         "action",
         "new"
@@ -484,7 +484,7 @@
     {
       "id": "hub-copter",
       "name": "Copter Cave",
-      "path": "play-hub/#/play/copter",
+      "path": "play-hub/game/copter/",
       "categories": [
         "action",
         "new"
@@ -496,7 +496,7 @@
     {
       "id": "hub-hopper",
       "name": "Road Hopper",
-      "path": "play-hub/#/play/hopper",
+      "path": "play-hub/game/hopper/",
       "categories": [
         "action",
         "new"
@@ -508,7 +508,7 @@
     {
       "id": "hub-catapult",
       "name": "Castle Crash",
-      "path": "play-hub/#/play/catapult",
+      "path": "play-hub/game/catapult/",
       "categories": [
         "action",
         "puzzle",
@@ -521,7 +521,7 @@
     {
       "id": "hub-bowduel",
       "name": "Bow Duel",
-      "path": "play-hub/#/play/bowduel",
+      "path": "play-hub/game/bowduel/",
       "categories": [
         "action",
         "new"
@@ -533,7 +533,7 @@
     {
       "id": "hub-towerdef",
       "name": "Tower Rush",
-      "path": "play-hub/#/play/towerdef",
+      "path": "play-hub/game/towerdef/",
       "categories": [
         "action",
         "new"
@@ -545,7 +545,7 @@
     {
       "id": "hub-mech",
       "name": "Mech Survivor",
-      "path": "play-hub/#/play/mech",
+      "path": "play-hub/game/mech/",
       "categories": [
         "action",
         "new"
@@ -557,7 +557,7 @@
     {
       "id": "hub-dungeon",
       "name": "Dungeon Dash",
-      "path": "play-hub/#/play/dungeon",
+      "path": "play-hub/game/dungeon/",
       "categories": [
         "action",
         "new"
@@ -569,7 +569,7 @@
     {
       "id": "hub-ski",
       "name": "Slope Ski",
-      "path": "play-hub/#/play/ski",
+      "path": "play-hub/game/ski/",
       "categories": [
         "action",
         "new"
@@ -581,7 +581,7 @@
     {
       "id": "hub-surf",
       "name": "Wave Surfer",
-      "path": "play-hub/#/play/surf",
+      "path": "play-hub/game/surf/",
       "categories": [
         "action",
         "new"
@@ -593,7 +593,7 @@
     {
       "id": "hub-bmx",
       "name": "Hill Rider",
-      "path": "play-hub/#/play/bmx",
+      "path": "play-hub/game/bmx/",
       "categories": [
         "action",
         "new"
@@ -605,7 +605,7 @@
     {
       "id": "hub-sumo",
       "name": "Sumo Push",
-      "path": "play-hub/#/play/sumo",
+      "path": "play-hub/game/sumo/",
       "categories": [
         "action",
         "new"
@@ -617,7 +617,7 @@
     {
       "id": "hub-hockey",
       "name": "Air Hockey",
-      "path": "play-hub/#/play/hockey",
+      "path": "play-hub/game/hockey/",
       "categories": [
         "action",
         "new"
@@ -629,7 +629,7 @@
     {
       "id": "hub-fisher",
       "name": "Deep Fisher",
-      "path": "play-hub/#/play/fisher",
+      "path": "play-hub/game/fisher/",
       "categories": [
         "action",
         "new"
@@ -641,7 +641,7 @@
     {
       "id": "hub-miner",
       "name": "Gold Claw",
-      "path": "play-hub/#/play/miner",
+      "path": "play-hub/game/miner/",
       "categories": [
         "action",
         "new"
@@ -653,7 +653,7 @@
     {
       "id": "hub-spinner",
       "name": "Spin Tops",
-      "path": "play-hub/#/play/spinner",
+      "path": "play-hub/game/spinner/",
       "categories": [
         "action",
         "new"
@@ -665,7 +665,7 @@
     {
       "id": "hub-paint",
       "name": "Paint Wars",
-      "path": "play-hub/#/play/paint",
+      "path": "play-hub/game/paint/",
       "categories": [
         "action",
         "new"
@@ -677,7 +677,7 @@
     {
       "id": "hub-blocks",
       "name": "Block Blitz",
-      "path": "play-hub/#/play/blocks",
+      "path": "play-hub/game/blocks/",
       "categories": [
         "action",
         "puzzle",
@@ -690,7 +690,7 @@
     {
       "id": "hub-smash",
       "name": "Glass Smash",
-      "path": "play-hub/#/play/smash",
+      "path": "play-hub/game/smash/",
       "categories": [
         "action",
         "new"
@@ -702,7 +702,7 @@
     {
       "id": "hub-beats",
       "name": "Beat Tapper",
-      "path": "play-hub/#/play/beats",
+      "path": "play-hub/game/beats/",
       "categories": [
         "action",
         "new"
@@ -714,7 +714,7 @@
     {
       "id": "hub-dogfight",
       "name": "Dogfight Ace",
-      "path": "play-hub/#/play/dogfight",
+      "path": "play-hub/game/dogfight/",
       "categories": [
         "action",
         "new"
@@ -726,7 +726,7 @@
     {
       "id": "hub-gravity",
       "name": "Gravity Flip",
-      "path": "play-hub/#/play/gravity",
+      "path": "play-hub/game/gravity/",
       "categories": [
         "action",
         "new"
@@ -738,7 +738,7 @@
     {
       "id": "hub-bouncy",
       "name": "Bounce Up",
-      "path": "play-hub/#/play/bouncy",
+      "path": "play-hub/game/bouncy/",
       "categories": [
         "action",
         "new"
@@ -750,7 +750,7 @@
     {
       "id": "hub-lumber",
       "name": "Lumber Chop",
-      "path": "play-hub/#/play/lumber",
+      "path": "play-hub/game/lumber/",
       "categories": [
         "action",
         "new"
@@ -762,7 +762,7 @@
     {
       "id": "hub-sniper",
       "name": "Sniper Scope",
-      "path": "play-hub/#/play/sniper",
+      "path": "play-hub/game/sniper/",
       "categories": [
         "action",
         "new"
@@ -774,7 +774,7 @@
     {
       "id": "hub-matrix",
       "name": "Grid Recall",
-      "path": "play-hub/#/play/matrix",
+      "path": "play-hub/game/matrix/",
       "categories": [
         "memory",
         "strategy",
@@ -787,7 +787,7 @@
     {
       "id": "hub-cups",
       "name": "Cup Shuffle",
-      "path": "play-hub/#/play/cups",
+      "path": "play-hub/game/cups/",
       "categories": [
         "memory",
         "new"
@@ -799,7 +799,7 @@
     {
       "id": "hub-darkmaze",
       "name": "Dark Maze",
-      "path": "play-hub/#/play/darkmaze",
+      "path": "play-hub/game/darkmaze/",
       "categories": [
         "memory",
         "strategy",
@@ -812,7 +812,7 @@
     {
       "id": "hub-changed",
       "name": "What Changed?",
-      "path": "play-hub/#/play/changed",
+      "path": "play-hub/game/changed/",
       "categories": [
         "memory",
         "strategy",
@@ -825,7 +825,7 @@
     {
       "id": "hub-nback",
       "name": "N-Back Flash",
-      "path": "play-hub/#/play/nback",
+      "path": "play-hub/game/nback/",
       "categories": [
         "memory",
         "strategy",
@@ -838,7 +838,7 @@
     {
       "id": "hub-flashcount",
       "name": "Flash Count",
-      "path": "play-hub/#/play/flashcount",
+      "path": "play-hub/game/flashcount/",
       "categories": [
         "memory",
         "strategy",
@@ -851,7 +851,7 @@
     {
       "id": "hub-faces",
       "name": "Face Names",
-      "path": "play-hub/#/play/faces",
+      "path": "play-hub/game/faces/",
       "categories": [
         "memory",
         "strategy",
@@ -864,7 +864,7 @@
     {
       "id": "hub-melody",
       "name": "Melody Keys",
-      "path": "play-hub/#/play/melody",
+      "path": "play-hub/game/melody/",
       "categories": [
         "memory",
         "strategy",
@@ -877,7 +877,7 @@
     {
       "id": "hub-recipe",
       "name": "Recipe Rush",
-      "path": "play-hub/#/play/recipe",
+      "path": "play-hub/game/recipe/",
       "categories": [
         "memory",
         "strategy",
@@ -890,7 +890,7 @@
     {
       "id": "hub-route",
       "name": "Route Recall",
-      "path": "play-hub/#/play/route",
+      "path": "play-hub/game/route/",
       "categories": [
         "memory",
         "strategy",
@@ -903,7 +903,7 @@
     {
       "id": "hub-crane",
       "name": "Crane Tower",
-      "path": "play-hub/#/play/crane",
+      "path": "play-hub/game/crane/",
       "categories": [
         "puzzle",
         "action",
@@ -916,7 +916,7 @@
     {
       "id": "hub-bridge",
       "name": "Bridge Builder",
-      "path": "play-hub/#/play/bridge",
+      "path": "play-hub/game/bridge/",
       "categories": [
         "puzzle",
         "strategy",
@@ -929,7 +929,7 @@
     {
       "id": "hub-tinycity",
       "name": "Tiny City",
-      "path": "play-hub/#/play/tinycity",
+      "path": "play-hub/game/tinycity/",
       "categories": [
         "puzzle",
         "new"
@@ -941,7 +941,7 @@
     {
       "id": "hub-tumble",
       "name": "Tumble Tower",
-      "path": "play-hub/#/play/tumble",
+      "path": "play-hub/game/tumble/",
       "categories": [
         "puzzle",
         "memory",
@@ -954,7 +954,7 @@
     {
       "id": "hub-roads",
       "name": "Road Rush",
-      "path": "play-hub/#/play/roads",
+      "path": "play-hub/game/roads/",
       "categories": [
         "puzzle",
         "new"
@@ -966,7 +966,7 @@
     {
       "id": "hub-sandcastle",
       "name": "Sandcastle",
-      "path": "play-hub/#/play/sandcastle",
+      "path": "play-hub/game/sandcastle/",
       "categories": [
         "puzzle",
         "new"
@@ -978,7 +978,7 @@
     {
       "id": "hub-blueprint",
       "name": "Blueprint",
-      "path": "play-hub/#/play/blueprint",
+      "path": "play-hub/game/blueprint/",
       "categories": [
         "puzzle",
         "memory",
@@ -991,7 +991,7 @@
     {
       "id": "hub-domino",
       "name": "Domino Build",
-      "path": "play-hub/#/play/domino",
+      "path": "play-hub/game/domino/",
       "categories": [
         "puzzle",
         "new"
@@ -1003,7 +1003,7 @@
     {
       "id": "hub-mergetown",
       "name": "Merge Town",
-      "path": "play-hub/#/play/mergetown",
+      "path": "play-hub/game/mergetown/",
       "categories": [
         "puzzle",
         "new"
@@ -1015,7 +1015,7 @@
     {
       "id": "hub-rocket",
       "name": "Rocket Builder",
-      "path": "play-hub/#/play/rocket",
+      "path": "play-hub/game/rocket/",
       "categories": [
         "puzzle",
         "action",
@@ -1028,7 +1028,7 @@
     {
       "id": "hub-fruitmerge",
       "name": "Fruit Drop",
-      "path": "play-hub/#/play/fruitmerge",
+      "path": "play-hub/game/fruitmerge/",
       "categories": [
         "merge",
         "strategy",
@@ -1041,7 +1041,7 @@
     {
       "id": "hub-dropmerge",
       "name": "Drop Merge",
-      "path": "play-hub/#/play/dropmerge",
+      "path": "play-hub/game/dropmerge/",
       "categories": [
         "merge",
         "strategy",
@@ -1054,7 +1054,7 @@
     {
       "id": "hub-chainmerge",
       "name": "Chain Link",
-      "path": "play-hub/#/play/chainmerge",
+      "path": "play-hub/game/chainmerge/",
       "categories": [
         "merge",
         "strategy",
@@ -1067,7 +1067,7 @@
     {
       "id": "hub-hexsort",
       "name": "Hexa Sort",
-      "path": "play-hub/#/play/hexsort",
+      "path": "play-hub/game/hexsort/",
       "categories": [
         "merge",
         "strategy",
@@ -1080,7 +1080,7 @@
     {
       "id": "hub-mergedefense",
       "name": "Merge Defenders",
-      "path": "play-hub/#/play/mergedefense",
+      "path": "play-hub/game/mergedefense/",
       "categories": [
         "merge",
         "action",
@@ -1093,7 +1093,7 @@
     {
       "id": "hub-gunmerge",
       "name": "Gun Merge",
-      "path": "play-hub/#/play/gunmerge",
+      "path": "play-hub/game/gunmerge/",
       "categories": [
         "merge",
         "new"
@@ -1105,7 +1105,7 @@
     {
       "id": "hub-carmerge",
       "name": "Car Merge",
-      "path": "play-hub/#/play/carmerge",
+      "path": "play-hub/game/carmerge/",
       "categories": [
         "merge",
         "new"
@@ -1117,7 +1117,7 @@
     {
       "id": "hub-planetmerge",
       "name": "Planet Merge",
-      "path": "play-hub/#/play/planetmerge",
+      "path": "play-hub/game/planetmerge/",
       "categories": [
         "merge",
         "new"
@@ -1129,7 +1129,7 @@
     {
       "id": "hub-farmmerge",
       "name": "Farm Merge",
-      "path": "play-hub/#/play/farmmerge",
+      "path": "play-hub/game/farmmerge/",
       "categories": [
         "merge",
         "new"
@@ -1141,7 +1141,7 @@
     {
       "id": "hub-potionmerge",
       "name": "Potion Shop",
-      "path": "play-hub/#/play/potionmerge",
+      "path": "play-hub/game/potionmerge/",
       "categories": [
         "merge",
         "new"
@@ -1153,7 +1153,7 @@
     {
       "id": "hub-busjam",
       "name": "Bus Jam",
-      "path": "play-hub/#/play/busjam",
+      "path": "play-hub/game/busjam/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1166,7 +1166,7 @@
     {
       "id": "hub-parkingjam",
       "name": "Parking Jam",
-      "path": "play-hub/#/play/parkingjam",
+      "path": "play-hub/game/parkingjam/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1179,7 +1179,7 @@
     {
       "id": "hub-blockjam",
       "name": "Block Jam",
-      "path": "play-hub/#/play/blockjam",
+      "path": "play-hub/game/blockjam/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1192,7 +1192,7 @@
     {
       "id": "hub-arrowescape",
       "name": "Arrow Escape",
-      "path": "play-hub/#/play/arrowescape",
+      "path": "play-hub/game/arrowescape/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1205,7 +1205,7 @@
     {
       "id": "hub-sandblast",
       "name": "Sand Blast",
-      "path": "play-hub/#/play/sandblast",
+      "path": "play-hub/game/sandblast/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1218,7 +1218,7 @@
     {
       "id": "hub-goodssort",
       "name": "Goods Sort",
-      "path": "play-hub/#/play/goodssort",
+      "path": "play-hub/game/goodssort/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1231,7 +1231,7 @@
     {
       "id": "hub-screwjam",
       "name": "Screw Jam",
-      "path": "play-hub/#/play/screwjam",
+      "path": "play-hub/game/screwjam/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1244,7 +1244,7 @@
     {
       "id": "hub-numbermerge",
       "name": "Number Merge",
-      "path": "play-hub/#/play/numbermerge",
+      "path": "play-hub/game/numbermerge/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1257,7 +1257,7 @@
     {
       "id": "hub-allinhole",
       "name": "All in Hole",
-      "path": "play-hub/#/play/allinhole",
+      "path": "play-hub/game/allinhole/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1270,7 +1270,7 @@
     {
       "id": "hub-lanedefense",
       "name": "Lane Defense",
-      "path": "play-hub/#/play/lanedefense",
+      "path": "play-hub/game/lanedefense/",
       "categories": [
         "puzzle",
         "new"
@@ -1282,7 +1282,7 @@
     {
       "id": "hub-connect4",
       "name": "Connect Four",
-      "path": "play-hub/#/play/connect4",
+      "path": "play-hub/game/connect4/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1295,7 +1295,7 @@
     {
       "id": "hub-reversi",
       "name": "Reversi",
-      "path": "play-hub/#/play/reversi",
+      "path": "play-hub/game/reversi/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1309,7 +1309,7 @@
     {
       "id": "hub-caro",
       "name": "Caro",
-      "path": "play-hub/#/play/caro",
+      "path": "play-hub/game/caro/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1323,7 +1323,7 @@
     {
       "id": "hub-chess",
       "name": "Chess",
-      "path": "play-hub/#/play/chess",
+      "path": "play-hub/game/chess/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1337,7 +1337,7 @@
     {
       "id": "hub-memory",
       "name": "Flip Match",
-      "path": "play-hub/#/play/memory",
+      "path": "play-hub/game/memory/",
       "categories": [
         "memory",
         "classic"
@@ -1348,7 +1348,7 @@
     {
       "id": "hub-2048",
       "name": "Merge 2048",
-      "path": "play-hub/#/play/2048",
+      "path": "play-hub/game/2048/",
       "categories": [
         "strategy",
         "puzzle"
@@ -1359,7 +1359,7 @@
     {
       "id": "hub-sequence",
       "name": "Pulse Sequence",
-      "path": "play-hub/#/play/sequence",
+      "path": "play-hub/game/sequence/",
       "categories": [
         "memory",
         "action",
@@ -1372,7 +1372,7 @@
     {
       "id": "hub-reaction",
       "name": "Flash Reflex",
-      "path": "play-hub/#/play/reaction",
+      "path": "play-hub/game/reaction/",
       "categories": [
         "action",
         "memory",
@@ -1385,7 +1385,7 @@
     {
       "id": "hub-whack",
       "name": "Pop Targets",
-      "path": "play-hub/#/play/whack",
+      "path": "play-hub/game/whack/",
       "categories": [
         "action",
         "new"
@@ -1397,7 +1397,7 @@
     {
       "id": "hub-slide",
       "name": "Slide Tile",
-      "path": "play-hub/#/play/slide",
+      "path": "play-hub/game/slide/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1411,7 +1411,7 @@
     {
       "id": "hub-colors",
       "name": "Color Clash",
-      "path": "play-hub/#/play/colors",
+      "path": "play-hub/game/colors/",
       "categories": [
         "memory",
         "action",
@@ -1425,7 +1425,7 @@
     {
       "id": "hub-taprace",
       "name": "Tap Rush",
-      "path": "play-hub/#/play/taprace",
+      "path": "play-hub/game/taprace/",
       "categories": [
         "action",
         "new"
@@ -1437,7 +1437,7 @@
     {
       "id": "hub-guess",
       "name": "Number Nest",
-      "path": "play-hub/#/play/guess",
+      "path": "play-hub/game/guess/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1451,7 +1451,7 @@
     {
       "id": "hub-odd",
       "name": "Spot Odd",
-      "path": "play-hub/#/play/odd",
+      "path": "play-hub/game/odd/",
       "categories": [
         "memory",
         "action",
@@ -1465,7 +1465,7 @@
     {
       "id": "hub-balloon",
       "name": "Balloon Pop",
-      "path": "play-hub/#/play/balloon",
+      "path": "play-hub/game/balloon/",
       "categories": [
         "action",
         "memory",
@@ -1478,7 +1478,7 @@
     {
       "id": "hub-math",
       "name": "Quick Calc",
-      "path": "play-hub/#/play/math",
+      "path": "play-hub/game/math/",
       "categories": [
         "strategy",
         "memory",
@@ -1491,7 +1491,7 @@
     {
       "id": "hub-order",
       "name": "Count Order",
-      "path": "play-hub/#/play/order",
+      "path": "play-hub/game/order/",
       "categories": [
         "memory",
         "puzzle",
@@ -1504,7 +1504,7 @@
     {
       "id": "hub-lights",
       "name": "Lights Out",
-      "path": "play-hub/#/play/lights",
+      "path": "play-hub/game/lights/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1518,7 +1518,7 @@
     {
       "id": "hub-scramble",
       "name": "Word Scramble",
-      "path": "play-hub/#/play/scramble",
+      "path": "play-hub/game/scramble/",
       "categories": [
         "strategy",
         "memory",
@@ -1532,7 +1532,7 @@
     {
       "id": "hub-sum",
       "name": "Sum Duo",
-      "path": "play-hub/#/play/sum",
+      "path": "play-hub/game/sum/",
       "categories": [
         "strategy",
         "memory",
@@ -1545,7 +1545,7 @@
     {
       "id": "hub-maze",
       "name": "Grid Maze",
-      "path": "play-hub/#/play/maze",
+      "path": "play-hub/game/maze/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1559,7 +1559,7 @@
     {
       "id": "hub-gauge",
       "name": "Perfect Stop",
-      "path": "play-hub/#/play/gauge",
+      "path": "play-hub/game/gauge/",
       "categories": [
         "action",
         "memory",
@@ -1572,7 +1572,7 @@
     {
       "id": "hub-arrow",
       "name": "Arrow Rush",
-      "path": "play-hub/#/play/arrow",
+      "path": "play-hub/game/arrow/",
       "categories": [
         "action",
         "new"
@@ -1584,7 +1584,7 @@
     {
       "id": "hub-echo",
       "name": "Pattern Echo",
-      "path": "play-hub/#/play/echo",
+      "path": "play-hub/game/echo/",
       "categories": [
         "memory",
         "strategy",
@@ -1597,7 +1597,7 @@
     {
       "id": "hub-same",
       "name": "Color Sweep",
-      "path": "play-hub/#/play/same",
+      "path": "play-hub/game/same/",
       "categories": [
         "memory",
         "action",
@@ -1610,7 +1610,7 @@
     {
       "id": "hub-hold",
       "name": "Hold Beat",
-      "path": "play-hub/#/play/hold",
+      "path": "play-hub/game/hold/",
       "categories": [
         "memory",
         "action",
@@ -1623,7 +1623,7 @@
     {
       "id": "hub-safe",
       "name": "Mine Safe",
-      "path": "play-hub/#/play/safe",
+      "path": "play-hub/game/safe/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1637,7 +1637,7 @@
     {
       "id": "hub-rps",
       "name": "Hand Duel",
-      "path": "play-hub/#/play/rps",
+      "path": "play-hub/game/rps/",
       "categories": [
         "action",
         "new"
@@ -1649,7 +1649,7 @@
     {
       "id": "hub-hop",
       "name": "Pad Hop",
-      "path": "play-hub/#/play/hop",
+      "path": "play-hub/game/hop/",
       "categories": [
         "memory",
         "action",
@@ -1662,7 +1662,7 @@
     {
       "id": "hub-sokoban",
       "name": "Crate Push",
-      "path": "play-hub/#/play/sokoban",
+      "path": "play-hub/game/sokoban/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1676,7 +1676,7 @@
     {
       "id": "hub-watersort",
       "name": "Color Pour",
-      "path": "play-hub/#/play/watersort",
+      "path": "play-hub/game/watersort/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1690,7 +1690,7 @@
     {
       "id": "hub-pipes",
       "name": "Pipe Link",
-      "path": "play-hub/#/play/pipes",
+      "path": "play-hub/game/pipes/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1704,7 +1704,7 @@
     {
       "id": "hub-nonogram",
       "name": "Dot Grid",
-      "path": "play-hub/#/play/nonogram",
+      "path": "play-hub/game/nonogram/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1718,7 +1718,7 @@
     {
       "id": "hub-patches",
       "name": "Flood It",
-      "path": "play-hub/#/play/patches",
+      "path": "play-hub/game/patches/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1731,7 +1731,7 @@
     {
       "id": "hub-shooter",
       "name": "Sky Strike",
-      "path": "play-hub/#/play/shooter",
+      "path": "play-hub/game/shooter/",
       "categories": [
         "action",
         "new"
@@ -1743,7 +1743,7 @@
     {
       "id": "hub-sudoku",
       "name": "Nano Sudoku",
-      "path": "play-hub/#/play/sudoku",
+      "path": "play-hub/game/sudoku/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1757,7 +1757,7 @@
     {
       "id": "hub-match3",
       "name": "Gem Match",
-      "path": "play-hub/#/play/match3",
+      "path": "play-hub/game/match3/",
       "categories": [
         "puzzle",
         "action",
@@ -1771,7 +1771,7 @@
     {
       "id": "hub-code",
       "name": "Code Crack",
-      "path": "play-hub/#/play/code",
+      "path": "play-hub/game/code/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1785,7 +1785,7 @@
     {
       "id": "hub-snake",
       "name": "Grid Snake",
-      "path": "play-hub/#/play/snake",
+      "path": "play-hub/game/snake/",
       "categories": [
         "action",
         "new"
@@ -1797,7 +1797,7 @@
     {
       "id": "hub-stack",
       "name": "Peak Stack",
-      "path": "play-hub/#/play/stack",
+      "path": "play-hub/game/stack/",
       "categories": [
         "action",
         "new"
@@ -1809,7 +1809,7 @@
     {
       "id": "hub-xiangqi",
       "name": "Chinese Chess",
-      "path": "play-hub/#/play/xiangqi",
+      "path": "play-hub/game/xiangqi/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1823,7 +1823,7 @@
     {
       "id": "hub-checkers",
       "name": "Checkers",
-      "path": "play-hub/#/play/checkers",
+      "path": "play-hub/game/checkers/",
       "categories": [
         "strategy",
         "puzzle",
@@ -1836,7 +1836,7 @@
     {
       "id": "hub-wordle",
       "name": "Word Nest",
-      "path": "play-hub/#/play/wordle",
+      "path": "play-hub/game/wordle/",
       "categories": [
         "puzzle",
         "strategy",
@@ -1850,7 +1850,7 @@
     {
       "id": "hub-solitaire",
       "name": "Klondike",
-      "path": "play-hub/#/play/solitaire",
+      "path": "play-hub/game/solitaire/",
       "categories": [
         "classic",
         "puzzle",
@@ -1865,7 +1865,7 @@
     {
       "id": "hub-dodge",
       "name": "Meteor Rush",
-      "path": "play-hub/#/play/dodge",
+      "path": "play-hub/game/dodge/",
       "categories": [
         "action",
         "new"
@@ -1877,7 +1877,7 @@
     {
       "id": "hub-flap",
       "name": "Sky Hop",
-      "path": "play-hub/#/play/flap",
+      "path": "play-hub/game/flap/",
       "categories": [
         "action",
         "new"
@@ -1889,7 +1889,7 @@
     {
       "id": "hub-breakout",
       "name": "Brick Bash",
-      "path": "play-hub/#/play/breakout",
+      "path": "play-hub/game/breakout/",
       "categories": [
         "action",
         "new"
@@ -1901,7 +1901,7 @@
     {
       "id": "hub-runner",
       "name": "Lane Rush",
-      "path": "play-hub/#/play/runner",
+      "path": "play-hub/game/runner/",
       "categories": [
         "action",
         "new"
@@ -1913,7 +1913,7 @@
     {
       "id": "hub-climb",
       "name": "Cliff Climb",
-      "path": "play-hub/#/play/climb",
+      "path": "play-hub/game/climb/",
       "categories": [
         "action",
         "new"
@@ -1925,7 +1925,7 @@
     {
       "id": "hub-rally",
       "name": "Paddle Rally",
-      "path": "play-hub/#/play/rally",
+      "path": "play-hub/game/rally/",
       "categories": [
         "action",
         "new"

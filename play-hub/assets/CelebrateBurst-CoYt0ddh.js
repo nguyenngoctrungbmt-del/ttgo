@@ -1,1 +1,0 @@
-import{d as e}from"./index-C-dW8sDe.js";var t=e();function n(){return(0,t.jsxs)(`div`,{className:`celebrate-burst`,"aria-hidden":!0,children:[Array.from({length:28},(e,n)=>(0,t.jsx)(`span`,{className:`celebrate-burst__piece celebrate-burst__piece--${n%6+1}`},n)),(0,t.jsx)(`div`,{className:`celebrate-burst__glow`})]})}export{n as t};
