@@ -1,0 +1,166 @@
+.soli-board {
+  /* layout from .board-host */
+}
+
+.soli-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.6rem;
+  width: min(100%, var(--board-max));
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+}
+
+.soli-stock-row,
+.soli-foundations {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.soli-slot {
+  position: relative;
+  width: 44px;
+  height: 62px;
+  padding: 0;
+  border: 1.5px solid color-mix(in srgb, CanvasText 18%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, CanvasText 6%, transparent);
+  cursor: pointer;
+}
+
+.soli-slot:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.soli-slot.is-selected,
+.soli-stack-card.is-selected .soli-card {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent, #0f766e) 55%, transparent);
+}
+
+.soli-slot--ghost {
+  background: transparent;
+  border-style: dashed;
+}
+
+.soli-empty {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  opacity: 0.45;
+}
+
+.soli-empty--suit {
+  font-size: 1.15rem;
+}
+
+.soli-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 44px;
+  height: 62px;
+  border-radius: 8px;
+  border: 1.5px solid color-mix(in srgb, CanvasText 14%, transparent);
+  background: Canvas;
+  padding: 0.2rem 0.15rem;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.soli-card.is-down {
+  background: linear-gradient(145deg, #0f766e, #115e59);
+  border-color: #0f766e;
+}
+
+.soli-card__back {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  border-radius: 4px;
+  border: 1.5px solid color-mix(in srgb, #fff 35%, transparent);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3px,
+      color-mix(in srgb, #fff 12%, transparent) 3px,
+      color-mix(in srgb, #fff 12%, transparent) 6px
+    );
+}
+
+.soli-card.is-red {
+  color: #dc2626;
+}
+
+.soli-card.is-black {
+  color: CanvasText;
+}
+
+.soli-card__rank {
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+.soli-card__suit {
+  font-size: 1.05rem;
+  line-height: 1;
+  margin-bottom: 0.1rem;
+}
+
+.soli-tableau {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+  width: min(100%, var(--board-max));
+  margin-inline: auto;
+  min-height: 220px;
+}
+
+.soli-col {
+  position: relative;
+  min-height: 180px;
+}
+
+.soli-stack-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.soli-stack-card:disabled {
+  cursor: default;
+}
+
+.soli-hint {
+  margin: 0.75rem auto 0;
+  text-align: center;
+  font-size: 0.78rem;
+  max-width: 28rem;
+}
+
+@media (min-width: 480px) {
+  .soli-slot,
+  .soli-card {
+    width: 52px;
+    height: 72px;
+  }
+
+  .soli-card__rank {
+    font-size: 0.8rem;
+  }
+
+  .soli-card__suit {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,189 @@
+.board-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.board-stage__frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.45rem 0.55rem;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, #bae6fd 32%, transparent), transparent 42%),
+    color-mix(in srgb, var(--panel-soft) 72%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--accent-2) 28%, var(--line));
+}
+
+.board-stage__deco {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.board-stage__deco--tl {
+  top: 10px;
+  left: 12px;
+  background: #38bdf8;
+  border-radius: 3px;
+  transform: rotate(18deg);
+}
+.board-stage__deco--tr {
+  top: 12px;
+  right: 14px;
+  background: #fbbf24;
+  border-radius: 50%;
+}
+.board-stage__deco--bl {
+  bottom: 12px;
+  left: 16px;
+  background: #fb7185;
+  border-radius: 50%;
+}
+.board-stage__deco--br {
+  bottom: 10px;
+  right: 12px;
+  background: #34d399;
+  border-radius: 3px;
+  transform: rotate(-12deg);
+}
+
+.board-stage__status {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.board-stage__play {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.board-seat {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel-soft) 88%, transparent);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.board-seat.is-active {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
+}
+
+.board-seat.is-you.is-active {
+  border-color: color-mix(in srgb, #e11d48 45%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, #e11d48 18%, transparent);
+  background: color-mix(in srgb, #e11d48 10%, var(--panel));
+}
+
+.board-seat.is-cpu.is-active {
+  border-color: color-mix(in srgb, #f59e0b 50%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, #f59e0b 20%, transparent);
+  background: color-mix(in srgb, #f59e0b 12%, var(--panel));
+}
+
+.board-seat__avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  background: color-mix(in srgb, var(--panel) 90%, #fff);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.board-seat__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.board-seat__meta strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.board-seat__meta .muted {
+  font-size: 0.72rem;
+}
+
+.board-seat__pill {
+  flex-shrink: 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.board-seat.is-active .board-seat__pill {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+}
+
+.board-seat.is-you.is-active .board-seat__pill {
+  background: linear-gradient(135deg, #fb7185, #e11d48);
+}
+
+.board-seat.is-cpu.is-active .board-seat__pill {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #422006;
+}
+
+/* Soft wash for host panels that use BoardStage */
+.board-host {
+  position: relative;
+  padding: 0.85rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background:
+    radial-gradient(ellipse 80% 45% at 50% 0%, color-mix(in srgb, #38bdf8 14%, transparent), transparent 55%),
+    radial-gradient(ellipse 60% 35% at 100% 100%, color-mix(in srgb, #f59e0b 10%, transparent), transparent 50%),
+    radial-gradient(ellipse 50% 30% at 0% 90%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 45%),
+    var(--panel);
+}
+
+/* Dark theme: swap the daylight sky wash for a faint indigo glow. */
+:root[data-theme='dark'] .board-stage__frame {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 14%, transparent), transparent 45%),
+    color-mix(in srgb, var(--panel-soft) 55%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 22%, transparent);
+}

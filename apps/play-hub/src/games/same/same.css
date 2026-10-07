@@ -1,0 +1,72 @@
+.same-board {
+  position: relative;
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.same-board.is-ok {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 35%, transparent);
+}
+
+.same-board.is-bad {
+  animation: shake 0.3s ease;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 35%, transparent);
+}
+
+.same-target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.same-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.same-grid {
+  display: grid;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.same-cell {
+  aspect-ratio: 1;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease, filter 0.12s ease, opacity 0.15s ease;
+  animation: pop 0.22s ease;
+}
+
+.same-cell:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.same-cell.is-done {
+  opacity: 0.2;
+  filter: grayscale(0.4);
+  box-shadow: none;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

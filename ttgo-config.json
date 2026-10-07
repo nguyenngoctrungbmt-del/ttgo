@@ -7,7 +7,11 @@
       "id": "tile-up",
       "name": "Merge Number Up",
       "path": "play/tile-up/",
-      "categories": ["puzzle", "merge", "daily"],
+      "categories": [
+        "puzzle",
+        "merge",
+        "daily"
+      ],
       "icon": "play/tile-up/icon.svg",
       "shortDesc": "Place number tiles, merge 3+ matches, and beat today’s high score.",
       "badge": "HOT"
@@ -16,7 +20,10 @@
       "id": "connect-4",
       "name": "Connect 4",
       "path": "play/connect-4/",
-      "categories": ["strategy", "classic"],
+      "categories": [
+        "strategy",
+        "classic"
+      ],
       "icon": "play/connect-4/icon.svg",
       "shortDesc": "Drop discs and connect four in a row—vs AI or a friend.",
       "badge": "NEW"
@@ -25,7 +32,11 @@
       "id": "reversi",
       "name": "Reversi",
       "path": "play/reversi/",
-      "categories": ["strategy", "classic", "new"],
+      "categories": [
+        "strategy",
+        "classic",
+        "new"
+      ],
       "icon": "play/reversi/icon.svg",
       "shortDesc": "Flip discs on an 8×8 board—classic Othello vs AI or a friend.",
       "badge": "NEW"
@@ -34,7 +45,10 @@
       "id": "color-blink",
       "name": "Color Blink",
       "path": "play/color-blink/",
-      "categories": ["puzzle", "new"],
+      "categories": [
+        "puzzle",
+        "new"
+      ],
       "icon": "play/color-blink/icon.svg",
       "shortDesc": "Watch the blinking colors and repeat the pattern—memory reflex fun.",
       "badge": "NEW"
@@ -43,17 +57,22 @@
       "id": "push-man",
       "name": "Push Man",
       "path": "play/push-man/",
-      "categories": ["puzzle", "classic"],
+      "categories": [
+        "puzzle",
+        "classic"
+      ],
       "icon": "play/push-man/icon.svg",
       "shortDesc": "Classic Sokoban-style push puzzle. Push boxes onto goals.",
       "badge": "NEW"
     },
-    
     {
       "id": "caro",
       "name": "Caro",
       "path": "play/caro/",
-      "categories": ["classic", "strategy"],
+      "categories": [
+        "classic",
+        "strategy"
+      ],
       "icon": "play/caro/icon.svg",
       "shortDesc": "Cờ Caro (Gomoku) two-player connect-5 board game.",
       "badge": "NEW"
@@ -62,7 +81,10 @@
       "id": "chest",
       "name": "Chest Match",
       "path": "play/chest/",
-      "categories": ["puzzle", "memory"],
+      "categories": [
+        "puzzle",
+        "memory"
+      ],
       "icon": "play/chest/icon.svg",
       "shortDesc": "Match pairs of chests — memory card game.",
       "badge": "NEW"
@@ -71,7 +93,10 @@
       "id": "defense",
       "name": "Defense",
       "path": "play/defense/",
-      "categories": ["strategy", "action"],
+      "categories": [
+        "strategy",
+        "action"
+      ],
       "icon": "play/defense/icon.svg",
       "shortDesc": "Turret defense: kill waves, gain XP, choose upgrades.",
       "badge": "NEW"
@@ -80,7 +105,11 @@
       "id": "minesweeper",
       "name": "Minesweeper",
       "path": "play/minesweeper/",
-      "categories": ["puzzle", "classic", "new"],
+      "categories": [
+        "puzzle",
+        "classic",
+        "new"
+      ],
       "icon": "play/minesweeper/icon.svg",
       "shortDesc": "Flag mines and clear the board—Easy, Medium, and Hard modes.",
       "badge": "NEW"
@@ -89,7 +118,12 @@
       "id": "2048",
       "name": "2048",
       "path": "play/2048/",
-      "categories": ["puzzle", "merge", "classic", "new"],
+      "categories": [
+        "puzzle",
+        "merge",
+        "classic",
+        "new"
+      ],
       "icon": "play/2048/icon.svg",
       "shortDesc": "Slide and merge number tiles—reach 2048 on a 4×4 board.",
       "badge": "NEW"
@@ -98,7 +132,10 @@
       "id": "chess",
       "name": "Chess",
       "path": "play/chess/",
-      "categories": ["strategy", "classic"],
+      "categories": [
+        "strategy",
+        "classic"
+      ],
       "icon": "play/chess/icon.svg",
       "shortDesc": "Classic chess vs AI—2D and 3D board, move history, and PGN.",
       "badge": "NEW"
@@ -107,7 +144,11 @@
       "id": "flappy-bird",
       "name": "Flappy Bird",
       "path": "play-hub/#/flappy-bird",
-      "categories": ["action", "classic", "new"],
+      "categories": [
+        "action",
+        "classic",
+        "new"
+      ],
       "icon": "play-hub/flappy-bird-icon.svg",
       "shortDesc": "Tap to flap through the pipes. How far can you go?",
       "badge": "NEW"
@@ -116,9 +157,1781 @@
       "id": "snake",
       "name": "Snake",
       "path": "play-hub/#/snake",
-      "categories": ["action", "classic", "new"],
+      "categories": [
+        "action",
+        "classic",
+        "new"
+      ],
       "icon": "play-hub/snake-icon.svg",
       "shortDesc": "Eat apples. Don’t hit yourself.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-slash",
+      "name": "Blade Slash",
+      "path": "play-hub/#/play/slash",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/slash.svg",
+      "shortDesc": "Swipe to slice flying fruit, chain combos, and dodge the bombs.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-asteroids",
+      "name": "Rock Blaster",
+      "path": "play-hub/#/play/asteroids",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/asteroids.svg",
+      "shortDesc": "Fly through an asteroid field, shatter rocks, and outgun UFOs.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-tank",
+      "name": "Tank Arena",
+      "path": "play-hub/#/play/tank",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/tank.svg",
+      "shortDesc": "Drive, auto-fire, and survive waves of slimes and bosses.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-ninja",
+      "name": "Rooftop Ninja",
+      "path": "play-hub/#/play/ninja",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/ninja.svg",
+      "shortDesc": "Sprint across rooftops — jump gaps, slash guards, deflect arrows.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-orbit",
+      "name": "Orbit Guard",
+      "path": "play-hub/#/play/orbit",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/orbit.svg",
+      "shortDesc": "Swing a shield around your planet and smash incoming meteors.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-parry",
+      "name": "Samurai Parry",
+      "path": "play-hub/#/play/parry",
+      "categories": [
+        "action",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/parry.svg",
+      "shortDesc": "Read the strike, parry on the beat, and cut down every challenger.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-defense",
+      "name": "City Shield",
+      "path": "play-hub/#/play/defense",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/defense.svg",
+      "shortDesc": "Intercept falling missiles and set off chain-reaction blasts.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-swing",
+      "name": "Grapple Swing",
+      "path": "play-hub/#/play/swing",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/swing.svg",
+      "shortDesc": "Hook, swing, and fling yourself over lava and spinning saws.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-zombie",
+      "name": "Last Stand",
+      "path": "play-hub/#/play/zombie",
+      "categories": [
+        "action",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/zombie.svg",
+      "shortDesc": "Hold the barricade — headshot the horde before it breaks through.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-knife",
+      "name": "Knife Toss",
+      "path": "play-hub/#/play/knife",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/knife.svg",
+      "shortDesc": "Throw knives into a spinning target — just never hit another blade.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-jetpack",
+      "name": "Jetpack Rush",
+      "path": "play-hub/#/play/jetpack",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/jetpack.svg",
+      "shortDesc": "Hold to blast through zappers, homing missiles and lasers.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-pulse",
+      "name": "Pulse Dash",
+      "path": "play-hub/#/play/pulse",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/pulse.svg",
+      "shortDesc": "Auto-run to the beat — jump spikes, hit orbs and flip gravity.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-brawler",
+      "name": "Street Brawler",
+      "path": "play-hub/#/play/brawler",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/brawler.svg",
+      "shortDesc": "Punch left, punch right, chain combos and clean up the streets.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-archer",
+      "name": "Sky Archer",
+      "path": "play-hub/#/play/archer",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/archer.svg",
+      "shortDesc": "Draw, aim and loose — pop balloons, birds and bullseyes in combos.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-goalie",
+      "name": "Goal Keeper",
+      "path": "play-hub/#/play/goalie",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/goalie.svg",
+      "shortDesc": "Dive, parry and catch curlers, dippers and rockets in goal.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-boxing",
+      "name": "Boxing Champ",
+      "path": "play-hub/#/play/boxing",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/boxing.svg",
+      "shortDesc": "Read the wind-up, dodge, counter — and knock out the champ.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-helix",
+      "name": "Helix Drop",
+      "path": "play-hub/#/play/helix",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/helix.svg",
+      "shortDesc": "Spin the tower, drop through gaps and smash rings as a fireball.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hoops",
+      "name": "Basket Flick",
+      "path": "play-hub/#/play/hoops",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/hoops.svg",
+      "shortDesc": "Flick swishes into a sliding hoop and catch fire before time runs out.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-racer",
+      "name": "Neon Racer",
+      "path": "play-hub/#/play/racer",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/racer.svg",
+      "shortDesc": "Weave through night traffic, skim cars for nitro, outrun the cops.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-drift",
+      "name": "Drift King",
+      "path": "play-hub/#/play/drift",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/drift.svg",
+      "shortDesc": "One-touch drifting: hold into the bend, hit apex gates, stay on track.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-slither",
+      "name": "Slither Arena",
+      "path": "play-hub/#/play/slither",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/slither.svg",
+      "shortDesc": "Grow a glowing worm, cut off rivals and feast on what they drop.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hole",
+      "name": "Black Hole",
+      "path": "play-hub/#/play/hole",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/hole.svg",
+      "shortDesc": "Swallow the city piece by piece — cones, cars, then skyscrapers.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-bubble",
+      "name": "Bubble Blast",
+      "path": "play-hub/#/play/bubble",
+      "categories": [
+        "action",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/bubble.svg",
+      "shortDesc": "Bank shots off the walls, pop trios and drop whole clusters.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-pinball",
+      "name": "Pinball Wizard",
+      "path": "play-hub/#/play/pinball",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/pinball.svg",
+      "shortDesc": "Flip, loop and chase multiball on a glowing neon table.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-galaga",
+      "name": "Star Squadron",
+      "path": "play-hub/#/play/galaga",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/galaga.svg",
+      "shortDesc": "Blast diving alien swarms and rescue captured fighters.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-bullet",
+      "name": "Bullet Storm",
+      "path": "play-hub/#/play/bullet",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/bullet.svg",
+      "shortDesc": "Weave through dazzling bullet storms, graze for points, slay bosses.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-copter",
+      "name": "Copter Cave",
+      "path": "play-hub/#/play/copter",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/copter.svg",
+      "shortDesc": "Hold to rise, release to dip through ice, lava and crystal caves.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hopper",
+      "name": "Road Hopper",
+      "path": "play-hub/#/play/hopper",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/hopper.svg",
+      "shortDesc": "Hop across roads, rivers and rails — and never stop moving.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-catapult",
+      "name": "Castle Crash",
+      "path": "play-hub/#/play/catapult",
+      "categories": [
+        "action",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/catapult.svg",
+      "shortDesc": "Fling boulders, topple towers and knock out every guard.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-bowduel",
+      "name": "Bow Duel",
+      "path": "play-hub/#/play/bowduel",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/bowduel.svg",
+      "shortDesc": "Out-aim a ladder of rival archers across windy hills.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-towerdef",
+      "name": "Tower Rush",
+      "path": "play-hub/#/play/towerdef",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/towerdef.svg",
+      "shortDesc": "Build and upgrade towers to hold the gate against endless waves.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-mech",
+      "name": "Mech Survivor",
+      "path": "play-hub/#/play/mech",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/mech.svg",
+      "shortDesc": "Survive 10 minutes of swarms while your auto-weapons level and evolve.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-dungeon",
+      "name": "Dungeon Dash",
+      "path": "play-hub/#/play/dungeon",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/dungeon.svg",
+      "shortDesc": "Slash through torch-lit rooms, grab perks and topple floor bosses.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-ski",
+      "name": "Slope Ski",
+      "path": "play-hub/#/play/ski",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/ski.svg",
+      "shortDesc": "Carve downhill, spin off ramps, and outrun the hungry yeti.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-surf",
+      "name": "Wave Surfer",
+      "path": "play-hub/#/play/surf",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/surf.svg",
+      "shortDesc": "Pump the wave face, flip off the lip, and outrun the closing curl.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-bmx",
+      "name": "Hill Rider",
+      "path": "play-hub/#/play/bmx",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/bmx.svg",
+      "shortDesc": "Throttle over wild hills, flip in the air, and never run dry.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-sumo",
+      "name": "Sumo Push",
+      "path": "play-hub/#/play/sumo",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/sumo.svg",
+      "shortDesc": "Shove, charge and sidestep rivals out of a shrinking sumo ring.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hockey",
+      "name": "Air Hockey",
+      "path": "play-hub/#/play/hockey",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/hockey.svg",
+      "shortDesc": "Smash the puck past 20 rivals on a glowing tournament ladder.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-fisher",
+      "name": "Deep Fisher",
+      "path": "play-hub/#/play/fisher",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/fisher.svg",
+      "shortDesc": "Dodge fish going down, hook them coming up, shoot them sky-high.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-miner",
+      "name": "Gold Claw",
+      "path": "play-hub/#/play/miner",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/miner.svg",
+      "shortDesc": "Drop the swinging claw, haul up gold and beat the clock.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-spinner",
+      "name": "Spin Tops",
+      "path": "play-hub/#/play/spinner",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/spinner.svg",
+      "shortDesc": "Steer your battle top, clash for sparks and knock rivals out of the bowl.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-paint",
+      "name": "Paint Wars",
+      "path": "play-hub/#/play/paint",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/paint.svg",
+      "shortDesc": "Loop out, paint the map and cut rival trails before they cut yours.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-blocks",
+      "name": "Block Blitz",
+      "path": "play-hub/#/play/blocks",
+      "categories": [
+        "action",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/blocks.svg",
+      "shortDesc": "Slide, spin and slam glossy blocks — chain combos as speed climbs.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-smash",
+      "name": "Glass Smash",
+      "path": "play-hub/#/play/smash",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/smash.svg",
+      "shortDesc": "Fly down a glass corridor, smashing panes to keep moving.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-beats",
+      "name": "Beat Tapper",
+      "path": "play-hub/#/play/beats",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/beats.svg",
+      "shortDesc": "Tap four lanes to fresh synth tracks — every song a little faster.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-dogfight",
+      "name": "Dogfight Ace",
+      "path": "play-hub/#/play/dogfight",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/dogfight.svg",
+      "shortDesc": "Out-turn enemy fighters, dodge missiles and down the enemy aces.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-gravity",
+      "name": "Gravity Flip",
+      "path": "play-hub/#/play/gravity",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/gravity.svg",
+      "shortDesc": "Tap to flip gravity — run the floor and ceiling past saws and gaps.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-bouncy",
+      "name": "Bounce Up",
+      "path": "play-hub/#/play/bouncy",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/bouncy.svg",
+      "shortDesc": "Bounce from meadow to outer space on springs, hats and jetpacks.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-lumber",
+      "name": "Lumber Chop",
+      "path": "play-hub/#/play/lumber",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/lumber.svg",
+      "shortDesc": "Chop left, chop right, dodge branches — and beat the clock.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-sniper",
+      "name": "Sniper Scope",
+      "path": "play-hub/#/play/sniper",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/sniper.svg",
+      "shortDesc": "Scope in, read the wind and drop, and land the perfect shot.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-matrix",
+      "name": "Grid Recall",
+      "path": "play-hub/#/play/matrix",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/matrix.svg",
+      "shortDesc": "Memorise the lit tiles, then tap them back as the grid grows.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-cups",
+      "name": "Cup Shuffle",
+      "path": "play-hub/#/play/cups",
+      "categories": [
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/cups.svg",
+      "shortDesc": "Keep your eye on the ball as the cups whirl faster and faster.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-darkmaze",
+      "name": "Dark Maze",
+      "path": "play-hub/#/play/darkmaze",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/darkmaze.svg",
+      "shortDesc": "Memorise the maze, then find the exit by lantern light alone.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-changed",
+      "name": "What Changed?",
+      "path": "play-hub/#/play/changed",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/changed.svg",
+      "shortDesc": "Study a cosy little scene, blink, and spot what is different.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-nback",
+      "name": "N-Back Flash",
+      "path": "play-hub/#/play/nback",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/nback.svg",
+      "shortDesc": "Is this the same as N steps back? Train your working memory.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-flashcount",
+      "name": "Flash Count",
+      "path": "play-hub/#/play/flashcount",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/flashcount.svg",
+      "shortDesc": "Objects flash for a moment — how many of each did you see?",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-faces",
+      "name": "Face Names",
+      "path": "play-hub/#/play/faces",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/faces.svg",
+      "shortDesc": "Meet the characters, remember their names, call them out.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-melody",
+      "name": "Melody Keys",
+      "path": "play-hub/#/play/melody",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/melody.svg",
+      "shortDesc": "Listen to the tune, then play it back on the keys.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-recipe",
+      "name": "Recipe Rush",
+      "path": "play-hub/#/play/recipe",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/recipe.svg",
+      "shortDesc": "Remember each order, then build it exactly right.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-route",
+      "name": "Route Recall",
+      "path": "play-hub/#/play/route",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/route.svg",
+      "shortDesc": "Memorise the directions, then drive the route turn by turn.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-crane",
+      "name": "Crane Tower",
+      "path": "play-hub/#/play/crane",
+      "categories": [
+        "puzzle",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/crane.svg",
+      "shortDesc": "Drop swinging floors from the crane and build the tallest tower.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-bridge",
+      "name": "Bridge Builder",
+      "path": "play-hub/#/play/bridge",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/bridge.svg",
+      "shortDesc": "Lay beams across the gap so the traffic makes it over.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-tinycity",
+      "name": "Tiny City",
+      "path": "play-hub/#/play/tinycity",
+      "categories": [
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/tinycity.svg",
+      "shortDesc": "Place buildings where the neighbours love them and grow a town.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-tumble",
+      "name": "Tumble Tower",
+      "path": "play-hub/#/play/tumble",
+      "categories": [
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/tumble.svg",
+      "shortDesc": "Slide blocks out of the tower and stack them higher.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-roads",
+      "name": "Road Rush",
+      "path": "play-hub/#/play/roads",
+      "categories": [
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/roads.svg",
+      "shortDesc": "Draw roads so every car gets to work on time.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-sandcastle",
+      "name": "Sandcastle",
+      "path": "play-hub/#/play/sandcastle",
+      "categories": [
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/sandcastle.svg",
+      "shortDesc": "Raise towers, dig moats and outlast every bigger tide.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-blueprint",
+      "name": "Blueprint",
+      "path": "play-hub/#/play/blueprint",
+      "categories": [
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/blueprint.svg",
+      "shortDesc": "Fill the blueprint with pieces off the belt before time runs out.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-domino",
+      "name": "Domino Build",
+      "path": "play-hub/#/play/domino",
+      "categories": [
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/domino.svg",
+      "shortDesc": "Draw a domino trail, tap GO and watch the chain ring every bell.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-mergetown",
+      "name": "Merge Town",
+      "path": "play-hub/#/play/mergetown",
+      "categories": [
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/mergetown.svg",
+      "shortDesc": "Merge tents into castles and skyscrapers before the town fills up.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-rocket",
+      "name": "Rocket Builder",
+      "path": "play-hub/#/play/rocket",
+      "categories": [
+        "puzzle",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/rocket.svg",
+      "shortDesc": "Bolt together a rocket, launch, dodge the sky and reach the Moon.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-fruitmerge",
+      "name": "Fruit Drop",
+      "path": "play-hub/#/play/fruitmerge",
+      "categories": [
+        "merge",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/fruitmerge.svg",
+      "shortDesc": "Drop cute fruit in the jar — two alike merge into a bigger one!",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-dropmerge",
+      "name": "Drop Merge",
+      "path": "play-hub/#/play/dropmerge",
+      "categories": [
+        "merge",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/dropmerge.svg",
+      "shortDesc": "Drop number blocks into columns and set off chain merges.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-chainmerge",
+      "name": "Chain Link",
+      "path": "play-hub/#/play/chainmerge",
+      "categories": [
+        "merge",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/chainmerge.svg",
+      "shortDesc": "Swipe chains of equal gems — they fuse into one bigger number.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hexsort",
+      "name": "Hexa Sort",
+      "path": "play-hub/#/play/hexsort",
+      "categories": [
+        "merge",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/hexsort.svg",
+      "shortDesc": "Stack hex tiles so matching colours flip together and burst.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-mergedefense",
+      "name": "Merge Defenders",
+      "path": "play-hub/#/play/mergedefense",
+      "categories": [
+        "merge",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/mergedefense.svg",
+      "shortDesc": "Summon and merge archers, mages and cannons to hold the road.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-gunmerge",
+      "name": "Gun Merge",
+      "path": "play-hub/#/play/gunmerge",
+      "categories": [
+        "merge",
+        "new"
+      ],
+      "icon": "play-hub/covers/gunmerge.svg",
+      "shortDesc": "Merge pistols into railguns and hold the barricade against the horde.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-carmerge",
+      "name": "Car Merge",
+      "path": "play-hub/#/play/carmerge",
+      "categories": [
+        "merge",
+        "new"
+      ],
+      "icon": "play-hub/covers/carmerge.svg",
+      "shortDesc": "Merge buggies into rocket cars and race them to beat every season.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-planetmerge",
+      "name": "Planet Merge",
+      "path": "play-hub/#/play/planetmerge",
+      "categories": [
+        "merge",
+        "new"
+      ],
+      "icon": "play-hub/covers/planetmerge.svg",
+      "shortDesc": "Fling space rocks into a gravity well and merge them into suns.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-farmmerge",
+      "name": "Farm Merge",
+      "path": "play-hub/#/play/farmmerge",
+      "categories": [
+        "merge",
+        "new"
+      ],
+      "icon": "play-hub/covers/farmmerge.svg",
+      "shortDesc": "Grow, merge and bake your way through busy farm days.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-potionmerge",
+      "name": "Potion Shop",
+      "path": "play-hub/#/play/potionmerge",
+      "categories": [
+        "merge",
+        "new"
+      ],
+      "icon": "play-hub/covers/potionmerge.svg",
+      "shortDesc": "Merge herbs and crystals, brew magic potions and keep customers happy.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-busjam",
+      "name": "Bus Jam",
+      "path": "play-hub/#/play/busjam",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/busjam.svg",
+      "shortDesc": "Send each bus off with passengers of its colour — clear the queue.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-parkingjam",
+      "name": "Parking Jam",
+      "path": "play-hub/#/play/parkingjam",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/parkingjam.svg",
+      "shortDesc": "Slide every car out of the packed lot without a crash.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-blockjam",
+      "name": "Block Jam",
+      "path": "play-hub/#/play/blockjam",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/blockjam.svg",
+      "shortDesc": "Slide colour blocks out through their matching doors.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-arrowescape",
+      "name": "Arrow Escape",
+      "path": "play-hub/#/play/arrowescape",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/arrowescape.svg",
+      "shortDesc": "Tap arrows to fly them off the grid — don't let them collide.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-sandblast",
+      "name": "Sand Blast",
+      "path": "play-hub/#/play/sandblast",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/sandblast.svg",
+      "shortDesc": "Drop sand blocks and bridge a colour from wall to wall.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-goodssort",
+      "name": "Goods Sort",
+      "path": "play-hub/#/play/goodssort",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/goodssort.svg",
+      "shortDesc": "Match three goods on a shelf to clear the store.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-screwjam",
+      "name": "Screw Jam",
+      "path": "play-hub/#/play/screwjam",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/screwjam.svg",
+      "shortDesc": "Unscrew bolts into matching boxes and free every plate.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-numbermerge",
+      "name": "Number Merge",
+      "path": "play-hub/#/play/numbermerge",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/numbermerge.svg",
+      "shortDesc": "Place number blocks — equal neighbours merge and grow.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-allinhole",
+      "name": "All in Hole",
+      "path": "play-hub/#/play/allinhole",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/allinhole.svg",
+      "shortDesc": "Steer the hole and swallow every last item in the level.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-lanedefense",
+      "name": "Lane Defense",
+      "path": "play-hub/#/play/lanedefense",
+      "categories": [
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/lanedefense.svg",
+      "shortDesc": "Plant defenders in five lanes and stop the march.",
+      "badge": "HOT"
+    },
+    {
+      "id": "hub-connect4",
+      "name": "Connect Four",
+      "path": "play-hub/#/play/connect4",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/connect4.svg",
+      "shortDesc": "Drop discs and connect four before the CPU does.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-reversi",
+      "name": "Reversi",
+      "path": "play-hub/#/play/reversi",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/reversi.svg",
+      "shortDesc": "Flip discs on an 8×8 board and outscore the CPU.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-caro",
+      "name": "Caro",
+      "path": "play-hub/#/play/caro",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/caro.svg",
+      "shortDesc": "Classic five-in-a-row duel against a crafty CPU.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-chess",
+      "name": "Chess",
+      "path": "play-hub/#/play/chess",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/chess.svg",
+      "shortDesc": "Play classic chess against a simple CPU opponent.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-memory",
+      "name": "Flip Match",
+      "path": "play-hub/#/play/memory",
+      "categories": [
+        "memory",
+        "classic"
+      ],
+      "icon": "play-hub/covers/memory.svg",
+      "shortDesc": "Find every pair before the timer climbs."
+    },
+    {
+      "id": "hub-2048",
+      "name": "Merge 2048",
+      "path": "play-hub/#/play/2048",
+      "categories": [
+        "strategy",
+        "puzzle"
+      ],
+      "icon": "play-hub/covers/2048.svg",
+      "shortDesc": "Swipe tiles, merge powers of two, chase a high score."
+    },
+    {
+      "id": "hub-sequence",
+      "name": "Pulse Sequence",
+      "path": "play-hub/#/play/sequence",
+      "categories": [
+        "memory",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/sequence.svg",
+      "shortDesc": "Watch the pulse, then tap the pattern back.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-reaction",
+      "name": "Flash Reflex",
+      "path": "play-hub/#/play/reaction",
+      "categories": [
+        "action",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/reaction.svg",
+      "shortDesc": "Wait for green, then tap as fast as you can.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-whack",
+      "name": "Pop Targets",
+      "path": "play-hub/#/play/whack",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/whack.svg",
+      "shortDesc": "Pop the glowing targets before they vanish.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-slide",
+      "name": "Slide Tile",
+      "path": "play-hub/#/play/slide",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/slide.svg",
+      "shortDesc": "Slide tiles into order from 1 to 8.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-colors",
+      "name": "Color Clash",
+      "path": "play-hub/#/play/colors",
+      "categories": [
+        "memory",
+        "action",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/colors.svg",
+      "shortDesc": "Tap the ink color — ignore what the word says.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-taprace",
+      "name": "Tap Rush",
+      "path": "play-hub/#/play/taprace",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/taprace.svg",
+      "shortDesc": "Mash the button as fast as you can before time runs out.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-guess",
+      "name": "Number Nest",
+      "path": "play-hub/#/play/guess",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/guess.svg",
+      "shortDesc": "Guess the secret number with higher / lower hints.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-odd",
+      "name": "Spot Odd",
+      "path": "play-hub/#/play/odd",
+      "categories": [
+        "memory",
+        "action",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/odd.svg",
+      "shortDesc": "Find the one tile that does not match the rest.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-balloon",
+      "name": "Balloon Pop",
+      "path": "play-hub/#/play/balloon",
+      "categories": [
+        "action",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/balloon.svg",
+      "shortDesc": "Pop only the target-color balloons before they float away.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-math",
+      "name": "Quick Calc",
+      "path": "play-hub/#/play/math",
+      "categories": [
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/math.svg",
+      "shortDesc": "Solve fast arithmetic before the timer hits zero.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-order",
+      "name": "Count Order",
+      "path": "play-hub/#/play/order",
+      "categories": [
+        "memory",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/order.svg",
+      "shortDesc": "Tap numbers in ascending order before they reshuffle.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-lights",
+      "name": "Lights Out",
+      "path": "play-hub/#/play/lights",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/lights.svg",
+      "shortDesc": "Toggle tiles until every light turns off.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-scramble",
+      "name": "Word Scramble",
+      "path": "play-hub/#/play/scramble",
+      "categories": [
+        "strategy",
+        "memory",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/scramble.svg",
+      "shortDesc": "Unscramble the letters to form the hidden word.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-sum",
+      "name": "Sum Duo",
+      "path": "play-hub/#/play/sum",
+      "categories": [
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/sum.svg",
+      "shortDesc": "Pick two numbers that add up to the target.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-maze",
+      "name": "Grid Maze",
+      "path": "play-hub/#/play/maze",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/maze.svg",
+      "shortDesc": "Navigate from S to E through shrinking corridors.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-gauge",
+      "name": "Perfect Stop",
+      "path": "play-hub/#/play/gauge",
+      "categories": [
+        "action",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/gauge.svg",
+      "shortDesc": "Stop the sliding marker inside the green zone.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-arrow",
+      "name": "Arrow Rush",
+      "path": "play-hub/#/play/arrow",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/arrow.svg",
+      "shortDesc": "Match the direction before time runs out.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-echo",
+      "name": "Pattern Echo",
+      "path": "play-hub/#/play/echo",
+      "categories": [
+        "memory",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/echo.svg",
+      "shortDesc": "Find the color sequence on the grid, in order.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-same",
+      "name": "Color Sweep",
+      "path": "play-hub/#/play/same",
+      "categories": [
+        "memory",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/same.svg",
+      "shortDesc": "Clear every tile that matches the target color.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hold",
+      "name": "Hold Beat",
+      "path": "play-hub/#/play/hold",
+      "categories": [
+        "memory",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/hold.svg",
+      "shortDesc": "Hold the button and release right on the mark.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-safe",
+      "name": "Mine Safe",
+      "path": "play-hub/#/play/safe",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/safe.svg",
+      "shortDesc": "Reveal safe tiles and dodge the hidden bombs.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-rps",
+      "name": "Hand Duel",
+      "path": "play-hub/#/play/rps",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/rps.svg",
+      "shortDesc": "Rock, paper, scissors — beat the CPU fast.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-hop",
+      "name": "Pad Hop",
+      "path": "play-hub/#/play/hop",
+      "categories": [
+        "memory",
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/hop.svg",
+      "shortDesc": "Watch the path light up, then hop it back.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-sokoban",
+      "name": "Crate Push",
+      "path": "play-hub/#/play/sokoban",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/sokoban.svg",
+      "shortDesc": "Push every crate onto a goal — plan ahead, no rushing.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-watersort",
+      "name": "Color Pour",
+      "path": "play-hub/#/play/watersort",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/watersort.svg",
+      "shortDesc": "Pour colors until each tube is a single shade.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-pipes",
+      "name": "Pipe Link",
+      "path": "play-hub/#/play/pipes",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/pipes.svg",
+      "shortDesc": "Rotate pipes until water flows from start to end.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-nonogram",
+      "name": "Dot Grid",
+      "path": "play-hub/#/play/nonogram",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/nonogram.svg",
+      "shortDesc": "Paint cells from the number clues — classic picross.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-patches",
+      "name": "Flood It",
+      "path": "play-hub/#/play/patches",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/patches.svg",
+      "shortDesc": "Flood the board one color at a time before moves run out.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-shooter",
+      "name": "Sky Strike",
+      "path": "play-hub/#/play/shooter",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/shooter.svg",
+      "shortDesc": "Dodge, shoot, and upgrade between waves from above.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-sudoku",
+      "name": "Nano Sudoku",
+      "path": "play-hub/#/play/sudoku",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/sudoku.svg",
+      "shortDesc": "Fill a 4×4 grid — no repeats in rows, columns, or 2×2 boxes.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-match3",
+      "name": "Gem Match",
+      "path": "play-hub/#/play/match3",
+      "categories": [
+        "puzzle",
+        "action",
+        "strategy",
+        "new"
+      ],
+      "icon": "play-hub/covers/match3.svg",
+      "shortDesc": "Swap neighboring gems and clear runs of three or more.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-code",
+      "name": "Code Crack",
+      "path": "play-hub/#/play/code",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/code.svg",
+      "shortDesc": "Guess the secret color code with peg feedback each try.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-snake",
+      "name": "Grid Snake",
+      "path": "play-hub/#/play/snake",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/snake.svg",
+      "shortDesc": "Slither, eat apples, and grow without hitting yourself.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-stack",
+      "name": "Peak Stack",
+      "path": "play-hub/#/play/stack",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/stack.svg",
+      "shortDesc": "Stop the sliding block and stack it as high as you can.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-xiangqi",
+      "name": "Chinese Chess",
+      "path": "play-hub/#/play/xiangqi",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/xiangqi.svg",
+      "shortDesc": "Xiangqi duel — checkmate the general across the river.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-checkers",
+      "name": "Checkers",
+      "path": "play-hub/#/play/checkers",
+      "categories": [
+        "strategy",
+        "puzzle",
+        "new"
+      ],
+      "icon": "play-hub/covers/checkers.svg",
+      "shortDesc": "Jump and crown pieces in a classic draughts match.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-wordle",
+      "name": "Word Nest",
+      "path": "play-hub/#/play/wordle",
+      "categories": [
+        "puzzle",
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/wordle.svg",
+      "shortDesc": "Guess the five-letter word in six tries with color clues.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-solitaire",
+      "name": "Klondike",
+      "path": "play-hub/#/play/solitaire",
+      "categories": [
+        "classic",
+        "puzzle",
+        "strategy",
+        "memory",
+        "new"
+      ],
+      "icon": "play-hub/covers/solitaire.svg",
+      "shortDesc": "Classic solitaire — build foundations from ace to king.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-dodge",
+      "name": "Meteor Rush",
+      "path": "play-hub/#/play/dodge",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/dodge.svg",
+      "shortDesc": "Shoot descending foes, dodge their fire, and grow stronger.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-flap",
+      "name": "Sky Hop",
+      "path": "play-hub/#/play/flap",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/flap.svg",
+      "shortDesc": "Tap to flap through moving pipe gaps in the sky.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-breakout",
+      "name": "Brick Bash",
+      "path": "play-hub/#/play/breakout",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/breakout.svg",
+      "shortDesc": "Smash bricks, catch falling power-ups, and dodge bomber foes.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-runner",
+      "name": "Lane Rush",
+      "path": "play-hub/#/play/runner",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/runner.svg",
+      "shortDesc": "Switch lanes at speed and dodge the hazards racing toward you.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-climb",
+      "name": "Cliff Climb",
+      "path": "play-hub/#/play/climb",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/climb.svg",
+      "shortDesc": "Swap walls and dodge enemies racing down the cliff.",
+      "badge": "NEW"
+    },
+    {
+      "id": "hub-rally",
+      "name": "Paddle Rally",
+      "path": "play-hub/#/play/rally",
+      "categories": [
+        "action",
+        "new"
+      ],
+      "icon": "play-hub/covers/rally.svg",
+      "shortDesc": "Classic court duel — bounce the ball past the CPU paddle.",
       "badge": "NEW"
     }
   ],

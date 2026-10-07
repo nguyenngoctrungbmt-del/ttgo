@@ -1,0 +1,59 @@
+.drift-mult {
+  padding: 0.1rem 0.6rem;
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.55);
+  font-size: 1.25rem;
+  color: #67e8f9;
+}
+
+.drift-mult.is-hot {
+  color: #fde047;
+  background: rgba(190, 18, 60, 0.7);
+}
+
+.drift-chain {
+  position: absolute;
+  left: 50%;
+  bottom: 1.2rem;
+  z-index: 6;
+  transform: translateX(-50%);
+  padding: 0.3rem 0.9rem;
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.drift-chain b {
+  color: #fde68a;
+  font-size: 1.2rem;
+}
+
+.drift-chain span {
+  color: #67e8f9;
+}
+
+.drift-frenzy,
+.drift-nitro {
+  padding: 0.05rem 0.5rem;
+  border-radius: 99px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.drift-frenzy {
+  background: rgba(161, 98, 7, 0.75);
+  color: #fef08a;
+}
+
+.drift-nitro {
+  background: rgba(14, 116, 144, 0.75);
+  color: #cffafe;
+}

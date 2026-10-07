@@ -1,0 +1,221 @@
+.df-flare {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid rgba(253, 186, 116, 0.85);
+  background: radial-gradient(circle at 35% 30%, rgba(251, 146, 60, 0.6), rgba(124, 45, 18, 0.65));
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  touch-action: none;
+  cursor: pointer;
+}
+
+.df-flare svg {
+  width: 26px;
+  height: 26px;
+  margin-bottom: -8px;
+}
+
+.df-flare:active {
+  transform: scale(0.93);
+}
+
+.df-flare.is-empty {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+.df-flare.is-urgent {
+  animation: df-pulse 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes df-pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8);
+  }
+  to {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+.df-hull {
+  display: flex;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.df-hull i {
+  width: 12px;
+  height: 8px;
+  border-radius: 3px;
+  background: #4ade80;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.df-hull i.is-low {
+  background: #f87171;
+}
+
+.df-hull i.is-gone {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.df-lock {
+  position: absolute;
+  top: 5.6rem;
+  left: 50%;
+  z-index: 7;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.8rem;
+  border-radius: 8px;
+  border: 2px solid #ef4444;
+  background: rgba(127, 29, 29, 0.6);
+  color: #fecaca;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+  animation: df-blink 0.3s steps(2) infinite;
+}
+
+.df-lock.is-missile {
+  background: rgba(239, 68, 68, 0.85);
+  color: #fff;
+}
+
+@keyframes df-blink {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.df-acebar {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  z-index: 6;
+  width: min(70%, 260px);
+  transform: translateX(-50%);
+  pointer-events: none;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.df-acebar div {
+  height: 7px;
+  margin-top: 2px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.df-acebar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #a855f7, #facc15);
+}
+
+.df-pick {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(8, 20, 40, 0.6);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 0.25s ease;
+}
+
+.df-pick h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.df-pick p {
+  margin: 0 0 0.5rem;
+  opacity: 0.85;
+}
+
+.df-pick__list {
+  display: grid;
+  gap: 0.6rem;
+  width: min(300px, 100%);
+}
+
+.df-pick__card {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(30, 41, 59, 0.95));
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  animation: df-card-in 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+.df-pick__card:nth-child(2) {
+  animation-delay: 0.07s;
+}
+
+.df-pick__card:nth-child(3) {
+  animation-delay: 0.14s;
+}
+
+.df-pick__card:active {
+  transform: scale(0.97);
+  border-color: #fde047;
+}
+
+.df-pick__icon {
+  grid-row: span 2;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.df-pick__card strong {
+  font-family: var(--font-display);
+}
+
+.df-pick__card span:last-child {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+@keyframes df-card-in {
+  from {
+    transform: translateY(16px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

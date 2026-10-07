@@ -1,0 +1,58 @@
+.sokoban-board {
+  /* layout from .board-host */
+  touch-action: none;
+}
+
+.sokoban-grid {
+  display: grid;
+  gap: 3px;
+  margin: 0 auto;
+  padding: 6px;
+  border-radius: 14px;
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+}
+
+.sokoban-cell {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--panel) 80%, #c4b5a0);
+  font-size: clamp(0.85rem, 3.5vw, 1.15rem);
+  font-weight: 800;
+  color: var(--text);
+}
+
+.sokoban-cell.is-wall {
+  background: #3f3a36;
+  color: transparent;
+  box-shadow: inset 0 0 0 1px #2a2623;
+}
+
+.sokoban-cell.is-goal {
+  background: color-mix(in srgb, var(--warm) 28%, var(--panel));
+  color: color-mix(in srgb, var(--warm) 70%, var(--muted));
+}
+
+.sokoban-cell.is-crate {
+  background: linear-gradient(145deg, #c2410c, #b45309);
+  color: #fff7ed;
+  box-shadow: 0 4px 10px rgba(180, 83, 9, 0.35);
+}
+
+.sokoban-cell.is-done {
+  background: linear-gradient(145deg, #16a34a, #15803d);
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.35);
+}
+
+.sokoban-cell.is-player {
+  background: linear-gradient(145deg, var(--accent), var(--accent-2));
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.sokoban-cell.is-void {
+  background: transparent;
+  box-shadow: none;
+}

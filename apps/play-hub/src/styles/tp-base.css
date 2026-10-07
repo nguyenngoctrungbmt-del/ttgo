@@ -1,0 +1,624 @@
+/*
+ * Base styles for the TodayPuzzle-ported games, re-themed with the TTGO site palette
+ * (assets/css/site.css). Dark is the default; light is opt-in via the theme toggle.
+ */
+:root {
+  --bg: #eef1fb;
+  --bg-2: #e3e8f6;
+  --ink: #12151c;
+  --panel: #ffffff;
+  --panel-soft: #e6eaf6;
+  --line: rgba(18, 21, 40, 0.1);
+  --text: #161b2e;
+  --muted: #59617a;
+  --accent: #6d5ef6;
+  --accent-2: #16a34a;
+  --accent-ink: #ffffff;
+  --warm: #f59e0b;
+  --coral: #f43f5e;
+  --ok: #10b981;
+  --danger: #ef4444;
+  --radius: 18px;
+  --shadow: 0 10px 28px rgba(109, 94, 246, 0.14);
+  --nav-h: 0px;
+  --font-display: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --overlay: rgba(18, 21, 28, 0.4);
+  --glow-a: rgba(109, 94, 246, 0.16);
+  --glow-b: rgba(34, 197, 94, 0.12);
+  --glow-c: rgba(245, 158, 11, 0.1);
+  --bg-scene: none;
+  --bg-wash:
+    radial-gradient(1200px 600px at 15% 10%, var(--glow-a), transparent 55%),
+    radial-gradient(900px 500px at 90% 20%, var(--glow-b), transparent 60%);
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  /* Layout scale: phone baseline; bumped on tablet / large portrait */
+  --app-max: 520px;
+  --board-sm: 300px;
+  --board-max: 360px;
+  --board-lg: 420px;
+  --stage-h: min(58dvh, 420px);
+  --play-min-h: min(70dvh, 520px);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #070a12;
+  --bg-2: #0b1430;
+  --ink: #eaf0ff;
+  --panel: #111a33;
+  --panel-soft: #1a2446;
+  --line: rgba(255, 255, 255, 0.12);
+  --text: #eaf0ff;
+  --muted: rgba(234, 240, 255, 0.72);
+  --accent: #7b6dff;
+  --accent-2: #22c55e;
+  --accent-ink: #ffffff;
+  --warm: #ffd45c;
+  --coral: #ff7f7f;
+  --ok: #52d49a;
+  --danger: #ff6b6b;
+  --shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  --overlay: rgba(4, 6, 14, 0.7);
+  --glow-a: rgba(109, 94, 246, 0.35);
+  --glow-b: rgba(34, 197, 94, 0.22);
+  --glow-c: rgba(255, 212, 92, 0.08);
+  --bg-scene: none;
+  --bg-wash:
+    radial-gradient(1200px 600px at 15% 10%, var(--glow-a), transparent 55%),
+    radial-gradient(900px 500px at 90% 20%, var(--glow-b), transparent 60%),
+    linear-gradient(180deg, #070a12, #0b1430);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--bg);
+  background-image: var(--bg-wash), var(--bg-scene);
+  background-size: auto, cover;
+  background-position: center, center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.is-play,
+html.is-play body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.app-root {
+  width: min(var(--app-max), 100%);
+  margin: 0 auto;
+  min-height: 100dvh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell {
+  flex: 1;
+  padding:
+    max(14px, var(--sat))
+    max(14px, var(--sar))
+    calc(var(--nav-h) + max(14px, var(--sab)))
+    max(14px, var(--sal));
+}
+
+.app-shell.is-play {
+  height: 100dvh;
+  height: 100svh;
+  max-height: 100dvh;
+  max-height: 100svh;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: max(12px, var(--sat));
+  padding-right: max(14px, var(--sar));
+  padding-bottom: max(12px, var(--sab));
+  padding-left: max(14px, var(--sal));
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell.is-play > * {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--accent-ink);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 32%, transparent);
+}
+
+.btn-warm {
+  background: var(--warm);
+  color: #422006;
+}
+
+.btn-ghost {
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  border: 1px solid var(--line);
+}
+
+.btn-icon {
+  width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: 14px;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--panel) 94%, transparent);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+:root[data-theme='dark'] .panel {
+  background: var(--panel);
+  backdrop-filter: none;
+}
+
+.page-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.page-sub {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.h-scroll {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.h-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.15rem 0.85rem;
+  min-height: 48px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  min-height: 44px;
+}
+
+.search-box input::placeholder {
+  color: var(--muted);
+}
+
+.chip-row {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.1rem;
+}
+
+.chip-row::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 90%, transparent);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.chip.is-active {
+  background: var(--accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--panel-soft);
+  overflow: hidden;
+}
+
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--ok));
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(var(--app-max), 100%);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.1rem;
+  padding:
+    0.45rem 0.4rem
+    max(0.55rem, var(--sab));
+  background: color-mix(in srgb, var(--panel) 94%, transparent);
+  border-top: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  z-index: 40;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.12rem;
+  min-height: 52px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 700;
+}
+
+.nav-item span.icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.nav-item.is-active {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.game-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.game-shell__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.game-shell__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.game-shell__meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.stat-pill span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.game-shell__body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: var(--overlay);
+  border-radius: inherit;
+  backdrop-filter: blur(4px);
+  animation: fade-in 0.25s ease;
+}
+
+.overlay-card {
+  position: relative;
+  z-index: 2;
+  width: min(320px, 100%);
+  padding: 1.4rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.overlay-card h2 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+}
+
+.overlay-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.overlay-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.play-idle {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+.play-idle__hint {
+  margin: 0;
+  max-width: 18rem;
+  line-height: 1.45;
+}
+
+.btn-play {
+  min-width: 10rem;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 16px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Large phone / small tablet portrait (e.g. ~600–900 wide) */
+@media (min-width: 600px) {
+  :root {
+    --app-max: 640px;
+    --board-sm: 360px;
+    --board-max: 440px;
+    --board-lg: 520px;
+    --stage-h: min(62dvh, 560px);
+    --play-min-h: min(72dvh, 640px);
+    --radius: 20px;
+  }
+
+  .app-shell {
+    padding:
+      max(18px, var(--sat))
+      max(20px, var(--sar))
+      calc(var(--nav-h) + max(18px, var(--sab)))
+      max(20px, var(--sal));
+  }
+
+  .app-shell.is-play {
+    padding-top: max(16px, var(--sat));
+    padding-right: max(20px, var(--sar));
+    padding-bottom: max(16px, var(--sab));
+    padding-left: max(20px, var(--sal));
+  }
+
+  .board-host {
+    padding: 1.1rem;
+  }
+
+  .overlay-card {
+    width: min(380px, 100%);
+  }
+}
+
+/* Tablet / large portrait (e.g. 1080×1920) */
+@media (min-width: 900px) {
+  :root {
+    --app-max: min(780px, 92vw);
+    --board-sm: 400px;
+    --board-max: 520px;
+    --board-lg: 600px;
+    --stage-h: min(64dvh, 680px);
+    --play-min-h: min(74dvh, 760px);
+      }
+
+  body {
+    font-size: 17px;
+  }
+
+  .overlay-card {
+    width: min(420px, 100%);
+  }
+}
+
+/* Extra-tall screens: let play stages use more vertical room */
+@media (min-height: 900px) {
+  :root {
+    --stage-h: min(66dvh, 640px);
+    --play-min-h: min(74dvh, 720px);
+  }
+}
+
+@media (min-width: 900px) and (min-height: 1400px) {
+  :root {
+    --stage-h: min(68dvh, 760px);
+    --play-min-h: min(76dvh, 860px);
+  }
+}
+
+.route-loading {
+  min-height: var(--play-min-h);
+}

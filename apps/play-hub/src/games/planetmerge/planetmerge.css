@@ -1,0 +1,19 @@
+.planetmerge-arena {
+  background: #0b1026;
+}
+
+.planetmerge-chain {
+  padding: 0.05rem 0.5rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #a78bfa, #ec4899);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.planetmerge-banner {
+  top: 22%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}

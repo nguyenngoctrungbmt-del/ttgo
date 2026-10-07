@@ -1,0 +1,73 @@
+.checkers-board {
+  /* layout from .board-host */
+}
+
+.checkers-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  width: min(100%, var(--board-max));
+}
+
+.checkers-cell {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background: #f0d9b5;
+  position: relative;
+}
+
+.checkers-cell.is-dark {
+  background: #6b4f2a;
+}
+
+.checkers-cell.is-sel {
+  box-shadow: inset 0 0 0 3px #facc15;
+}
+
+.checkers-cell.is-target {
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, #22c55e 70%, transparent);
+}
+
+.checkers-cell.is-last {
+  background: color-mix(in srgb, #fde047 45%, #f0d9b5);
+}
+
+.checkers-cell.is-dark.is-last {
+  background: color-mix(in srgb, #fde047 40%, #6b4f2a);
+}
+
+.checkers-piece {
+  width: 72%;
+  height: 72%;
+  border-radius: 999px;
+  pointer-events: none;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+  font-size: clamp(0.65rem, 3vw, 0.95rem);
+  font-weight: 800;
+}
+
+.checkers-piece.is-you {
+  background: radial-gradient(circle at 35% 30%, #fecaca, #dc2626);
+  color: #7f1d1d;
+}
+
+.checkers-piece.is-cpu {
+  background: radial-gradient(circle at 35% 30%, #e5e7eb, #111827);
+  color: #f9fafb;
+}
+
+.checkers-dot {
+  width: 28%;
+  height: 28%;
+  border-radius: 999px;
+  background: color-mix(in srgb, #166534 55%, transparent);
+}

@@ -1,0 +1,68 @@
+/* Ribbon announcing a new sky theme */
+.defense-zone {
+  --zone: #a78bfa;
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  z-index: 11;
+  min-width: 11rem;
+  padding: 0.35rem 1.4rem 0.45rem;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  border: 2px solid var(--zone);
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.6));
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: defense-zone 3.2s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+.defense-zone small {
+  display: block;
+  color: var(--zone);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.defense-zone em {
+  display: block;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.defense-mega {
+  display: block;
+  margin-top: 0.15rem;
+  color: #fde047;
+  font-weight: 900;
+  animation: defense-mega 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes defense-mega {
+  to {
+    opacity: 0.55;
+  }
+}
+
+@keyframes defense-zone {
+  0% {
+    transform: translate(-50%, -30px) scale(0.85);
+    opacity: 0;
+  }
+  10%,
+  85% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -12px) scale(1);
+    opacity: 0;
+  }
+}

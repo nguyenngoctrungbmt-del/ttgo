@@ -1,0 +1,40 @@
+.ninja-hints {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  pointer-events: none;
+  animation: ninja-hints 2.6s ease both;
+}
+
+.ninja-hints span {
+  display: grid;
+  place-items: center;
+  min-height: 34%;
+  padding: 1.2rem 0.5rem;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  border-top: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+.ninja-hints span:first-child {
+  border-right: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+@keyframes ninja-hints {
+  0%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

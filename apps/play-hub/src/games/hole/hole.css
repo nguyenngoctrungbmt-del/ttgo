@@ -1,0 +1,145 @@
+.hole-timer {
+  padding: 0.15rem 0.7rem;
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.55);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.hole-timer.is-low {
+  color: #fecaca;
+  background: rgba(220, 38, 38, 0.7);
+  animation: hole-pulse 0.5s ease-in-out infinite alternate;
+}
+
+.hole-combo {
+  padding: 0.05rem 0.5rem;
+  border-radius: 99px;
+  background: #a78bfa;
+  font-size: 0.9rem;
+}
+
+.hole-bar {
+  position: absolute;
+  top: 4.3rem;
+  left: 50%;
+  z-index: 6;
+  width: min(72%, 280px);
+  height: 12px;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.hole-bar__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #6366f1, #c084fc);
+  transition: width 0.15s linear;
+}
+
+.hole-bar__mark {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.hole-bar__mark svg,
+.hole-clear__stars svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  stroke: rgba(15, 23, 42, 0.6);
+  stroke-width: 1.4;
+}
+
+.hole-bar__mark.is-on {
+  color: #fde047;
+}
+
+.hole-pows {
+  position: absolute;
+  top: 5.6rem;
+  left: 50%;
+  z-index: 6;
+  display: flex;
+  gap: 0.3rem;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.hole-pows span {
+  padding: 0.1rem 0.55rem;
+  border-radius: 99px;
+  color: #0f172a;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+}
+
+.hole-clear {
+  position: absolute;
+  inset: 0;
+  z-index: 14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  pointer-events: none;
+  color: #fff;
+  font-family: var(--font-display);
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(circle, rgba(30, 27, 75, 0.55), rgba(30, 27, 75, 0.15));
+  animation: fade-in 0.3s ease;
+}
+
+.hole-clear h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.hole-clear p {
+  margin: 0;
+  font-weight: 800;
+  opacity: 0.9;
+}
+
+.hole-clear__stars {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.hole-clear__stars span {
+  width: 54px;
+  height: 54px;
+  color: rgba(255, 255, 255, 0.25);
+  animation: hole-star 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.5) both;
+}
+
+.hole-clear__stars span.is-on {
+  color: #fde047;
+}
+
+@keyframes hole-star {
+  from {
+    transform: scale(0) rotate(-40deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes hole-pulse {
+  to {
+    transform: scale(1.08);
+  }
+}

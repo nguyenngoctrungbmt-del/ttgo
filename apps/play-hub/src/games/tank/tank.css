@@ -1,0 +1,168 @@
+.tank-bossbar {
+  position: absolute;
+  top: 4.2rem;
+  left: 50%;
+  z-index: 6;
+  width: min(70%, 260px);
+  height: 10px;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.tank-bossbar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #f472b6, #e11d48);
+  transition: width 0.15s ease-out;
+}
+
+.tank-upgrade {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(10, 14, 6, 0.6);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 0.25s ease;
+}
+
+.tank-upgrade h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.tank-upgrade p {
+  margin: 0 0 0.6rem;
+  opacity: 0.85;
+}
+
+.tank-upgrade__list {
+  display: grid;
+  gap: 0.6rem;
+  width: min(300px, 100%);
+}
+
+.tank-upgrade__card {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(107, 142, 35, 0.9), rgba(63, 74, 44, 0.95));
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  animation: tank-card-in 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+.tank-upgrade__card:nth-child(2) {
+  animation-delay: 0.07s;
+}
+
+.tank-upgrade__card:nth-child(3) {
+  animation-delay: 0.14s;
+}
+
+.tank-upgrade__card:active {
+  transform: scale(0.97);
+  border-color: #fde047;
+}
+
+.tank-upgrade__icon {
+  grid-row: span 2;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.tank-upgrade__card strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.tank-upgrade__card span:last-child {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+@keyframes tank-card-in {
+  from {
+    transform: translateY(16px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Zone ribbon announcing a new biome */
+.tank-zone {
+  --zone: #a3e635;
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  z-index: 11;
+  min-width: 11rem;
+  padding: 0.35rem 1.4rem 0.45rem;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  border: 2px solid var(--zone);
+  background: linear-gradient(180deg, rgba(15, 18, 10, 0.82), rgba(15, 18, 10, 0.62));
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: tank-zone 3.2s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+.tank-zone small {
+  display: block;
+  color: var(--zone);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.tank-zone em {
+  display: block;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+@keyframes tank-zone {
+  0% {
+    transform: translate(-50%, -30px) scale(0.85);
+    opacity: 0;
+  }
+  10%,
+  85% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -12px) scale(1);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,183 @@
+.xiangqi-board {
+  /* layout from .board-host */
+}
+
+.xiangqi-frame {
+  width: min(100%, var(--board-max));
+  background: linear-gradient(160deg, #b45309, #7c2d12);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid color-mix(in srgb, #451a03 55%, transparent);
+}
+
+.xiangqi-stage {
+  position: relative;
+  width: 100%;
+  /* 8 file-gaps × 9 rank-gaps, plus margin for edge pieces */
+  aspect-ratio: 8.8 / 9.8;
+  background: #e8c48a;
+  border-radius: 6px;
+  overflow: visible;
+}
+
+.xiangqi-lines {
+  position: absolute;
+  inset: 5.2% 5.5%;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.xiangqi-lines line,
+.xiangqi-lines path {
+  stroke: #5c3310;
+  stroke-width: 0.045;
+  stroke-linecap: square;
+  fill: none;
+}
+
+.xiangqi-lines .is-outer {
+  stroke-width: 0.08;
+}
+
+.xiangqi-river-label {
+  position: absolute;
+  left: 5.5%;
+  right: 5.5%;
+  top: calc(5.2% + (4.5 / 9) * (100% - 10.4%));
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  pointer-events: none;
+  z-index: 1;
+  font-size: clamp(0.7rem, 3.2vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: color-mix(in srgb, #7f1d1d 55%, #5c3310);
+  text-align: center;
+  line-height: 1;
+}
+
+.xiangqi-river-label span:last-child {
+  letter-spacing: 0.28em;
+}
+
+.xiangqi-points {
+  position: absolute;
+  inset: 5.2% 5.5%;
+  z-index: 2;
+}
+
+.xiangqi-point {
+  position: absolute;
+  width: 11.5%;
+  height: 10.2%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 999px;
+  padding: 0;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.xiangqi-point.is-sel {
+  z-index: 3;
+}
+
+.xiangqi-point.is-sel::before,
+.xiangqi-point.is-last::before {
+  content: '';
+  position: absolute;
+  inset: 8%;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.xiangqi-point.is-sel::before {
+  box-shadow: inset 0 0 0 2.5px #facc15;
+  background: color-mix(in srgb, #facc15 28%, transparent);
+}
+
+.xiangqi-point.is-last::before {
+  background: color-mix(in srgb, #fde047 40%, transparent);
+}
+
+.xiangqi-point.is-target::after {
+  content: '';
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  border-radius: 999px;
+  background: color-mix(in srgb, #166534 60%, transparent);
+  pointer-events: none;
+}
+
+.xiangqi-point.is-target.has-piece::after {
+  width: 78%;
+  height: 78%;
+  background: transparent;
+  box-shadow: inset 0 0 0 2.5px color-mix(in srgb, #16a34a 80%, transparent);
+}
+
+.xiangqi-piece {
+  width: 86%;
+  height: 86%;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: clamp(0.68rem, 3.4vw, 1.05rem);
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+  border: 2px solid currentColor;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  position: relative;
+  z-index: 1;
+}
+
+.xiangqi-piece.is-red {
+  color: #b91c1c;
+  background: radial-gradient(circle at 32% 28%, #fff7ed, #fdba74 58%, #f5d0a0);
+}
+
+.xiangqi-piece.is-black {
+  color: #111827;
+  background: radial-gradient(circle at 32% 28%, #f8fafc, #e2e8f0 58%, #cbd5e1);
+}
+
+.xiangqi-diff {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 4;
+}
+
+.xiangqi-diff--bar {
+  margin: 0 0 8px;
+}
+
+.xiangqi-diff__btn {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel, #fff) 88%, transparent);
+  color: inherit;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.xiangqi-diff__btn.is-on {
+  background: color-mix(in srgb, #c2410c 88%, #7c2d12);
+  border-color: transparent;
+  color: #fff7ed;
+}

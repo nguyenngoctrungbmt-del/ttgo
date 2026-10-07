@@ -1,0 +1,123 @@
+.nm-arena {
+  background: #1e1b4b;
+}
+
+.nm-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  opacity: 0.95;
+}
+
+.nm-hard {
+  padding: 0.05rem 0.45rem;
+  border-radius: 99px;
+  background: #dc2626;
+  box-shadow: 0 2px 0 #7f1d1d;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+}
+
+.nm-boosters {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  z-index: 8;
+  display: flex;
+  gap: 14px;
+  transform: translateX(-50%);
+}
+
+.nm-boost {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, #818cf8, #4338ca);
+  box-shadow: 0 4px 0 #1e1b4b, 0 6px 14px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  touch-action: none;
+}
+
+.nm-boost:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #1e1b4b;
+}
+
+.nm-boost:disabled {
+  filter: grayscale(0.9);
+  opacity: 0.55;
+}
+
+.nm-boost.is-hot {
+  animation: nm-pulse 0.8s ease-in-out infinite;
+}
+
+.nm-boost svg {
+  width: 28px;
+  height: 28px;
+}
+
+.nm-boost__n {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 99px;
+  background: #fff;
+  color: #3730a3;
+  font-weight: 900;
+  font-size: 0.72rem;
+  line-height: 20px;
+}
+
+@keyframes nm-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 0 #1e1b4b, 0 0 0 0 rgba(253, 224, 71, 0.8);
+  }
+  50% {
+    box-shadow: 0 4px 0 #1e1b4b, 0 0 0 8px rgba(253, 224, 71, 0);
+  }
+}
+
+.nm-banner {
+  top: 42%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}
+
+.nm-banner small {
+  white-space: normal;
+  letter-spacing: 0.06em;
+}
+.nm-boost.is-on {
+  background: linear-gradient(180deg, #fbbf24, #b45309);
+  box-shadow: 0 4px 0 #78350f, 0 0 0 4px rgba(251, 191, 36, 0.45);
+}
+
+.nm-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  z-index: 9;
+  transform: translateX(-50%);
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  background: rgba(180, 83, 9, 0.94);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  pointer-events: none;
+  white-space: nowrap;
+}

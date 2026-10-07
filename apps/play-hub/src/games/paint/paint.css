@@ -1,0 +1,153 @@
+.paint-hud {
+  color: #fff;
+}
+
+.paint-goal {
+  width: 7.5rem;
+  height: 7px;
+  margin-top: 0.3rem;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.paint-goal span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #fb7185, #f43f5e);
+  transition: width 0.25s ease-out;
+}
+
+.paint-pows {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.3rem;
+}
+
+.paint-pows span {
+  padding: 0.05rem 0.45rem;
+  border-radius: 99px;
+  font-size: 0.68rem;
+  color: #0f172a;
+  text-shadow: none;
+}
+
+.paint-pows .is-shield {
+  background: #67e8f9;
+}
+
+.paint-pows .is-speed {
+  background: #fde047;
+}
+
+.paint-board {
+  margin: 0;
+  padding: 0.35rem 0.55rem;
+  list-style: none;
+  min-width: 8.5rem;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.5);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.paint-board li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.88;
+}
+
+.paint-board li i {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.paint-board li b {
+  margin-left: auto;
+  padding-left: 0.4rem;
+}
+
+.paint-board li.is-me {
+  color: #fecdd3;
+  opacity: 1;
+}
+
+.paint-feed {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.paint-feed div {
+  padding: 0.1rem 0.6rem;
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.paint-feed div.is-me {
+  background: rgba(225, 29, 72, 0.85);
+}
+
+.paint-banner {
+  text-shadow:
+    0 3px 0 rgba(136, 19, 55, 0.6),
+    0 0 18px rgba(0, 0, 0, 0.35);
+}
+
+.paint-clear {
+  position: absolute;
+  inset: 0;
+  z-index: 14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  pointer-events: none;
+  color: #fff;
+  font-family: var(--font-display);
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.55), rgba(244, 63, 94, 0.1));
+  animation: fade-in 0.3s ease;
+}
+
+.paint-clear h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.paint-clear p {
+  margin: 0;
+  font-weight: 800;
+}
+
+.paint-stat {
+  padding: 0.35rem 0.6rem 0.45rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.paint-stars {
+  margin: 2px 0 4px;
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  color: #f59e0b;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}

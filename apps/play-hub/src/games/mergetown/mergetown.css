@@ -1,0 +1,25 @@
+.mergetown-arena {
+  background: #bbf7d0;
+}
+
+.mergetown-hud {
+  color: #fff;
+}
+
+.mergetown-combo {
+  padding: 0.1rem 0.55rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #422006;
+  text-shadow: none;
+  font-size: 0.95rem;
+}
+
+.mergetown-banner {
+  top: 38%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+  color: #fff;
+}

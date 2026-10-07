@@ -1,0 +1,132 @@
+.watersort-board {
+  /* layout from .board-host */
+}
+
+.watersort-rack {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  width: min(100%, var(--board-lg));
+}
+
+.watersort-tube {
+  width: 52px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  transform-origin: 50% 12%;
+  transition: transform 0.2s ease;
+}
+
+.watersort-tube.is-selected .watersort-glass {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  transform: translateY(-6px);
+}
+
+.watersort-tube.is-pouring {
+  transform: rotate(-28deg) translateY(-10px);
+  z-index: 2;
+}
+
+.watersort-tube.is-receiving .watersort-glass {
+  outline: 2px solid color-mix(in srgb, var(--accent) 50%, transparent);
+  outline-offset: 2px;
+}
+
+.watersort-glass {
+  height: 148px;
+  border-radius: 0 0 18px 18px;
+  border: 2px solid color-mix(in srgb, var(--text) 28%, transparent);
+  border-top: none;
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  box-shadow: inset 0 -4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease;
+}
+
+.watersort-layer {
+  flex: 1;
+  min-height: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.watersort-layer:empty,
+.watersort-layer:not([style]) {
+  background: transparent;
+  border: none;
+}
+
+.watersort-layer.is-filling {
+  animation: watersort-fill 0.38s ease-out both;
+  transform-origin: bottom center;
+}
+
+.watersort-layer.is-draining {
+  animation: watersort-drain 0.36s ease-in both;
+  transform-origin: top center;
+}
+
+.watersort-stream {
+  position: absolute;
+  height: 7px;
+  border-radius: 999px;
+  transform-origin: 0 50%;
+  pointer-events: none;
+  z-index: 3;
+  box-shadow: 0 0 10px color-mix(in srgb, currentColor 40%, transparent);
+  animation: watersort-stream 0.4s ease-out both;
+  opacity: 0.92;
+}
+
+.watersort-stream::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: inherit;
+  transform: translateY(-50%);
+  filter: blur(0.5px);
+}
+
+@keyframes watersort-fill {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes watersort-drain {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0.2;
+  }
+}
+
+@keyframes watersort-stream {
+  0% {
+    opacity: 0;
+    filter: brightness(1.15);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.55;
+  }
+}

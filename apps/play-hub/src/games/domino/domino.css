@@ -1,0 +1,63 @@
+.domino-arena {
+  background: #3f1d38;
+}
+
+.domino-bar {
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  z-index: 8;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.domino-btn {
+  flex: 1;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+
+.domino-btn:disabled {
+  opacity: 0.4;
+}
+
+.domino-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.domino-btn--go {
+  flex: 1.4;
+  border-color: #fde047;
+  background: linear-gradient(135deg, #facc15, #ea580c);
+  color: #422006;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.45);
+}
+
+.domino-low {
+  color: #fca5a5;
+}
+
+.domino-banner {
+  top: 36%;
+  color: #fde047;
+}
+
+.domino-banner small {
+  color: #fff;
+}
+
+.domino-banner {
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}

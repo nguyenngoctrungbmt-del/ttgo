@@ -1,0 +1,205 @@
+.dd-arena {
+  background: #05060a;
+}
+
+.dd-hearts {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 9rem;
+}
+
+.dd-heart {
+  position: relative;
+  width: 18px;
+  height: 16px;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.dd-heart::before,
+.dd-heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 15px;
+  border-radius: 10px 10px 0 0;
+  background: #ef4444;
+}
+
+.dd-heart::before {
+  left: 8px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.dd-heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.dd-heart.is-empty::before,
+.dd-heart.is-empty::after {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.dd-bossbar {
+  position: absolute;
+  top: 3.7rem;
+  left: 50%;
+  z-index: 6;
+  width: min(66%, 260px);
+  transform: translateX(-50%);
+  pointer-events: none;
+  text-align: center;
+  color: #fecaca;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.dd-bossbar div {
+  height: 9px;
+  margin-top: 2px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.dd-bossbar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #f87171, #b91c1c);
+  transition: width 0.15s ease-out;
+}
+
+.dd-btns {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.9rem;
+  z-index: 8;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.7rem;
+}
+
+.dd-btn {
+  display: grid;
+  place-items: center;
+  background: rgba(30, 41, 59, 0.55);
+}
+
+.dd-btn--atk {
+  width: 76px;
+  height: 76px;
+  background: rgba(185, 28, 28, 0.5);
+  border-color: rgba(254, 202, 202, 0.7);
+}
+
+.dd-btn.is-cool {
+  opacity: 0.4;
+}
+
+.dd-perk {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(6, 4, 12, 0.7);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 0.25s ease;
+}
+
+.dd-perk h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #fde047;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.dd-perk p {
+  margin: 0 0 0.6rem;
+  opacity: 0.85;
+}
+
+.dd-perk__list {
+  display: grid;
+  gap: 0.6rem;
+  width: min(310px, 100%);
+}
+
+.dd-perk__card {
+  display: grid;
+  grid-template-columns: 2.8rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  border: 2px solid rgba(253, 224, 71, 0.45);
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.92), rgba(41, 22, 10, 0.95));
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  animation: dd-card-in 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+.dd-perk__card:nth-child(2) {
+  animation-delay: 0.07s;
+}
+
+.dd-perk__card:nth-child(3) {
+  animation-delay: 0.14s;
+}
+
+.dd-perk__card:active {
+  transform: scale(0.97);
+  border-color: #fde047;
+}
+
+.dd-perk__icon {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+}
+
+.dd-perk__card strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.dd-perk__card em {
+  font-style: normal;
+  color: #fde047;
+  font-size: 0.8rem;
+}
+
+.dd-perk__card > span:last-child {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+@keyframes dd-card-in {
+  from {
+    transform: translateY(16px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

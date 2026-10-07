@@ -1,0 +1,37 @@
+.galaga-chips {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.galaga-chip {
+  padding: 0.1rem 0.45rem;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #0b1020;
+  text-shadow: none;
+}
+
+.galaga-chip--rapid {
+  background: #fde047;
+}
+
+.galaga-chip--spread {
+  background: #67e8f9;
+}
+
+.galaga-chip--shield {
+  background: #86efac;
+}
+
+.galaga-chip--dual {
+  background: #f9a8d4;
+}
+
+.galaga-chain {
+  font-size: 0.8rem;
+  color: #fde68a;
+}

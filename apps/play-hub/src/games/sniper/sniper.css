@@ -1,0 +1,110 @@
+.sn-btn {
+  position: absolute;
+  bottom: 0.8rem;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  touch-action: none;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+
+.sn-btn--fire {
+  right: 0.8rem;
+  background: radial-gradient(circle at 35% 30%, rgba(248, 113, 113, 0.85), rgba(127, 29, 29, 0.85));
+  border-color: rgba(254, 202, 202, 0.85);
+}
+
+.sn-btn--fire.is-cocking {
+  opacity: 0.5;
+}
+
+.sn-btn--steady {
+  left: 0.8rem;
+  background: radial-gradient(circle at 35% 30%, rgba(96, 165, 250, 0.7), rgba(30, 58, 138, 0.8));
+  border-color: rgba(191, 219, 254, 0.85);
+}
+
+.sn-btn.is-down,
+.sn-btn:active {
+  transform: scale(0.93);
+}
+
+.sn-breath {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 5.9rem;
+  z-index: 8;
+  width: 78px;
+  height: 7px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.sn-breath span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #60a5fa, #a5f3fc);
+}
+
+.sn-breath.is-out span {
+  background: #f87171;
+}
+
+.sn-wind {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  z-index: 6;
+  transform: translateX(-50%);
+  padding: 0.15rem 0.6rem;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #e0f2fe;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.sn-glint {
+  position: absolute;
+  top: 5.7rem;
+  left: 50%;
+  z-index: 7;
+  transform: translateX(-50%);
+  padding: 0.2rem 0.7rem;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.85);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  animation: sn-blink 0.3s steps(2) infinite;
+}
+
+@keyframes sn-blink {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.sn-time.is-low {
+  color: #fca5a5;
+}

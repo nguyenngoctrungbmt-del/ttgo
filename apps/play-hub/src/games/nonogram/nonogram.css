@@ -1,0 +1,76 @@
+.nonogram-board {
+  /* layout from .board-host */
+}
+
+.nonogram-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.nonogram-grid {
+  display: grid;
+  gap: 2px;
+}
+
+.nonogram-corner {
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.nonogram-clue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.nonogram-clue--col {
+  flex-direction: column;
+  min-height: 42px;
+  padding-bottom: 2px;
+}
+
+.nonogram-clue--row {
+  justify-content: flex-end;
+  padding-right: 4px;
+  min-width: 36px;
+}
+
+.nonogram-cell {
+  aspect-ratio: 1;
+  min-width: 22px;
+  border-radius: 5px;
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.85rem;
+  transition: background 0.1s ease, transform 0.1s ease;
+}
+
+.nonogram-cell.is-fill {
+  background: linear-gradient(145deg, #4c1d95, #7c3aed);
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.35);
+}
+
+.nonogram-cell.is-x {
+  background: var(--panel);
+  color: var(--danger);
+}
+
+.nonogram-cell:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.btn.is-active-mode {
+  background: color-mix(in srgb, var(--accent) 18%, var(--panel));
+  color: var(--accent);
+}

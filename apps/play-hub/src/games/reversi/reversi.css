@@ -1,0 +1,48 @@
+.reversi-board {
+  /* layout from .board-host */
+}
+
+.reversi-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  background: #14532d;
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: var(--shadow);
+  width: min(100%, var(--board-max));
+}
+
+.reversi-cell {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 4px;
+  background: #166534;
+  padding: 8%;
+  display: grid;
+  place-items: center;
+}
+
+.reversi-cell.is-legal {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, #bbf7d0 70%, transparent);
+}
+
+.reversi-cell.is-last {
+  outline: 2px solid #fde047;
+  outline-offset: -2px;
+}
+
+.reversi-disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.reversi-disc.is-you {
+  background: radial-gradient(circle at 30% 30%, #525252, #0a0a0a 60%);
+}
+
+.reversi-disc.is-cpu {
+  background: radial-gradient(circle at 30% 30%, #fafafa, #d4d4d4 60%);
+}

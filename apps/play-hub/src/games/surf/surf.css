@@ -1,0 +1,47 @@
+.surf-gap {
+  width: 92px;
+  height: 7px;
+  margin-top: 0.3rem;
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.4);
+  overflow: hidden;
+}
+
+.surf-gap span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #f8fafc, #5eead4);
+  transition: width 0.12s linear;
+}
+
+.surf-gap.is-danger span {
+  background: linear-gradient(90deg, #ef4444, #fca5a5);
+}
+
+.surf-lives {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  min-height: 14px;
+}
+
+.surf-lives i {
+  width: 22px;
+  height: 7px;
+  border-radius: 99px 60% 60% 99px;
+  background: linear-gradient(#fdba74, #f97316);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.surf-lives b {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+  background: rgba(56, 189, 248, 0.3);
+}
+
+.surf-combo {
+  color: #fde047;
+}

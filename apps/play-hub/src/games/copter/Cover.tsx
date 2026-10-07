@@ -1,0 +1,60 @@
+/** Copter Cave cover: a red helicopter threading a glowing crystal cave. */
+export default function Cover() {
+  return (
+    <svg viewBox="0 0 120 120" role="img" aria-label="Copter Cave">
+      <defs>
+        <linearGradient id="copter-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#0f3b3a" />
+          <stop offset="0.5" stopColor="#14625c" />
+          <stop offset="1" stopColor="#0f3b3a" />
+        </linearGradient>
+        <linearGradient id="copter-wall" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#042f2e" />
+          <stop offset="1" stopColor="#115e59" />
+        </linearGradient>
+        <linearGradient id="copter-wall2" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stopColor="#042f2e" />
+          <stop offset="1" stopColor="#115e59" />
+        </linearGradient>
+        <linearGradient id="copter-body" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#fca5a5" />
+          <stop offset="0.4" stopColor="#ef4444" />
+          <stop offset="1" stopColor="#991b1b" />
+        </linearGradient>
+        <linearGradient id="copter-glass" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#cffafe" />
+          <stop offset="1" stopColor="#0e7490" />
+        </linearGradient>
+      </defs>
+      <rect width="120" height="120" rx="26" fill="url(#copter-bg)" />
+      <path d="M0 0 H120 V22 L108 30 L96 24 L84 34 L70 28 L58 36 L44 26 L30 32 L16 22 L0 28 Z" fill="url(#copter-wall)" stroke="#5eead4" strokeWidth="2" />
+      <path d="M0 120 H120 V92 L106 86 L92 96 L78 88 L64 98 L50 90 L36 98 L22 88 L0 94 Z" fill="url(#copter-wall2)" stroke="#5eead4" strokeWidth="2" />
+      <path d="M92 96 L96 82 L100 96 Z M60 97 L63 86 L66 97 Z" fill="#e879f9" />
+      {/* gems */}
+      <path d="M86 58 l5 -7 l5 7 l-5 8 Z" fill="#67e8f9" stroke="#0e7490" strokeWidth="1.5" />
+      <path d="M102 54 l4 -6 l4 6 l-4 7 Z" fill="#67e8f9" stroke="#0e7490" strokeWidth="1.5" />
+      {/* smoke */}
+      <circle cx="18" cy="66" r="5" fill="#cbd5e1" opacity="0.35" />
+      <circle cx="28" cy="63" r="4" fill="#cbd5e1" opacity="0.5" />
+      <g transform="translate(58 62) rotate(-8)">
+        {/* rotor blur */}
+        <ellipse cx="0" cy="-19" rx="34" ry="4" fill="#e2e8f0" opacity="0.35" />
+        <line x1="-30" y1="-19" x2="30" y2="-19" stroke="#f8fafc" strokeWidth="3" strokeLinecap="round" />
+        <rect x="-2" y="-19" width="4" height="7" fill="#334155" />
+        {/* tail */}
+        <path d="M-10 -4 L-36 -2 L-36 3 L-10 5 Z" fill="#b91c1c" />
+        <path d="M-36 -2 L-41 -12 L-32 -2 Z" fill="#7f1d1d" />
+        <ellipse cx="-37" cy="-2" rx="2.5" ry="8" fill="#e2e8f0" opacity="0.6" />
+        {/* skids */}
+        <path d="M-12 16 H14 Q19 16 20 12 M-5 11 L-7 16 M7 11 L9 16" stroke="#334155" strokeWidth="2.5" fill="none" />
+        {/* body */}
+        <path d="M-15 -2 Q-15 -13 0 -13 Q20 -13 23 2 Q22 12 5 12 H-10 Q-16 10 -15 -2 Z" fill="url(#copter-body)" stroke="#450a0a" strokeWidth="1.2" />
+        <path d="M4 -10 Q17 -10 21 2 H4 Z" fill="url(#copter-glass)" />
+        <circle cx="9" cy="-3" r="3.5" fill="#fde68a" />
+        <path d="M5.5 -4 A3.6 3.6 0 0 1 12.5 -4 Z" fill="#1e293b" />
+        <rect x="-14" y="2" width="17" height="3" fill="#fde047" />
+        <ellipse cx="13" cy="-7" rx="3.5" ry="1.4" fill="#fff" opacity="0.8" transform="rotate(25 13 -7)" />
+      </g>
+    </svg>
+  )
+}

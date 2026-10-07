@@ -1,0 +1,232 @@
+.city-tray {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 8;
+  display: flex;
+  align-items: stretch;
+  gap: 0.4rem;
+}
+
+.city-card {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  column-gap: 0.5rem;
+  align-items: center;
+  padding: 0.35rem 0.55rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f2937;
+  text-align: left;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.18);
+  animation: city-card-in 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.3);
+}
+
+.city-card svg {
+  grid-row: span 2;
+  width: 46px;
+  height: 46px;
+}
+
+.city-card strong {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  line-height: 1.1;
+}
+
+.city-card span {
+  font-size: 0.7rem;
+  line-height: 1.2;
+  color: #4b5563;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.city-card.is-wild {
+  border-color: #f472b6;
+  cursor: pointer;
+}
+
+.city-next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.25rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.city-next svg {
+  width: 26px;
+  height: 26px;
+}
+
+.city-tools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
+}
+
+.city-tool {
+  position: relative;
+  width: 42px;
+  height: 28px;
+  border-radius: 9px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.city-tool svg {
+  width: 18px;
+  height: 18px;
+}
+
+.city-tool b {
+  position: absolute;
+  right: -5px;
+  top: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 99px;
+  background: #f59e0b;
+  color: #111827;
+  font-size: 0.66rem;
+  line-height: 16px;
+}
+
+.city-tool:disabled {
+  opacity: 0.35;
+}
+
+.city-tool.is-on {
+  border-color: #fde047;
+  background: #b45309;
+}
+
+.city-progress {
+  position: relative;
+  width: 120px;
+  height: 9px;
+  margin-top: 0.25rem;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.city-progress span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, #4ade80, #fde047);
+  transition: width 0.3s ease;
+}
+
+.city-pick {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(6, 30, 20, 0.6);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 0.25s ease;
+}
+
+.city-pick h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.city-pick p {
+  margin: 0 0 0.5rem;
+  opacity: 0.88;
+}
+
+.city-pick__list {
+  display: grid;
+  gap: 0.55rem;
+  width: min(300px, 100%);
+}
+
+.city-pick__list.is-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.city-pick__card {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.92), rgba(20, 83, 45, 0.96));
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.city-pick__card svg {
+  grid-row: span 2;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.city-pick__card strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.city-pick__card span:last-child {
+  font-size: 0.8rem;
+  opacity: 0.88;
+}
+
+.city-pick__type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem 0.2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f2937;
+  font-weight: 800;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.city-pick__type svg {
+  width: 38px;
+  height: 38px;
+}
+
+@keyframes city-card-in {
+  from {
+    transform: translateY(12px) scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

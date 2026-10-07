@@ -1,0 +1,38 @@
+.sandcastle-arena {
+  background: #38bdf8;
+}
+
+.sandcastle-wave {
+  position: absolute;
+  right: 0.7rem;
+  top: 3.1rem;
+  z-index: 8;
+  padding: 0.45rem 0.9rem;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 99px;
+  background: linear-gradient(135deg, #0ea5e9, #0369a1);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.45);
+  cursor: pointer;
+  touch-action: none;
+}
+
+.sandcastle-wave:active {
+  transform: scale(0.94);
+}
+
+.sandcastle-banner {
+  top: 34%;
+  font-size: 1.9rem;
+}
+
+.sandcastle-banner {
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}

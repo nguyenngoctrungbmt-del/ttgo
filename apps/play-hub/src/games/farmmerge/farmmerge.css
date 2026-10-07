@@ -1,0 +1,42 @@
+.farmmerge-arena {
+  background: #65a30d;
+}
+
+.farmmerge-hud {
+  top: 0.35rem;
+}
+
+.farmmerge-hud .action-hud__score {
+  font-size: 1.6rem;
+}
+
+.farmmerge-goal {
+  padding: 0.1rem 0.55rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #f59e0b, #b45309);
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.farmmerge-goal.is-met {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.farmmerge-low {
+  color: #fecaca;
+  animation: farmmerge-pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes farmmerge-pulse {
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.farmmerge-banner {
+  top: 42%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}

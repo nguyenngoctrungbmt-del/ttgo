@@ -1,0 +1,152 @@
+.run-continue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.run-continue p {
+  margin: 0;
+}
+
+.run-continue__ring {
+  --k: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: conic-gradient(#f59e0b calc(var(--k) * 360deg), color-mix(in srgb, var(--muted) 20%, transparent) 0);
+  transition: background 0.9s linear;
+}
+
+.run-continue__ring::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: var(--panel);
+}
+
+.run-continue__ring span {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.run-continue__ad {
+  min-width: 14rem;
+  min-height: 3rem;
+  font-size: 1rem;
+  font-weight: 800;
+  animation: mission-pulse 1.2s ease-in-out infinite;
+}
+
+.run-continue__note {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.run-result {
+  width: min(340px, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.run-result .run-result__sub {
+  margin: 0 0 0.6rem;
+}
+
+.run-result__chips {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+
+.run-chip {
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
+  background: var(--panel-soft);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.run-chip.is-best {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  color: #422006;
+  animation: mission-pulse 1.2s ease-in-out infinite;
+}
+
+.run-chip.is-coin {
+  background: color-mix(in srgb, #f59e0b 22%, var(--panel));
+  color: #92400e;
+}
+
+.run-daily {
+  margin: 0 0 0.7rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #78350f;
+  font-size: 0.82rem;
+  animation: mission-fresh 0.6s ease-out both;
+}
+
+.run-next {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.9rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.run-next__icon {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.4rem;
+}
+
+.run-next__icon.game-cover svg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.run-next__copy {
+  display: grid;
+  min-width: 0;
+}
+
+.run-next__copy strong {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.run-next__copy span {
+  font-size: 0.74rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-next__go {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--muted);
+}

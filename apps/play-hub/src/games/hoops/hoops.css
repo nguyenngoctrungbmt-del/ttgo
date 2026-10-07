@@ -1,0 +1,58 @@
+.hoops-clock {
+  position: absolute;
+  top: 0.55rem;
+  left: 50%;
+  z-index: 6;
+  transform: translateX(-50%);
+  min-width: 4.2rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: #fde68a;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.45rem;
+  text-align: center;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.hoops-clock.is-low {
+  color: #fca5a5;
+  border-color: #ef4444;
+  animation: hoops-throb 0.5s ease-in-out infinite;
+}
+
+.hoops-clock.is-fire {
+  color: #fff7ed;
+  border-color: #f97316;
+  background: linear-gradient(180deg, rgba(234, 88, 12, 0.85), rgba(124, 45, 18, 0.85));
+}
+
+.hoops-flames {
+  display: flex;
+  gap: 3px;
+}
+
+.hoops-flames i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.hoops-flames i.is-on {
+  background: linear-gradient(135deg, #fde047, #f97316);
+}
+
+@keyframes hoops-throb {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}

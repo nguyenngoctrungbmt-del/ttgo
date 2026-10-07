@@ -1,0 +1,52 @@
+.ar-goals {
+  position: absolute;
+  top: 4.1rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  pointer-events: none;
+}
+
+.ar-goal {
+  padding: 0.12rem 0.55rem;
+  border-radius: 99px;
+  background: rgba(15, 23, 42, 0.5);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.74rem;
+  text-shadow: none;
+}
+
+.ar-goal.is-done {
+  background: rgba(22, 163, 74, 0.85);
+}
+
+.ar-hearts {
+  display: flex;
+  gap: 3px;
+}
+
+.ar-hearts svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ar-arrows {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.05rem;
+}
+
+.ar-arrows svg {
+  width: 22px;
+  height: 10px;
+}
+
+.ar-arrows.is-low {
+  color: #fca5a5;
+}

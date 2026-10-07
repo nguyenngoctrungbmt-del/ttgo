@@ -1,0 +1,48 @@
+.arrow-board {
+  position: relative;
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: box-shadow 0.2s ease;
+  touch-action: none;
+}
+
+.arrow-board.is-ok {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 35%, transparent);
+}
+
+.arrow-board.is-bad {
+  animation: shake 0.3s ease;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 35%, transparent);
+}
+
+.arrow-prompt {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  font-size: clamp(4rem, 22vw, 6rem);
+  font-weight: 800;
+  color: var(--accent);
+  animation: pop 0.2s ease;
+}
+
+.arrow-hint {
+  text-align: center;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

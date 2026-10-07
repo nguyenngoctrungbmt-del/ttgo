@@ -1,0 +1,208 @@
+.runner-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: var(--play-min-h);
+  padding: 1rem;
+}
+
+.runner-board .play-idle {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+}
+
+.runner-arena {
+  position: relative;
+  flex: 1;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 0%, color-mix(in srgb, #f97316 18%, transparent), transparent 50%),
+    linear-gradient(180deg, #1e293b 0%, #0f172a 55%, #134e4a 100%);
+  touch-action: none;
+  user-select: none;
+}
+
+.runner-hud {
+  position: absolute;
+  top: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f8fafc;
+  text-shadow: 0 2px 8px color-mix(in srgb, #000 50%, transparent);
+  pointer-events: none;
+}
+
+.runner-lanes {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.runner-lane {
+  border-right: 1px dashed color-mix(in srgb, #94a3b8 28%, transparent);
+}
+
+.runner-lane:last-child {
+  border-right: none;
+}
+
+.runner-road {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #334155 40%, transparent),
+    color-mix(in srgb, #1e293b 55%, transparent)
+  );
+  border-left: 2px solid color-mix(in srgb, #fbbf24 45%, transparent);
+  border-right: 2px solid color-mix(in srgb, #fbbf24 45%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.runner-obstacle {
+  position: absolute;
+  width: 18%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #fb7185 0%, #e11d48 60%, #9f1239 100%);
+  box-shadow: 0 4px 12px color-mix(in srgb, #000 40%, transparent);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.runner-obstacle.is-crate {
+  background: linear-gradient(145deg, #fdba74 0%, #ea580c 55%, #9a3412 100%);
+  border-radius: 6px;
+}
+
+.runner-obstacle.is-spike {
+  background: linear-gradient(180deg, #a78bfa 0%, #7c3aed 100%);
+  clip-path: polygon(50% 8%, 92% 90%, 8% 90%);
+  border-radius: 0;
+}
+
+.runner-player {
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 0.62;
+  border-radius: 28% 28% 18% 18% / 22% 22% 28% 28%;
+  background: linear-gradient(180deg, #67e8f9 0%, #0891b2 42%, #0e7490 100%);
+  box-shadow:
+    0 4px 12px color-mix(in srgb, #000 40%, transparent),
+    inset 0 0 0 1.5px color-mix(in srgb, #a5f3fc 45%, transparent);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+  transition: left 0.12s ease-out;
+}
+
+.runner-player::after {
+  content: '';
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: -10%;
+  height: 14%;
+  background: color-mix(in srgb, #22d3ee 40%, transparent);
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+.runner-car-cabin {
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  top: 28%;
+  height: 34%;
+  border-radius: 30% 30% 18% 18% / 40% 40% 30% 30%;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, #67e8f9 35%, transparent);
+}
+
+.runner-car-hood {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  top: 8%;
+  height: 16%;
+  border-radius: 40% 40% 20% 20%;
+  background: linear-gradient(180deg, #a5f3fc 0%, #22d3ee 100%);
+  opacity: 0.85;
+}
+
+.runner-car-wheel {
+  position: absolute;
+  width: 22%;
+  height: 16%;
+  border-radius: 3px;
+  background: #0f172a;
+  box-shadow: inset 0 0 0 1px #475569;
+}
+
+.runner-car-wheel.is-fl {
+  left: -14%;
+  top: 18%;
+}
+
+.runner-car-wheel.is-fr {
+  right: -14%;
+  top: 18%;
+}
+
+.runner-car-wheel.is-rl {
+  left: -14%;
+  bottom: 14%;
+}
+
+.runner-car-wheel.is-rr {
+  right: -14%;
+  bottom: 14%;
+}
+
+.runner-car-light {
+  position: absolute;
+  top: 4%;
+  width: 18%;
+  height: 8%;
+  border-radius: 40%;
+  background: #fef08a;
+  box-shadow: 0 0 6px color-mix(in srgb, #facc15 70%, transparent);
+}
+
+.runner-car-light.is-l {
+  left: 14%;
+}
+
+.runner-car-light.is-r {
+  right: 14%;
+}
+
+.runner-hint {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, #e2e8f0 70%, transparent);
+  pointer-events: none;
+  letter-spacing: 0.02em;
+}

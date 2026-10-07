@@ -1,0 +1,133 @@
+.shooter-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: var(--play-min-h);
+  padding: 1rem;
+}
+
+.shooter-board .play-idle {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+}
+
+.shooter-arena {
+  position: relative;
+  flex: 1;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 0%, color-mix(in srgb, #1d4ed8 22%, transparent), transparent 55%),
+    radial-gradient(circle at 20% 80%, color-mix(in srgb, #0ea5e9 12%, transparent), transparent 40%),
+    linear-gradient(180deg, #0b1220 0%, #111827 55%, #0f172a 100%);
+  touch-action: none;
+  user-select: none;
+  cursor: crosshair;
+}
+
+.shooter-hud {
+  position: absolute;
+  top: 0.65rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, #fff 70%, transparent);
+  background: color-mix(in srgb, #000 35%, transparent);
+  pointer-events: none;
+}
+
+.shooter-player {
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(180deg, #38bdf8 0%, #1d4ed8 70%, #1e3a8a 100%);
+  clip-path: polygon(50% 0%, 85% 70%, 70% 100%, 30% 100%, 15% 70%);
+  box-shadow: 0 0 12px color-mix(in srgb, #38bdf8 45%, transparent);
+  pointer-events: none;
+}
+
+.shooter-bullet {
+  position: absolute;
+  z-index: 2;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fef08a, #f59e0b);
+  box-shadow: 0 0 6px #fbbf24;
+  pointer-events: none;
+}
+
+.shooter-enemy {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #fb7185 0%, #e11d48 55%, #9f1239 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 35%, 70% 100%, 30% 100%, 0% 35%);
+  box-shadow: 0 4px 10px color-mix(in srgb, #e11d48 35%, transparent);
+  pointer-events: none;
+}
+
+.shooter-enemy__hp {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  line-height: 1;
+}
+
+.shooter-upgrade {
+  z-index: 20;
+}
+
+.shooter-upgrade__card {
+  max-width: 22rem;
+  width: min(100%, 22rem);
+}
+
+.shooter-upgrade__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.shooter-upgrade__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.12s ease;
+}
+
+.shooter-upgrade__btn:hover,
+.shooter-upgrade__btn:focus-visible {
+  border-color: #1d4ed8;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.shooter-upgrade__btn strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.shooter-upgrade__btn span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}

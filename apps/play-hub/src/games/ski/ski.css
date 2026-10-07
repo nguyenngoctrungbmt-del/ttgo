@@ -1,0 +1,68 @@
+.ski-arena {
+  background: #e3eefb;
+}
+
+.ski-hud {
+  color: #0f2a4a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.ski-lives {
+  display: flex;
+  gap: 4px;
+  min-height: 14px;
+}
+
+.ski-lives i {
+  position: relative;
+  width: 14px;
+  height: 13px;
+}
+
+.ski-lives i::before,
+.ski-lives i::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 12px;
+  border-radius: 8px 8px 0 0;
+  background: #ef4444;
+}
+
+.ski-lives i::before {
+  left: 6px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.ski-lives i::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.ski-combo {
+  color: #1d4ed8;
+}
+
+.ski-yeti {
+  color: #dc2626;
+  animation: ski-pulse 0.5s ease-in-out infinite alternate;
+}
+
+.ski-banner {
+  color: #ffffff;
+  text-shadow:
+    0 3px 0 #1e3a8a,
+    0 0 18px rgba(30, 58, 138, 0.6);
+}
+
+@keyframes ski-pulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}

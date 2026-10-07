@@ -1,0 +1,143 @@
+.pipes-board {
+  /* layout from .board-host */
+}
+
+.pipes-grid {
+  display: grid;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.pipes-cell {
+  aspect-ratio: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 14px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.55), transparent 45%),
+    #e2e8f0;
+  border: 1.5px solid #94a3b8;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    box-shadow 0.12s ease,
+    transform 0.12s ease;
+}
+
+[data-theme='dark'] .pipes-cell {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08), transparent 45%),
+    #1e293b;
+  border-color: #475569;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.pipes-cell.is-lit {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.35), transparent 40%),
+    color-mix(in srgb, #06b6d4 28%, #e0f2fe);
+  border-color: #0891b2;
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, #22d3ee 45%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+[data-theme='dark'] .pipes-cell.is-lit {
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.1), transparent 40%),
+    color-mix(in srgb, #06b6d4 35%, #0f172a);
+  border-color: #22d3ee;
+}
+
+.pipes-cell.is-start {
+  background: linear-gradient(145deg, #0ea5e9, #0369a1);
+  border-color: #0284c7;
+  box-shadow:
+    0 4px 12px rgba(3, 105, 161, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.pipes-cell.is-end {
+  background: linear-gradient(145deg, #fbbf24, #d97706);
+  border-color: #f59e0b;
+  box-shadow:
+    0 4px 12px rgba(217, 119, 6, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.pipes-cell.is-start.is-lit,
+.pipes-cell.is-end.is-lit {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.45),
+    0 4px 14px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.pipes-cell:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.pipes-art {
+  width: 82%;
+  height: 82%;
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 2px 3px rgba(15, 23, 42, 0.22));
+}
+
+.pipes-art .pipe-arm,
+.pipes-art .pipe-hub {
+  fill: #334155;
+  stroke: #0f172a;
+  stroke-width: 2.5;
+}
+
+.pipes-art .pipe-shine {
+  fill: rgba(255, 255, 255, 0.28);
+  pointer-events: none;
+}
+
+.pipes-art.is-flow .pipe-arm,
+.pipes-art.is-flow .pipe-hub {
+  fill: #06b6d4;
+  stroke: #0e7490;
+}
+
+.pipes-art.is-flow .pipe-shine {
+  fill: rgba(255, 255, 255, 0.55);
+}
+
+.pipes-cell.is-start .pipe-arm,
+.pipes-cell.is-start .pipe-hub,
+.pipes-cell.is-end .pipe-arm,
+.pipes-cell.is-end .pipe-hub {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: rgba(15, 23, 42, 0.22);
+}
+
+.pipes-cell.is-start .pipe-shine,
+.pipes-cell.is-end .pipe-shine {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+.pipes-art .pipe-mark {
+  fill: #0369a1;
+  stroke: none;
+}
+
+.pipes-cell.is-start .pipe-mark {
+  fill: #0369a1;
+}
+
+.pipes-art .pipe-mark--end {
+  fill: #b45309;
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 2;
+}
+
+.pipes-cell.is-end .pipe-mark--end {
+  fill: #92400e;
+}

@@ -1,0 +1,39 @@
+.blueprint-arena {
+  background: #1e3a8a;
+}
+
+.blueprint-combo {
+  padding: 0.15rem 0.6rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #422006;
+  font-size: 1rem;
+  text-shadow: none;
+  animation: blueprint-pop 0.25s ease;
+}
+
+.blueprint-banner {
+  top: 30%;
+  font-size: 2rem;
+  color: #fde047;
+}
+
+.blueprint-banner small {
+  color: #fff;
+}
+
+@keyframes blueprint-pop {
+  from {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.blueprint-banner {
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}

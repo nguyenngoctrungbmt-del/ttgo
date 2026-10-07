@@ -1,0 +1,96 @@
+.bullet-bomb {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(134, 239, 172, 0.75);
+  background: radial-gradient(circle at 35% 30%, rgba(74, 222, 128, 0.45), rgba(20, 83, 45, 0.55));
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  touch-action: none;
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+}
+
+.bullet-bomb svg {
+  width: 26px;
+  height: 26px;
+  margin-bottom: -6px;
+}
+
+.bullet-bomb:active {
+  transform: scale(0.93);
+}
+
+.bullet-bomb.is-empty {
+  opacity: 0.4;
+  border-color: rgba(255, 255, 255, 0.35);
+  filter: grayscale(1);
+}
+
+.bullet-bossbar {
+  position: absolute;
+  top: 3.7rem;
+  left: 50%;
+  z-index: 6;
+  width: min(78%, 300px);
+  transform: translateX(-50%);
+  pointer-events: none;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bullet-bossbar__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.bullet-bossbar__pips {
+  display: flex;
+  gap: 3px;
+}
+
+.bullet-bossbar__pips i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f0abfc;
+  box-shadow: 0 0 4px #e879f9;
+}
+
+.bullet-bossbar__pips i.is-done {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+
+.bullet-bossbar__bar {
+  height: 7px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bullet-bossbar__bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #e879f9, #f43f5e);
+  transition: width 0.12s linear;
+}
+
+.bullet-graze {
+  font-size: 0.78rem;
+  color: #a5f3fc;
+}

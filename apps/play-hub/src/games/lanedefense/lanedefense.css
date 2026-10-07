@@ -1,0 +1,115 @@
+.ld-arena {
+  background: #14532d;
+}
+
+.ld-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  opacity: 0.95;
+}
+
+.ld-hard {
+  padding: 0.05rem 0.45rem;
+  border-radius: 99px;
+  background: #dc2626;
+  box-shadow: 0 2px 0 #7f1d1d;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+}
+
+.ld-tools {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 8;
+  display: flex;
+  gap: 8px;
+}
+
+.ld-tool {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, #a16207, #713f12);
+  box-shadow: 0 4px 0 #451a03, 0 6px 12px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  touch-action: none;
+}
+
+.ld-tool:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #451a03;
+}
+
+.ld-tool.is-on {
+  background: linear-gradient(180deg, #f87171, #b91c1c);
+  box-shadow: 0 4px 0 #7f1d1d, 0 0 0 4px rgba(248, 113, 113, 0.45);
+}
+
+.ld-tool--zap {
+  background: linear-gradient(180deg, #facc15, #ca8a04);
+  color: #422006;
+  box-shadow: 0 4px 0 #713f12, 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ld-tool:disabled {
+  filter: grayscale(0.9);
+  opacity: 0.55;
+}
+
+.ld-tool svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ld-tool__n {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 99px;
+  background: #fff;
+  color: #713f12;
+  font-weight: 900;
+  font-size: 0.7rem;
+  line-height: 18px;
+}
+
+.ld-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 112px;
+  z-index: 9;
+  transform: translateX(-50%);
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  background: rgba(185, 28, 28, 0.92);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.ld-banner {
+  top: 40%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}
+
+.ld-banner small {
+  white-space: normal;
+  letter-spacing: 0.06em;
+}

@@ -1,0 +1,91 @@
+.goalie-lives {
+  display: flex;
+  gap: 4px;
+}
+
+.goalie-lives i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff, #e2e8f0 45%, #94a3b8);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+}
+
+.goalie-lives i.is-lost {
+  opacity: 0.22;
+}
+
+.goalie-mult {
+  padding: 0.05rem 0.45rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #422006;
+  font-size: 0.85rem;
+  text-shadow: none;
+}
+
+.goalie-pips {
+  display: flex;
+  gap: 3px;
+}
+
+.goalie-pips i {
+  width: 9px;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.goalie-pips i.is-on {
+  background: #4ade80;
+}
+
+.goalie-focus {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  z-index: 8;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  background: radial-gradient(circle at 40% 35%, #67e8f9, #0891b2 70%);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 22px rgba(103, 232, 249, 0.7);
+  animation: goalie-pulse 0.9s ease-in-out infinite;
+  touch-action: none;
+}
+
+.goalie-focus-bar {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 7;
+  width: 60px;
+  height: 7px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+.goalie-focus-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #a5f3fc);
+}
+
+@keyframes goalie-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}

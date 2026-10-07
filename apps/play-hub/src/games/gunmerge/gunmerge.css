@@ -1,0 +1,67 @@
+.gunmerge-arena {
+  background: #0c0a09;
+}
+
+.gunmerge-hud .action-hud__score {
+  font-size: 1.7rem;
+}
+
+.gunmerge-cash {
+  padding: 0.1rem 0.55rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  color: #fff;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.gunmerge-combo {
+  padding: 0.05rem 0.5rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #422006;
+  text-shadow: none;
+  font-size: 0.85rem;
+}
+
+.gunmerge-bossbar {
+  position: absolute;
+  top: 3.6rem;
+  left: 50%;
+  z-index: 6;
+  width: min(62%, 240px);
+  transform: translateX(-50%);
+  pointer-events: none;
+  text-align: center;
+  color: #fecaca;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.gunmerge-bossbar div {
+  height: 9px;
+  margin-top: 2px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.gunmerge-bossbar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #f472b6, #dc2626);
+  transition: width 0.12s ease-out;
+}
+
+.gunmerge-banner {
+  top: 24%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}

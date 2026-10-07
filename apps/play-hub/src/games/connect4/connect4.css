@@ -1,0 +1,275 @@
+.connect4-board {
+  position: relative;
+  padding: 0.85rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, color-mix(in srgb, #38bdf8 18%, transparent), transparent 55%),
+    radial-gradient(ellipse 70% 40% at 100% 100%, color-mix(in srgb, #f59e0b 12%, transparent), transparent 50%),
+    radial-gradient(ellipse 60% 35% at 0% 90%, color-mix(in srgb, #e11d48 10%, transparent), transparent 45%),
+    var(--panel);
+}
+
+.connect4-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  justify-content: center;
+}
+
+.connect4-seat {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel-soft) 88%, transparent);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.connect4-seat.is-active {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent);
+  background: color-mix(in srgb, var(--accent) 10%, var(--panel));
+}
+
+.connect4-seat.is-you.is-active {
+  border-color: color-mix(in srgb, #e11d48 45%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, #e11d48 18%, transparent);
+  background: color-mix(in srgb, #e11d48 10%, var(--panel));
+}
+
+.connect4-seat.is-cpu.is-active {
+  border-color: color-mix(in srgb, #f59e0b 50%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, #f59e0b 20%, transparent);
+  background: color-mix(in srgb, #f59e0b 12%, var(--panel));
+}
+
+.connect4-seat__avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  background: color-mix(in srgb, var(--panel) 90%, #fff);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.connect4-seat__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.connect4-seat__meta strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.connect4-seat__meta .muted {
+  font-size: 0.72rem;
+}
+
+.connect4-seat__pill {
+  flex-shrink: 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.connect4-seat.is-active .connect4-seat__pill {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+}
+
+.connect4-seat.is-you.is-active .connect4-seat__pill {
+  background: linear-gradient(135deg, #fb7185, #e11d48);
+}
+
+.connect4-seat.is-cpu.is-active .connect4-seat__pill {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #422006;
+}
+
+.connect4-frame {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.35rem 0.35rem;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, #bae6fd 35%, transparent), transparent 40%),
+    color-mix(in srgb, var(--panel-soft) 70%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--accent-2) 28%, var(--line));
+}
+
+.connect4-frame__deco {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.connect4-frame__deco--tl {
+  top: 10px;
+  left: 12px;
+  background: #38bdf8;
+  transform: rotate(18deg);
+}
+.connect4-frame__deco--tr {
+  top: 12px;
+  right: 14px;
+  background: #fbbf24;
+  border-radius: 50%;
+}
+.connect4-frame__deco--bl {
+  bottom: 12px;
+  left: 16px;
+  background: #fb7185;
+  border-radius: 50%;
+}
+.connect4-frame__deco--br {
+  bottom: 10px;
+  right: 12px;
+  background: #34d399;
+  transform: rotate(-12deg);
+}
+
+.connect4-turn {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.connect4-cols {
+  --c4-gap: 0.35rem;
+  width: min(100%, var(--board-max));
+  display: grid;
+  gap: var(--c4-gap);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, #60a5fa 35%, transparent), transparent 40%),
+    color-mix(in srgb, #1d4ed8 78%, #0f172a);
+  border-radius: 18px;
+  padding: 0.55rem;
+  box-shadow:
+    0 12px 28px rgba(29, 78, 216, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+}
+
+.connect4-cols-label {
+  width: min(100%, var(--board-max));
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--c4-gap, 0.35rem);
+  padding: 0 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-align: center;
+}
+
+.connect4-col {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 6.9;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.connect4-col:disabled {
+  cursor: default;
+}
+
+.connect4-holes {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: var(--c4-gap);
+  pointer-events: none;
+}
+
+.connect4-slot {
+  border-radius: 999px;
+  background: color-mix(in srgb, #0f172a 70%, #1e3a8a);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.connect4-disc {
+  --row-h: calc((100% - 5 * var(--c4-gap)) / 6);
+  --disc: 68%;
+  position: absolute;
+  left: 50%;
+  width: var(--disc);
+  aspect-ratio: 1;
+  height: auto;
+  top: calc(var(--row) * (var(--row-h) + var(--c4-gap)) + (var(--row-h) * 0.16));
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.connect4-disc.is-you {
+  background: radial-gradient(circle at 30% 30%, #fda4af, #e11d48 55%, #9f1239);
+}
+
+.connect4-disc.is-cpu {
+  background: radial-gradient(circle at 30% 30%, #fde68a, #f59e0b 55%, #b45309);
+}
+
+.connect4-disc.is-dropping {
+  z-index: 3;
+  animation: connect4-drop var(--drop-ms, 320ms) cubic-bezier(0.22, 0.82, 0.28, 1.08) both;
+}
+
+@keyframes connect4-drop {
+  0% {
+    transform: translate(-50%, calc(var(--drop-rows, 1) * -1 * (var(--row-h) + var(--c4-gap))));
+  }
+  78% {
+    transform: translate(-50%, 3px);
+  }
+  90% {
+    transform: translate(-50%, -2px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connect4-disc.is-dropping {
+    animation: none;
+  }
+}

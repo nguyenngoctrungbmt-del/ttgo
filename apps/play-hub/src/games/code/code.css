@@ -1,0 +1,116 @@
+.code-board {
+  /* layout from .board-host */
+}
+
+.code-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: min(100%, var(--board-sm));
+  margin-inline: auto;
+}
+
+.code-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.code-pegs,
+.code-guess {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.code-peg,
+.code-slot {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, CanvasText 18%, transparent);
+  padding: 0;
+  background: var(--panel-soft);
+}
+
+.code-peg.is-black {
+  background: #1f2937;
+  border-color: #111827;
+}
+
+.code-peg.is-white {
+  background: #f8fafc;
+  border-color: color-mix(in srgb, CanvasText 30%, transparent);
+}
+
+.code-slot.is-filled {
+  border-color: transparent;
+}
+
+.code-slot.is-active {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent, #7c3aed) 45%, transparent);
+}
+
+.code-composer {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.code-current {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.code-current-slot {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 2px dashed color-mix(in srgb, CanvasText 22%, transparent);
+  padding: 0;
+  background: var(--panel-soft);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.code-current-slot.is-filled {
+  border-style: solid;
+  border-color: transparent;
+}
+
+.code-current-slot.is-focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent, #7c3aed) 40%, transparent);
+}
+
+.code-palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.code-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 2px solid color-mix(in srgb, CanvasText 16%, transparent);
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.code-swatch:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.code-swatch:disabled,
+.code-current-slot:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.code-actions {
+  display: flex;
+  gap: 0.5rem;
+}

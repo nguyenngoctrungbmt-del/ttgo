@@ -1,0 +1,145 @@
+.spinner-bar {
+  width: 7.5rem;
+  height: 10px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.spinner-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.12s linear;
+}
+
+.spinner-btns {
+  gap: 0.7rem;
+}
+
+.action-btn.spinner-btn {
+  --k: 0;
+  width: 70px;
+  height: 70px;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  opacity: 0.65;
+  background:
+    radial-gradient(circle, rgba(15, 23, 42, 0.75) 56%, transparent 57%),
+    conic-gradient(var(--c) calc(var(--k) * 360deg), rgba(255, 255, 255, 0.15) 0);
+}
+
+.action-btn.spinner-btn.is-dash {
+  --c: #f472b6;
+}
+
+.action-btn.spinner-btn.is-shield {
+  --c: #22d3ee;
+}
+
+.action-btn.spinner-btn.is-ready {
+  opacity: 1;
+  border-color: var(--c);
+  box-shadow: 0 0 16px var(--c);
+}
+
+.spinner-upgrade {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(30, 7, 24, 0.66);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 0.25s ease;
+}
+
+.spinner-upgrade h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.spinner-upgrade p {
+  margin: 0 0 0.6rem;
+  opacity: 0.85;
+}
+
+.spinner-upgrade__list {
+  display: grid;
+  gap: 0.6rem;
+  width: min(300px, 100%);
+}
+
+.spinner-upgrade__card {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(219, 39, 119, 0.92), rgba(88, 28, 135, 0.95));
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  animation: spinner-card-in 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3) both;
+}
+
+.spinner-upgrade__card:nth-child(2) {
+  animation-delay: 0.07s;
+}
+
+.spinner-upgrade__card:nth-child(3) {
+  animation-delay: 0.14s;
+}
+
+.spinner-upgrade__card:active {
+  transform: scale(0.97);
+  border-color: #fde047;
+}
+
+.spinner-upgrade__icon {
+  grid-row: span 2;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.spinner-upgrade__card strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.spinner-upgrade__card span:last-child {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+@keyframes spinner-card-in {
+  from {
+    transform: translateY(16px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.spinner-upgrade .spinner-upgrade__stars {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  color: #fde047;
+  opacity: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}

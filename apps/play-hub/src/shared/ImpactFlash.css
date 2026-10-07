@@ -1,0 +1,145 @@
+.impact-flash {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.impact-flash__veil {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    color-mix(in srgb, #ef4444 45%, transparent),
+    color-mix(in srgb, #7f1d1d 35%, transparent) 55%,
+    transparent 75%
+  );
+  animation: impact-veil 0.55s ease-out forwards;
+}
+
+.impact-flash__blast {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+}
+
+.impact-flash__boom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: clamp(1.6rem, 8vmin, 2.8rem);
+  line-height: 1;
+  transform: translate(-50%, -50%) scale(0.4);
+  animation: impact-boom 0.5s ease-out forwards;
+}
+
+.impact-flash__ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 3px solid #fbbf24;
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0.9;
+  animation: impact-ring 0.5s ease-out forwards;
+}
+
+.impact-flash__spark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fbbf24;
+  box-shadow: 0 0 6px #ef4444;
+  transform: translate(-50%, -50%);
+  animation: impact-spark 0.5s ease-out forwards;
+  animation-delay: calc(var(--i) * 12ms);
+  --angle: calc(var(--i) * 30deg);
+}
+
+.impact-flash__spark:nth-child(odd) {
+  background: #fb7185;
+  width: 5px;
+  height: 5px;
+}
+
+.impact-flash__spark:nth-child(3n) {
+  background: #fff7ed;
+}
+
+@keyframes impact-veil {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes impact-boom {
+  0% {
+    transform: translate(-50%, -50%) scale(0.35);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes impact-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0;
+  }
+}
+
+@keyframes impact-spark {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-48px) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* Parent arenas can add this class for a shake. */
+.is-impact-shake {
+  animation: impact-shake 0.4s ease-out;
+}
+
+@keyframes impact-shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-4px, 2px);
+  }
+  40% {
+    transform: translate(5px, -3px);
+  }
+  60% {
+    transform: translate(-3px, -2px);
+  }
+  80% {
+    transform: translate(3px, 1px);
+  }
+}

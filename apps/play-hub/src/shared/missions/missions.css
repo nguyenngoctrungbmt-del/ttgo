@@ -1,0 +1,223 @@
+.missions {
+  width: min(340px, 100%);
+  padding: 0.75rem 0.85rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.missions.is-compact {
+  padding: 0.6rem 0.7rem;
+  box-shadow: none;
+  background: var(--panel-soft);
+  margin: 0 0 1rem;
+}
+
+.missions__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.missions__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.missions__tier {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+.missions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: 1.2rem 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mission__check {
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  color: var(--muted);
+  background: var(--panel-soft);
+}
+
+.missions.is-compact .mission__check {
+  background: var(--panel);
+}
+
+.mission.is-complete .mission__check {
+  color: #fff;
+  background: var(--warm);
+}
+
+.mission.is-claimed .mission__check {
+  background: var(--ok);
+}
+
+.mission__body {
+  min-width: 0;
+}
+
+.mission__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.mission__label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.mission.is-claimed .mission__label {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.mission__count {
+  flex: none;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mission__bar {
+  height: 5px;
+  margin-top: 0.25rem;
+  border-radius: 99px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--muted) 22%, transparent);
+}
+
+.mission__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mission.is-complete .mission__bar span {
+  background: linear-gradient(90deg, var(--warm), #f97316);
+}
+
+.mission__xp {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  min-width: 3.2rem;
+  text-align: right;
+}
+
+.mission__claim {
+  min-height: 30px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  animation: mission-pulse 1.2s ease-in-out infinite;
+}
+
+.mission.is-fresh {
+  animation: mission-fresh 0.7s ease-out both;
+}
+
+@keyframes mission-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes mission-fresh {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.mission-toast {
+  position: absolute;
+  top: 3.4rem;
+  left: 50%;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.45);
+  pointer-events: none;
+  white-space: nowrap;
+  animation: mission-toast 2.2s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+.mission-toast__kicker {
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.mission-toast__text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+@keyframes mission-toast {
+  0% {
+    transform: translate(-50%, -30px) scale(0.6);
+    opacity: 0;
+  }
+  12% {
+    transform: translate(-50%, 0) scale(1.08);
+    opacity: 1;
+  }
+  20%,
+  85% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -16px) scale(0.95);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,64 @@
+.memory-board {
+  /* layout from .board-host */
+  transition: box-shadow 0.25s ease;
+}
+
+.memory-board.is-burst {
+  box-shadow: 0 0 0 3px rgba(91, 108, 255, 0.28);
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+  width: min(100%, var(--board-max));
+}
+
+.memory-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  perspective: 800px;
+  padding: 0;
+}
+
+.memory-card__face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  transition: transform 0.35s ease;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.memory-card__back {
+  background: linear-gradient(145deg, #0d9488, #0284c7);
+  border: 1px solid transparent;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.memory-card__front {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  transform: rotateY(180deg);
+}
+
+.memory-card.is-open .memory-card__back {
+  transform: rotateY(180deg);
+}
+
+.memory-card.is-open .memory-card__front {
+  transform: rotateY(0deg);
+}
+
+.memory-card.is-matched .memory-card__front {
+  background: #e4f8ee;
+  color: #1f7a4d;
+  border-color: transparent;
+  animation: pop 0.25s ease;
+}

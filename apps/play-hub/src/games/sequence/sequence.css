@@ -1,0 +1,51 @@
+.sequence-board {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  flex: 1;
+}
+
+.sequence-hint {
+  margin: 0;
+  min-height: 2.6em;
+  line-height: 1.4;
+}
+
+.sequence-pads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.sequence-pad {
+  aspect-ratio: 1;
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--pad) 22%, #ffffff);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: var(--shadow);
+}
+
+.sequence-pad:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+.sequence-pad.is-lit {
+  background: var(--pad);
+  color: #263238;
+  transform: scale(0.97);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pad) 35%, transparent);
+}
+
+.sequence-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}

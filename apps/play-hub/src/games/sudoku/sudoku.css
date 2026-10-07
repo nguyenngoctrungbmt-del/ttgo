@@ -1,0 +1,133 @@
+.sudoku-grid {
+  display: grid;
+    gap: 0;
+  width: min(100%, var(--board-sm));
+  border: 2px solid color-mix(in srgb, var(--ink) 55%, transparent);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.sudoku-cell {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--panel);
+  border: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition:
+    background 0.12s ease,
+    color 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.sudoku-cell.is-col-last {
+  border-right: none;
+}
+
+.sudoku-cell.is-row-last {
+  border-bottom: none;
+}
+
+.sudoku-cell.box-left {
+  border-left: 2px solid color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.sudoku-cell.box-top {
+  border-top: 2px solid color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.sudoku-cell.is-given {
+  font-weight: 800;
+  color: color-mix(in srgb, var(--ink) 88%, #0369a1);
+  background: var(--panel-soft);
+  cursor: default;
+}
+
+.sudoku-cell.is-selected {
+  background: color-mix(in srgb, #0369a1 18%, var(--panel));
+  box-shadow: inset 0 0 0 2px #0369a1;
+}
+
+.sudoku-cell.is-conflict {
+  color: #be123c;
+  background: color-mix(in srgb, #be123c 12%, var(--panel));
+}
+
+.sudoku-cell.is-conflict.is-selected {
+  background: color-mix(in srgb, #be123c 18%, var(--panel));
+  box-shadow: inset 0 0 0 2px #be123c;
+}
+
+.sudoku-cell:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.sudoku-pad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: min(100%, var(--board-sm));
+}
+
+.sudoku-key {
+  flex: 1 1 2.75rem;
+  min-width: 2.75rem;
+  height: 2.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+  color: var(--ink);
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease;
+}
+
+.sudoku-key:disabled {
+  opacity: 0.45;
+}
+
+.sudoku-key:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.sudoku-key-clear {
+  flex: 1 1 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+}
+
+.sudoku-grid--6 .sudoku-cell {
+  font-size: 1.2rem;
+}
+
+.sudoku-grid--9 {
+  width: min(100%, 400px);
+  border-radius: 10px;
+}
+
+.sudoku-grid--9 .sudoku-cell {
+  font-size: clamp(0.85rem, 4vw, 1.15rem);
+}
+
+.sudoku-pad--9 {
+  width: min(100%, 400px);
+  gap: 0.35rem;
+}
+
+.sudoku-pad--9 .sudoku-key {
+  flex: 1 1 2.2rem;
+  min-width: 2.2rem;
+  height: 2.6rem;
+}

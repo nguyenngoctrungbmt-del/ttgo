@@ -1,0 +1,198 @@
+.bridge-bar {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 8;
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
+}
+
+.bridge-mat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 52px;
+  padding: 0.25rem 0.2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+
+.bridge-mat small {
+  font-size: 0.66rem;
+  opacity: 0.8;
+}
+
+.bridge-mat i {
+  display: block;
+  width: 26px;
+  height: 7px;
+  border-radius: 3px;
+}
+
+.bridge-mat.is-on {
+  border-color: #fde047;
+  background: rgba(30, 41, 59, 0.92);
+  box-shadow: 0 0 0 2px rgba(253, 224, 71, 0.35);
+}
+
+.bridge-mat:disabled {
+  opacity: 0.35;
+}
+
+.bridge-tool {
+  width: 52px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.bridge-tool svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bridge-go {
+  min-width: 68px;
+  border-radius: 12px;
+  border: 0;
+  background: linear-gradient(180deg, #22c55e, #15803d);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #14532d;
+}
+
+.bridge-go:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #14532d;
+}
+
+.bridge-go.is-stop {
+  background: linear-gradient(180deg, #f97316, #c2410c);
+  box-shadow: 0 4px 0 #7c2d12;
+}
+
+.bridge-budget {
+  position: relative;
+  width: 118px;
+  height: 9px;
+  margin-top: 0.2rem;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.bridge-budget span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, #f59e0b, #fde047);
+  transition: width 0.2s ease;
+}
+
+.bridge-budget b {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.bridge-pick {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem;
+  background: rgba(8, 15, 30, 0.62);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  text-align: center;
+  animation: fade-in 0.25s ease;
+}
+
+.bridge-pick h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.bridge-pick p {
+  margin: 0 0 0.6rem;
+  opacity: 0.85;
+}
+
+.bridge-pick__list {
+  display: grid;
+  gap: 0.6rem;
+  width: min(300px, 100%);
+}
+
+.bridge-pick__card {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(3, 105, 161, 0.92), rgba(12, 74, 110, 0.96));
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.bridge-pick__card svg {
+  grid-row: span 2;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.bridge-pick__card strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.bridge-pick__card span:last-child {
+  font-size: 0.82rem;
+  opacity: 0.88;
+}
+
+.bridge-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 4.4rem;
+  z-index: 7;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.7rem;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+}

@@ -1,0 +1,120 @@
+.stack-board {
+  /* layout from .board-host */
+}
+
+.stack-stage {
+  position: relative;
+  width: min(100%, var(--board-sm));
+  height: var(--stage-h);
+  margin-inline: auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--accent, #ea580c) 12%, transparent), transparent 55%),
+    var(--panel-soft);
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.stack-stage.is-busy {
+  cursor: default;
+}
+
+/* Grows up from the bottom; camera translate pushes it down once tall. */
+.stack-tower {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-bottom: 12%;
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stack-tower.is-pre-settle {
+  transition: none;
+}
+
+.stack-block {
+  height: 22px;
+  margin-inline: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 color-mix(in srgb, CanvasText 18%, transparent);
+  flex-shrink: 0;
+}
+
+.stack-block.is-landing {
+  animation: stack-land 0.28s cubic-bezier(0.22, 1.2, 0.36, 1);
+}
+
+.stack-block.is-moving {
+  position: absolute;
+  height: 22px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px color-mix(in srgb, CanvasText 20%, transparent);
+  will-change: left, top, transform;
+  transition: left 0.05s linear;
+}
+
+.stack-block.is-falling {
+  transition: top 0.42s cubic-bezier(0.33, 0.1, 0.25, 1), transform 0.42s ease;
+  z-index: 2;
+}
+
+.stack-block.is-miss {
+  transition:
+    top 0.55s cubic-bezier(0.4, 0, 1, 1),
+    opacity 0.55s ease,
+    transform 0.55s ease;
+  opacity: 0;
+  transform: rotate(12deg) scale(0.92);
+  z-index: 2;
+}
+
+.stack-hint {
+  margin-top: 0.75rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.stack-combo {
+  position: absolute;
+  top: 0.65rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent, #ea580c);
+  pointer-events: none;
+  animation: stack-combo-pop 0.35s ease;
+  z-index: 3;
+}
+
+@keyframes stack-land {
+  0% {
+    transform: scaleY(0.7) scaleX(1.08);
+  }
+  55% {
+    transform: scaleY(1.12) scaleX(0.96);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes stack-combo-pop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}

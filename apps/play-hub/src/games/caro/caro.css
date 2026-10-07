@@ -1,0 +1,55 @@
+.caro-board {
+  /* layout from .board-host */
+}
+
+.caro-grid {
+  display: grid;
+  gap: 1px;
+  background: color-mix(in srgb, var(--line) 80%, #94a3b8);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  width: min(100%, var(--board-max));
+}
+
+.caro-cell {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 0;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: clamp(0.7rem, 2.8vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.caro-cell:nth-child(odd) {
+  background: color-mix(in srgb, var(--panel) 88%, #93c5fd);
+}
+
+.caro-cell.is-last {
+  box-shadow: inset 0 0 0 2px #f59e0b;
+}
+
+.caro-cell:disabled {
+  opacity: 1;
+}
+
+.caro-mark {
+  display: block;
+  font-size: inherit;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.caro-mark.is-you {
+  color: #16a34a;
+}
+
+.caro-mark.is-cpu {
+  color: #dc2626;
+}

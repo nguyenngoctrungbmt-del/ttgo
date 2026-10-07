@@ -1,0 +1,111 @@
+.rally-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: var(--play-min-h);
+  padding: 1rem;
+}
+
+.rally-board .play-idle {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+}
+
+.rally-arena {
+  position: relative;
+  flex: 1;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 50%, color-mix(in srgb, #4ade80 12%, transparent), transparent 55%),
+    linear-gradient(180deg, #14532d 0%, #166534 50%, #052e16 100%);
+  touch-action: none;
+  user-select: none;
+}
+
+.rally-hud {
+  position: absolute;
+  top: 0.65rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ecfdf5;
+  text-shadow: 0 2px 8px color-mix(in srgb, #000 45%, transparent);
+  pointer-events: none;
+}
+
+.rally-hud span {
+  min-width: 1.5ch;
+  text-align: center;
+}
+
+.rally-hud span.is-you {
+  color: #86efac;
+}
+
+.rally-hud span.is-cpu {
+  color: #fde047;
+}
+
+.rally-net {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  height: 0;
+  border-top: 2px dashed color-mix(in srgb, #bbf7d0 35%, transparent);
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rally-paddle {
+  position: absolute;
+  height: 2.8%;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 2px 8px color-mix(in srgb, #000 30%, transparent);
+}
+
+.rally-paddle.is-you {
+  background: linear-gradient(90deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+}
+
+.rally-paddle.is-cpu {
+  background: linear-gradient(90deg, #facc15 0%, #eab308 50%, #ca8a04 100%);
+}
+
+.rally-ball {
+  position: absolute;
+  width: 4.2%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #f8fafc 0%, #e2e8f0 45%, #94a3b8 100%);
+  box-shadow: 0 2px 10px color-mix(in srgb, #000 40%, transparent);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.rally-hint {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, #dcfce7 70%, transparent);
+  pointer-events: none;
+}

@@ -1,0 +1,44 @@
+.carmerge-arena {
+  background: #14532d;
+}
+
+.carmerge-cash {
+  padding: 0.1rem 0.55rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  color: #fff;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.carmerge-combo {
+  padding: 0.05rem 0.5rem;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #422006;
+  text-shadow: none;
+  font-size: 0.85rem;
+}
+
+.carmerge-hud .action-hud__score {
+  font-size: 1.7rem;
+}
+
+.carmerge-low {
+  color: #fca5a5;
+  animation: carmerge-pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes carmerge-pulse {
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.carmerge-banner {
+  top: 30%;
+  width: max-content;
+  max-width: 94%;
+  text-align: center;
+  white-space: normal;
+}
