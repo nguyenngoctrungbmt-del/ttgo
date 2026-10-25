@@ -106,7 +106,7 @@ export function renderGamePage(game, info, related, updated) {
   <meta name="twitter:title" content="${escapeHtml(`${game.title} — Free Online Game`)}" />
   <meta name="twitter:description" content="${escapeHtml(desc)}" />
   <meta name="twitter:image" content="${shot}" />
-  <link rel="stylesheet" href="../../../assets/css/site.css?v=20261025" />
+  <link rel="stylesheet" href="../../../assets/css/site.css?v=20261026" />
   <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
   </script>

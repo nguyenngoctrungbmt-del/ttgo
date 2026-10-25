@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.ttgo.io.vn/blog/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1073,6 +1073,36 @@
   <url>
     <loc>https://www.ttgo.io.vn/blog/quick-action-games-short-break/</loc>
     <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ttgo.io.vn/blog/greyward-castaway-survival-beginners-guide/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ttgo.io.vn/blog/juicy-acres-power-ups-guide/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ttgo.io.vn/blog/jewel-block-kingdom-tips/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ttgo.io.vn/blog/action-advance-offline-action-games/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ttgo.io.vn/blog/playverse-vs-100-offline-games/</loc>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
