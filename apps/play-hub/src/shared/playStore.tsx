@@ -27,7 +27,8 @@ export function playStoreUrl(placement: Placement, gameId?: string) {
 }
 
 function onClick(placement: Placement, gameId?: string) {
-  void trackEvent('play_store_click', { placement, game_id: gameId ?? 'none' })
+  // Same event name as the static pages (assets/js/firebase.js) so one report covers the whole site.
+  void trackEvent('store_click', { store: 'google_play', app_id: PACKAGE_ID, placement, game_id: gameId ?? 'none', page: location.pathname })
 }
 
 /** Game id from a /play/<id> route, if any. */

@@ -1,5 +1,5 @@
 /** Static, crawlable landing page for one hub game: play-hub/game/<id>/index.html. */
-const SITE = 'https://ttgo.io.vn/'
+const SITE = 'https://www.ttgo.io.vn/'
 
 export const escapeHtml = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -106,7 +106,7 @@ export function renderGamePage(game, info, related, updated) {
   <meta name="twitter:title" content="${escapeHtml(`${game.title} — Free Online Game`)}" />
   <meta name="twitter:description" content="${escapeHtml(desc)}" />
   <meta name="twitter:image" content="${shot}" />
-  <link rel="stylesheet" href="../../../assets/css/site.css?v=20261008" />
+  <link rel="stylesheet" href="../../../assets/css/site.css?v=20261025" />
   <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
   </script>
@@ -229,6 +229,7 @@ ${relatedTiles}
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module" src="../../../assets/js/firebase.js"></script>
 </body>
 </html>
 `

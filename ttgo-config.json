@@ -1,5 +1,5 @@
 {
-  "siteUrl": "https://ttgo.io.vn/",
+  "siteUrl": "https://www.ttgo.io.vn/",
   "developerPageUrl": "https://play.google.com/store/apps/developer?id=AVTFINITY&hl=en",
   "brandName": "TTGO",
   "playGames": [
@@ -1937,9 +1937,17 @@
   ],
   "games": [
     {
+      "id": "today_puzzle",
+      "name": "Today Puzzle: Brain Games",
+      "detailUrl": "https://www.ttgo.io.vn/play-hub/",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ttgo.today.puzzle",
+      "iconUrl": "https://play-lh.googleusercontent.com/R5QbQTfkZMR3Cs8TVbhphG3aBdVdOe8x2clGE1olHTbKwFdUlt60ra_B7LmSMAhSn3ysWFgyxvRHhzlOo4Tj00s=w240-h480",
+      "screenshots": []
+    },
+    {
       "id": "block_puzzle_jewel_crystal_cat",
       "name": "Block Puzzle Jewel Crystal Cat",
-      "detailUrl": "https://ttgo.io.vn/games/block_puzzle_jewel_crystal_cat/",
+      "detailUrl": "https://www.ttgo.io.vn/games/block_puzzle_jewel_crystal_cat/",
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.happyfunnypuzzle.block.jewel.crystal",
       "iconUrl": "https://play-lh.googleusercontent.com/exFadaJKOfD76a9FqhlSyZ6hOqO-JvpOnRi527BvPYcW_RjKUGAAa7KzqzxEVc5183lbEQ7h30sK5s9cogvl_w=w240-h480",
       "screenshots": []
@@ -1947,7 +1955,7 @@
     {
       "id": "offline_100_games_no_wifi",
       "name": "100 Offline Game No Wifi",
-      "detailUrl": "https://ttgo.io.vn/games/offline_100_games_no_wifi/",
+      "detailUrl": "https://www.ttgo.io.vn/games/offline_100_games_no_wifi/",
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.PuzzleCollection.tiles.puzzle.Collection.Brain",
       "iconUrl": "https://play-lh.googleusercontent.com/ypAR0AeQYEf-XXR_rzAN6f5Xvxl1DmrbpGu_Z5Hgcs37gxH5Pzi0BQrvUautmp11YLO7OFbHciADXDkN63_K1w=w240-h480",
       "screenshots": []
@@ -1955,7 +1963,7 @@
     {
       "id": "winter_blast_puzzle",
       "name": "Winter Blast Puzzle",
-      "detailUrl": "https://ttgo.io.vn/games/winter_blast_puzzle/",
+      "detailUrl": "https://www.ttgo.io.vn/games/winter_blast_puzzle/",
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ttgo.winter.blash",
       "iconUrl": "https://play-lh.googleusercontent.com/8QIRwD1zq3rti3viND9PBycoe3t6cDM9L6kUWX0JUDEgKxA0iiLq_kQHnZpfjoZAEW88rQteozJ-00OvntC0Qw=w240-h480",
       "screenshots": []
@@ -1963,17 +1971,41 @@
     {
       "id": "cat_color_water_sort_puzzle",
       "name": "Cat Color Water Sort Puzzle",
-      "detailUrl": "https://ttgo.io.vn/games/cat_color_water_sort_puzzle/",
+      "detailUrl": "https://www.ttgo.io.vn/games/cat_color_water_sort_puzzle/",
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.unfairthirty.cat.color.water.sort.puzzle",
       "iconUrl": "https://play-lh.googleusercontent.com/wijRRvhs3uc-zM0bLs8BG8EIp0oL4Yu7ULtS9OIwEM_QFaCI84i2MNQCD0wDp-gK9XAHeTTwfXV_RYZq2oABsg=w240-h480",
       "screenshots": []
     },
     {
-      "id": "dreamtile_animal_mahjong_match",
-      "name": "DreamTile Animal Mahjong Match",
-      "detailUrl": "https://ttgo.io.vn/games/dreamtile_animal_mahjong_match/",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.avt.mahjong.dreamtile.match2",
-      "iconUrl": "https://play-lh.googleusercontent.com/PxmmRaR2Lr1cRUwC_swIihtft8xcfqdNj21ZRpbJfYhDVn6A13374Xp-a-eyrYmgVhSklj3DnZol_uNyeJAIJw=w240-h480",
+      "id": "action_advance",
+      "name": "Action Advance: 100+ Games",
+      "detailUrl": "https://www.ttgo.io.vn/games/action_advance/",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ttgo.actionadvance",
+      "iconUrl": "https://play-lh.googleusercontent.com/Qs6tRLsW6bxf7EDxcFM9EufyApRH29Mqj64arIwXYF8FoPD6QDF_pRIPsnrJ37ghwduO3_yFoqAGDw-acIzf=w240-h480",
+      "screenshots": []
+    },
+    {
+      "id": "juicy_acres_farm_match_3",
+      "name": "Juicy Acres: Farm Match 3",
+      "detailUrl": "https://www.ttgo.io.vn/games/juicy_acres_farm_match_3/",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ttgo.juicyacres",
+      "iconUrl": "https://play-lh.googleusercontent.com/8mNT_8hyMsyJpJ07pr6gGl4YIlEihbu7e-8wirq3UHuaWWWKcrJq-WB-OkIdg_3FdE09pcx1zr-LmiH6_-AsQQ=w240-h480",
+      "screenshots": []
+    },
+    {
+      "id": "playverse_daily_puzzle_games",
+      "name": "PlayVerse: Daily Puzzle Games",
+      "detailUrl": "https://www.ttgo.io.vn/games/playverse_daily_puzzle_games/",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ttgo.playverse",
+      "iconUrl": "https://play-lh.googleusercontent.com/_xFWk0FeLBVySJIrLMj22FZmGSOrxyufnIjCqMQHcAczvyo7260EFlNkIlcdsVIPpncfbobYudaWCK_ksaAHKcs=w240-h480",
+      "screenshots": []
+    },
+    {
+      "id": "jewel_block_kingdom",
+      "name": "Jewel Block Kingdom",
+      "detailUrl": "https://www.ttgo.io.vn/games/jewel_block_kingdom/",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.jewelblock.kingdom.puzzle",
+      "iconUrl": "https://play-lh.googleusercontent.com/eJ7rIykChokqCd0qL0eYEslR506F5dvhhsk33aepO2KGyc1khB4VMkLbGRWREE4Yo8mh1uT_8Pz-9AQdmN_Ffw=w240-h480",
       "screenshots": []
     }
   ]

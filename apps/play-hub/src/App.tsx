@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import Hub from './hub/Hub'
 import ClassicShell from './classic/ClassicShell'
@@ -6,6 +6,7 @@ import FlappyBird from './classic/flappy-bird/FlappyBird'
 import Snake from './classic/snake/Snake'
 import { GAME_ROUTES } from './games/routes'
 import { GAMES } from './data/games'
+import { trackScreen } from './analytics/analytics'
 
 const TITLE_SUFFIX = ' — TTGO Play Hub'
 
@@ -34,6 +35,17 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+  }, [location.pathname])
+
+  // Firebase logs the first page view itself; hash-route changes after that are logged here.
+  const firstView = useRef(true)
+  useEffect(() => {
+    if (firstView.current) {
+      firstView.current = false
+      return
+    }
+    const screen = location.pathname === '/' ? 'hub' : location.pathname.slice(1).replaceAll('/', '_')
+    void trackScreen(screen, location.pathname)
   }, [location.pathname])
 
   return (

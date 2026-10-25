@@ -11,6 +11,7 @@
     "capture-shots": "node scripts/capture-shots.mjs"
   },
   "dependencies": {
+    "firebase": "^13.1.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-router-dom": "^7.18.4",
